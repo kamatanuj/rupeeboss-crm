@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extract leads from D-insights Rupeeboss conversations"""
+"""Extract leads from D-insights Rupeeboss conversations with Hindi name support"""
 import json
 import re
 import csv
@@ -32,27 +32,42 @@ def extract_leads_from_conversation(conv_data):
     # Find Indian phone numbers (10 digits starting with 6-9)
     phones = re.findall(r'\b([6-9]\d{9})\b', user_text)
     
-    # Find names - look for patterns
+    # Find Hindi names - pattern: "मेरा नाम है <name>" or "नाम है <name>"
+    # Hindi names typically come after these phrases
     names = []
-    name_patterns = [
-        r'नाम[:\s]+([A-Za-z]{2,20})',
-        r'My name is[:\s]+([A-Za-z]{2,20})',
-        r'This is ([A-Za-z]{2,20})',
-        r'I am ([A-Za-z]{2,20})',
+    
+    # Pattern 1: मेरा नाम है followed by name (may include Kumar, Singh, etc.)
+    patterns = [
+        r'मेरा नाम है ([A-Za-z\s]+?)(?:[,.\s]|$)',
+        r'नाम है ([A-Za-z\s]+?)(?:[,.\s]|$)',
+        r'My name is ([A-Za-z\s]+?)(?:[,.\s]|$)',
+        r'This is ([A-Za-z\s]+?)(?:[,.\s]|$)',
+        r'I am ([A-Za-z\s]+?)(?:[,.\s]|$)',
     ]
-    for pattern in name_patterns:
+    
+    for pattern in patterns:
         found = re.findall(pattern, user_text, re.IGNORECASE)
-        names.extend(found)
+        for f in found:
+            # Clean up the name
+            name = f.strip()
+            # Filter out very short or long names
+            if 2 <= len(name.split()[0]) <= 15:
+                names.append(name.split()[0].title())
+    
+    # Also try to find names in Hindi text more specifically
+    # Look for name + Kumar/Singh/Patel patterns
+    hindi_name_pattern = r'(?:नेरज|दीपक|अक्षय|पूजा|राज|विकास|अमित|सुनील|संजय|गोपाल|हरीश|मनीष|आशिष|नितेश|राहुल|प्रवीण|आनन्द|विजय|रमेश|यश|करण|सागर|मयंक|शुभम|अभिषेक|तरुण|वivek|रवि|किशन|महेश|प्रशांत|दिनेश|जगदीश|सुरेश|भरत|आलोक|शैलेश|दर्शन|मनोज|ललित|रमन|वineet|अनिल|राजेश|मुकेश|जितेन|दिनीष|हर्ष|मंगेश|सचिन|युवराज|शरद|विनोद|शंकर|जय|विजय|कृष्ण|राधा|गOVIND)[A-Za-z\s]*'
     
     leads = []
     seen_phones = set()
     for phone in phones:
         if phone not in seen_phones:
             seen_phones.add(phone)
+            lead_name = names[0] if names else ''
             leads.append({
                 'email': '',
                 'phone': phone,
-                'name': names[0].strip().title() if names else ''
+                'name': lead_name
             })
     return leads
 
@@ -90,10 +105,13 @@ def main():
     
     print(f"\n✅ Extracted {len(all_leads)} unique leads")
     hot = [l for l in all_leads.values() if l['phone']]
-    if hot[:5]:
-        print(f"\n🔥 Sample hot leads:")
-        for l in hot[:5]:
-            print(f"  {l['name'] or 'N/A'} | {l['phone']}")
+    named = [l for l in hot if l['name']]
+    print(f"   - {len(named)} leads with names")
+    print(f"   - {len(hot) - len(named)} leads without names")
+    if named[:10]:
+        print(f"\n🔥 Sample leads with names:")
+        for l in named[:10]:
+            print(f"  {l['name']} | {l['phone']}")
 
 if __name__ == "__main__":
     main()
