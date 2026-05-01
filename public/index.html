@@ -2850,8 +2850,21 @@
                 phoneVerification = `\n\nWe don't have your contact number on file. Please provide your phone number and email address for follow-up.`;
             }
             
-            // Generate personalized email based on transcript content
-            let emailReply = `Dear ${name},\n\nThank you for contacting RupeeBoss regarding ${topic}.\n\nBased on our conversation, I've attached information about our loan products and services relevant to your inquiry.\n\nOur team will contact you within 24 hours to discuss your specific requirements and provide detailed information about eligibility, interest rates, and documentation.${phoneVerification}\n\nWe appreciate your interest and look forward to helping you with your financial needs.\n\nBest regards,\nSales Team\nRupeeBoss\n📧 sales@rupeeboss.com`;
+            // Generate topic-specific email reply based on transcript
+            let emailReply = '';
+            
+            if (topic.toLowerCase().includes('business loan')) {
+                emailReply = `Dear ${name},\n\nThank you for contacting RupeeBoss regarding Business Loan eligibility check.\n\nBased on our conversation, I understand you're looking for financing options for your business. Our business loan products offer competitive interest rates starting from 11.99% p.a., with loan amounts up to ₹50 lakhs and flexible repayment tenures up to 5 years.\n\nOur team will contact you within 24 hours to discuss your business profile, annual turnover requirements, and help you choose the best loan product. We'll also guide you through the documentation process including ITR, bank statements, and business proof.${phoneVerification}\n\nWhat type of business do you operate, and what loan amount are you considering? We're here to fuel your business growth.\n\nBest regards,\nSales Team\nRupeeBoss\n📧 sales@rupeeboss.com`;
+            } else if (topic.toLowerCase().includes('home loan')) {
+                emailReply = `Dear ${name},\n\nThank you for contacting RupeeBoss regarding Home Loan inquiry.\n\nBased on our conversation, I understand you're looking to purchase or construct a residential property. Our home loan products feature attractive interest rates from 8.5% p.a., loan amounts up to ₹5 crores, and repayment tenures up to 30 years.\n\nOur team will contact you within 24 hours to discuss your property details, income eligibility, and available tax benefits under Section 80C and 24(b). We'll also explain the documentation needed including property papers, income proof, and KYC documents.${phoneVerification}\n\nAre you looking for a loan against a specific property? We're here to make your home ownership dream come true.\n\nBest regards,\nSales Team\nRupeeBoss\n📧 sales@rupeeboss.com`;
+            } else if (topic.toLowerCase().includes('personal loan')) {
+                emailReply = `Dear ${name},\n\nThank you for contacting RupeeBoss regarding Personal Loan requirements.\n\nBased on our conversation, I understand you need quick personal financing for your immediate needs. Our personal loan products offer instant approval with interest rates from 10.99% p.a., loan amounts up to ₹25 lakhs, and tenures from 1 to 5 years with minimal documentation.\n\nOur team will contact you within 24 hours to discuss your income profile, employment type, and help you get the best personal loan offer. We'll explain the simple documentation process requiring only identity proof, address proof, and income statements.${phoneVerification}\n\nWhat is the purpose of the loan, and when do you need the funds? We're here to provide quick financial solutions.\n\nBest regards,\nSales Team\nRupeeBoss\n📧 sales@rupeeboss.com`;
+            } else if (topic.toLowerCase().includes('loan against property')) {
+                emailReply = `Dear ${name},\n\nThank you for contacting RupeeBoss regarding Loan Against Property (LAP).\n\nBased on our conversation, I understand you're looking to leverage your residential or commercial property for funding. Our LAP products offer loan amounts up to 60% of property value, interest rates from 9.5% p.a., and flexible repayment options up to 15 years.\n\nOur team will contact you within 24 hours to evaluate your property, discuss your income eligibility, and explain the entire process including property valuation, legal verification, and documentation requirements.${phoneVerification}\n\nWhat is the approximate value of your property, and what funding amount are you looking for? We're here to unlock your property's potential.\n\nBest regards,\nSales Team\nRupeeBoss\n📧 sales@rupeeboss.com`;
+            } else {
+                // Generic but personalized
+                emailReply = `Dear ${name},\n\nThank you for contacting RupeeBoss regarding ${topic}.\n\nBased on our conversation, I've attached detailed information about our loan products relevant to your inquiry. We offer Home Loans, Business Loans, Personal Loans, and Loan Against Property with competitive interest rates and flexible repayment options.\n\nOur team will contact you within 24 hours to understand your specific requirements, assess your eligibility, and provide customized loan solutions with complete transparency on interest rates, processing fees, and documentation.${phoneVerification}\n\nWe appreciate your interest and look forward to helping you achieve your financial goals.\n\nBest regards,\nSales Team\nRupeeBoss\n📧 sales@rupeeboss.com`;
+            }
             
             const subject = `Follow-up: ${topic} - RupeeBoss`;
             const body = encodeURIComponent(emailReply);
@@ -2860,7 +2873,8 @@
             if (recipient) {
                 window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${body}`;
             } else {
-                alert(`Email Reply for ${name}\n\nSubject: ${subject}\n\nNo email found for this lead.${phoneVerification}\n\n---\n\n${emailReply}`);
+                // Always show the email reply even without email
+                alert(`Email Draft for ${name}\n\nSubject: ${subject}\n\n---\n\n${emailReply}\n\n---\n\nNote: No email address found. Please ask the customer for their email address during the follow-up call.`);
             }
         }
         
