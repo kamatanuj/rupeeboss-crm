@@ -1,0 +1,6 @@
+# Exclude large files from Cloudflare Pages deployment
+rupeeboss_leads.csv
+*.csv
+*.log
+.git/**
+.github/**
