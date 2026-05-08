@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Livealth CRM - Lead Management</title>
+    <title>Rupeeboss CRM - Lead Management</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -821,7 +821,7 @@
         <button class="logout-btn" onclick="logout()">Logout</button>
         <button class="logout-btn" style="background: rgba(16, 185, 129, 0.3); color: #10b981;" onclick="showChangePasswordModal()">🔑 Change Password</button>
     </div>
-        <h1>🏥 Livealth CRM</h1>
+        <h1>🏥 Rupeeboss CRM</h1>
         <div class="note">📅 Leads from D-Insights AI Voice Agent conversations</div>
         
         <div class="stats">
@@ -865,7 +865,7 @@
 
     <script>
         // Follow-ups data embedded (no fetch needed)
-        const FOLLOW_UPS_DATA = {"test123":[{"id":"fup_1777973235214","type":"note","timestamp":"2026-05-05T09:27:15.214Z","content":"Test follow-up from server","rep":"admin","nextFollowUpDate":"2026-05-10","status":"pending"}],"2026-04-297201818793Language Support Inquiry":[{"id":"fup_1777973425476","type":"note","timestamp":"2026-05-05T09:30:25.476Z","content":"Testing for user admin. Client contacted.  Need brochures","rep":"admin","nextFollowUpDate":"2026-05-05","status":"pending"},{"id":"fup_1777973446391","type":"email","timestamp":"2026-05-05T09:30:46.391Z","content":"Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777980486624","type":"email","timestamp":"2026-05-05T11:28:06.624Z","content":"Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...","rep":"user","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777980489320","type":"email","timestamp":"2026-05-05T11:28:09.320Z","content":"Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...","rep":"user","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777980494158","type":"email","timestamp":"2026-05-05T11:28:14.158Z","content":"Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...","rep":"user","nextFollowUpDate":"2026-05-07","status":"pending"}],"2026-04-299554067071Order Immune Boosters":[{"id":"fup_1777979278020","type":"note","timestamp":"2026-05-05T11:07:58.020Z","content":"customer looking for  immune booster products.","rep":"admin","nextFollowUpDate":"2026-05-05","status":"pending"},{"id":"fup_1777979289688","type":"email","timestamp":"2026-05-05T11:08:09.688Z","content":"Email sent: Dear Umang,\n\nThank you for contacting Livealth BioPharma regarding Order Immune Boosters.\n\nBased on ...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777979291504","type":"email","timestamp":"2026-05-05T11:08:11.504Z","content":"Email sent: Dear Umang,\n\nThank you for contacting Livealth BioPharma regarding Order Immune Boosters.\n\nBased on ...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777979571447","type":"email","timestamp":"2026-05-05T11:12:51.447Z","content":"Email sent: Dear Umang,\n\nThank you for contacting Livealth BioPharma regarding Order Immune Boosters.\n\nBased on ...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"}],"2026-04-299405062501Livealth Product Inquiry":[{"id":"fup_1777979516002","type":"email","timestamp":"2026-05-05T11:11:56.002Z","content":"Email sent: Dear Vaibhav,\n\nThank you for contacting Livealth BioPharma regarding Livealth Product Inquiry.\n\nBase...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"}],"2026-04-238395049046Clonidine Cyprus Availability":[{"id":"fup_1777979710233","type":"email","timestamp":"2026-05-05T11:15:10.233Z","content":"Email sent: Dear Doctor,\n\nThank you for contacting Livealth BioPharma regarding Clonidine Cyprus Availability.\n\n...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777979750210","type":"note","timestamp":"2026-05-05T11:15:50.210Z","content":"testing for doctor","rep":"admin","nextFollowUpDate":"2026-05-05","status":"pending"}]};
+        const FOLLOW_UPS_DATA = {"test123":[{"id":"fup_1777973235214","type":"note","timestamp":"2026-05-05T09:27:15.214Z","content":"Test follow-up from server","rep":"admin","nextFollowUpDate":"2026-05-10","status":"pending"}],"2026-04-297201818793Language Support Inquiry":[{"id":"fup_1777973425476","type":"note","timestamp":"2026-05-05T09:30:25.476Z","content":"Testing for user admin. Client contacted.  Need brochures","rep":"admin","nextFollowUpDate":"2026-05-05","status":"pending"},{"id":"fup_1777973446391","type":"email","timestamp":"2026-05-05T09:30:46.391Z","content":"Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777980486624","type":"email","timestamp":"2026-05-05T11:28:06.624Z","content":"Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...","rep":"user","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777980489320","type":"email","timestamp":"2026-05-05T11:28:09.320Z","content":"Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...","rep":"user","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777980494158","type":"email","timestamp":"2026-05-05T11:28:14.158Z","content":"Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...","rep":"user","nextFollowUpDate":"2026-05-07","status":"pending"}],"2026-04-299554067071Order Immune Boosters":[{"id":"fup_1777979278020","type":"note","timestamp":"2026-05-05T11:07:58.020Z","content":"customer looking for  immune booster products.","rep":"admin","nextFollowUpDate":"2026-05-05","status":"pending"},{"id":"fup_1777979289688","type":"email","timestamp":"2026-05-05T11:08:09.688Z","content":"Email sent: Dear Umang,\n\nThank you for contacting Rupeeboss BioPharma regarding Order Immune Boosters.\n\nBased on ...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777979291504","type":"email","timestamp":"2026-05-05T11:08:11.504Z","content":"Email sent: Dear Umang,\n\nThank you for contacting Rupeeboss BioPharma regarding Order Immune Boosters.\n\nBased on ...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777979571447","type":"email","timestamp":"2026-05-05T11:12:51.447Z","content":"Email sent: Dear Umang,\n\nThank you for contacting Rupeeboss BioPharma regarding Order Immune Boosters.\n\nBased on ...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"}],"2026-04-299405062501Rupeeboss Product Inquiry":[{"id":"fup_1777979516002","type":"email","timestamp":"2026-05-05T11:11:56.002Z","content":"Email sent: Dear Vaibhav,\n\nThank you for contacting Rupeeboss BioPharma regarding Rupeeboss Product Inquiry.\n\nBase...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"}],"2026-04-238395049046Clonidine Cyprus Availability":[{"id":"fup_1777979710233","type":"email","timestamp":"2026-05-05T11:15:10.233Z","content":"Email sent: Dear Doctor,\n\nThank you for contacting Rupeeboss BioPharma regarding Clonidine Cyprus Availability.\n\n...","rep":"admin","nextFollowUpDate":"2026-05-07","status":"pending"},{"id":"fup_1777979750210","type":"note","timestamp":"2026-05-05T11:15:50.210Z","content":"testing for doctor","rep":"admin","nextFollowUpDate":"2026-05-05","status":"pending"}]};
 
         const PAGE_SIZE = 16;
         let currentCategory = 'all';
@@ -1115,21 +1115,21 @@
         }
 
         function generateSummary(lead) {
-            const topic = lead.title || 'Livealth products';
+            const topic = lead.title || 'Rupeeboss products';
             const lang = lead.language || 'en';
             const duration = Math.floor((lead.duration || 60) / 60);
             const name = lead.name || 'Customer';
             
             const summaries = {
-                'Bengali Language Support': `Customer ${name} called seeking product information in Bengali language. Agent provided assistance in Bengali covering Livealth Biopharma's pharmaceutical product range including generic medicines and specialty drugs. Customer requested product catalog via email. Duration: ${duration} min.`,
+                'Bengali Language Support': `Customer ${name} called seeking product information in Bengali language. Agent provided assistance in Bengali covering Rupeeboss Biopharma's pharmaceutical product range including generic medicines and specialty drugs. Customer requested product catalog via email. Duration: ${duration} min.`,
                 
                 'Language Support Inquiry': `Inquiry about language support options for placing orders. Customer interested in regional language assistance for future communication. Agent explained multi-language support availability. Next step: Email product catalog. Duration: ${duration} min.`,
                 
-                'Biopharma Products Services': `${name} requested detailed information about Livealth Biopharma's product range and services. Agent explained product categories including tablets, injections, capsules across cardiovascular, anti-infectives, and specialty therapeutics. Customer requested catalog for distribution purposes. Duration: ${duration} min.`,
+                'Biopharma Products Services': `${name} requested detailed information about Rupeeboss Biopharma's product range and services. Agent explained product categories including tablets, injections, capsules across cardiovascular, anti-infectives, and specialty therapeutics. Customer requested catalog for distribution purposes. Duration: ${duration} min.`,
                 
                 'Order Immune Boosters': `${name} called to place bulk order for immune booster products. Customer identified as distributor seeking products for Middle East market. Required Vitamin C, Zinc, and immunity booster combinations. Agent noted requirements for sales team follow-up. Duration: ${duration} min.`,
                 
-                'Yemen Distribution Inquiry': `Distribution inquiry from ${name} in Yemen. Interest in becoming Livealth Biopharma distributor. Agent explained export requirements, minimum order quantities ($10,000 USD), and documentation needed for Yemen market registration. Duration: ${duration} min.`,
+                'Yemen Distribution Inquiry': `Distribution inquiry from ${name} in Yemen. Interest in becoming Rupeeboss Biopharma distributor. Agent explained export requirements, minimum order quantities ($10,000 USD), and documentation needed for Yemen market registration. Duration: ${duration} min.`,
                 
                 'Nigeria Pharma Export': `Export inquiry for Nigeria market from ${name}. Interest in generic pharmaceutical products for distribution. Agent discussed product availability, pricing, and shipping logistics. Customer provided email for catalog distribution. Duration: ${duration} min.`,
             };
@@ -1143,24 +1143,24 @@
 
         function generateTranscript(lead) {
             const name = lead.name || 'Customer';
-            const topic = lead.title || 'Livealth products';
+            const topic = lead.title || 'Rupeeboss products';
             const lang = lead.language || 'en';
             
             const transcripts = {
-                'Bengali Language Support': `Agent: Namaste! Welcome to Livealth Biopharma. How can I help you today?\nCaller: (in Bengali) ...\nAgent: Thank you for calling. I understand you're looking for product information. Let me assist you in Bengali.\nCaller: (in Bengali) ...\nAgent: We have pharmaceutical products including generic medicines, contrast media, and specialty drugs. Our catalog includes products for cardiovascular, anti-infectives, and more. Could you provide your email for the product catalog?\nCaller: (in Bengali) ...\nAgent: I've noted your request. Our team will send product information to your email within 24 hours. Thank you for calling Livealth Biopharma!`,
+                'Bengali Language Support': `Agent: Namaste! Welcome to Rupeeboss Biopharma. How can I help you today?\nCaller: (in Bengali) ...\nAgent: Thank you for calling. I understand you're looking for product information. Let me assist you in Bengali.\nCaller: (in Bengali) ...\nAgent: We have pharmaceutical products including generic medicines, contrast media, and specialty drugs. Our catalog includes products for cardiovascular, anti-infectives, and more. Could you provide your email for the product catalog?\nCaller: (in Bengali) ...\nAgent: I've noted your request. Our team will send product information to your email within 24 hours. Thank you for calling Rupeeboss Biopharma!`,
                 
-                'Language Support Inquiry': `Agent: Namaste! Livealth Biopharma here. How may I assist you today?\nCaller: Hi, do you provide support in regional languages?\nAgent: Yes, we can assist in Hindi, English, and several other languages. Which language would you prefer?\nCaller: I need information about your pharmaceutical export services.\nAgent: We export generic medicines, contrast media, and specialty pharmaceuticals worldwide. Our minimum order is $10,000 USD. What products are you interested in?\nCaller: I'm looking for cardiovascular medicines.\nAgent: We have Amlodipine, Atenolol, Metoprolol, and other cardiovascular products. Should I email you our full catalog?\nCaller: Yes, please.`,
+                'Language Support Inquiry': `Agent: Namaste! Rupeeboss Biopharma here. How may I assist you today?\nCaller: Hi, do you provide support in regional languages?\nAgent: Yes, we can assist in Hindi, English, and several other languages. Which language would you prefer?\nCaller: I need information about your pharmaceutical export services.\nAgent: We export generic medicines, contrast media, and specialty pharmaceuticals worldwide. Our minimum order is $10,000 USD. What products are you interested in?\nCaller: I'm looking for cardiovascular medicines.\nAgent: We have Amlodipine, Atenolol, Metoprolol, and other cardiovascular products. Should I email you our full catalog?\nCaller: Yes, please.`,
                 
-                'Biopharma Products Services': `Agent: Namaste! Welcome to Livealth Biopharma. How can I help you today?\nCaller: Namaste! I want to know about your product range.\nAgent: Thank you for calling! We are a pharmaceutical company specializing in export of generic medicines. Our products include tablets, injections, capsules, and more across therapeutic categories.\nCaller: What therapeutic areas do you cover?\nAgent: We cover cardiovascular, anti-infectives, CNS, gastroenterology, and specialty pharmaceuticals. We also have contrast media for imaging.\nCaller: Can you send me your product catalog?\nAgent: Of course! Could you please provide your email address?\nCaller: Yes, it's info@company.com\nAgent: Perfect! I've noted your email. You will receive our complete product catalog within 24 hours.`,
+                'Biopharma Products Services': `Agent: Namaste! Welcome to Rupeeboss Biopharma. How can I help you today?\nCaller: Namaste! I want to know about your product range.\nAgent: Thank you for calling! We are a pharmaceutical company specializing in export of generic medicines. Our products include tablets, injections, capsules, and more across therapeutic categories.\nCaller: What therapeutic areas do you cover?\nAgent: We cover cardiovascular, anti-infectives, CNS, gastroenterology, and specialty pharmaceuticals. We also have contrast media for imaging.\nCaller: Can you send me your product catalog?\nAgent: Of course! Could you please provide your email address?\nCaller: Yes, it's info@company.com\nAgent: Perfect! I've noted your email. You will receive our complete product catalog within 24 hours.`,
                 
-                'Order Immune Boosters': `Agent: Namaste! Livealth Biopharma. How can I help you?\nCaller: I'm interested in ordering immune booster products.\nAgent: We have several immune support products including vitamin supplements and herbal preparations. What's the quantity you're looking for?\nCaller: We're a distributor. We need bulk quantities for the Middle East market.\nAgent: For bulk orders, our minimum is $10,000 USD. We ship worldwide with proper documentation. What specific products do you need?\nCaller: We need Vitamin C, Zinc, and immunity booster combinations.\nAgent: We can supply all of those. I'll have our sales team email you the pricing and availability details within 24 hours.\nCaller: Great! When can we expect the quote?\nAgent: Within 24 hours. Thank you for your interest in Livealth Biopharma!`,
+                'Order Immune Boosters': `Agent: Namaste! Rupeeboss Biopharma. How can I help you?\nCaller: I'm interested in ordering immune booster products.\nAgent: We have several immune support products including vitamin supplements and herbal preparations. What's the quantity you're looking for?\nCaller: We're a distributor. We need bulk quantities for the Middle East market.\nAgent: For bulk orders, our minimum is $10,000 USD. We ship worldwide with proper documentation. What specific products do you need?\nCaller: We need Vitamin C, Zinc, and immunity booster combinations.\nAgent: We can supply all of those. I'll have our sales team email you the pricing and availability details within 24 hours.\nCaller: Great! When can we expect the quote?\nAgent: Within 24 hours. Thank you for your interest in Rupeeboss Biopharma!`,
             };
             
             if (transcripts[topic]) {
                 return transcripts[topic];
             }
             
-            return `Agent: Namaste! Welcome to Livealth Biopharma. How can I help you today?\nCaller: ${name !== 'Unknown' ? name + ' here. ' : ''}I'm interested in ${topic}.\nAgent: Thank you for calling Livealth Biopharma! We specialize in export of generic pharmaceutical products. Let me help you with information about ${topic}.\nCaller: Can you tell me about your product range and pricing?\nAgent: We have products across various therapeutic categories. Our minimum order is $10,000 USD. What region are you exporting to?\nCaller: ${lang === 'en' ? "We're looking to source products for our local market." : "We're interested in distribution."}\nAgent: Perfect! We ship worldwide with all necessary documentation. Could you please provide your email so we can send you our complete product catalog?\nCaller: Yes, my email is ${lead.email || 'not provided'}.\nAgent: ${lead.email ? "I've noted your email address." : "No problem."} Our sales team will contact you within 24 hours with the product catalog and pricing details.\nCaller: Thank you! How long does shipping take?\nAgent: Shipping time depends on your location, typically 7-14 days by air freight. Thank you for calling Livealth Biopharma!`;
+            return `Agent: Namaste! Welcome to Rupeeboss Biopharma. How can I help you today?\nCaller: ${name !== 'Unknown' ? name + ' here. ' : ''}I'm interested in ${topic}.\nAgent: Thank you for calling Rupeeboss Biopharma! We specialize in export of generic pharmaceutical products. Let me help you with information about ${topic}.\nCaller: Can you tell me about your product range and pricing?\nAgent: We have products across various therapeutic categories. Our minimum order is $10,000 USD. What region are you exporting to?\nCaller: ${lang === 'en' ? "We're looking to source products for our local market." : "We're interested in distribution."}\nAgent: Perfect! We ship worldwide with all necessary documentation. Could you please provide your email so we can send you our complete product catalog?\nCaller: Yes, my email is ${lead.email || 'not provided'}.\nAgent: ${lead.email ? "I've noted your email address." : "No problem."} Our sales team will contact you within 24 hours with the product catalog and pricing details.\nCaller: Thank you! How long does shipping take?\nAgent: Shipping time depends on your location, typically 7-14 days by air freight. Thank you for calling Rupeeboss Biopharma!`;
         }
 
         function toggleSection(leadId, section) {
@@ -1269,7 +1269,7 @@
             if (topic === 'Bengali Language Support') {
                 emailReply = `Dear ${name},
 
-Thank you for contacting Livealth BioPharma regarding Bengali language support.
+Thank you for contacting Rupeeboss BioPharma regarding Bengali language support.
 
 We have noted your need for product information in Bengali. Our complete pharmaceutical catalog covering generic medicines, contrast media, and specialty drugs is attached.
 
@@ -1279,7 +1279,7 @@ We look forward to supporting your pharmaceutical distribution needs.
 
 Best regards,
 Sales Team
-Livealth BioPharma
+Rupeeboss BioPharma
 📧 sales@livealthbiopharma.com`;
             } else if (topic === 'Language Support Inquiry') {
                 emailReply = `Dear ${name},
@@ -1294,11 +1294,11 @@ Let us know your preferred language for future communications.
 
 Best regards,
 Sales Team
-Livealth BioPharma`;            
+Rupeeboss BioPharma`;            
             } else if (topic === 'Biopharma Products Services') {
                 emailReply = `Dear ${name},
 
-Thank you for your interest in Livealth BioPharma's product range and therapeutic offerings.
+Thank you for your interest in Rupeeboss BioPharma's product range and therapeutic offerings.
 
 As discussed, we specialize in generic medicines across cardiovascular, anti-infectives, CNS, gastroenterology, and specialty pharmaceuticals including contrast media for imaging.
 
@@ -1308,12 +1308,12 @@ Which therapeutic categories interest you the most? We're here to support your p
 
 Best regards,
 Sales Team
-Livealth BioPharma`;
+Rupeeboss BioPharma`;
             } else {
                 // Generic but still personalized
                 emailReply = `Dear ${name},
 
-Thank you for contacting Livealth BioPharma regarding ${topic}.
+Thank you for contacting Rupeeboss BioPharma regarding ${topic}.
 
 Based on our conversation, I've attached our complete product catalog relevant to your inquiry. Our minimum order is $10,000 USD with worldwide shipping.
 
@@ -1323,10 +1323,10 @@ We appreciate your interest and look forward to serving your pharmaceutical need
 
 Best regards,
 Sales Team
-Livealth BioPharma`;
+Rupeeboss BioPharma`;
             }
             
-            const subject = `Follow-up: ${topic} - Livealth BioPharma`;
+            const subject = `Follow-up: ${topic} - Rupeeboss BioPharma`;
             const body = encodeURIComponent(emailReply);
             const recipient = lead.email || '';
             
