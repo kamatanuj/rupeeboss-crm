@@ -1,0 +1,129 @@
+{
+  "test123": [
+    {
+      "id": "fup_1777973235214",
+      "type": "note",
+      "timestamp": "2026-05-05T09:27:15.214Z",
+      "content": "Test follow-up from server",
+      "rep": "admin",
+      "nextFollowUpDate": "2026-05-10",
+      "status": "pending"
+    }
+  ],
+  "2026-04-297201818793Language Support Inquiry": [
+    {
+      "id": "fup_1777973425476",
+      "type": "note",
+      "timestamp": "2026-05-05T09:30:25.476Z",
+      "content": "Testing for user admin. Client contacted.  Need brochures",
+      "rep": "admin",
+      "nextFollowUpDate": "2026-05-05",
+      "status": "pending"
+    },
+    {
+      "id": "fup_1777973446391",
+      "type": "email",
+      "timestamp": "2026-05-05T09:30:46.391Z",
+      "content": "Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...",
+      "rep": "admin",
+      "nextFollowUpDate": "2026-05-07",
+      "status": "pending"
+    },
+    {
+      "id": "fup_1777980486624",
+      "type": "email",
+      "timestamp": "2026-05-05T11:28:06.624Z",
+      "content": "Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...",
+      "rep": "user",
+      "nextFollowUpDate": "2026-05-07",
+      "status": "pending"
+    },
+    {
+      "id": "fup_1777980489320",
+      "type": "email",
+      "timestamp": "2026-05-05T11:28:09.320Z",
+      "content": "Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...",
+      "rep": "user",
+      "nextFollowUpDate": "2026-05-07",
+      "status": "pending"
+    },
+    {
+      "id": "fup_1777980494158",
+      "type": "email",
+      "timestamp": "2026-05-05T11:28:14.158Z",
+      "content": "Email sent: Dear Surat,\n\nThank you for inquiring about our language support options for pharmaceutical exports.\n...",
+      "rep": "user",
+      "nextFollowUpDate": "2026-05-07",
+      "status": "pending"
+    }
+  ],
+  "2026-04-299554067071Order Immune Boosters": [
+    {
+      "id": "fup_1777979278020",
+      "type": "note",
+      "timestamp": "2026-05-05T11:07:58.020Z",
+      "content": "customer looking for  immune booster products.",
+      "rep": "admin",
+      "nextFollowUpDate": "2026-05-05",
+      "status": "pending"
+    },
+    {
+      "id": "fup_1777979289688",
+      "type": "email",
+      "timestamp": "2026-05-05T11:08:09.688Z",
+      "content": "Email sent: Dear Umang,\n\nThank you for contacting Livealth BioPharma regarding Order Immune Boosters.\n\nBased on ...",
+      "rep": "admin",
+      "nextFollowUpDate": "2026-05-07",
+      "status": "pending"
+    },
+    {
+      "id": "fup_1777979291504",
+      "type": "email",
+      "timestamp": "2026-05-05T11:08:11.504Z",
+      "content": "Email sent: Dear Umang,\n\nThank you for contacting Livealth BioPharma regarding Order Immune Boosters.\n\nBased on ...",
+      "rep": "admin",
+      "nextFollowUpDate": "2026-05-07",
+      "status": "pending"
+    },
+    {
+      "id": "fup_1777979571447",
+      "type": "email",
+      "timestamp": "2026-05-05T11:12:51.447Z",
+      "content": "Email sent: Dear Umang,\n\nThank you for contacting Livealth BioPharma regarding Order Immune Boosters.\n\nBased on ...",
+      "rep": "admin",
+      "nextFollowUpDate": "2026-05-07",
+      "status": "pending"
+    }
+  ],
+  "2026-04-299405062501Livealth Product Inquiry": [
+    {
+      "id": "fup_1777979516002",
+      "type": "email",
+      "timestamp": "2026-05-05T11:11:56.002Z",
+      "content": "Email sent: Dear Vaibhav,\n\nThank you for contacting Livealth BioPharma regarding Livealth Product Inquiry.\n\nBase...",
+      "rep": "admin",
+      "nextFollowUpDate": "2026-05-07",
+      "status": "pending"
+    }
+  ],
+  "2026-04-238395049046Clonidine Cyprus Availability": [
+    {
+      "id": "fup_1777979710233",
+      "type": "email",
+      "timestamp": "2026-05-05T11:15:10.233Z",
+      "content": "Email sent: Dear Doctor,\n\nThank you for contacting Livealth BioPharma regarding Clonidine Cyprus Availability.\n\n...",
+      "rep": "admin",
+      "nextFollowUpDate": "2026-05-07",
+      "status": "pending"
+    },
+    {
+      "id": "fup_1777979750210",
+      "type": "note",
+      "timestamp": "2026-05-05T11:15:50.210Z",
+      "content": "testing for doctor",
+      "rep": "admin",
+      "nextFollowUpDate": "2026-05-05",
+      "status": "pending"
+    }
+  ]
+}
