@@ -398,18 +398,33 @@
         }
         
         .section.summary { 
-            background: rgba(16, 185, 129, 0.15); 
-            border: 1px solid rgba(16, 185, 129, 0.3); 
+            background: #EFF6FF; 
+            border: 1px solid #BFDBFE; 
         }
         
         .section.transcript { 
-            background: rgba(139, 92, 246, 0.1); 
-            border: 1px solid rgba(139, 92, 246, 0.3); 
+            background: #0F172A; 
+            border: 1px solid #1E293B;
+            color: #E2E8F0;
+        }
+        
+        .section.transcript .section-header {
+            color: #60A5FA;
+            border-bottom-color: #1E293B;
+        }
+        
+        .section.transcript .section-content {
+            color: #E2E8F0;
         }
         
         .section.followups { 
-            background: rgba(59, 130, 246, 0.1); 
-            border: 1px solid #2563EB; 
+            background: #1E293B; 
+            border: 1px solid #334155;
+        }
+        
+        .section.followups .section-header {
+            color: #60A5FA;
+            border-bottom-color: #334155;
         }
         
         .followup-timeline {
@@ -419,12 +434,12 @@
         }
         
         .followup-item {
-            background: #FFFFFF;
+            background: #1E293B;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
-            border: 1px solid #E2E8F0;
-            border-left: 3px solid #1E3A8A;
+            border: 1px solid #334155;
+            border-left: 3px solid #3B82F6;
         }
 
         .followup-item .badge {
@@ -454,12 +469,12 @@
         }
         
         .followup-content {
-            color: #0F172A;
+            color: #E2E8F0;
             font-size: 0.9em;
             line-height: 1.5;
             margin-bottom: 8px;
             padding: 8px 0;
-            border-bottom: 1px solid #E2E8F0;
+            border-bottom: 1px solid #334155;
         }
         
         .followup-meta {
@@ -467,7 +482,7 @@
             justify-content: space-between;
             align-items: center;
             font-size: 0.8em;
-            color: #64748B;
+            color: #94A3B8;
         }
         
         .followup-status {
@@ -489,13 +504,13 @@
 
         .followup-item p {
             margin: 5px 0;
-            color: #0F172A;
+            color: #E2E8F0;
             font-size: 0.9em;
             line-height: 1.4;
         }
 
         .followup-item small {
-            color: #64748B;
+            color: #94A3B8;
             font-size: 0.8em;
         }
         
@@ -503,6 +518,7 @@
             background: #1E293B;
             padding: 15px;
             border-radius: 8px;
+            border: 1px solid #334155;
         }
         
         .followup-form select,
@@ -511,9 +527,9 @@
             width: 100%;
             padding: 10px;
             border-radius: 8px;
-            border: 1px solid #E2E8F0;
-            background: #FFFFFF;
-            color: #0F172A;
+            border: 1px solid #334155;
+            background: #0F172A;
+            color: #E2E8F0;
             font-size: 14px;
             margin-bottom: 8px;
             -webkit-appearance: none;
@@ -528,8 +544,8 @@
             padding: 10px 20px;
             border: none;
             border-radius: 8px;
-            background: #2563EB;
-            color: #3b82f6;
+            background: #3B82F6;
+            color: #FFFFFF;
             cursor: pointer;
             font-size: 14px;
             transition: all 0.2s;
@@ -537,7 +553,7 @@
         }
         
         .followup-form button:hover {
-            background: #1D4ED8;
+            background: #2563EB;
         }
         
         .btn-expand.followups { 
@@ -575,21 +591,26 @@
         }
         
         .summary .section-header { 
-            color: #10b981; 
+            color: #1E3A8A; 
         }
         
         .transcript .section-header { 
-            color: #a78bfa; 
+            color: #60A5FA; 
         }
         
         .section-content { 
             font-size: 0.9em; 
             line-height: 1.6; 
-            color: #F1F5F9; 
+            color: #1E293B; 
             max-height: 300px; 
             overflow-y: auto; 
             white-space: pre-wrap; 
             word-break: break-word;
+        }
+        
+        .section.transcript .section-content {
+            color: #E2E8F0;
+            background: #0F172A;
         }
         
         .transcript-actions {
