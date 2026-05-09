@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rupeeboss CRM - Lead Management</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Login Modal Styles */
+        .login-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .login-modal.show {
+            display: flex;
+        }
+        
+        .login-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            width: 90%;
+            max-width: 400px;
+        }
+        
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #10b981;
+        }
+        
+        .login-input {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background: rgba(255,255,255,0.1);
+            color: #FFFFFF;
+            font-size: 15px;
+            margin-bottom: 12px;
+            -webkit-appearance: none;
+        }
+        
+        .login-input::placeholder {
+            color: #94A3B8;
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(16, 185, 129, 0.5);
+            color: #FFFFFF;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-height: 44px;
+        }
+        
+        .login-btn:hover {
+            background: rgba(16, 185, 129, 0.7);
+        }
+        
+        .login-error {
+            color: #ef4444;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9em;
+            display: none;
+        }
+        
+        .login-error.show {
+            display: block;
+        }
+        
+        .user-info {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 25px;
+        }
+        
+        .user-info.show {
+            display: flex;
+        }
+        
+        .logout-btn {
+            padding: 5px 12px;
+            border: none;
+            border-radius: 15px;
+            background: rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            cursor: pointer;
+            font-size: 0.85em;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(239, 68, 68, 0.5);
+        }
+        
+        .btn-delete {
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: none;
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            min-height: 44px;
+            display: none;
+        }
+        
+        .btn-delete.show {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-delete:hover {
+            background: rgba(239, 68, 68, 0.4);
+        }
+        
+        .download-btn {
+            display: none;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(16, 185, 129, 0.3);
+            color: #10b981;
+            cursor: pointer;
+            margin: 15px auto;
+            font-size: 14px;
+        }
+        
+        .download-btn.show {
+            display: block;
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b4e 100%); 
+            min-height: 100vh; 
+            color: #FFFFFF;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 200px 15px 15px 15px; 
+        }
+        
+        h1 { 
+            text-align: center; 
+            padding: 20px 0; 
+            color: #10b981; 
+            font-size: 1.8em;
+        }
+        
+        .stats { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px; 
+            margin-bottom: 20px; 
+            padding: 0 5px;
+        }
+        
+        .stat { 
+            background: rgba(255,255,255,0.1); 
+            padding: 15px 10px; 
+            border-radius: 12px; 
+            text-align: center; 
+            min-width: 0;
+        }
+        
+        .stat-value { 
+            font-size: 1.8em; 
+            font-weight: bold; 
+        }
+        
+        .stat-label { 
+            color: #94A3B8; 
+            margin-top: 3px; 
+            font-size: 0.8em; 
+        }
+        
+        .stat-hot .stat-value { color: #F97316; }
+        .stat-cold .stat-value { color: #0EA5E9; }
+        .stat-email .stat-value { color: #3B82F6; }
+        
+        .note { 
+            background: rgba(16, 185, 129, 0.15); 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            margin-bottom: 15px; 
+            color: #10b981; 
+            text-align: center; 
+            font-size: 0.85em; 
+        }
+        
+        .filter-btns { 
+            display: flex; 
+            justify-content: center; 
+            gap: 6px; 
+            margin-bottom: 15px; 
+            flex-wrap: wrap; 
+            padding: 0 5px;
+        }
+        
+        .filter-btn { 
+            padding: 8px 14px; 
+            border: none; 
+            border-radius: 20px; 
+            cursor: pointer; 
+            font-size: 12px; 
+            background: rgba(255,255,255,0.1); 
+            color: #FFFFFF; 
+            transition: all 0.2s; 
+            white-space: nowrap;
+        }
+        
+        .filter-btn.active { 
+            background: rgba(16, 185, 129, 0.6); 
+        }
+        
+        .filter-btn:hover { 
+            background: rgba(255,255,255,0.2); 
+        }
+        
+        .search-box { 
+            width: 100%; 
+            padding: 12px 15px; 
+            border-radius: 8px; 
+            border: none; 
+            background: rgba(255,255,255,0.1); 
+            color: #FFFFFF; 
+            font-size: 15px; 
+            margin-bottom: 15px;
+            -webkit-appearance: none;
+        }
+        
+        .search-box::placeholder { 
+            color: #94A3B8; 
+        }
+        
+        .lead-card { 
+            background: #1E293B; 
+            border-radius: 12px; 
+            padding: 15px; 
+            margin-bottom: 12px; 
+            transition: all 0.2s; 
+        }
+        
+        .lead-card:hover { 
+            background: rgba(255,255,255,0.1); 
+        }
+        
+        .lead-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-start; 
+            margin-bottom: 10px; 
+            flex-wrap: wrap; 
+            gap: 8px; 
+        }
+        
+        .lead-name { 
+            font-size: 1.1em; 
+            font-weight: 600; 
+            color: #FFFFFF; 
+        }
+        
+        .lead-info { 
+            font-size: 0.85em; 
+            color: #94A3B8; 
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+        }
+        
+        .lead-info span { 
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+        
+        .lead-info a { 
+            color: #06b6d4; 
+            text-decoration: none; 
+        }
+        
+        .lead-info a:hover { 
+            text-decoration: underline; 
+        }
+        
+        .convo-title { 
+            font-size: 0.85em; 
+            color: #f59e0b; 
+            margin-top: 6px;
+            word-break: break-word;
+        }
+        
+        .badge { 
+            display: inline-block; 
+            padding: 4px 10px; 
+            border-radius: 15px; 
+            font-size: 11px; 
+            font-weight: 600; 
+            white-space: nowrap;
+        }
+        
+        .badge-hot { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .badge-cold { background: rgba(107, 114, 128, 0.2); color: #6b7280; }
+        .badge-email { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+        
+        .btn-row { 
+            display: flex; 
+            gap: 8px; 
+            margin-top: 10px; 
+            flex-wrap: wrap; 
+        }
+        
+        .btn-expand { 
+            flex: 1; 
+            min-width: 120px; 
+            padding: 10px 12px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            border: none; 
+            font-size: 13px; 
+            transition: all 0.2s;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .btn-expand.summary { 
+            background: rgba(16, 185, 129, 0.2); 
+            color: #10b981; 
+        }
+        
+        .btn-expand.summary:hover { 
+            background: rgba(16, 185, 129, 0.4); 
+        }
+        
+        .btn-expand.transcript { 
+            background: rgba(139, 92, 246, 0.2); 
+            color: #a78bfa; 
+        }
+        
+        .btn-expand.transcript:hover { 
+            background: rgba(139, 92, 246, 0.4); 
+        }
+        
+        .section { 
+            display: none; 
+            margin-top: 15px; 
+            padding: 15px; 
+            border-radius: 8px; 
+        }
+        
+        .section.show { 
+            display: block; 
+        }
+        
+        .section.summary { 
+            background: rgba(16, 185, 129, 0.15); 
+            border: 1px solid rgba(16, 185, 129, 0.3); 
+        }
+        
+        .section.transcript { 
+            background: rgba(139, 92, 246, 0.1); 
+            border: 1px solid rgba(139, 92, 246, 0.3); 
+        }
+        
+        .section.followups { 
+            background: rgba(59, 130, 246, 0.1); 
+            border: 1px solid #2563EB; 
+        }
+        
+        .followup-timeline {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+        }        .followup-item {
+            background: #1E293B;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 3px solid #1D4ED8;
+        }
+        
+        .followup-item .badge {
+            font-size: 10px;
+            margin-right: 5px;
+        }
+        
+        .followup-item p {
+            margin: 5px 0;
+            color: #F1F5F9;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .followup-item small {
+            color: #94A3B8;
+            font-size: 0.8em;
+        }
+        
+        .followup-form {
+            background: #1E293B;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .followup-form select,
+        .followup-form textarea,
+        .followup-form input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background: rgba(255,255,255,0.1);
+            color: #FFFFFF;
+            font-size: 14px;
+            margin-bottom: 8px;
+            -webkit-appearance: none;
+        }
+        
+        .followup-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        
+        .followup-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #2563EB;
+            color: #3b82f6;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+            min-height: 44px;
+        }
+        
+        .followup-form button:hover {
+            background: #1D4ED8;
+        }
+        
+        .btn-expand.followups { 
+            background: rgba(59, 130, 246, 0.2); 
+            color: #3b82f6; 
+        }
+        
+        .btn-expand.followups:hover { 
+            background: rgba(59, 130, 246, 0.4); 
+        }
+        
+        .btn-expand.docs { 
+            background: rgba(168, 85, 247, 0.2); 
+            color: #a855f7; 
+        }
+        
+        .btn-expand.docs:hover { 
+            background: rgba(168, 85, 247, 0.4); 
+        }
+        
+        .followup-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+            margin-left: 5px;
+        }
+        
+        .section-header { 
+            font-weight: 600; 
+            margin-bottom: 10px; 
+            font-size: 0.9em; 
+        }
+        
+        .summary .section-header { 
+            color: #10b981; 
+        }
+        
+        .transcript .section-header { 
+            color: #a78bfa; 
+        }
+        
+        .section-content { 
+            font-size: 0.9em; 
+            line-height: 1.6; 
+            color: #F1F5F9; 
+            max-height: 300px; 
+            overflow-y: auto; 
+            white-space: pre-wrap; 
+            word-break: break-word;
+        }
+        
+        .transcript-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .email-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            background: #2563EB;
+            color: #3b82f6;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+            min-height: 44px;
+        }
+        
+        .email-btn:hover {
+            background: #1D4ED8;
+        }
+        
+        .back-btn { 
+            display: none; 
+            padding: 10px 16px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            background: rgba(255,255,255,0.1); 
+            color: #FFFFFF; 
+            margin-top: 15px;
+            min-height: 44px;
+            font-size: 14px;
+        }
+        
+        .back-btn.show { 
+            display: inline-flex; 
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .pagination { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 6px; 
+            margin-top: 25px; 
+            flex-wrap: wrap;
+            padding: 0 5px;
+        }
+        
+        .page-btn { 
+            padding: 8px 12px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            background: rgba(255,255,255,0.1); 
+            color: #FFFFFF; 
+            font-size: 13px; 
+            transition: all 0.2s;
+            min-height: 40px;
+            min-width: 40px;
+        }
+        
+        .page-btn:hover:not(:disabled) { 
+            background: rgba(255,255,255,0.2); 
+        }
+        
+        .page-btn:disabled { 
+            opacity: 0.4; 
+            cursor: not-allowed; 
+        }
+        
+        .page-btn.active { 
+            background: rgba(16, 185, 129, 0.5); 
+        }
+        
+        .page-info { 
+            color: #94A3B8; 
+            font-size: 14px; 
+            margin: 15px 0; 
+            text-align: center; 
+        }
+        
+        .last-updated { 
+            text-align: center; 
+            color: #666; 
+            padding: 15px; 
+            font-size: 13px; 
+        }
+        
+        .leads-container { 
+            display: grid; 
+            gap: 12px; 
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            
+            .container {
+                padding: 200px 10px 10px 10px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+                padding: 15px 0;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            
+            .stat {
+                padding: 12px 8px;
+            }
+            
+            .stat-value {
+                font-size: 1.5em;
+            }
+            
+            .stat-label {
+                font-size: 0.75em;
+            }
+            
+            .filter-btns {
+                gap: 5px;
+            }
+            
+            .filter-btn {
+                padding: 6px 12px;
+                font-size: 11px;
+            }
+            
+            .lead-card {
+                padding: 12px;
+            }
+            
+            .lead-header {
+                flex-direction: column;
+                gap: 6px;
+            }
+            
+            .lead-name {
+                font-size: 1em;
+            }
+            
+            .lead-info {
+                font-size: 0.8em;
+                flex-direction: column;
+                gap: 4px;
+            }
+            
+            .lead-info span {
+                font-size: 0.95em;
+            }
+            
+            .convo-title {
+                font-size: 0.8em;
+            }
+            
+            .badge {
+                font-size: 10px;
+                padding: 3px 8px;
+            }
+            
+            .btn-row {
+                flex-direction: column;
+            }
+            
+            .btn-expand {
+                min-width: 100%;
+                font-size: 12px;
+                padding: 12px;
+            }
+            
+            .btn-delete {
+                min-width: 100%;
+                font-size: 12px;
+                padding: 12px;
+                margin-top: 8px;
+            }
+            
+            .section {
+                padding: 12px;
+            }
+            
+            .section-content {
+                font-size: 0.85em;
+                max-height: 250px;
+            }
+            
+            .pagination {
+                gap: 4px;
+            }
+            
+            .page-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+                min-height: 36px;
+                min-width: 36px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .stat-value {
+                font-size: 1.3em;
+            }
+            
+            h1 {
+                font-size: 1.3em;
+            }
+            
+            .filter-btn {
+                padding: 5px 10px;
+                font-size: 10px;
+            }
+        }
+        
+        /* Fix for very small screens */
+        @media (max-width: 360px) {
+            .container {
+                padding: 200px 8px 8px 8px;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-modal" id="loginModal">
+        <div class="login-box">
+            <h2>🔐 Login Required</h2>
+            <input type="text" class="login-input" id="username" placeholder="Username" onkeypress="if(event.key==='Enter') login()">
+            <input type="password" class="login-input" id="password" placeholder="Password" onkeypress="if(event.key==='Enter') login()">
+            <button class="login-btn" onclick="login()">Login</button>
+            <div class="login-error" id="loginError">Invalid credentials!</div>
+        </div>
+    </div>
+    
+    <!-- Change Password Modal -->
+    <div class="login-modal" id="docManagerModal">
+        <div class="login-box" style="max-width: 600px;">
+            <div class="modal-header">
+                <h2>📄 Document Manager</h2>
+                <button class="close-btn" onclick="closeDocManager()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="doc-lead-info" style="margin-bottom: 20px; padding: 15px; background: #1E293B; border-radius: 8px;">
+                    <div id="doc-lead-name" style="font-size: 18px; font-weight: bold; margin-bottom: 5px;"></div>
+                    <div id="doc-lead-contact" style="color: #94A3B8; font-size: 14px;"></div>
+                </div>
+                
+                <div class="upload-section" style="margin-bottom: 20px;">
+                    <input type="file" id="doc-file-input" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" style="margin-bottom: 10px; color: #F1F5F9;">
+                    <button class="btn-expand" onclick="uploadDoc()" style="width: 100%;">📤 Upload Document</button>
+                    <div id="upload-status" style="margin-top: 10px; font-size: 14px;"></div>
+                </div>
+                
+                <div class="docs-list-section">
+                    <h3 style="margin-bottom: 15px; color: #F1F5F9;">Uploaded Documents</h3>
+                    <div id="docs-list" style="max-height: 300px; overflow-y: auto;">
+                        <p style="color: #64748B; text-align: center; padding: 20px;">No documents uploaded yet.</p>
+                    </div>
+                </div>
+                
+                <!-- Back to List Button -->
+                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #334155;">
+                    <button class="btn-expand" onclick="backToLeadFromDocs()" style="width: 100%; background: rgba(37, 99, 235, 0.3); color: #60A5FA;">
+                        🔙 Back to Lead
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="login-modal" id="changePasswordModal">
+        <div class="login-box">
+            <h2>🔑 Change Password</h2>
+            <input type="password" class="login-input" id="currentPassword" placeholder="Current Password" onkeypress="if(event.key==='Enter') changePassword()">
+            <input type="password" class="login-input" id="newPassword" placeholder="New Password (min 4 chars)" onkeypress="if(event.key==='Enter') changePassword()">
+            <input type="password" class="login-input" id="confirmPassword" placeholder="Confirm New Password" onkeypress="if(event.key==='Enter') changePassword()">
+            <button class="login-btn" onclick="changePassword()">Update Password</button>
+            <button class="login-btn" style="background: rgba(239, 68, 68, 0.3); margin-top: 8px;" onclick="hideChangePasswordModal()">Cancel</button>
+            <div class="login-error" id="passwordError">Invalid current password!</div>
+        </div>
+    </div>
+    
+
+    
+    <div class="container" id="mainContainer" style="display: none;">
+    <div class="user-info" id="userInfo">
+        <span id="userRole"></span>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+        <button class="logout-btn" style="background: rgba(16, 185, 129, 0.3); color: #10b981;" onclick="showChangePasswordModal()">🔑 Change Password</button>
+    </div>
+        <h1>🏥 Rupeeboss CRM</h1>
+        <div class="note">📅 Leads from D-Insights AI Voice Agent conversations</div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value" id="stat-total">174</div>
+                <div class="stat-label">Total Leads</div>
+            </div>
+            <div class="stat stat-hot">
+                <div class="stat-value" id="stat-hot">63</div>
+                <div class="stat-label">🔥 HOT</div>
+            </div>
+            <div class="stat stat-cold">
+                <div class="stat-value" id="stat-cold">111</div>
+                <div class="stat-label">❄️ COLD</div>
+            </div>
+            <div class="stat stat-email">
+                <div class="stat-value" id="stat-email">0</div>
+                <div class="stat-label">📧 EMAIL</div>
+            </div>
+        </div>
+
+        <div class="filter-btns">
+            <button class="filter-btn active" onclick="setCategory('all')">All (<span id="filter-all">174</span>)</button>
+            <button class="filter-btn" onclick="setCategory('HOT')">🔥 HOT (<span id="filter-hot">63</span>)</button>
+            <button class="filter-btn" onclick="setCategory('COLD')">❄️ COLD (<span id="filter-cold">111</span>)</button>
+            <button class="filter-btn" onclick="setCategory('EMAIL_ONLY')">📧 EMAIL (<span id="filter-email">0</span>)</button>
+            <button class="filter-btn" onclick="setCategory('DUE')">📅 DUE (<span id="filter-due">0</span>)</button>
+        </div>
+
+        <input type="text" class="search-box" placeholder="Search by name, email, phone, or topic..." oninput="handleSearch(this.value)">
+
+        <div id="leads-container" class="leads-container"></div>
+        
+        <div class="page-info" id="page-info"></div>
+        <div class="pagination" id="pagination"></div>
+
+        <div class="last-updated">
+            Last updated: May 9, 2026 (174 leads from RupeeBoss AI Voice Agent)<br>
+            <small>Source: ElevenLabs Conversation Data</small>
+        </div>
+
+    <script>
+        // Follow-ups data embedded (no fetch needed)
+        const FOLLOW_UPS_DATA = {};
+
+        const PAGE_SIZE = 16;
+        let currentCategory = 'all';
+        let currentPage = 1;
+        let searchQuery = '';
+        let allData = [];
+        let expandedLead = null;
+        let savedScrollPosition = 0;
+        let savedLeadId = null;
+        let currentUser = null;
+        let followUpsCache = {}; // Cache for follow-ups data
+        
+        // Load credentials from localStorage or use defaults
+        function loadCredentials() {
+            const saved = localStorage.getItem('crm_credentials');
+            if (saved) {
+                return JSON.parse(saved);
+            }
+            return {
+                'admin': { password: 'admin123', role: 'admin' },
+                'user': { password: 'user123', role: 'user' }
+            };
+        }
+        
+        function saveCredentials(creds) {
+            localStorage.setItem('crm_credentials', JSON.stringify(creds));
+        }
+        
+        let USERS = loadCredentials();
+        
+        // Check auth on load
+        function checkAuth() {
+            const saved = sessionStorage.getItem('crm_user');
+            if (saved) {
+                currentUser = JSON.parse(saved);
+                showMainUI();
+            } else {
+                showLogin();
+            }
+        }
+        
+        function showLogin() {
+            document.getElementById('loginModal').classList.add('show');
+            document.getElementById('mainContainer').style.display = 'none';
+            document.getElementById('userInfo').classList.remove('show');
+        }
+        
+        function showMainUI() {
+            document.getElementById('loginModal').classList.remove('show');
+            document.getElementById('mainContainer').style.display = 'block';
+            document.getElementById('userInfo').classList.add('show');
+            document.getElementById('userRole').textContent = `👤 ${currentUser.role.toUpperCase()}`;
+            
+            // Show/hide delete buttons based on role
+            if (currentUser.role === 'admin') {
+                document.querySelectorAll('.btn-delete').forEach(btn => btn.classList.add('show'));
+            }
+            
+            loadData();
+        }
+        
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorEl = document.getElementById('loginError');
+            
+            if (USERS[username] && USERS[username].password === password) {
+                currentUser = { username, role: USERS[username].role };
+                sessionStorage.setItem('crm_user', JSON.stringify(currentUser));
+                errorEl.classList.remove('show');
+                showMainUI();
+            } else {
+                errorEl.classList.add('show');
+            }
+        }
+        
+        function showChangePasswordModal() {
+            document.getElementById('changePasswordModal').classList.add('show');
+            document.getElementById('currentPassword').value = '';
+            document.getElementById('newPassword').value = '';
+            document.getElementById('confirmPassword').value = '';
+            document.getElementById('passwordError').classList.remove('show');
+        }
+        
+        function hideChangePasswordModal() {
+            document.getElementById('changePasswordModal').classList.remove('show');
+        }
+        
+        function changePassword() {
+            const current = document.getElementById('currentPassword').value;
+            const newPass = document.getElementById('newPassword').value;
+            const confirmPass = document.getElementById('confirmPassword').value;
+            const errorEl = document.getElementById('passwordError');
+            
+            // Validate current password
+            if (!USERS[currentUser.username] || USERS[currentUser.username].password !== current) {
+                errorEl.textContent = 'Invalid current password!';
+                errorEl.classList.add('show');
+                return;
+            }
+            
+            // Validate new password length
+            if (newPass.length < 4) {
+                errorEl.textContent = 'Password must be at least 4 characters!';
+                errorEl.classList.add('show');
+                return;
+            }
+            
+            // Validate passwords match
+            if (newPass !== confirmPass) {
+                errorEl.textContent = 'New passwords do not match!';
+                errorEl.classList.add('show');
+                return;
+            }
+            
+            // Update password
+            USERS[currentUser.username].password = newPass;
+            saveCredentials(USERS);
+            
+            alert('Password updated successfully!' );
+            hideChangePasswordModal();
+        }
+        
+        function logout() {
+            currentUser = null;
+            sessionStorage.removeItem('crm_user');
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            showLogin();
+        }
+
+        async function loadData() {
+            try {
+                // Always load fresh from GitHub (source of truth)
+                const resp = await fetch('dashboard_data.json?v=' + new Date().getTime());
+                const data = await resp.json();
+                allData = data.leads;
+                
+                updateStats();
+                renderTable();
+                
+                // Load follow-ups for DUE filter
+                if (currentCategory === 'DUE') {
+                    await loadAllFollowUps();
+                }
+            } catch (e) {
+                console.error('Error loading data:', e);
+                alert('Failed to load data from server. Please refresh the page.');
+            }
+        }
+
+        function setCategory(cat) {
+            currentCategory = cat;
+            currentPage = 1;
+            expandedLead = null;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Load follow-ups if DUE filter is selected
+            if (cat === 'DUE') {
+                loadAllFollowUps().then(() => {
+                    updateStats();
+                    renderTable();
+                });
+            } else {
+                updateStats();
+                renderTable();
+            }
+        }
+
+        function handleSearch(query) {
+            searchQuery = query.toLowerCase();
+            currentPage = 1;
+            expandedLead = null;
+            renderTable();
+        }
+
+        function updateStats() {
+            const total = allData.length;
+            const hot = allData.filter(r => r.category === 'HOT').length;
+            const cold = allData.filter(r => r.category === 'COLD').length;
+            const email = allData.filter(r => r.category === 'EMAIL_ONLY').length;
+            
+            // Count leads with due follow-ups
+            let dueCount = 0;
+            if (Object.keys(followUpsCache).length > 0) {
+                const today = new Date().toISOString().split('T')[0];
+                dueCount = allData.filter(row => {
+                    const leadId = row.date + (row.phone || '') + (row.title || '');
+                    const followUps = followUpsCache[leadId] || [];
+                    return followUps.some(fup => 
+                        fup.nextFollowUpDate && 
+                        fup.nextFollowUpDate <= today && 
+                        fup.status === 'pending'
+                    );
+                }).length;
+            }
+            
+            document.getElementById('stat-total').textContent = total;
+            document.getElementById('stat-hot').textContent = hot;
+            document.getElementById('stat-cold').textContent = cold;
+            document.getElementById('stat-email').textContent = email;
+            document.getElementById('filter-all').textContent = total;
+            document.getElementById('filter-hot').textContent = hot;
+            document.getElementById('filter-cold').textContent = cold;
+            document.getElementById('filter-email').textContent = email;
+            const filterDueEl = document.getElementById('filter-due');
+            if (filterDueEl) filterDueEl.textContent = dueCount;
+        }
+
+        // Load all follow-ups for filtering (from API)
+        async function loadAllFollowUps() {
+            try {
+                // Fetch followups.json directly (client-side)
+                // Use embedded data (no fetch)
+                followUpsCache = FOLLOW_UPS_DATA;
+                console.log('📋 Loaded follow-ups for all leads:', Object.keys(followUpsCache).length);
+            } catch (err) {
+                console.error('Error loading all follow-ups:', err);
+                followUpsCache = {};
+            }
+        }
+        
+        function getFiltered() {
+            return allData.filter(row => {
+                const matchCat = currentCategory === 'all' || row.category === currentCategory;
+                const matchSearch = !searchQuery || 
+                    row.name.toLowerCase().includes(searchQuery) || 
+                    row.email.toLowerCase().includes(searchQuery) || 
+                    row.phone.includes(searchQuery) ||
+                    (row.title && row.title.toLowerCase().includes(searchQuery));
+                
+                // Handle DUE filter
+                if (currentCategory === 'DUE') {
+                    const leadId = row.date + (row.phone || '') + (row.title || '');
+                    const followUps = followUpsCache[leadId] || [];
+                    const today = new Date().toISOString().split('T')[0];
+                    return followUps.some(fup => 
+                        fup.nextFollowUpDate && 
+                        fup.nextFollowUpDate <= today && 
+                        fup.status === 'pending'
+                    );
+                }
+                
+                return matchCat && matchSearch;
+            });
+        }
+
+        function generateSummary(lead) {
+            // Use the actual summary from the lead data
+            if (lead.summary && lead.summary.trim() !== '') {
+                return lead.summary;
+            }
+            
+            // Fallback to a generic summary if none exists
+            const name = lead.name || 'Customer';
+            const topic = lead.title || 'Loan Inquiry';
+            const phone = lead.phone || 'N/A';
+            
+            return `${name} contacted RupeeBoss regarding ${topic}. Phone: ${phone}. Please review the transcript for full details.`;
+        }
+
+        function generateTranscript(lead) {
+            // Use the actual transcript from the lead data
+            if (lead.transcript && lead.transcript.trim() !== '') {
+                // Format the transcript with proper line breaks
+                return lead.transcript.replace(/\n/g, '<br>');
+            }
+            
+            // Fallback if no transcript exists
+            return 'No transcript available for this lead.';
+        }
+
+        function toggleSection(leadId, section) {
+            if (expandedLead === leadId + '_' + section) {
+                expandedLead = null;
+            } else {
+                // Save scroll position and lead ID
+                savedScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+                savedLeadId = leadId;
+                expandedLead = leadId + '_' + section;
+            }
+            renderTable();
+        }
+        
+        function deleteLead(leadId) {
+            if (!currentUser || currentUser.role !== 'admin') {
+                alert('Only admin can delete leads!');
+                return;
+            }
+            
+            if (!confirm('Are you sure you want to delete this lead?')) {
+                return;
+            }
+            
+            const index = allData.findIndex(r => (r.date + (r.phone || '') + (r.title || '')) === leadId);
+            if (index > -1) {
+                // Remove from local array
+                const removedLead = allData.splice(index, 1)[0];
+                
+                // Try to update GitHub
+                fetch('/api/update-leads', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ leads: allData })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Server returned ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        updateStats();
+                        renderTable();
+                        alert('Lead deleted and GitHub updated!');
+                    } else {
+                        // Revert local change
+                        allData.splice(index, 0, removedLead);
+                        updateStats();
+                        renderTable();
+                        alert('Failed to update GitHub: ' + (data.error || 'Unknown error'));
+                    }
+                })
+                .catch(error => {
+                    // Revert local change (no localStorage fallback)
+                    allData.splice(index, 0, removedLead);
+                    updateStats();
+                    renderTable();
+                    alert('Error updating GitHub: ' + error.message + '\n\nPlease check your connection and try again.');
+                });
+            }
+        }
+        
+        function goBack() {
+            const leadId = savedLeadId; // Already encoded
+            expandedLead = null;
+            renderTable();
+            // Restore scroll position after render
+            setTimeout(() => {
+                const leadElement = document.querySelector(`[data-lead-id="${leadId}"]`);
+                if (leadElement) {
+                    leadElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    window.scrollTo({ top: savedScrollPosition, behavior: 'smooth' });
+                }
+            }, 100);
+        }
+
+        function generateEmailFromTranscript(leadId) {
+            const lead = allData.find(r => (r.date + r.phone + r.title) === leadId);
+            
+            if (!lead) {
+                alert('Lead not found!');
+                return;
+            }
+            
+            const name = lead.name || 'Customer';
+            const topic = lead.title || 'Business Loan';
+            const phone = lead.phone || '';
+            const transcript = lead.transcript || '';
+            const summary = lead.summary || '';
+            
+            // Extract key information from transcript
+            let loanType = 'Business Loan';
+            let loanAmount = '';
+            let purpose = '';
+            let employment = '';
+            let income = '';
+            let creditScore = '';
+            let experience = '';
+            let companyName = '';
+            
+            // Parse transcript for key details
+            if (transcript) {
+                const lowerTranscript = transcript.toLowerCase();
+                
+                // Detect loan type
+                if (lowerTranscript.includes('personal loan')) loanType = 'Personal Loan';
+                else if (lowerTranscript.includes('home loan')) loanType = 'Home Loan';
+                else if (lowerTranscript.includes('business loan')) loanType = 'Business Loan';
+                else if (lowerTranscript.includes('loan against property')) loanType = 'Loan Against Property';
+                
+                // Extract loan amount
+                const amountMatch = transcript.match(/(\d+\s*(?:lakh|lakhs|crore|crores|cr))/i);
+                if (amountMatch) loanAmount = amountMatch[0];
+                
+                // Extract income
+                const incomeMatch = transcript.match(/(?:income|salary|turnover)\s*(?:is|of|about|approximately)?\s*(?:₹|Rs\.?|INR)?\s*(\d+[,\d]*\s*(?:k|thousand|lakh|lakhs|crore|crores)?)/i);
+                if (incomeMatch) income = incomeMatch[1];
+                
+                // Extract employment type
+                if (lowerTranscript.includes('salaried')) employment = 'Salaried';
+                else if (lowerTranscript.includes('self-employed')) employment = 'Self-employed';
+                else if (lowerTranscript.includes('business')) employment = 'Business Owner';
+                else if (lowerTranscript.includes('professional')) employment = 'Professional';
+                
+                // Extract experience
+                const expMatch = transcript.match(/(\d+)\s*(?:years?|yrs?)\s*(?:of\s*)?(?:experience|work|business)/i);
+                if (expMatch) experience = expMatch[1] + ' years';
+                
+                // Extract credit score
+                const csMatch = transcript.match(/(?:credit\s*score|cibil)\s*(?:is|of|about)?\s*(\d+)/i);
+                if (csMatch) creditScore = csMatch[1];
+            }
+            
+            // Build dynamic email based on extracted information
+            let personalizationDetails = '';
+            
+            if (loanAmount) {
+                personalizationDetails += `\n- Loan Amount Required: ${loanAmount}`;
+            }
+            if (income) {
+                personalizationDetails += `\n- Your Income/Turnover: ₹${income}`;
+            }
+            if (employment) {
+                personalizationDetails += `\n- Employment Type: ${employment}`;
+            }
+            if (experience) {
+                personalizationDetails += `\n- Work Experience: ${experience}`;
+            }
+            if (creditScore) {
+                personalizationDetails += `\n- Credit Score: ${creditScore}`;
+            }
+            
+            // Create the email
+            const emailReply = `Dear ${name === 'Unknown' ? 'Customer' : name},
+
+Thank you for contacting RupeeBoss Financial Services regarding your ${loanType} inquiry.
+
+We have reviewed your conversation with our AI assistant, Riya, and would like to follow up with you personally to provide the best loan options tailored to your needs.${personalizationDetails}
+
+Based on the information shared, our loan experts will:
+1. Analyze your eligibility for ${loanType}
+2. Find the best interest rates from our partner banks (starting from 8.35% p.a.)
+3. Provide a customized repayment plan
+4. Guide you through the documentation process
+
+Next Steps:
+- Our relationship manager will contact you within 24 hours on ${phone || 'your registered number'}
+- We will schedule a convenient time to discuss your requirements
+- You can also reach us directly at 1800-123-4567
+
+Documents Required (keep ready):
+✓ KYC Documents (Aadhaar, PAN)
+✓ Income Proof (Salary slips / ITR / Bank statements)
+✓ Business Proof (if applicable)
+✓ Address Proof
+
+Why Choose RupeeBoss:
+✓ 50+ partner banks and NBFCs
+✓ Loan amounts from ₹50,000 to ₹100 Crores
+✓ Minimal documentation
+✓ Quick disbursal (within 10-15 working days)
+✓ Competitive interest rates
+✓ Dedicated relationship manager
+
+If you have any questions or would like to expedite the process, please reply to this email or call our customer care.
+
+Reference ID: ${lead.id || 'N/A'}
+Conversation Date: ${lead.date}
+
+Best regards,
+Team RupeeBoss
+📧 care@rupeeboss.com
+📞 1800-123-4567 (Toll-Free)
+🌐 www.rupeeboss.com
+
+---
+This email was generated based on your conversation with RupeeBoss AI Assistant on ${lead.date}. Please do not reply directly to this automated message. Contact our team using the details above.`;
+            
+            const subject = `Follow-up: Your ${loanType} Inquiry - RupeeBoss Financial Services`;
+            
+            // Log this email as a follow-up
+            logEmailAsFollowUp(leadId, emailReply);
+            
+            // Show the email in a modal
+            showEmailModal(name, subject, emailReply, lead.email);
+        }
+        
+        function showEmailModal(name, subject, body, email) {
+            // Create modal HTML
+            const modalHtml = `
+            <div id="emailModal" class="login-modal show" style="z-index: 2000;">
+                <div class="login-box" style="max-width: 700px; max-height: 90vh; overflow-y: auto;">
+                    <div class="modal-header">
+                        <h2>📧 Generated Email Reply</h2>
+                        <button class="close-btn" onclick="closeEmailModal()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div style="margin-bottom: 15px;">
+                            <strong>To:</strong> ${name} ${email ? '&lt;' + email + '&gt;' : '(No email - copy manually)'}
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <strong>Subject:</strong> ${subject}
+                        </div>
+                        <div style="background: #0F172A; padding: 20px; border-radius: 8px; border: 1px solid #334155; white-space: pre-wrap; font-family: monospace; font-size: 14px; max-height: 400px; overflow-y: auto;">
+${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
+                        </div>
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            <button class="btn-expand" onclick="copyEmailToClipboard()">📋 Copy Email</button>
+                            ${email ? `<button class="btn-expand" onclick="openEmailClient('${email}', '${subject.replace(/'/g, "\\'")}', '${body.replace(/'/g, "\\'").replace(/\n/g, '\\n')}')">📧 Send via Email Client</button>` : ''}
+                            <button class="btn-delete" onclick="closeEmailModal()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+            
+            // Remove existing modal if any
+            const existing = document.getElementById('emailModal');
+            if (existing) existing.remove();
+            
+            // Add modal to body
+            const div = document.createElement('div');
+            div.innerHTML = modalHtml;
+            document.body.appendChild(div);
+            
+            // Store for copy function
+            window.currentEmailBody = body;
+            window.currentEmailSubject = subject;
+            window.currentEmailRecipient = email;
+        }
+        
+        function closeEmailModal() {
+            const modal = document.getElementById('emailModal');
+            if (modal) modal.remove();
+            window.currentEmailBody = null;
+        }
+        
+        function copyEmailToClipboard() {
+            if (window.currentEmailBody) {
+                navigator.clipboard.writeText(window.currentEmailBody).then(() => {
+                    alert('Email copied to clipboard!');
+                }).catch(() => {
+                    // Fallback
+                    const textarea = document.createElement('textarea');
+                    textarea.value = window.currentEmailBody;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    alert('Email copied to clipboard!');
+                });
+            }
+        }
+        
+        function openEmailClient(email, subject, body) {
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(mailtoLink, '_blank');
+        }
+
+        function renderTable() {
+            const filtered = getFiltered();
+            const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+            if (currentPage > totalPages) currentPage = totalPages;
+            
+            const start = (currentPage - 1) * PAGE_SIZE;
+            const end = start + PAGE_SIZE;
+            const pageData = filtered.slice(start, end);
+            
+            const container = document.getElementById('leads-container');
+            
+            if (expandedLead !== null && expandedLead.includes('_')) {
+                const [leadId, section] = expandedLead.split('_');
+                const lead = filtered.find(r => (r.date + r.phone + r.title) === leadId);
+                
+                if (lead) {
+                    const summary = generateSummary(lead);
+                    const transcript = generateTranscript(lead);
+                    
+                    let content = '';
+                    
+                    if (section === 'summary') {
+                        content = `
+                            <div class="lead-card" style="background: rgba(0,0,0,0.2);" data-lead-id="${leadId}">
+                                <div class="lead-header">
+                                    <div>
+                                        <div class="lead-name">${lead.name || 'Unknown'}</div>
+                                        <div class="lead-info">
+                                            ${lead.phone ? `<span>📱 <a href="tel:${lead.phone}">${lead.phone}</a></span>` : ''}
+                                            ${lead.email ? `<span>✉️ ${lead.email}</span>` : ''}
+                                            <span>📅 ${lead.date}</span>
+                                        </div>
+                                        <div class="convo-title">📞 ${lead.title || 'General Inquiry'}</div>
+                                    </div>
+                                    <span class="badge badge-${lead.category.toLowerCase()}">${lead.category === 'HOT' ? '🔥 HOT' : lead.category === 'COLD' ? '❄️ COLD' : '📧 EMAIL'}</span>
+                                </div>
+                                <div class="section summary show">
+                                    <div class="section-header">📋 Call Summary</div>
+                                    <div class="section-content">${summary}</div>
+                                </div>
+                                <button class="back-btn show" onclick="goBack()">← Back to Leads List</button>
+                            </div>
+                        `;
+                    } else if (section === 'transcript') {
+                        content = `
+                            <div class="lead-card" style="background: rgba(0,0,0,0.2);" data-lead-id="${leadId}">
+                                <div class="lead-header">
+                                    <div>
+                                        <div class="lead-name">${lead.name || 'Unknown'}</div>
+                                        <div class="lead-info">
+                                            ${lead.phone ? `<span>📱 <a href="tel:${lead.phone}">${lead.phone}</a></span>` : ''}
+                                            ${lead.email ? `<span>✉️ ${lead.email}</span>` : ''}
+                                            <span>📅 ${lead.date}</span>
+                                            <span>⏱️ ${Math.floor((lead.duration || 60) / 60)} min</span>
+                                        </div>
+                                        <div class="convo-title">📞 ${lead.title || 'General Inquiry'}</div>
+                                    </div>
+                                    <span class="badge badge-${lead.category.toLowerCase()}">${lead.category === 'HOT' ? '🔥 HOT' : lead.category === 'COLD' ? '❄️ COLD' : '📧 EMAIL'}</span>
+                                </div>
+                                <div class="section transcript show">
+                                    <div class="section-header">📝 Conversation Transcript</div>
+                                    <div class="section-content">${transcript}</div>
+                                </div>
+                                <div class="transcript-actions">
+                                    <button class="back-btn show" onclick="goBack()">← Back to Leads List</button>
+                                    <button class="email-btn" onclick="generateEmailFromTranscript('${leadId}')">📧 Generate Email Reply</button>
+                                </div>
+                            </div>
+                        `;
+                    } else if (section === 'followups') {
+                        content = `
+                            <div class="lead-card" style="background: rgba(0,0,0,0.2);" data-lead-id="${leadId}">
+                                <div class="lead-header">
+                                    <div>
+                                        <div class="lead-name">${lead.name || 'Unknown'}</div>
+                                        <div class="lead-info">
+                                            ${lead.phone ? `<span>📱 <a href="tel:${lead.phone}">${lead.phone}</a></span>` : ''}
+                                            ${lead.email ? `<span>✉️ ${lead.email}</span>` : ''}
+                                            <span>📅 ${lead.date}</span>
+                                        </div>
+                                        <div class="convo-title">📞 ${lead.title || 'General Inquiry'}</div>
+                                    </div>
+                                    <span class="badge badge-${lead.category.toLowerCase()}">${lead.category === 'HOT' ? '🔥 HOT' : lead.category === 'COLD' ? '❄️ COLD' : '📧 EMAIL'}</span>
+                                </div>
+                                <div class="section followups show">
+                                    <div class="section-header">📅 Follow-Ups Timeline</div>
+                                    <div class="followup-timeline" id="followup-timeline-${leadId}">
+                                        <p style="color: #94A3B8;font-size:0.9em;">Loading follow-ups...</p>
+                                    </div>
+                                    <div class="followup-form">
+                                        <select id="followup-type-${leadId}">
+                                            <option value="note">📝 Note</option>
+                                            <option value="email">📧 Email</option>
+                                            <option value="call">📞 Call</option>
+                                        </select>
+                                        <textarea id="followup-content-${leadId}" placeholder="Add note or log interaction..."></textarea>
+                                        <input type="date" id="followup-date-${leadId}" placeholder="Next follow-up date">
+                                        <button onclick="addFollowUp('${leadId}')">Log Follow-Up</button>
+                                    </div>
+                                </div>
+                                <button class="back-btn show" onclick="goBack()">← Back to Leads List</button>
+                            </div>
+                        `;
+                        // Load follow-ups after rendering
+                        setTimeout(() => loadFollowUps(leadId), 100);
+                    }
+                    
+                    container.innerHTML = content;
+                    document.getElementById('page-info').textContent = '';
+                    document.getElementById('pagination').innerHTML = '';
+                    return;
+                }
+            }
+            
+            container.innerHTML = pageData.map((row) => {
+                const leadId = row.date + (row.phone || '') + (row.title || '');
+                const shortTitle = row.title ? (row.title.length > 50 ? row.title.substring(0, 50) + '...' : row.title) : 'General Inquiry';
+                
+                return `
+                    <div class="lead-card" data-lead-id="${leadId}">
+                        <div class="lead-header">
+                            <div>
+                                <div class="lead-name">${row.name || 'Unknown'}</div>
+                                <div class="lead-info">
+                                    ${row.phone ? `<span>📱 <a href="tel:${row.phone}">${row.phone}</a></span>` : ''}
+                                    ${row.email ? `<span>✉️ ${row.email}</span>` : ''}
+                                    <span>📅 ${row.date}</span>
+                                </div>
+                                <div class="convo-title">📞 ${shortTitle}</div>
+                            </div>
+                            <span class="badge badge-${row.category.toLowerCase()}">${row.category === 'HOT' ? '🔥 HOT' : row.category === 'COLD' ? '❄️ COLD' : '📧 EMAIL'}</span>
+                        </div>
+                        <div class="btn-row">
+                            <button class="btn-expand summary" onclick="toggleSection('${leadId}', 'summary')">
+                                📋 View Summary
+                            </button>
+                            <button class="btn-expand transcript" onclick="toggleSection('${leadId}', 'transcript')">
+                                📖 View Transcript
+                            </button>
+                            <button class="btn-expand followups" onclick="toggleSection('${leadId}', 'followups')">
+                                📅 Follow-Ups
+                            </button>
+                            <button class="btn-expand docs" onclick="openDocManager('${leadId}')">
+                                📄 Docs
+                            </button>
+                            <button class="btn-delete" onclick="deleteLead('${leadId}')">🗑️ Delete</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            document.getElementById('page-info').textContent = `Showing ${start + 1}-${Math.min(end, filtered.length)} of ${filtered.length} leads`;
+            
+            // Pagination
+            let html = '';
+            html += `<button class="page-btn" onclick="goToPage(1)" ${currentPage === 1 ? 'disabled' : ''}>«</button>`;
+            html += `<button class="page-btn" onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>‹</button>`;
+            
+            const maxButtons = 5;
+            let startPage = Math.max(1, currentPage - Math.floor(maxButtons / 2));
+            let endPage = Math.min(totalPages, startPage + maxButtons - 1);
+            if (endPage - startPage < maxButtons - 1) {
+                startPage = Math.max(1, endPage - maxButtons + 1);
+            }
+            
+            if (startPage > 1) {
+                html += `<button class="page-btn" onclick="goToPage(1)">1</button>`;
+                if (startPage > 2) html += `<span style="color: #94A3B8">...</span>`;
+            }
+            
+            for (let i = startPage; i <= endPage; i++) {
+                html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
+            }
+            
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) html += `<span style="color: #94A3B8">...</span>`;
+                html += `<button class="page-btn" onclick="goToPage(${totalPages})">${totalPages}</button>`;
+            }
+            
+            html += `<button class="page-btn" onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>›</button>`;
+            html += `<button class="page-btn" onclick="goToPage(${totalPages})" ${currentPage === totalPages ? 'disabled' : ''}>»</button>`;
+            
+            document.getElementById('pagination').innerHTML = html;
+            
+            // Show delete buttons for admin
+            if (currentUser && currentUser.role === 'admin') {
+                document.querySelectorAll('.btn-delete').forEach(btn => btn.classList.add('show'));
+            }
+        }
+
+        // Follow-up functions (using server-side API)
+                // Load follow-ups for a lead (client-side fetch)
+        // Load follow-ups (from localStorage + embedded data)
+        async function loadFollowUps(leadId) {
+            try {
+                const container = document.getElementById(`followup-timeline-${leadId}`);
+                if (!container) return;
+                
+                // Get follow-ups from localStorage (loadFollowUps function)
+                let allFollowUps = {};
+                const stored = localStorage.getItem('rupeeboss_followups');
+                if (stored) {
+                    allFollowUps = JSON.parse(stored);
+                }
+                
+                // Merge with embedded FOLLOW_UPS_DATA (if any)
+                if (typeof FOLLOW_UPS_DATA !== 'undefined' && FOLLOW_UPS_DATA[leadId]) {
+                    if (!allFollowUps[leadId]) allFollowUps[leadId] = [];
+                    // Merge, avoiding duplicates by ID
+                    const existingIds = new Set(allFollowUps[leadId].map(f => f.id));
+                    FOLLOW_UPS_DATA[leadId].forEach(f => {
+                        if (!existingIds.has(f.id)) {
+                            allFollowUps[leadId].push(f);
+                        }
+                    });
+                }
+                
+                const followUps = allFollowUps[leadId] || [];
+                
+                // Update cache
+                followUpsCache[leadId] = followUps;
+                
+                // Render follow-ups
+                if (followUps.length === 0) {
+                    container.innerHTML = '<div class="no-followups">No follow-ups yet.</div>';
+                    return;
+                }
+                
+                const sorted = [...followUps].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                
+                container.innerHTML = sorted.map(fup => `
+                    <div class="followup-item status-${fup.status || 'pending'}">
+                        <div class="followup-header">
+                            <span class="followup-type">${fup.type === 'email' ? '📧' : fup.type === 'call' ? '📞' : '📝'} ${fup.type.toUpperCase()}</span>
+                            <span class="followup-date">${new Date(fup.timestamp).toLocaleString()}</span>
+                        </div>
+                        <div class="followup-content">${fup.content}</div>
+                        <div class="followup-meta">
+                            <span>Rep: ${fup.rep || 'Unknown'}</span>
+                            ${fup.nextFollowUpDate ? `<span>Next: ${new Date(fup.nextFollowUpDate).toLocaleDateString()}</span>` : ''}
+                            <span class="followup-status">${fup.status || 'pending'}</span>
+                        </div>
+                    </div>
+                `).join('');
+                
+            } catch (err) {
+                console.error('Error loading follow-ups:', err);
+                const container = document.getElementById(`followup-timeline-${leadId}`);
+                if (container) {
+                    container.innerHTML = '<div class="error">Error loading follow-ups: ' + err.message + '</div>';
+                }
+            }
+        }
+
+        
+        // Add follow-up (uses localStorage for persistence)
+        // Add follow-up with better error handling
+        async function addFollowUp(leadId) {
+            console.log('📝 addFollowUp called with leadId:', leadId);
+            
+            if (!currentUser) {
+                alert('Please login first!');
+                return;
+            }
+            
+            try {
+                const typeEl = document.getElementById(`followup-type-${leadId}`);
+                const contentEl = document.getElementById(`followup-content-${leadId}`);
+                const dateEl = document.getElementById(`followup-date-${leadId}`);
+                
+                if (!typeEl || !contentEl) {
+                    console.error('❌ Form elements not found!');
+                    alert('Error: Form elements not found. Try refreshing.');
+                    return;
+                }
+                
+                const type = typeEl.value;
+                const content = contentEl.value;
+                const nextDate = dateEl?.value || '';
+                
+                if (!content.trim()) {
+                    alert('Please enter follow-up content!');
+                    return;
+                }
+                
+                // Get follow-ups from localStorage (addFollowUp function)
+                let allFollowUps = {};
+                const stored = localStorage.getItem('rupeeboss_followups');
+                if (stored) {
+                    allFollowUps = JSON.parse(stored);
+                    console.log('📂 Loaded follow-ups from localStorage');
+                }
+                
+                // Add new follow-up
+                if (!allFollowUps[leadId]) allFollowUps[leadId] = [];
+                const newFollowUp = {
+                    id: `fup_${Date.now()}`,
+                    type,
+                    timestamp: new Date().toISOString(),
+                    content,
+                    rep: currentUser.username,
+                    nextFollowUpDate: nextDate || null,
+                    status: 'pending'
+                };
+                allFollowUps[leadId].push(newFollowUp);
+                
+                // Save to localStorage
+                localStorage.setItem('rupeeboss_followups', JSON.stringify(allFollowUps));
+                console.log('✅ Saved to localStorage!', newFollowUp);
+                
+                // Verify save
+                const verify = JSON.parse(localStorage.getItem('rupeeboss_followups'));
+                console.log('✅ Verified save:', verify[leadId]?.length || 0, 'follow-ups for this lead');
+                
+                // Update cache
+                followUpsCache[leadId] = allFollowUps[leadId];
+                
+                // Clear form
+                contentEl.value = '';
+                if (dateEl) dateEl.value = '';
+                
+                // Reload follow-ups
+                loadFollowUps(leadId);
+                
+                // Update stats if DUE filter is active
+                if (currentCategory === 'DUE') {
+                    loadAllFollowUps().then(() => {
+                        updateStats();
+                        renderTable();
+                    });
+                }
+                
+                alert('Follow-up added successfully!');
+                
+            } catch (err) {
+                console.error('❌ Error in addFollowUp:', err);
+                alert('Error saving follow-up: ' + err.message);
+            }
+        }
+        
+        // Log email as follow-up (server-side API)
+        async function logEmailAsFollowUp(leadId, emailContent) {
+            if (!currentUser) return;
+            
+            try {
+                await fetch('/api/followups', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        leadId: leadId,
+                        type: 'email',
+                        content: `Email sent: ${emailContent.substring(0, 100)}...`,
+                        rep: currentUser.username,
+                        nextFollowUpDate: new Date(Date.now() + 2*24*60*60*1000).toISOString().split('T')[0],
+                        status: 'pending'
+                    })
+                });
+                
+                // Update cache
+                await loadAllFollowUps();
+            } catch (error) {
+                console.error('Error logging email follow-up:', error);
+            }
+        }
+        
+        function goToPage(page) {
+            currentPage = page;
+            expandedLead = null;
+            renderTable();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        checkAuth();
+        
+        // Document Management Functions
+        let currentDocLeadId = null;
+        let currentDocLeadIndex = null;
+        
+        function openDocManager(leadId) {
+            if (!currentUser || !currentUser.role) {
+                alert('Please login first!');
+                return;
+            }
+            
+            currentDocLeadId = leadId;
+            currentDocLeadIndex = allData.findIndex(r => (r.date + (r.phone || '') + (r.title || '')) === leadId);
+            
+            if (currentDocLeadIndex === -1) {
+                alert('Lead not found!');
+                return;
+            }
+            
+            const lead = allData[currentDocLeadIndex];
+            
+            // Update modal header
+            document.getElementById('doc-lead-name').textContent = lead.name || 'Unknown';
+            document.getElementById('doc-lead-contact').textContent = 
+                [lead.phone ? `📱 ${lead.phone}` : '', lead.email ? `✉️ ${lead.email}` : ''].filter(Boolean).join(' | ');
+            
+            // Load existing documents
+            loadDocs(lead);
+            
+            // Show modal
+            document.getElementById('docManagerModal').classList.add('show');
+        }
+        
+        function closeDocManager() {
+            document.getElementById('docManagerModal').classList.remove('show');
+            currentDocLeadId = null;
+            currentDocLeadIndex = null;
+            document.getElementById('doc-file-input').value = '';
+            document.getElementById('upload-status').textContent = '';
+        }
+        
+        function backToLeadFromDocs() {
+            // Store the current lead ID before closing
+            const leadId = currentDocLeadId;
+            const leadIndex = currentDocLeadIndex;
+            
+            // Close the document manager modal
+            closeDocManager();
+            
+            // If we have a valid lead, scroll to it and highlight it
+            if (leadId && leadIndex !== null && leadIndex !== -1) {
+                // Use setTimeout to ensure the modal is closed and DOM is updated
+                setTimeout(() => {
+                    // Find the lead card element
+                    const leadCard = document.querySelector(`[data-lead-id="${leadId}"]`);
+                    
+                    if (leadCard) {
+                        // Scroll to the lead card
+                        leadCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        // Add a temporary highlight effect
+                        leadCard.style.transition = 'box-shadow 0.3s ease';
+                        leadCard.style.boxShadow = '0 0 20px rgba(37, 99, 235, 0.6)';
+                        
+                        // Remove highlight after 2 seconds
+                        setTimeout(() => {
+                            leadCard.style.boxShadow = '';
+                        }, 2000);
+                    } else {
+                        // If lead card not found (might be on different page), reload and then scroll
+                        console.log('Lead card not found, reloading...');
+                        const row = allData[leadIndex];
+                        if (row) {
+                            // Re-render to ensure the lead is visible
+                            renderPage(currentCategory, currentPage);
+                            
+                            // Try scrolling again after render
+                            setTimeout(() => {
+                                const retryCard = document.querySelector(`[data-lead-id="${leadId}"]`);
+                                if (retryCard) {
+                                    retryCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    retryCard.style.transition = 'box-shadow 0.3s ease';
+                                    retryCard.style.boxShadow = '0 0 20px rgba(37, 99, 235, 0.6)';
+                                    setTimeout(() => {
+                                        retryCard.style.boxShadow = '';
+                                    }, 2000);
+                                }
+                            }, 500);
+                        }
+                    }
+                }, 300);
+            }
+        }
+        
+        function loadDocs(lead) {
+            const docsList = document.getElementById('docs-list');
+            const docs = lead.documents || [];
+            
+            if (docs.length === 0) {
+                docsList.innerHTML = '<p style="color: #64748B; text-align: center; padding: 20px;">No documents uploaded yet.</p>';
+                return;
+            }
+            
+            let html = '';
+            docs.forEach(doc => {
+                const filePath = doc.url.replace('https://raw.githubusercontent.com/kamatanuj/rupeeboss-crm/main/', '');
+                html += `
+                <div style="background: #0F172A; padding: 15px; margin-bottom: 10px; border-radius: 8px; border-left: 3px solid #2563EB;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <div style="color: #F1F5F9; font-weight: bold; margin-bottom: 5px;">📄 ${doc.name}</div>
+                            <div style="color: #64748B; font-size: 12px;">Uploaded: ${new Date(doc.uploadedAt).toLocaleString()}</div>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn-expand" style="padding: 5px 10px; font-size: 12px;" onclick="downloadDoc('${doc.url}', '${doc.name}')">📥 Download</button>
+                            ${currentUser && currentUser.role === 'admin' ? `<button class="btn-delete" style="padding: 5px 10px; font-size: 12px;" onclick="deleteDoc('${currentDocLeadId}', '${doc.id}', '${filePath}', ${currentDocLeadIndex})">🗑️ Delete</button>` : ''}
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+            docsList.innerHTML = html;
+        }
+        
+        async function uploadDoc() {
+            const fileInput = document.getElementById('doc-file-input');
+            const statusDiv = document.getElementById('upload-status');
+            
+            if (!fileInput.files || fileInput.files.length === 0) {
+                statusDiv.innerHTML = '<span style="color: #EF4444;">❌ Please select at least one file</span>';
+                return;
+            }
+            
+            if (currentDocLeadIndex === null) {
+                statusDiv.innerHTML = '<span style="color: #EF4444;">❌ No lead selected</span>';
+                return;
+            }
+            
+            statusDiv.innerHTML = '<span style="color: #F59E0B;">⏳ Uploading documents...</span>';
+            
+            const lead = allData[currentDocLeadIndex];
+            let successCount = 0;
+            let errorCount = 0;
+            
+            for (let i = 0; i < fileInput.files.length; i++) {
+                const file = fileInput.files[i];
+                
+                // Validate file size (5MB limit)
+                if (file.size > 5 * 1024 * 1024) {
+                    statusDiv.innerHTML += `<br><span style="color: #EF4444;">❌ ${file.name} exceeds 5MB limit</span>`;
+                    errorCount++;
+                    continue;
+                }
+                
+                // Validate file type
+                const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+                if (!allowedTypes.includes(file.type)) {
+                    statusDiv.innerHTML += `<br><span style="color: #EF4444;">❌ ${file.name} has unsupported format</span>`;
+                    errorCount++;
+                    continue;
+                }
+                
+                try {
+                    // Convert to base64
+                    const base64Content = await new Promise((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onload = () => resolve(reader.result.split(',')[1]);
+                        reader.onerror = reject;
+                        reader.readAsDataURL(file);
+                    });
+                    
+                    // Upload to API
+                    const response = await fetch('/api/upload-doc', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            leadId: currentDocLeadId,
+                            fileName: file.name,
+                            fileContent: base64Content,
+                            leadIndex: currentDocLeadIndex
+                        })
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        successCount++;
+                        // Update local data
+                        if (!lead.documents) lead.documents = [];
+                        lead.documents.push(result.document);
+                    } else {
+                        errorCount++;
+                        statusDiv.innerHTML += `<br><span style="color: #EF4444;">❌ ${file.name}: ${result.error}</span>`;
+                    }
+                    
+                } catch (error) {
+                    errorCount++;
+                    statusDiv.innerHTML += `<br><span style="color: #EF4444;">❌ ${file.name}: ${error.message}</span>`;
+                }
+            }
+            
+            if (successCount > 0) {
+                statusDiv.innerHTML = `<span style="color: #10B981;">✅ ${successCount} document(s) uploaded successfully!</span>`;
+                loadDocs(lead);
+                fileInput.value = '';
+            }
+            
+            if (errorCount > 0 && successCount === 0) {
+                statusDiv.innerHTML += `<br><span style="color: #EF4444;">Failed to upload documents</span>`;
+            }
+        }
+        
+        async function deleteDoc(leadId, docId, filePath, leadIndex) {
+            if (!confirm('Are you sure you want to delete this document?')) {
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/delete-doc', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        leadId: leadId,
+                        docId: docId,
+                        filePath: filePath,
+                        leadIndex: leadIndex
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Update local data
+                    const lead = allData[leadIndex];
+                    if (lead.documents) {
+                        lead.documents = lead.documents.filter(d => d.id !== docId);
+                    }
+                    loadDocs(lead);
+                    alert('Document deleted successfully!');
+                } else {
+                    alert('Failed to delete document: ' + (result.error || 'Unknown error'));
+                }
+                
+            } catch (error) {
+                alert('Error deleting document: ' + error.message);
+            }
+        }
+        
+        function downloadDoc(url, fileName) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html><!-- Last pipeline update: Tue May  5 10:24:06 UTC 2026 -->
