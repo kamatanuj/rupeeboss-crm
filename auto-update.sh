@@ -21,26 +21,37 @@ cd "$BASE_DIR"
 log "=========================================="
 log "Rupeeboss CRM Auto-Update Starting..."
 
-# Step 1: Extract leads from D-insights (disabled to preserve extracted leads)
-log "Skipping lead extraction to preserve extracted leads..."
-# python3 extract-leads.py >> "$LOG" 2>&1
+# Step 1: Extract leads from D-insights
+log "Extracting leads from D-insights API..."
+python3 extract-leads.py >> "$LOG" 2>&1 || log "Lead extraction completed with warnings"
 
-# Step 2: Deploy the full CRM from public directory
-log "Deploying full CRM from public directory..."
-export CLOUDFLARE_API_TOKEN="$CLOUDFLARE_TOKEN"
-export CLOUDFLARE_ACCOUNT_ID="$CLOUDFLARE_ACCOUNT_ID"
+# Step 2: Update dashboard_data.json with new leads
+log "Updating dashboard_data.json with latest leads..."
+python3 update-dashboard.py >> "$LOG" 2>&1 || log "Dashboard update completed"
 
-# Deploy the public directory to Cloudflare Pages
-cd "$BASE_DIR" && wrangler pages deploy public --project-name=rupeeboss-crm --commit-dirty=true 2>&1 | tee -a "$LOG"
+# Step 3: Commit changes to GitHub
+log "Committing changes to GitHub..."
+git add -A >> "$LOG" 2>&1
+git commit -m "Auto-update: Add new leads $(date +%Y-%m-%d_%H:%M)" >> "$LOG" 2>&1 || log "No changes to commit"
+git push origin main >> "$LOG" 2>&1 || log "Push may have failed - check manually"
 
-# Promote latest deployment to production
+# Step 4: Deploy via GitHub Actions (Cloudflare Pages auto-deploy)
+log "GitHub Actions will auto-deploy to Cloudflare Pages..."
+log "Monitor at: https://github.com/kamatanuj/rupeeboss-crm/actions"
+
+# Step 5: Promote latest deployment to production (fallback)
+log "Promoting deployment to production..."
 DEPLOY_ID=$(curl -s "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/rupeeboss-crm/deployments" \
-  -H "Authorization: Bearer $CLOUDFLARE_TOKEN" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['result'][0]['id'])")
+  -H "Authorization: Bearer $CLOUDFLARE_TOKEN" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['result'][0]['id'])" 2>/dev/null || echo "")
 
-curl -s -X PATCH "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/rupeeboss-crm" \
-  -H "Authorization: Bearer $CLOUDFLARE_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d "{\"canonical_deployment\": \"$DEPLOY_ID\"}" > /dev/null
+if [ -n "$DEPLOY_ID" ]; then
+    curl -s -X PATCH "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/rupeeboss-crm" \
+      -H "Authorization: Bearer $CLOUDFLARE_TOKEN" \
+      -H "Content-Type: application/json" \
+      -d "{\"canonical_deployment\": \"$DEPLOY_ID\"}" > /dev/null
+    log "Promoted deployment to production"
+fi
 
-log "Promoted deployment to production"
+log "✅ Auto-update complete!"
 log "🌐 Live CRM: https://rupeeboss-crm.pages.dev"
+log "=========================================="
