@@ -416,28 +416,86 @@
             max-height: 300px;
             overflow-y: auto;
             margin-bottom: 15px;
-        }        .followup-item {
-            background: #1E293B;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            border-left: 3px solid #1D4ED8;
         }
         
+        .followup-item {
+            background: #FFFFFF;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #E2E8F0;
+            border-left: 3px solid #1E3A8A;
+        }
+
         .followup-item .badge {
             font-size: 10px;
             margin-right: 5px;
         }
         
+        .followup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .followup-type {
+            font-weight: 600;
+            color: #1E3A8A;
+            font-size: 0.85em;
+        }
+        
+        .followup-date {
+            color: #64748B;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        .followup-content {
+            color: #0F172A;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            padding: 8px 0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        
+        .followup-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8em;
+            color: #64748B;
+        }
+        
+        .followup-status {
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75em;
+            font-weight: 600;
+        }
+        
+        .followup-status.pending {
+            background: #FEF3C7;
+            color: #B45309;
+        }
+        
+        .followup-status.completed {
+            background: #D1FAE5;
+            color: #059669;
+        }
+
         .followup-item p {
             margin: 5px 0;
-            color: #F1F5F9;
+            color: #0F172A;
             font-size: 0.9em;
             line-height: 1.4;
         }
-        
+
         .followup-item small {
-            color: #94A3B8;
+            color: #64748B;
             font-size: 0.8em;
         }
         
