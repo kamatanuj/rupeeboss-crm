@@ -1256,95 +1256,198 @@
             }
             
             const name = lead.name || 'Customer';
-            const topic = lead.title || 'our pharmaceutical products';
+            const topic = lead.title || 'Business Loan';
             const phone = lead.phone || '';
+            const transcript = lead.transcript || '';
+            const summary = lead.summary || '';
             
-            // Generate transcript
-            const transcript = generateTranscript(lead);
+            // Extract key information from transcript
+            let loanType = 'Business Loan';
+            let loanAmount = '';
+            let purpose = '';
+            let employment = '';
+            let income = '';
+            let creditScore = '';
+            let experience = '';
+            let companyName = '';
             
-            // Create personalized email based on the specific inquiry
-            let emailReply = '';
-            let phoneVerification = '';
-            
-            // Phone verification line
-            if (phone) {
-                phoneVerification = `\nWe have your contact number as ${phone}. Please confirm if we can reach you on this number, or provide an alternative contact number.`;
-            } else {
-                phoneVerification = `\nWe don't have your contact number on file. Please provide your phone number and email address for follow-up.`;
+            // Parse transcript for key details
+            if (transcript) {
+                const lowerTranscript = transcript.toLowerCase();
+                
+                // Detect loan type
+                if (lowerTranscript.includes('personal loan')) loanType = 'Personal Loan';
+                else if (lowerTranscript.includes('home loan')) loanType = 'Home Loan';
+                else if (lowerTranscript.includes('business loan')) loanType = 'Business Loan';
+                else if (lowerTranscript.includes('loan against property')) loanType = 'Loan Against Property';
+                
+                // Extract loan amount
+                const amountMatch = transcript.match(/(\d+\s*(?:lakh|lakhs|crore|crores|cr))/i);
+                if (amountMatch) loanAmount = amountMatch[0];
+                
+                // Extract income
+                const incomeMatch = transcript.match(/(?:income|salary|turnover)\s*(?:is|of|about|approximately)?\s*(?:₹|Rs\.?|INR)?\s*(\d+[,\d]*\s*(?:k|thousand|lakh|lakhs|crore|crores)?)/i);
+                if (incomeMatch) income = incomeMatch[1];
+                
+                // Extract employment type
+                if (lowerTranscript.includes('salaried')) employment = 'Salaried';
+                else if (lowerTranscript.includes('self-employed')) employment = 'Self-employed';
+                else if (lowerTranscript.includes('business')) employment = 'Business Owner';
+                else if (lowerTranscript.includes('professional')) employment = 'Professional';
+                
+                // Extract experience
+                const expMatch = transcript.match(/(\d+)\s*(?:years?|yrs?)\s*(?:of\s*)?(?:experience|work|business)/i);
+                if (expMatch) experience = expMatch[1] + ' years';
+                
+                // Extract credit score
+                const csMatch = transcript.match(/(?:credit\s*score|cibil)\s*(?:is|of|about)?\s*(\d+)/i);
+                if (csMatch) creditScore = csMatch[1];
             }
             
-            if (topic === 'Bengali Language Support') {
-                emailReply = `Dear ${name},
-
-Thank you for contacting Rupeeboss BioPharma regarding Bengali language support.
-
-We have noted your need for product information in Bengali. Our complete pharmaceutical catalog covering generic medicines, contrast media, and specialty drugs is attached.
-
-Our team speaks Bengali and will call you within 24 hours to discuss your specific requirements and pricing for the Mumbai region.${phoneVerification}
-
-We look forward to supporting your pharmaceutical distribution needs.
-
-Best regards,
-Sales Team
-Rupeeboss BioPharma
-📧 sales@livealthbiopharma.com`;
-            } else if (topic === 'Language Support Inquiry') {
-                emailReply = `Dear ${name},
-
-Thank you for inquiring about our language support options for pharmaceutical exports.
-
-We confirm that we provide full support in Hindi, English, and multiple regional languages for all communication including orders, documentation, and support.
-
-Our product catalog for cardiovascular medicines (Amlodipine, Atenolol, Metoprolol, etc.) is attached. Our sales team will contact you within 24 hours in your preferred language.${phoneVerification}
-
-Let us know your preferred language for future communications.
-
-Best regards,
-Sales Team
-Rupeeboss BioPharma`;            
-            } else if (topic === 'Biopharma Products Services') {
-                emailReply = `Dear ${name},
-
-Thank you for your interest in Rupeeboss BioPharma's product range and therapeutic offerings.
-
-As discussed, we specialize in generic medicines across cardiovascular, anti-infectives, CNS, gastroenterology, and specialty pharmaceuticals including contrast media for imaging.
-
-Our complete product catalog with detailed specifications, MOQ ($10,000 USD), and worldwide shipping details is attached. We will call you within 24 hours to discuss your specific therapeutic area requirements.${phoneVerification}
-
-Which therapeutic categories interest you the most? We're here to support your pharmaceutical needs.
-
-Best regards,
-Sales Team
-Rupeeboss BioPharma`;
-            } else {
-                // Generic but still personalized
-                emailReply = `Dear ${name},
-
-Thank you for contacting Rupeeboss BioPharma regarding ${topic}.
-
-Based on our conversation, I've attached our complete product catalog relevant to your inquiry. Our minimum order is $10,000 USD with worldwide shipping.
-
-Our sales team will contact you within 24 hours to discuss your specific requirements and provide detailed pricing.${phoneVerification}
-
-We appreciate your interest and look forward to serving your pharmaceutical needs.
-
-Best regards,
-Sales Team
-Rupeeboss BioPharma`;
+            // Build dynamic email based on extracted information
+            let personalizationDetails = '';
+            
+            if (loanAmount) {
+                personalizationDetails += `\n- Loan Amount Required: ${loanAmount}`;
+            }
+            if (income) {
+                personalizationDetails += `\n- Your Income/Turnover: ₹${income}`;
+            }
+            if (employment) {
+                personalizationDetails += `\n- Employment Type: ${employment}`;
+            }
+            if (experience) {
+                personalizationDetails += `\n- Work Experience: ${experience}`;
+            }
+            if (creditScore) {
+                personalizationDetails += `\n- Credit Score: ${creditScore}`;
             }
             
-            const subject = `Follow-up: ${topic} - Rupeeboss BioPharma`;
-            const body = encodeURIComponent(emailReply);
-            const recipient = lead.email || '';
+            // Create the email
+            const emailReply = `Dear ${name === 'Unknown' ? 'Customer' : name},
+
+Thank you for contacting RupeeBoss Financial Services regarding your ${loanType} inquiry.
+
+We have reviewed your conversation with our AI assistant, Riya, and would like to follow up with you personally to provide the best loan options tailored to your needs.${personalizationDetails}
+
+Based on the information shared, our loan experts will:
+1. Analyze your eligibility for ${loanType}
+2. Find the best interest rates from our partner banks (starting from 8.35% p.a.)
+3. Provide a customized repayment plan
+4. Guide you through the documentation process
+
+Next Steps:
+- Our relationship manager will contact you within 24 hours on ${phone || 'your registered number'}
+- We will schedule a convenient time to discuss your requirements
+- You can also reach us directly at 1800-123-4567
+
+Documents Required (keep ready):
+✓ KYC Documents (Aadhaar, PAN)
+✓ Income Proof (Salary slips / ITR / Bank statements)
+✓ Business Proof (if applicable)
+✓ Address Proof
+
+Why Choose RupeeBoss:
+✓ 50+ partner banks and NBFCs
+✓ Loan amounts from ₹50,000 to ₹100 Crores
+✓ Minimal documentation
+✓ Quick disbursal (within 10-15 working days)
+✓ Competitive interest rates
+✓ Dedicated relationship manager
+
+If you have any questions or would like to expedite the process, please reply to this email or call our customer care.
+
+Reference ID: ${lead.id || 'N/A'}
+Conversation Date: ${lead.date}
+
+Best regards,
+Team RupeeBoss
+📧 care@rupeeboss.com
+📞 1800-123-4567 (Toll-Free)
+🌐 www.rupeeboss.com
+
+---
+This email was generated based on your conversation with RupeeBoss AI Assistant on ${lead.date}. Please do not reply directly to this automated message. Contact our team using the details above.`;
+            
+            const subject = `Follow-up: Your ${loanType} Inquiry - RupeeBoss Financial Services`;
             
             // Log this email as a follow-up
             logEmailAsFollowUp(leadId, emailReply);
             
-            if (recipient) {
-                window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${body}`;
-            } else {
-                alert(`Email Reply for ${name}\n\nSubject: ${subject}\n\nNo email found for this lead.\n\n---\n\n${emailReply}`);
+            // Show the email in a modal
+            showEmailModal(name, subject, emailReply, lead.email);
+        }
+        
+        function showEmailModal(name, subject, body, email) {
+            // Create modal HTML
+            const modalHtml = `
+            <div id="emailModal" class="login-modal show" style="z-index: 2000;">
+                <div class="login-box" style="max-width: 700px; max-height: 90vh; overflow-y: auto;">
+                    <div class="modal-header">
+                        <h2>📧 Generated Email Reply</h2>
+                        <button class="close-btn" onclick="closeEmailModal()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div style="margin-bottom: 15px;">
+                            <strong>To:</strong> ${name} ${email ? '&lt;' + email + '&gt;' : '(No email - copy manually)'}
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <strong>Subject:</strong> ${subject}
+                        </div>
+                        <div style="background: #0F172A; padding: 20px; border-radius: 8px; border: 1px solid #334155; white-space: pre-wrap; font-family: monospace; font-size: 14px; max-height: 400px; overflow-y: auto;">
+${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
+                        </div>
+                        <div style="margin-top: 20px; display: flex; gap: 10px;">
+                            <button class="btn-expand" onclick="copyEmailToClipboard()">📋 Copy Email</button>
+                            ${email ? `<button class="btn-expand" onclick="openEmailClient('${email}', '${subject.replace(/'/g, "\\'")}', '${body.replace(/'/g, "\\'").replace(/\n/g, '\\n')}')">📧 Send via Email Client</button>` : ''}
+                            <button class="btn-delete" onclick="closeEmailModal()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+            
+            // Remove existing modal if any
+            const existing = document.getElementById('emailModal');
+            if (existing) existing.remove();
+            
+            // Add modal to body
+            const div = document.createElement('div');
+            div.innerHTML = modalHtml;
+            document.body.appendChild(div);
+            
+            // Store for copy function
+            window.currentEmailBody = body;
+            window.currentEmailSubject = subject;
+            window.currentEmailRecipient = email;
+        }
+        
+        function closeEmailModal() {
+            const modal = document.getElementById('emailModal');
+            if (modal) modal.remove();
+            window.currentEmailBody = null;
+        }
+        
+        function copyEmailToClipboard() {
+            if (window.currentEmailBody) {
+                navigator.clipboard.writeText(window.currentEmailBody).then(() => {
+                    alert('Email copied to clipboard!');
+                }).catch(() => {
+                    // Fallback
+                    const textarea = document.createElement('textarea');
+                    textarea.value = window.currentEmailBody;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    alert('Email copied to clipboard!');
+                });
             }
+        }
+        
+        function openEmailClient(email, subject, body) {
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(mailtoLink, '_blank');
         }
 
         function renderTable() {
