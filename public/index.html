@@ -427,6 +427,129 @@
             border-bottom-color: #334155;
         }
         
+        /* Email Modal Styles */
+        .email-modal-box {
+            background: #FFFFFF;
+            padding: 0;
+            border-radius: 16px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            width: 90%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .email-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid #E2E8F0;
+            background: #F8FAFC;
+            border-radius: 16px 16px 0 0;
+        }
+        
+        .email-modal-header h2 {
+            color: #1E3A8A;
+            font-size: 1.3em;
+            margin: 0;
+        }
+        
+        .email-close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #64748B;
+            cursor: pointer;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .email-close-btn:hover {
+            background: #F1F5F9;
+            color: #1E293B;
+        }
+        
+        .email-modal-body {
+            padding: 24px;
+        }
+        
+        .email-field {
+            margin-bottom: 15px;
+            color: #1E293B;
+            font-size: 0.95em;
+        }
+        
+        .email-field strong {
+            color: #1E3A8A;
+            margin-right: 8px;
+        }
+        
+        .email-content-box {
+            background: #F8FAFC;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+            white-space: pre-wrap;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            max-height: 400px;
+            overflow-y: auto;
+            color: #1E293B;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+        
+        .email-actions {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .email-btn-primary {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #1E3A8A;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .email-btn-primary:hover {
+            background: #1E40AF;
+        }
+        
+        .email-btn-secondary {
+            padding: 10px 20px;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            background: #FFFFFF;
+            color: #64748B;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+            min-height: 44px;
+        }
+        
+        .email-btn-secondary:hover {
+            background: #F1F5F9;
+            color: #1E293B;
+        }
+        
         .followup-timeline {
             max-height: 300px;
             overflow-y: auto;
@@ -1465,25 +1588,25 @@ This email was generated based on your conversation with RupeeBoss AI Assistant 
             // Create modal HTML
             const modalHtml = `
             <div id="emailModal" class="login-modal show" style="z-index: 2000;">
-                <div class="login-box" style="max-width: 700px; max-height: 90vh; overflow-y: auto;">
-                    <div class="modal-header">
+                <div class="email-modal-box" style="max-width: 700px; max-height: 90vh; overflow-y: auto;">
+                    <div class="email-modal-header">
                         <h2>📧 Generated Email Reply</h2>
-                        <button class="close-btn" onclick="closeEmailModal()">&times;</button>
+                        <button class="email-close-btn" onclick="closeEmailModal()">&times;</button>
                     </div>
-                    <div class="modal-body">
-                        <div style="margin-bottom: 15px;">
+                    <div class="email-modal-body">
+                        <div class="email-field">
                             <strong>To:</strong> ${name} ${email ? '&lt;' + email + '&gt;' : '(No email - copy manually)'}
                         </div>
-                        <div style="margin-bottom: 15px;">
+                        <div class="email-field">
                             <strong>Subject:</strong> ${subject}
                         </div>
-                        <div style="background: #0F172A; padding: 20px; border-radius: 8px; border: 1px solid #334155; white-space: pre-wrap; font-family: monospace; font-size: 14px; max-height: 400px; overflow-y: auto;">
+                        <div class="email-content-box">
 ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
                         </div>
-                        <div style="margin-top: 20px; display: flex; gap: 10px;">
-                            <button class="btn-expand" onclick="copyEmailToClipboard()">📋 Copy Email</button>
-                            ${email ? `<button class="btn-expand" onclick="openEmailClient('${email}', '${subject.replace(/'/g, "\\'")}', '${body.replace(/'/g, "\\'").replace(/\n/g, '\\n')}')">📧 Send via Email Client</button>` : ''}
-                            <button class="btn-delete" onclick="closeEmailModal()">Close</button>
+                        <div class="email-actions">
+                            <button class="email-btn-primary" onclick="copyEmailToClipboard()">📋 Copy Email</button>
+                            ${email ? `<button class="email-btn-primary" onclick="openEmailClient('${email}', '${subject.replace(/'/g, "\\'")}', '${body.replace(/'/g, "\\'").replace(/\n/g, '\\n')}')">📧 Send via Email Client</button>` : ''}
+                            <button class="email-btn-secondary" onclick="closeEmailModal()">Close</button>
                         </div>
                     </div>
                 </div>
