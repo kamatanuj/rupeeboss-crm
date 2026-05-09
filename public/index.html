@@ -797,6 +797,13 @@
                         <p style="color: #64748B; text-align: center; padding: 20px;">No documents uploaded yet.</p>
                     </div>
                 </div>
+                
+                <!-- Back to List Button -->
+                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #334155;">
+                    <button class="btn-expand" onclick="backToLeadFromDocs()" style="width: 100%; background: rgba(37, 99, 235, 0.3); color: #60A5FA;">
+                        🔙 Back to Lead
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -1752,6 +1759,59 @@ Rupeeboss BioPharma`;
             currentDocLeadIndex = null;
             document.getElementById('doc-file-input').value = '';
             document.getElementById('upload-status').textContent = '';
+        }
+        
+        function backToLeadFromDocs() {
+            // Store the current lead ID before closing
+            const leadId = currentDocLeadId;
+            const leadIndex = currentDocLeadIndex;
+            
+            // Close the document manager modal
+            closeDocManager();
+            
+            // If we have a valid lead, scroll to it and highlight it
+            if (leadId && leadIndex !== null && leadIndex !== -1) {
+                // Use setTimeout to ensure the modal is closed and DOM is updated
+                setTimeout(() => {
+                    // Find the lead card element
+                    const leadCard = document.querySelector(`[data-lead-id="${leadId}"]`);
+                    
+                    if (leadCard) {
+                        // Scroll to the lead card
+                        leadCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        // Add a temporary highlight effect
+                        leadCard.style.transition = 'box-shadow 0.3s ease';
+                        leadCard.style.boxShadow = '0 0 20px rgba(37, 99, 235, 0.6)';
+                        
+                        // Remove highlight after 2 seconds
+                        setTimeout(() => {
+                            leadCard.style.boxShadow = '';
+                        }, 2000);
+                    } else {
+                        // If lead card not found (might be on different page), reload and then scroll
+                        console.log('Lead card not found, reloading...');
+                        const row = allData[leadIndex];
+                        if (row) {
+                            // Re-render to ensure the lead is visible
+                            renderPage(currentCategory, currentPage);
+                            
+                            // Try scrolling again after render
+                            setTimeout(() => {
+                                const retryCard = document.querySelector(`[data-lead-id="${leadId}"]`);
+                                if (retryCard) {
+                                    retryCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    retryCard.style.transition = 'box-shadow 0.3s ease';
+                                    retryCard.style.boxShadow = '0 0 20px rgba(37, 99, 235, 0.6)';
+                                    setTimeout(() => {
+                                        retryCard.style.boxShadow = '';
+                                    }, 2000);
+                                }
+                            }, 500);
+                        }
+                    }
+                }, 300);
+            }
         }
         
         function loadDocs(lead) {
