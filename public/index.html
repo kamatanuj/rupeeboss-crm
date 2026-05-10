@@ -7,9 +7,9 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <script>
-        // Force cache refresh on new deployments - version: 2026-05-10-v2
+        // Force cache refresh on new deployments - version: 2026-05-10-v3
         (function() {
-            const BUILD_VERSION = '2026-05-10-v2';
+            const BUILD_VERSION = '2026-05-10-v3';
             const storedVersion = localStorage.getItem('app_version');
             if (storedVersion !== BUILD_VERSION) {
                 localStorage.setItem('app_version', BUILD_VERSION);
@@ -142,6 +142,7 @@
             color: #DC2626;
             cursor: pointer;
             font-size: 13px;
+            font-weight: 700;
             transition: all 0.2s;
             min-height: 44px;
             display: none;
@@ -254,6 +255,7 @@
             border-radius: 20px; 
             cursor: pointer; 
             font-size: 12px; 
+            font-weight: 700;
             background: #FFFFFF; 
             color: #0F172A; 
             border: 1px solid #E2E8F0;
@@ -377,6 +379,7 @@
             cursor: pointer; 
             border: none; 
             font-size: 13px; 
+            font-weight: 700;
             transition: all 0.2s;
             min-height: 44px;
             display: flex;
