@@ -9,7 +9,7 @@
     <script>
         // Force cache refresh on new deployments - version: 2026-05-10-v6
         (function() {
-            const BUILD_VERSION = '2026-05-10-v7';
+            const BUILD_VERSION = '2026-05-10-v8';
             const storedVersion = localStorage.getItem('app_version');
             if (storedVersion !== BUILD_VERSION) {
                 localStorage.setItem('app_version', BUILD_VERSION);
@@ -378,6 +378,88 @@
         .badge-hot { background: #FEE2E2; color: #DC2626; border: 1px solid #FECACA; }
         .badge-cold { background: #DBEAFE; color: #2563EB; border: 1px solid #BFDBFE; }
         .badge-email { background: #D1FAE5; color: #059669; border: 1px solid #A7F3D0; }
+        
+        .sentiment-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        
+        .sentiment-positive { background: rgba(16, 185, 129, 0.15); color: #10B981; }
+        .sentiment-neutral { background: rgba(245, 158, 11, 0.15); color: #F59E0B; }
+        .sentiment-negative { background: rgba(239, 68, 68, 0.15); color: #EF4444; }
+        
+        .sentiment-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        
+        .sentiment-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        .sentiment-fill.sentiment-positive { background: linear-gradient(90deg, #10B981, #059669); }
+        .sentiment-fill.sentiment-neutral { background: linear-gradient(90deg, #F59E0B, #D97706); }
+        .sentiment-fill.sentiment-negative { background: linear-gradient(90deg, #EF4444, #DC2626); }
+        
+        .sentiment-details {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        
+        .sentiment-emoji { font-size: 20px; }
+        
+        .sentiment-label {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .sentiment-interest {
+            color: #94A3B8;
+            font-size: 13px;
+        }
+        
+        .sentiment-keywords {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: #64748B;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .sentiment-section {
+            background: rgba(30, 30, 60, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .sentiment-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #94A3B8;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         
         .btn-row { 
             display: flex; 
@@ -1121,6 +1203,14 @@
                 <div class="stat-value" id="stat-email">0</div>
                 <div class="stat-label">📧 EMAIL</div>
             </div>
+            <div class="stat">
+                <div class="stat-value" id="stat-positive">0</div>
+                <div class="stat-label">😊 Positive</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="stat-negative">0</div>
+                <div class="stat-label">😠 Negative</div>
+            </div>
         </div>
 
         <div class="filter-btns">
@@ -1129,6 +1219,8 @@
             <button class="filter-btn" onclick="setCategory('COLD')">❄️ COLD (<span id="filter-cold">111</span>)</button>
             <button class="filter-btn" onclick="setCategory('EMAIL_ONLY')">📧 EMAIL (<span id="filter-email">0</span>)</button>
             <button class="filter-btn" onclick="setCategory('DUE')">📅 DUE (<span id="filter-due">0</span>)</button>
+            <button class="filter-btn" onclick="setCategory('POSITIVE')">😊 POSITIVE (<span id="filter-positive">0</span>)</button>
+            <button class="filter-btn" onclick="setCategory('NEGATIVE')">😠 NEGATIVE (<span id="filter-negative">0</span>)</button>
         </div>
 
         <input type="text" class="search-box" placeholder="Search by name, email, phone, or topic..." oninput="handleSearch(this.value)">
@@ -1347,6 +1439,10 @@
             const cold = allData.filter(r => r.category === 'COLD').length;
             const email = allData.filter(r => r.category === 'EMAIL_ONLY').length;
             
+            // Count sentiment
+            const positive = allData.filter(r => r.sentiment && r.sentiment.label === 'positive').length;
+            const negative = allData.filter(r => r.sentiment && r.sentiment.label === 'negative').length;
+            
             // Count leads with due follow-ups
             let dueCount = 0;
             if (Object.keys(followUpsCache).length > 0) {
@@ -1366,10 +1462,14 @@
             document.getElementById('stat-hot').textContent = hot;
             document.getElementById('stat-cold').textContent = cold;
             document.getElementById('stat-email').textContent = email;
+            document.getElementById('stat-positive').textContent = positive;
+            document.getElementById('stat-negative').textContent = negative;
             document.getElementById('filter-all').textContent = total;
             document.getElementById('filter-hot').textContent = hot;
             document.getElementById('filter-cold').textContent = cold;
             document.getElementById('filter-email').textContent = email;
+            document.getElementById('filter-positive').textContent = positive;
+            document.getElementById('filter-negative').textContent = negative;
             const filterDueEl = document.getElementById('filter-due');
             if (filterDueEl) filterDueEl.textContent = dueCount;
         }
@@ -1410,6 +1510,14 @@
                         fup.nextFollowUpDate <= today && 
                         fup.status === 'pending'
                     );
+                }
+                
+                // Handle sentiment filters
+                if (currentCategory === 'POSITIVE') {
+                    return row.sentiment && row.sentiment.label === 'positive';
+                }
+                if (currentCategory === 'NEGATIVE') {
+                    return row.sentiment && row.sentiment.label === 'negative';
                 }
                 
                 return matchCat && matchSearch;
@@ -1761,6 +1869,20 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
                                     <div class="section-header">📝 Conversation Transcript</div>
                                     <div class="section-content">${transcript}</div>
                                 </div>
+                                    <div class="sentiment-bar">
+                                        <div class="sentiment-fill sentiment-${lead.sentiment.label}" style="width: ${Math.abs(lead.sentiment.score * 100)}%;"></div>
+                                    </div>
+                                    <div class="sentiment-details">
+                                        <span class="sentiment-emoji">${lead.sentiment.emoji}</span>
+                                        <span class="sentiment-label">${lead.sentiment.label.toUpperCase()} (${lead.sentiment.score})</span>
+                                        <span class="sentiment-interest">Interest: ${lead.sentiment.interest}</span>
+                                    </div>
+                                    <div class="sentiment-keywords">
+                                        <span>✅ Positive: ${lead.sentiment.positive_count}</span>
+                                        <span>❌ Negative: ${lead.sentiment.negative_count}</span>
+                                        <span>📊 Total: ${lead.sentiment.total_keywords}</span>
+                                    </div>
+                                </div>
                                 <div class="transcript-actions">
                                     <button class="back-btn show" onclick="goBack()">← Back to Leads List</button>
                                     <button class="email-btn" onclick="generateEmailFromTranscript('${leadId}')">📧 Generate Email Reply</button>
@@ -1825,6 +1947,7 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
                                     ${row.phone ? `<span>📱 <a href="tel:${row.phone}">${row.phone}</a></span>` : ''}
                                     ${row.email ? `<span>✉️ ${row.email}</span>` : ''}
                                     <span>📅 ${row.date}</span>
+                                    ${row.sentiment ? `<span class="sentiment-badge sentiment-${row.sentiment.label}">${row.sentiment.emoji} ${row.sentiment.interest}</span>` : ''}
                                 </div>
                                 <div class="convo-title">📞 ${shortTitle}</div>
                             </div>
