@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <script>
+        // Force cache refresh on new deployments - version: 2026-05-10-v2
+        (function() {
+            const BUILD_VERSION = '2026-05-10-v2';
+            const storedVersion = localStorage.getItem('app_version');
+            if (storedVersion !== BUILD_VERSION) {
+                localStorage.setItem('app_version', BUILD_VERSION);
+                // Only reload once per version change
+                if (storedVersion) {
+                    location.reload(true);
+                }
+            }
+        })();
+    </script>
     <title>Rupeeboss CRM - Lead Management</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
