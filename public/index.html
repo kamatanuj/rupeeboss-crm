@@ -2116,16 +2116,35 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
         
         function loadDocs(lead) {
             const docsList = document.getElementById('docs-list');
-            const docs = lead.documents || [];
             
-            if (docs.length === 0) {
+            // Get documents from localStorage for this lead
+            let allDocs = JSON.parse(localStorage.getItem('rupeeboss_documents') || '[]');
+            const leadId = lead.date + (lead.phone || '') + (lead.title || '');
+            const leadDocs = allDocs.filter(d => d.leadId === leadId);
+            
+            // Merge with any documents from the lead object (for backward compatibility)
+            const docs = lead.documents || [];
+            const mergedDocs = [...docs];
+            
+            // Add localStorage docs that aren't already in the list
+            leadDocs.forEach(localDoc => {
+                if (!mergedDocs.find(d => d.id === localDoc.id)) {
+                    mergedDocs.push({
+                        id: localDoc.id,
+                        name: localDoc.name,
+                        url: '#',
+                        uploadedAt: localDoc.uploadedAt
+                    });
+                }
+            });
+            
+            if (mergedDocs.length === 0) {
                 docsList.innerHTML = '<p style="color: #64748B; text-align: center; padding: 20px;">No documents uploaded yet.</p>';
                 return;
             }
             
             let html = '';
-            docs.forEach(doc => {
-                const filePath = doc.url.replace('https://raw.githubusercontent.com/kamatanuj/rupeeboss-crm/main/', '');
+            mergedDocs.forEach(doc => {
                 html += `
                 <div style="background: #0F172A; padding: 15px; margin-bottom: 10px; border-radius: 8px; border-left: 3px solid #2563EB;">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -2134,8 +2153,8 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
                             <div style="color: #64748B; font-size: 12px;">Uploaded: ${new Date(doc.uploadedAt).toLocaleString()}</div>
                         </div>
                         <div style="display: flex; gap: 10px;">
-                            <button class="btn-expand" style="padding: 5px 10px; font-size: 12px;" onclick="downloadDoc('${doc.url}', '${doc.name}')">📥 Download</button>
-                            ${currentUser && currentUser.role === 'admin' ? `<button class="btn-delete" style="padding: 5px 10px; font-size: 12px;" onclick="deleteDoc('${currentDocLeadId}', '${doc.id}', '${filePath}', ${currentDocLeadIndex})">🗑️ Delete</button>` : ''}
+                            <button class="btn-expand" style="padding: 5px 10px; font-size: 12px;" onclick="downloadDoc('${doc.url || '#'}', '${doc.name}')">📥 Download</button>
+                            ${currentUser && currentUser.role === 'admin' ? `<button class="btn-delete" style="padding: 5px 10px; font-size: 12px;" onclick="deleteDoc('${currentDocLeadId}', '${doc.id}', '', ${currentDocLeadIndex})">🗑️ Delete</button>` : ''}
                         </div>
                     </div>
                 </div>
@@ -2167,9 +2186,9 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
             for (let i = 0; i < fileInput.files.length; i++) {
                 const file = fileInput.files[i];
                 
-                // Validate file size (5MB limit)
-                if (file.size > 5 * 1024 * 1024) {
-                    statusDiv.innerHTML += `<br><span style="color: #EF4444;">❌ ${file.name} exceeds 5MB limit</span>`;
+                // Validate file size (2MB limit for localStorage)
+                if (file.size > 2 * 1024 * 1024) {
+                    statusDiv.innerHTML += `<br><span style="color: #EF4444;">❌ ${file.name} exceeds 2MB limit</span>`;
                     errorCount++;
                     continue;
                 }
@@ -2191,29 +2210,33 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
                         reader.readAsDataURL(file);
                     });
                     
-                    // Upload to API
-                    const response = await fetch('/api/upload-doc', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            leadId: currentDocLeadId,
-                            fileName: file.name,
-                            fileContent: base64Content,
-                            leadIndex: currentDocLeadIndex
-                        })
+                    // Store in localStorage
+                    const docId = 'doc_' + Date.now() + '_' + i;
+                    const document = {
+                        id: docId,
+                        name: file.name,
+                        type: file.type,
+                        size: file.size,
+                        content: base64Content,
+                        uploadedAt: new Date().toISOString(),
+                        leadId: currentDocLeadId
+                    };
+                    
+                    // Save to localStorage
+                    let allDocs = JSON.parse(localStorage.getItem('rupeeboss_documents') || '[]');
+                    allDocs.push(document);
+                    localStorage.setItem('rupeeboss_documents', JSON.stringify(allDocs));
+                    
+                    // Update local data
+                    if (!lead.documents) lead.documents = [];
+                    lead.documents.push({
+                        id: docId,
+                        name: file.name,
+                        url: '#', // Will use localStorage content
+                        uploadedAt: new Date().toISOString()
                     });
                     
-                    const result = await response.json();
-                    
-                    if (result.success) {
-                        successCount++;
-                        // Update local data
-                        if (!lead.documents) lead.documents = [];
-                        lead.documents.push(result.document);
-                    } else {
-                        errorCount++;
-                        statusDiv.innerHTML += `<br><span style="color: #EF4444;">❌ ${file.name}: ${result.error}</span>`;
-                    }
+                    successCount++;
                     
                 } catch (error) {
                     errorCount++;
@@ -2238,30 +2261,18 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
             }
             
             try {
-                const response = await fetch('/api/delete-doc', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        leadId: leadId,
-                        docId: docId,
-                        filePath: filePath,
-                        leadIndex: leadIndex
-                    })
-                });
+                // Remove from localStorage
+                let allDocs = JSON.parse(localStorage.getItem('rupeeboss_documents') || '[]');
+                allDocs = allDocs.filter(d => d.id !== docId);
+                localStorage.setItem('rupeeboss_documents', JSON.stringify(allDocs));
                 
-                const result = await response.json();
-                
-                if (result.success) {
-                    // Update local data
-                    const lead = allData[leadIndex];
-                    if (lead.documents) {
-                        lead.documents = lead.documents.filter(d => d.id !== docId);
-                    }
-                    loadDocs(lead);
-                    alert('Document deleted successfully!');
-                } else {
-                    alert('Failed to delete document: ' + (result.error || 'Unknown error'));
+                // Update local data
+                const lead = allData[leadIndex];
+                if (lead.documents) {
+                    lead.documents = lead.documents.filter(d => d.id !== docId);
                 }
+                loadDocs(lead);
+                alert('Document deleted successfully!');
                 
             } catch (error) {
                 alert('Error deleting document: ' + error.message);
@@ -2269,7 +2280,31 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
         }
         
         function downloadDoc(url, fileName) {
-            window.open(url, '_blank');
+            // Find document in localStorage
+            let allDocs = JSON.parse(localStorage.getItem('rupeeboss_documents') || '[]');
+            const doc = allDocs.find(d => d.name === fileName);
+            
+            if (doc && doc.content) {
+                // Create download from base64
+                const byteCharacters = atob(doc.content);
+                const byteNumbers = new Array(byteCharacters.length);
+                for (let i = 0; i < byteCharacters.length; i++) {
+                    byteNumbers[i] = byteCharacters.charCodeAt(i);
+                }
+                const byteArray = new Uint8Array(byteNumbers);
+                const blob = new Blob([byteArray], { type: doc.type });
+                
+                const downloadUrl = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = downloadUrl;
+                a.download = fileName;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(downloadUrl);
+            } else {
+                window.open(url, '_blank');
+            }
         }
     </script>
 </body>
