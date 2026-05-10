@@ -9,7 +9,7 @@
     <script>
         // Force cache refresh on new deployments - version: 2026-05-10-v6
         (function() {
-            const BUILD_VERSION = '2026-05-10-v6';
+            const BUILD_VERSION = '2026-05-10-v7';
             const storedVersion = localStorage.getItem('app_version');
             if (storedVersion !== BUILD_VERSION) {
                 localStorage.setItem('app_version', BUILD_VERSION);
@@ -1144,8 +1144,17 @@
         </div>
 
     <script>
-        // Follow-ups data embedded (no fetch needed)
-        const FOLLOW_UPS_DATA = {};
+        // Follow-ups data embedded (merged with localStorage)
+        let FOLLOW_UPS_DATA = {};
+        
+        // Merge with localStorage on load
+        (function() {
+            const stored = localStorage.getItem('rupeeboss_followups');
+            if (stored) {
+                FOLLOW_UPS_DATA = JSON.parse(stored);
+                console.log('📋 Loaded follow-ups from localStorage:', Object.keys(FOLLOW_UPS_DATA).length, 'leads');
+            }
+        })();
 
         const PAGE_SIZE = 16;
         let currentCategory = 'all';
@@ -1365,12 +1374,16 @@
             if (filterDueEl) filterDueEl.textContent = dueCount;
         }
 
-        // Load all follow-ups for filtering (from API)
+        // Load all follow-ups for filtering (from localStorage)
         async function loadAllFollowUps() {
             try {
-                // Fetch followups.json directly (client-side)
-                // Use embedded data (no fetch)
-                followUpsCache = FOLLOW_UPS_DATA;
+                // Load from localStorage first
+                const stored = localStorage.getItem('rupeeboss_followups');
+                if (stored) {
+                    followUpsCache = JSON.parse(stored);
+                } else {
+                    followUpsCache = {};
+                }
                 console.log('📋 Loaded follow-ups for all leads:', Object.keys(followUpsCache).length);
             } catch (err) {
                 console.error('Error loading all follow-ups:', err);
