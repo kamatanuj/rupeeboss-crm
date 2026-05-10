@@ -1246,6 +1246,15 @@
                 const data = await resp.json();
                 allData = data.leads;
                 
+                // Filter out deleted leads from localStorage
+                const deletedLeads = JSON.parse(localStorage.getItem('rupeeboss_deleted_leads') || '[]');
+                if (deletedLeads.length > 0) {
+                    allData = allData.filter(r => {
+                        const leadId = r.date + (r.phone || '') + (r.title || '');
+                        return !deletedLeads.includes(leadId);
+                    });
+                }
+                
                 updateStats();
                 renderTable();
                 
@@ -1408,38 +1417,15 @@
                 // Remove from local array
                 const removedLead = allData.splice(index, 1)[0];
                 
-                // Try to update GitHub
-                fetch('/api/update-leads', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ leads: allData })
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Server returned ' + response.status);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.success) {
-                        updateStats();
-                        renderTable();
-                        alert('Lead deleted and GitHub updated!');
-                    } else {
-                        // Revert local change
-                        allData.splice(index, 0, removedLead);
-                        updateStats();
-                        renderTable();
-                        alert('Failed to update GitHub: ' + (data.error || 'Unknown error'));
-                    }
-                })
-                .catch(error => {
-                    // Revert local change (no localStorage fallback)
-                    allData.splice(index, 0, removedLead);
-                    updateStats();
-                    renderTable();
-                    alert('Error updating GitHub: ' + error.message + '\n\nPlease check your connection and try again.');
-                });
+                // Store deleted lead ID in localStorage so it stays hidden
+                let deletedLeads = JSON.parse(localStorage.getItem('rupeeboss_deleted_leads') || '[]');
+                deletedLeads.push(leadId);
+                localStorage.setItem('rupeeboss_deleted_leads', JSON.stringify(deletedLeads));
+                
+                // Update UI
+                updateStats();
+                renderTable();
+                alert('Lead deleted successfully! (Hidden from view)');
             }
         }
         
