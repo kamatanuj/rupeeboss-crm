@@ -7,9 +7,9 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <script>
-        // Force cache refresh on new deployments - version: 2026-05-10-v4
+        // Force cache refresh on new deployments - version: 2026-05-10-v5
         (function() {
-            const BUILD_VERSION = '2026-05-10-v4';
+            const BUILD_VERSION = '2026-05-10-v5';
             const storedVersion = localStorage.getItem('app_version');
             if (storedVersion !== BUILD_VERSION) {
                 localStorage.setItem('app_version', BUILD_VERSION);
@@ -193,11 +193,22 @@
             padding: 80px 15px 15px 15px; 
         }
         
-        h1 { 
-            text-align: center; 
-            padding: 20px 0; 
-            color: #1E3A8A; 
-            font-size: 1.8em;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-container h1 {
+            margin: 0;
+            padding: 0;
         }
         
         .stats { 
@@ -1087,7 +1098,10 @@
         <button class="logout-btn" onclick="logout()">Logout</button>
         <button class="logout-btn" style="background: rgba(16, 185, 129, 0.3); color: #10b981;" onclick="showChangePasswordModal()">🔑 Change Password</button>
     </div>
-        <h1>🏥 Rupeeboss CRM</h1>
+        <div class="logo-container">
+            <img src="rupeeboss-logo.jpg" alt="RupeeBoss Logo">
+            <h1>RupeeBoss CRM</h1>
+        </div>
         <div class="note">📅 Leads from D-Insights AI Voice Agent conversations</div>
         
         <div class="stats">
