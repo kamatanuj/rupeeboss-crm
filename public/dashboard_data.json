@@ -4218,6 +4218,17 @@
         "negative_count": 2,
         "total_keywords": 2
       }
+    },
+    {
+      "id": "rb_0180",
+      "name": "",
+      "phone": "9927414103",
+      "email": "",
+      "title": "RupeeBoss Loan Inquiry - 9927414103",
+      "summary": "Lead extracted from conversation. Phone: 9927414103",
+      "transcript": "[Transcript not available - extracted from metadata]",
+      "date": "2026-05-15",
+      "category": "COLD"
     }
   ],
   "metadata": {
@@ -4225,7 +4236,7 @@
     "hot": 63,
     "cold": 111,
     "generated_at": "2026-05-09",
-    "lastUpdated": "2026-05-15T07:00:46.817722",
-    "totalLeads": 179
+    "lastUpdated": "2026-05-15T08:00:45.247770",
+    "totalLeads": 180
   }
 }
