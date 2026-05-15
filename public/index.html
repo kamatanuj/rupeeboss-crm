@@ -1868,6 +1868,7 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
                                 <div class="section transcript show">
                                     <div class="section-header">📝 Conversation Transcript</div>
                                     <div class="section-content">${transcript}</div>
+                                    ${lead.sentiment ? `
                                     <div class="sentiment-bar">
                                         <div class="sentiment-fill sentiment-${lead.sentiment.label}" style="width: ${Math.abs(lead.sentiment.score * 100)}%;"></div>
                                     </div>
@@ -1881,6 +1882,7 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
                                         <span>❌ Negative: ${lead.sentiment.negative_count}</span>
                                         <span>📊 Total: ${lead.sentiment.total_keywords}</span>
                                     </div>
+                                    ` : ''}
                                 </div>
                                 <div class="transcript-actions">
                                     <button class="back-btn show" onclick="goBack()">← Back to Leads List</button>
