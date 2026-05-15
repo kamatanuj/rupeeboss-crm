@@ -1868,7 +1868,6 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
                                 <div class="section transcript show">
                                     <div class="section-header">📝 Conversation Transcript</div>
                                     <div class="section-content">${transcript}</div>
-                                </div>
                                     <div class="sentiment-bar">
                                         <div class="sentiment-fill sentiment-${lead.sentiment.label}" style="width: ${Math.abs(lead.sentiment.score * 100)}%;"></div>
                                     </div>
@@ -1936,6 +1935,7 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
             
             container.innerHTML = pageData.map((row) => {
                 const leadId = row.date + (row.phone || '') + (row.title || '');
+                const safeLeadId = leadId.replace(/'/g, "\\'").replace(/"/g, '\\"');
                 const shortTitle = row.title ? (row.title.length > 50 ? row.title.substring(0, 50) + '...' : row.title) : 'General Inquiry';
                 
                 return `
@@ -1954,19 +1954,19 @@ ${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
                             <span class="badge badge-${row.category.toLowerCase()}">${row.category === 'HOT' ? '🔥 HOT' : row.category === 'COLD' ? '❄️ COLD' : '📧 EMAIL'}</span>
                         </div>
                         <div class="btn-row">
-                            <button class="btn-expand summary" onclick="toggleSection('${leadId}', 'summary')">
+                            <button class="btn-expand summary" onclick="toggleSection('${safeLeadId}', 'summary')">
                                 📋 View Summary
                             </button>
-                            <button class="btn-expand transcript" onclick="toggleSection('${leadId}', 'transcript')">
+                            <button class="btn-expand transcript" onclick="toggleSection('${safeLeadId}', 'transcript')">
                                 📖 View Transcript
                             </button>
-                            <button class="btn-expand followups" onclick="toggleSection('${leadId}', 'followups')">
+                            <button class="btn-expand followups" onclick="toggleSection('${safeLeadId}', 'followups')">
                                 📅 Follow-Ups
                             </button>
-                            <button class="btn-expand docs" onclick="openDocManager('${leadId}')">
+                            <button class="btn-expand docs" onclick="openDocManager('${safeLeadId}')">
                                 📄 Docs
                             </button>
-                            <button class="btn-delete" onclick="deleteLead('${leadId}')">🗑️ Delete</button>
+                            <button class="btn-delete" onclick="deleteLead('${safeLeadId}')">🗑️ Delete</button>
                         </div>
                     </div>
                 `;

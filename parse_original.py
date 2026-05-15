@@ -94,8 +94,8 @@ for conv_id in conversations:
                 name_found = potential_name.title()
                 break
     
-    # Get summary if available
-    summary = conv_data['transcript_summary'].iloc[0] if len(conv_data) > 0 and pd.notna(conv_data['transcript_summary'].iloc[0]) else ''
+    # Get summary if available (use FULL summary, not truncated)
+    summary = str(conv_data['transcript_summary'].iloc[0]) if len(conv_data) > 0 and pd.notna(conv_data['transcript_summary'].iloc[0]) else ''
     
     # Only add if phone found
     if phones_found:
@@ -106,7 +106,7 @@ for conv_id in conversations:
             'conversation_id': conv_id,
             'name': name_found if name_found else 'Unknown',
             'phone': phone,
-            'summary': summary[:200] if summary else '',
+            'summary': summary,
             'message_count': len(conv_data),
             'all_messages': ' | '.join([str(m)[:100] for m in user_messages[:5]])  # First 5 messages
         })
