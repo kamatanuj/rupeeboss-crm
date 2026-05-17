@@ -27,6 +27,7 @@ def update_dashboard():
     existing_phones = {lead.get('phone', '') for lead in dashboard['leads']}
     
     # Add new leads
+    today = datetime.now().strftime("%Y-%m-%d")
     added = 0
     for i, lead in enumerate(new_leads):
         phone = lead.get('Phone', '')
@@ -40,7 +41,7 @@ def update_dashboard():
                 "title": f"RupeeBoss Loan Inquiry - {phone}",
                 "summary": f"Lead extracted from conversation. Phone: {phone}",
                 "transcript": "[Transcript not available - extracted from metadata]",
-                "date": datetime.now().strftime("%Y-%m-%d"),
+                "date": today,
                 "category": "HOT" if lead.get('Name') else "COLD"
             }
             dashboard['leads'].append(new_lead)
