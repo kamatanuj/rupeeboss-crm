@@ -2664,6 +2664,17 @@
       "transcript": "[Transcript not available - extracted from metadata]",
       "date": "2026-05-09",
       "category": "COLD"
+    },
+    {
+      "id": "rb_0180",
+      "name": "",
+      "phone": "9927414103",
+      "email": "",
+      "title": "RupeeBoss Loan Inquiry - 9927414103",
+      "summary": "Lead extracted from conversation. Phone: 9927414103",
+      "transcript": "[Transcript not available - extracted from metadata]",
+      "date": "2026-05-17",
+      "category": "COLD"
     }
   ],
   "metadata": {
@@ -2671,7 +2682,7 @@
     "hot": 63,
     "cold": 111,
     "generated_at": "2026-05-09",
-    "lastUpdated": "2026-05-10T09:00:43.377602",
-    "totalLeads": 179
+    "lastUpdated": "2026-05-17T08:00:42.704302",
+    "totalLeads": 180
   }
 }
