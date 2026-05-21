@@ -11050,13 +11050,24 @@
       "transcript": "[Transcript not available - extracted from metadata]",
       "date": "2026-05-17",
       "category": "COLD"
+    },
+    {
+      "id": "rb_0692",
+      "name": "",
+      "phone": "7090396141",
+      "email": "",
+      "title": "RupeeBoss Loan Inquiry - 7090396141",
+      "summary": "Lead extracted from conversation. Phone: 7090396141",
+      "transcript": "[Transcript not available - extracted from metadata]",
+      "date": "2026-05-21",
+      "category": "COLD"
     }
   ],
   "metadata": {
     "total": 690,
     "generated_at": "2026-05-17T08:59:34.236181",
     "source": "ElevenLabs API",
-    "lastUpdated": "2026-05-21T16:00:42.387131",
-    "totalLeads": 691
+    "lastUpdated": "2026-05-21T17:00:44.778260",
+    "totalLeads": 692
   }
 }
