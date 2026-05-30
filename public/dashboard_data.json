@@ -11061,13 +11061,24 @@
       "transcript": "[Transcript not available - extracted from metadata]",
       "date": "2026-05-21",
       "category": "COLD"
+    },
+    {
+      "id": "rb_0693",
+      "name": "",
+      "phone": "8090524815",
+      "email": "",
+      "title": "RupeeBoss Loan Inquiry - 8090524815",
+      "summary": "Lead extracted from conversation. Phone: 8090524815",
+      "transcript": "[Transcript not available - extracted from metadata]",
+      "date": "2026-05-30",
+      "category": "COLD"
     }
   ],
   "metadata": {
     "total": 690,
     "generated_at": "2026-05-17T08:59:34.236181",
     "source": "ElevenLabs API",
-    "lastUpdated": "2026-05-30T12:00:43.276681",
-    "totalLeads": 692
+    "lastUpdated": "2026-05-30T13:00:44.189421",
+    "totalLeads": 693
   }
 }
