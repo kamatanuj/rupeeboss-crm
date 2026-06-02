@@ -86,6 +86,27 @@ def extract_lead(detail, conv_id):
                 if len(name) > 1 and name.lower() not in ['unknown', 'interested', 'my', 'sir', 'maam', 'yes', 'salaried', 'here']:
                     break
     
+    # FIX: Check if the collected name is actually the agent's name "Riya"
+    # If so, mark it as "Name Not Provided" since user didn't provide their name
+    if name and name.lower() == 'riya':
+        # Double-check if user actually mentioned their name in transcript
+        transcript = detail.get('transcript', [])
+        user_text = " ".join([msg.get('message', '') for msg in transcript if msg.get('role') == 'user'])
+        
+        # Check if user actually provided a name
+        user_name_patterns = [
+            r'मेरा नाम',
+            r'my name is',
+            r'i am [a-zA-Z]+',
+            r'this is [a-zA-Z]+',
+        ]
+        
+        user_provided_name = any(re.search(pattern, user_text, re.IGNORECASE) for pattern in user_name_patterns)
+        
+        if not user_provided_name:
+            # User didn't provide name, "Riya" came from agent's introduction
+            name = 'Name Not Provided'
+    
     # Transcript
     transcript_lines = []
     for msg in detail.get('transcript', []):
