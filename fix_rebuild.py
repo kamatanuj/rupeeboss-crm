@@ -114,19 +114,19 @@ for batch_start in range(0, len(all_convs), 50):
 
 print(f"\nTotal unique leads: {len(all_leads_dict)}")
 
-# Step 3: Write files
+# Step 3: Write fresh CSV (LATEST FIRST)
 print("\n[3/3] Writing files...")
 
 with open(f'{BASE_DIR}/leads.csv', 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(['Name', 'Email', 'Phone', 'Date'])
-    for phone, lead in sorted(all_leads_dict.items(), key=lambda x: x[1]['date']):
+    for phone, lead in sorted(all_leads_dict.items(), key=lambda x: x[1]['date'], reverse=True):
         writer.writerow([lead['name'], lead['email'], lead['phone'], lead['date']])
 
 print(f"Written leads.csv: {len(all_leads_dict)} rows")
 
 leads_list = []
-for i, (phone, lead) in enumerate(sorted(all_leads_dict.items(), key=lambda x: x[1]['date'])):
+for i, (phone, lead) in enumerate(sorted(all_leads_dict.items(), key=lambda x: x[1]['date'], reverse=True)):
     leads_list.append({
         "id": f"rb_{i+1:04d}",
         "name": lead['name'] or "Unknown",
