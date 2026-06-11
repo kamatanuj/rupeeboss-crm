@@ -5,6 +5,9 @@ import re
 import csv
 import urllib.request
 import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env file
 
 ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
 CONV_URL = "https://api.elevenlabs.io/v1/convai/conversations?page_size=100"
