@@ -1,0 +1,141 @@
+RupeeBoss Repeat Customer Reference
+====================================
+
+This document lists customers who called multiple times.
+Use this to understand follow-up patterns.
+
+
+Customer: Unknown | Phone: 9927414103
+Total Calls: 6 | First: 2026-05-15 | Last: 2026-05-19
+Loan Types Discussed: Machinery Loan Callback; Senior Callback Request; Machinery Loan Inquiry; Machine Loan Callback; Code Add Request; Startup Loan Callback
+---
+
+Customer: Unknown | Phone: 7830474563
+Total Calls: 6 | First: 2026-03-30 | Last: 2026-03-30
+Loan Types Discussed: RM Callback Request; RupeeBoss Loan Inquiry; RupeeBoss Loan Inquiry; Unsecured Business Loan Inquiry; Unsecured Business Loan Inquiry; Unsecured Business Loan Application
+---
+
+Customer: The | Phone: 9820496217
+Total Calls: 5 | First: 2025-12-03 | Last: 2025-12-04
+Loan Types Discussed: Business Loan Application Inquiry; Business Loan Inquiry Details; Business Loan Inquiry; Business Loan Inquiry; Business Loan Inquiry
+---
+
+Customer: Unknown | Phone: 9820455298
+Total Calls: 5 | First: 2025-03-25 | Last: 2025-07-08
+Loan Types Discussed: ; ; ; ; 
+---
+
+Customer: Anuj | Phone: 9820370923
+Total Calls: 4 | First: 2025-04-21 | Last: 2026-03-24
+Loan Types Discussed: LAP Interest Rate Inquiry; RupeeBoss: Loan Information &; ; 
+---
+
+Customer: Unknown | Phone: 9318391500
+Total Calls: 3 | First: 2025-12-01 | Last: 2025-12-01
+Loan Types Discussed: Startup Loan Inquiry (Hindi); Startup Business Loan Options; Business loan inquiry
+---
+
+Customer: Unknown | Phone: 8969567307
+Total Calls: 3 | First: 2025-04-03 | Last: 2025-04-03
+Loan Types Discussed: ; ; 
+---
+
+Customer: Unknown | Phone: 8709360119
+Total Calls: 3 | First: 2025-07-29 | Last: 2025-07-29
+Loan Types Discussed: PMEGP loan inquiry; Property Loan Inquiry; Loan options inquiry
+---
+
+Customer: Unknown | Phone: 7255896286
+Total Calls: 3 | First: 2025-04-27 | Last: 2025-04-27
+Loan Types Discussed: ; ; 
+---
+
+Customer: Unknown | Phone: 9887333688
+Total Calls: 2 | First: 2025-07-25 | Last: 2025-07-25
+Loan Types Discussed: ; 
+---
+
+Customer: Unknown | Phone: 9886666831
+Total Calls: 2 | First: 2025-07-24 | Last: 2025-07-24
+Loan Types Discussed: ; 
+---
+
+Customer: Unknown | Phone: 9864847915
+Total Calls: 2 | First: 2025-12-04 | Last: 2025-12-04
+Loan Types Discussed: Loan Against Property Inquiry; Property Loan Inquiry (Hindi)
+---
+
+Customer: Unknown | Phone: 9620551047
+Total Calls: 2 | First: 2025-12-05 | Last: 2025-12-05
+Loan Types Discussed: Business Loan Inquiry; Business Loan Inquiry
+---
+
+Customer: Unknown | Phone: 9473039418
+Total Calls: 2 | First: 2025-07-30 | Last: 2025-07-30
+Loan Types Discussed: Loan information request; Business Loan Application (Hindi)
+---
+
+Customer: Pinky | Phone: 9381246660
+Total Calls: 2 | First: 2025-07-07 | Last: 2025-07-08
+Loan Types Discussed: ; 
+---
+
+Customer: Unknown | Phone: 9376198182
+Total Calls: 2 | First: 2025-08-22 | Last: 2025-08-28
+Loan Types Discussed: Personal Loan EMI Inquiry; Personal loan inquiry
+---
+
+Customer: Unknown | Phone: 9160254911
+Total Calls: 2 | First: 2025-07-10 | Last: 2025-07-10
+Loan Types Discussed: ; 
+---
+
+Customer: Unknown | Phone: 9139249105
+Total Calls: 2 | First: 2025-09-09 | Last: 2025-09-09
+Loan Types Discussed: Personal Loan Inquiry (Hindi); Hindi Loan Information Request
+---
+
+Customer: Unknown | Phone: 9012443348
+Total Calls: 2 | First: 2025-04-23 | Last: 2025-04-23
+Loan Types Discussed: ; 
+---
+
+Customer: Unknown | Phone: 8790349135
+Total Calls: 2 | First: 2025-08-22 | Last: 2025-08-25
+Loan Types Discussed: CGTMSE Loan Eligibility Inquiry; Startup Loan Inquiry
+---
+
+Customer: Unknown | Phone: 8620973141
+Total Calls: 2 | First: 2025-08-26 | Last: 2025-09-01
+Loan Types Discussed: Unsecured Business Loan Inquiry; MSME Loan Inquiry
+---
+
+Customer: Unknown | Phone: 8291262077
+Total Calls: 2 | First: 2025-09-28 | Last: 2025-09-28
+Loan Types Discussed: Unsecured Business Loan Inquiry; Startup Loan Inquiry (Hindi)
+---
+
+Customer: Unknown | Phone: 8115021981
+Total Calls: 2 | First: 2025-10-07 | Last: 2025-10-07
+Loan Types Discussed: MSME Loan Inquiry; MSME Loan Information Request
+---
+
+Customer: Unknown | Phone: 7870432930
+Total Calls: 2 | First: 2026-04-27 | Last: 2026-04-27
+Loan Types Discussed: Business Loan Eligibility Check; Unsecured Business Loan Inquiry
+---
+
+Customer: Unknown | Phone: 7733910825
+Total Calls: 2 | First: 2026-04-15 | Last: 2026-04-15
+Loan Types Discussed: Home Loan Callback; Home Loan Plot Construction
+---
+
+Customer: Unknown | Phone: 7080704667
+Total Calls: 2 | First: 2026-06-11 | Last: 2026-06-11
+Loan Types Discussed: Startup Business Loan; Collateral-Free Startup Loan
+---
+
+Customer: Unknown | Phone: 7061740105
+Total Calls: 2 | First: 2026-03-23 | Last: 2026-03-23
+Loan Types Discussed: MSME Loan Inquiry; Loan Eligibility Check
+---

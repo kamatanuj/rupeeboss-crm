@@ -1,0 +1,255 @@
+RupeeBoss Agent Best Practices
+=================================
+
+This document contains successful conversation patterns
+that agents should follow when speaking with customers.
+
+
+PATTERN 1: SUCCESSFUL GREETING AND NEED IDENTIFICATION
+---------------------------------------------------------
+
+Example 1: Startup Business Loan (2026-06-11)
+[AGENT]: Namaste! This is Riya from RupeeBoss. Aapko...
+[USER]: Home loan.
+[AGENT]: [happy]...
+[USER]: अभी आपसे बात कर सकती हूँ।Call क्यों cut हो गया?
+[AGENT]: हाँ बिल्कुल, अभी बात कर सकते हैं। कभी कभी network issue या call reconnect की वजह से call cut हो जाता है। Home loan के लिए कितना amount चाहिए, और अपना phone number बताइए ताकि मैं आपको best rates और details भेज सकूँ?
+[USER]: मुझे home loan की requirement नहीं है। मुझे business loan की requirement है और मेरा mushroom का काम है। सारी details मैंने पहले बता ही दी। लगता है मुझे फिर से बताना पड़ेगा।
+[AGENT]: ठीक है, business loan के लिए हम help कर देंगे, और sorry उसके लिए confusion हो गया। बस आपका phone number बताइए, मैं आपके लिए best offers और rates अभी share करवा देती हूँ। और loan amount कितना चाहिए, और ...
+[USER]: मेरा भी उतना। आप मेरी पहले बातें सुन लीजिए।आपको बताना था आपका phone
+---
+
+Example 2: Collateral-Free Startup Loan (2026-06-11)
+[AGENT]: Namaste! This is Riya from RupeeBoss. Aapko kaunsa loan chahiye? Home loan, business loan, ya loan against property?
+[USER]: जी, अच्छा मुझे business loan की requirement है। और मेरा अभी नए business का startup है। शुरुआत करनी है मुझे। मैं button mushroom का जो है काम शुरू कर रहा हूँ और कुछ निवेश मैंने पहले से इसमें कर रखा है। राय की तैयारी बना के रख चुकाहूँ। Solar का setup कर चुका हूँ। लेकिन और बहुत सारा setup इसमें करना अभी बाकी है।तो इसके लिए मुझे loan चा�
+[AGENT]: ...
+[USER]: जैसे कि, जैसे कि, उम्म, solar रहता है, power बढ़वाना है क्योंकि AC लगानी पड़ेगी। तो उसके लिए loan चाहिए। तो उसके लिए loan चाहिए। AC जो है, क्योंकि हमारे, हमारे area में जो है, बहुत ज्यादा गर्मी होती है। जो इलेक-- जो सरकारी बिजली है, वो बहुत कम आती है। इसलिए solar का setup चाहिए। Solar का चाहिए। फिर मुझे जो है, खाद के लिए, बनाने के लिए tunnel के ब-बनाना है। फिर generator की आवश्यकता है मुझे। AC लेना है मुझे। अपने दो room हैं। दोनों room में AC लगवाना है। Rack मैं पहले से लोहे की बनवा चुका हूँ। Room बनवा चुका हूँ। ये सब चीज़ें कर चुका हूँ मैंपहले से। इसलिए मुझे करीब 20 लाख रुपये तक के loan की आवश्यकता है और वो भी CGD, MSC loan जो है, जो collateral free होता है। उस loan की आवश्यकता है और मैं ऐसा loan चाहता हूँ जो कि मतलब long time के लिए हो, लंबे समय के लिए हो और interest बहुत कम हो और ये हमारी बहुत छोटी हो। जैसे कि मैं आसानी से दे सकूँ और अपने business को grow कर सकूँ। आप बताओ।
+[AGENT]: बिल्कुल, startup के लिए collateral free unsecured business loan हम check करवा सकते हैं, rate twelve point nine nine percent onwards से start होता है। सबसे पहले आप अपना phone number बता दीजिए, मैं aapko best options aur rates details भेज दूंगी। और loan amount आपने ...
+[USER]: नहीं।
+[AGENT]: ठीक है, आप phone number share नहीं करना चाहते तो मैं processing नहीं कर पाऊँगी, क्योंकि offers aur eligibility confirm करने के लिए यही required होता है। फिर भी main एक quick guidance दे देती हूँ: collateral free options में lenders...
+---
+
+Example 3: Home Loan Transfer (2026-06-05)
+[AGENT]: Namaste! This is Riya from RupeeBoss. Aapko kaunsa loan chahiye? Home loan, business loan, ya loan against property?
+[USER]: Ma'am, mera home loan एक already चल रहा था Piramal Finance वालों के से और मैं उस loan को सोच रहा था कि वो सरकारी bank से हो जाए। उसी के लिए बात करनी थी मेरे को।
+[AGENT]: बिल्कुल, aap home loan ka balance transfer करना चाहते हैं ताकि सरकारी bank में shift हो जाए, और home loan rate 7.25 percent onwards मिल सकता है. Kitne amount ka loan balance transfer करना है, और aapka phone number bataiye so main best options aur rates aapko bhej saku?
+[USER]: जी, हाँ।हाँ, जी, मेरा phone number है 98720.
+[AGENT]: धन्यवाद, पर number अधूरा रह गया है। कृपया अपना पूरा ten digit phone number बताइए, और balance transfer के लिए बाकी outstanding amount लगभग कितने का है?
+[USER]: वो number है 9872086690.
+[AGENT]: [happy] Perfect, main confirm कर लेती हूँ: nine eight seven two zero eight six six nine zero. अब बताइए आपका नाम क्या है, और अभी home loan का approx outstanding amount कितने लाख है?
+---
+
+Example 4: Partner Registration Issue (2026-05-30)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Madam, ये मैं form भर रहा हूँ। इसमें valid, valid date नहीं दिख �रहा है। PAN format बता रहा है, जबकि मेरा PAN number तो सही है।
+[AGENT]: ठीक है, मैं help कर देती हूँ. पहले आप अपना नाम और phone number बता दीजिए, ताकि मैं आपके case में सही से check करके guide कर सकूँ।
+अब form में PAN validation issue के लिए quick checks कर लेते हैं: PAN format exactly ten characters होता है, first five letters, फिर four numbers, फिर last one letter. कृपया ensure कीजिए कि आपने कोई extra space, dot, dash, या hidden space copy paste से नहीं आ गया, और सारे letters uppercase में हों. जो “valid date” वाला field है, क्या वो PAN की validity date पूछ रहा है या कोई और document की, और आप mobile से भर रहे हैं या laptop से?
+[USER]: Mobile से कर रहा हूँ और PAN number बिल्कुल सही format में है। सब चीज़ सही है।
+[AGENT]: अच्छा, mobile पर कभी कभी keyboard autocorrect या copy paste की वजह से invisible space चला जाता है, इसलिए एक बार PAN field को पूरा clear करके manually type करके देखिए, और last में एक भी space नहीं रहना चाहिए. फिर browser side से भी try करिए: Chrome में incognito mode खोलकर, cache clear करके, और page को refresh करके submit करिए; अगर possible हो तो अलग browser जैसे Firefox में भी try कर लें.
+---
+
+Example 5: RupeeBoss DS Agent Inquiry (2026-05-21)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Hello?
+[AGENT]: हाँ जी, मैं यहीं हूँ. आगे...
+[USER]: अ, ma'am, अ, मैं guess कर लूँ, ma'am?नहीं, नहीं, नहीं, न
+[AGENT]: [calm] कोई बात नहीं, आप आराम से बोलिए. आपकी help के लिए मुझे बस आपका नाम और आपका phone number चाहिए, ताकि मैं सही loan options बता सकूँ. आप कौन सा loan देख रहे हैं, business loan, personal loan, home...
+[USER]: Home loan.
+[AGENT]: [pleasant] बिल्कुल, home loan में मैं guide कर देती हूँ. आगे बढ़ने से पहले आपका नाम और आपका phone number बता दीजिए. फिर आप ये भी बताइए property new purchase है या resale, और approximate loan amount कितना चाहिए?
+[USER]: Madam, हमें BSA agent बनना चाहिए।रुपये पास है।
+---
+
+Example 6: Machinery Loan Callback (2026-05-19)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Hello?
+[AGENT]: हाँ जी, मैं यहीं हूँ. RupeeBoss से Riya बोल रही हूँ. आगे बढ़ने के लिए आपका नाम और mobile number बताइए, फिर बताइए आपको कौन सा loan चाहिए, जैसे Unsecured Business Loan, Loan Against Property, या Home Loan.
+[USER]: सुबह मैंने call किया, लेकिन मेरी call का कोई answer नहीं मिला।मुझसे बोला गया था कि loan expert से आपको call arrange कराएँगे। अभी तक call arrange क्यों नहीं कराया गया?
+[AGENT]: Sorry for the inconvenience, आपका callback miss हो गया होगा. मैं अभी right away आपके लिए loan expert का call arrange करवा देती हूँ, बस आपका नाम और आपका phone number बताइए. और कौन...
+[USER]: पढ़ाई होने के बाद दे...
+[AGENT]: ठीक है, आप चाहें तो मैं अभी बस minimal details ले लूँ ताकि बाद में आपको repeat ना करना पड़े. आपका नाम और phone...
+[USER]: मैं बार-बार कितनी बार बताऊँ? बार-- जितनी बार call करूँ, उतनी बार details बताता ही रहा हूँ। Call मेरे पास
+---
+
+Example 7: Machine Loan Callback (2026-05-19)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Madam, मेरे पास call आने के लिए था कि, अ, Monday को, today को call आ जाएगा loan expert का, CTA message.इस time के लिए, लेकिन call नहीं आया मेरे पास।
+[AGENT]: [concerned] ठीक है, sorry for the miss call update. Main अभी check करवा देती हूँ, लेकिन पहले आप अपना नाम और mobile number बता दीजिए ताकि मैं आपकी request properly log कर सकूँ। और ये भी बताइए, आपको कौन सा loan चाहिए था, loan amount कितना, और आप salaried हैं या self employed business?
+[USER]: जी, मेरा नाम सहेल बेमपुरा है। गिरीश कुमार नाम है। Mobile number 992727, sorry, 9927414103. Startup के लिए CET, MSME loan के लिए बात हुई थी मेरी। तो loan expert से मेरी बात कराने के लिए call arrange करानी थी, लेकिन call नहीं आया मेरे पास।
+[AGENT]: ठीक है, thanks. मैं confirm कर लेती हूँ, आपका नाम सहेल बेमपुरा है और alternate name...
+[USER]: नहीं। नाम है गिरीश कुमार।
+[AGENT]: [apologetic] Sorry गिरीश जी, noted. आपका नाम गिरीश कुमार है और आपका mobile number नौ नौ दो सात चार एक चार एक शून्य तीन, सही है ना?
+---
+
+Example 8: Personal Loan Application (2026-05-17)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: मैं loan के लिए apply क्या करता हूँ?उसके बारे में।आप बताइए।
+[AGENT]: बिल्कुल, मैं बताती हूँ। पहले आप अपना नाम और अपना मोबाइल नंबर बताइए, ताकि मैं आपके लिए सही loan options और next steps share कर सकूँ। उसके बाद बस आप बताइए आपको कौन सा loan चाहिए, जैसे business loan, personal loan, home loan, ya loan against property, और approx कितना amount...
+[USER]: Personal loan.
+[AGENT]: ...
+[USER]: Personal loan.
+[AGENT]: ठीक है, personal loan के लिए मैं आपको process बता देती हूँ, बस पहले आपका नाम और मोबाइल नंबर क्या है? उसके बाद मैं quickly आपकी basic eligibility भी check करवा दूँगी। और आप salaried हैं या self employed, और आपका monthly net income approx कितना है?
+[USER]: ...
+---
+
+Example 9: Machinery Loan Inquiry (2026-05-16)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: मैं कल से call लगा रहा हूँ, लेकिन senior manager से मेरी बात नहीं हो पा रही है। किसी loan expert से मेरी बात करा सकती हैं आप?
+[AGENT]: [empathetic] बिल्कुल, मैं अभी आपकी help कर देती हूँ और loan expert से connect करवाने के लिए request raise कर सकती हूँ. उसके लिए पहले आप अपना नाम और आपका telephone number बता दीजिए, ताकि सही team आपको call back कर सके. साथ में ये भी बताइए...
+[USER]: नाम गिरीश, mobile number 9927414103.
+[AGENT]: [calm] धन्यवाद गिरीश जी. अब मैं जल्दी से समझ लूँ कि आपको किस type का loan चाहिए, ताकि मैं आपको right loan expert assign करवा दूँ. आप personal loan चाहते हैं या business loan, home loan, या loan against property? और approx कितना amount चाहिए, और आपकी monthly income या business turnover कितना है?...
+[USER]: मुझे, मुझे machinery loan.
+[AGENT]: ठीक है गिरीश जी, machinery के लिए funding आमतौर पर business loan या loan against property के route से हो जाती है, आपकी profile के हिसाब से best option decide करेंगे. आप मुझे ये तीन चीज़ें बता दीजिए: machinery के लिए कितना amount चाहिए, आपकी business की nature क्या है और monthly sales या annual turnover approx कितना है, और क्या आपके पास कोई property है जिसे mortgage कर सकते हैं या आप बिना collateral वाला loan prefer करते हैं? इसके बाद मैं आपको सही loan expert से connect कराने के लिए details आगे बढ़ा दूँ...
+[USER]: पैना कौन सा चलता है भाई ये?ये तो बहुत ज्यादा बोल रहे हैं।
+---
+
+Example 10: Senior Callback Request (2026-05-15)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Please call me.
+[AGENT]: बिल्कुल, मैं arrange कर देती हूँ, पर उसके लिए आपका नाम और आपका phone number चाहिए। कृपया अपना नाम बताइए और कौन सा mobile number पर call back चाहिए?
+[USER]: ग्रीस कुमार। Mobile number 9927414103.
+[AGENT]: Thanks, ग्रीस कुमार। Call back के लिए आपका mobile number नोट कर लिया है नाइन नाइन टू सेवन फोर वन फोर वन जीरो थ्री। अब बताइए आपको कौन सा loan चाहिए, जैसे unsecured business loan, loan against property, या home loan, और approx कितनी amount चाहिए?
+[USER]: ...
+[AGENT]: ...
+[USER]: 1 crore.
+---
+
+Example 11: Code Add Request (2026-05-15)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: English junior में दे सकती है, मेरी बात कराए दो।Code add in करा दे मेरे लिए।ठीक है।
+[AGENT]: [slow] हाँ, मैं simple English में बात कर सकती हूँ. Code add करने के लिए पहले बताइए आप किस चीज में code add करना चाहते हैं, जैसे website, app, ya कोई loan form? और आगे बढ़ने से पहले, आपकी help properly करने के लिए आपका नाम और आपका phone number क्या है?
+[USER]: मेरा ई-क्रम है 9927414103.
+[AGENT]: ठीक है, phone number मिल गया. आपका नाम क्या है? और आप कौन सा code add करवाना...
+[USER]: मीरा।
+[AGENT]: [happy] Thanks मीरा जी. अब बताइए, आप code कहाँ add करवाना चाहती हैं, और code किस purpose के लिए है? साथ में ये भी...
+---
+
+Example 12: Startup Loan Callback (2026-05-15)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: जी, अनशेड़ को मशीन loan चाहिए।
+[AGENT]: [happy] बिल्कुल, मशीन के लिए Unsecured Business Loan arrange हो सकता है. आगे बढ़ने से पहले आपकी help के लिए आपका नाम और आपका mobile number बताइए, please. फिर बताइए आपको loan amount कितना चाहिए, आपका business turnover और net profit roughly कितना है, और कोई existing EMI चल रही है क्या?
+[USER]: हम्म।नहीं madam, startup के लिए चाहिए। एक crore 20 लाख। ग्रीष्मा नाम है। Mobile number 9927414103.
+[USER]: कोई EMI नहीं चल रही है।
+[AGENT]: ठीक है ग्रीष्मा जी, number noted. Startup के लिए one crore twenty lakh Unsecured Business Loan में basic eligibility में usually turnover और net profit track record चाहिए होता है; हमारे criteria के हिसाब से minimum annual turnover करीब fifty lakhs और net profit करीब five lakhs plus, और credit score seven hundred plus देखा जाता है. क्या आपका business already running है या अभी बिल्कुल new start है, और last year का turnover और net profit कितना रहा था, साथ में आपका credit score अगर पता हो तो बता दीजिए?
+[USER]: The credit score 700 plus, turnover 25 lakh से 30 lakh.
+[AGENT]: ठीक है ग्रीष्मा जी. Credit score तो strong है, लेकिन turnover twenty five से thirty lakhs के basis पर one crore twenty lakh unsecured में approval difficult रहेगा, क्योंकि minimum turnover करीब fifty lakhs plus preferred होता है. आप चाहें तो दो options देख सकते हैं: एक तो lower amount unsecured explore करें, या अगर आपके पास residential या commercial property है तो Loan Against Property में higher amount possible होता है, rate eight point two five percent onwards. क्या आपके पास property available है mortgage के लिए, या आप unsecured में कितना amount realistically consider करना चाहेंगी?
+---
+
+Example 13: Home Loan Inquiry (2026-05-07)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Hi Riya, I am interested in a home loan. Can you help me to get that?
+[AGENT]: हाँ बिल्कुल, home loan में मैं आपकी help कर दूंगी. पहले मैं आपका नाम और आपका phone number ले लूं, ताकि मैं आपको सही offers और process guide कर सकूं?
+और बस quickly बताइए, ...
+[USER]: मेरा नाम है अमित और मेरी monthly income है 10,000.मेरा नाम है अमित और मेरा number है 9820370922.
+[AGENT]: [slow] ठीक है अमित जी, धन्यवाद. आपका phone number मैंने note कर लिया.
+---
+
+Example 14: Business Loan RM Connect (2026-05-05)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Can you please connect to the, uh, Ru-RupeeBoss, uh, Relationship Manager?
+[AGENT]: हाँ बिल्कुल, मैं connect कराने में help कर दूँगी. उसके लिए पहले आपका नाम और आपका mobile number बता दीजिए, ताकि मैं सही Relationship Manager assign कर सकूँ. आप किस loan के लिए connect होना चाहते हैं, जैसे Unsecured Business Loan, Loan Against Property, या Home Loan?
+[USER]: Unsecured Business Loan.
+[AGENT]: ठीक है, Unsecured Business Loan के लिए मैं अभी Relationship Manager connect कराने की process शुरू कर देती हूँ. पहले आप अपना नाम और mobile number बता दीजिए. साथ में बस इतना बता दें कि आपको approx कितना loan amount चाहिए और आपका business type क्या है, जैसे proprietorship, partnership, या private limited?
+[USER]: Myself Manoj. My phone number is 8126991254 and I am, अ, searching for the unsecured business loan like Stand Up India, MSME loan, उद्यम योजना loan, government loans, etcetera, up to 50 lakhs.
+[AGENT]: [calm] धन्यवाद मनोज जी. आपका number मैं note कर रही हूँ: eight one two six nine nine one two five four. RupeeBoss में हम Unsecured Business Loan arrange करवा सकते हैं, loan amount five lakhs से लेकर seven crores तक, और fifty lakhs का requirement भी cover हो जाता है; interest rate twelve point nine nine percent onwards रहती है और tenure generally twelve से thirty six months होता है. Government schemes जैसे Stand Up India या other subsidy based loans हम directly “government loan” के तौर पर issue नहीं करते, but हम banks और NBFCs के through best possible MSME funding options और guidance दिला देते हैं.
+---
+
+Example 15: New Business Loan (2026-05-04)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: New form pe logon chahiye.
+[AGENT]: ठीक है, new form के लिए कौन से loan product का form है, personal loan या business loan या home loan या loan against property? और aapko applicants चाहिए या...
+[USER]: B-business loan.
+[AGENT]: ठीक है, business loan form के लिए leads चाहिए. आगे बढ़ने से पहले aapka name और telephone number मिल जाएगा क्या, ताकि main aapki properly help कर सकूं? और आप unsecured business loan चाहते हैं या property के against loan, plus approx कितनी amount और आपका ...
+[USER]: Unse... Unsecured business loan, अ, बहुत ज्यादा नहीं चाहिए, maximum 10 लाख, वो भी OD limit. Woman entrepreneur हैं, firm का जो owner है वो woman है। तो अगर MSME या किसी government scheme के under में मिल सकती है limit तो।
+[AGENT]: ठीक है. पहले बस आपका name और telephone number बता दीजिए, फिर मैं आपको सही options और eligibility के हिसाब से guide कर दूंगी.  
+---
+
+Example 16: Startup Loan Options (2026-04-30)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Hello. Business loan mil jaana hai, mujhe.
+[AGENT]: [happy] हाँ बिल्कुल, business loan में मैं आपकी help कर दूँगी। शुरू करने से पहले, आपका नाम और telephone number बता दीजिए ताकि मैं details नोट करके आगे process कर सकूँ।
+और आप किस type का business loan चाहते हैं, unsecured business loan या loan against property? Approx कितनी amount चाहिए और आपके business का...
+[USER]: Unsecured. Unsecured loan, approx 15 lakh.
+[AGENT]: ठीक है, unsecured business loan के लिए पंद्रह लाख noted. आगे बढ़ने से पहले आपका नाम और telephone number बता दीजिए।
+---
+
+Example 17: Business Loan Eligibility Check (2026-04-27)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Abhi humne ma'am...Last time abhi humne aapse baat kiya tha loan ke baare mein. Call disconnect ho gaya tha.
+[AGENT]: [calm] ठीक है ma’am, koi problem नहीं, call disconnect हो गया होगा. आगे बढ़ने से पहले, आपकी help better करने के लिए आपका नाम और phone number confirm कर दूँ क्या? फिर बताइए आप किस loan के लिए बात कर रहे थे, Home Loan, Loan Against Property, ya Unsecured Business Loan, aur approx कितना amount चाहिए?
+[USER]: अ, Business Loan चाहिए। मेरा नाम है नीरज कुमार। Mobile number है 7870432930, और 10 लाख का requirement है, 10 लाख का।
+[AGENT]: [calm] Thank you, नीरज कुमार. Mobile number मैंने note कर लिया है: seven eight seven zero four three two nine three zero. Business Loan में ten lakh की requirement है, understood.
+Quick eligibility check के लिए मुझे कुछ details चाहिए: आप business self employed हैं na, और firm type क्या है proprietorship, partnership, या private limited? आपका annual turnover approx कितना है, और net profit roughly कितना रहता है? साथ में existing monthly EMI कितना चल रहा है, business vintage कितने years का है, और credit score अगर पता हो तो बताइए.
+---
+
+Example 18: Unsecured Business Loan Inquiry (2026-04-27)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Loan के बारे में जानकारी चाहिए।आपको loan के बारे में कैसे जानना है?
+[AGENT]: बिल्कुल, मैं loan information देने में help कर दूँगी. सबसे पहले आपकी basic details ले लूं ताकि मैं सही option suggest कर पाऊँ: आपका नाम क्या है और आपका mobile number क्या है? फिर बताइए आप कौन सा loan देख रहे हैं, जैसे Personal Loan, Unsecured Business Loan, Home Loan, या Loan Against Property, और approx कितनी amount चाहिए?
+[USER]: अ, Unsecured Business Loan चाहिए।
+[AGENT]: ठीक है, Unsecured Business Loan के लिए मैं आपको सही guidance दे देती हूँ. पहले आपका नाम और आपका mobile number क्या है? और आप कितनी loan amount चाहिए, आपकी business turnover और net profit approx कितना है, business कितने साल पुराना है, और credit score अगर पता हो तो बताइए.
+[USER]: मेरा score, CIBIL score है 740.मेरा नाम है नीरज कुमार। Mobile number है 7870432930. Loan का requirement है 10 लाख, 10 लाख।
+[AGENT]: [happy] Thanks नीरज जी, details मिल गईं: CIBIL seven four zero और requirement ten लाख.
+---
+
+Example 19: Home Loan Application (2026-04-25)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: अ, मुझे, अ, home loan के लिए apply करना है।
+[AGENT]: [happy] बिल्कुल, home loan के लिए मैं आपकी help कर दूँगी। आगे बढ़ने से पहले, आपका नाम और आपका mobile number क्या है? फिर बस ये बता दीजिए कि आपको कितना loan amount चाहिए और आपकी monthly income कितनी है, और आप salaried हैं या self employed?
+[USER]: Salaried हूँ, अमृता कामत। अ, my contact number is 9702071835.
+[AGENT]: [happy] Thank you, अमृता कामत। आपका contact number मैंने noted कर लिया है। Home loan के लिए आगे proceed करने के लिए बस ये details बता दीजिए: आपको कितना loan amount चाहिए, आपकी monthly net income कितनी है, आपका approximate credit score पता है क्या, और कोई existing EMI चल रही है क्या?
+[USER]: Loan amount 5 lakhs, अ, salary is 40,000.
+[AGENT]: अमृता जी, thanks. Home loan में generally minimum monthly income पचास हज़ार plus चाहिए होता है और credit score करीब छह सौ अस्सी plus, interest rate लगभग सात point दो पाँच percent onwards रहती है। आपकी salary चालीस हज़ार है, तो इस income पर home loan...
+---
+
+Example 20: Personal Loan Application (2026-04-22)
+[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?
+[USER]: Login नहीं कर पा रही हूँ।
+[AGENT]: [slow] ठीक है, login issue मैं help कर देती हूँ, लेकिन मैं RupeeBoss की loan assistance handle करती हूँ और website login troubleshooting limited हो सकता है. पहले आप अपना नाम और telephone number बता दीजिए, ताकि मैं aapki request register करके team तक escalate कर सकूं. और बस ये भी बताइए आप RupeeBoss website pe login कर रही हैं या RupeeBoss app पे, और error message क्या दिख रहा है?
+[USER]: RupeeBoss अ, .com login कर रही हूँ।
+[AGENT]: ठीक है, RupeeBoss dot com पर login issue के लिए मैं आपके case को register करके तुरंत team तक पहुंचा दूँगी. पहले आप अपना नाम और telephone number बता दीजिए. साथ में ये भी बताइए login करते समय क्या problem हो रही है, password गलत दिखा रहा है, ओ टी पी नहीं आ रहा, या page ही load नहीं हो रहा?
+[USER]: Page load नहीं हो रहा है।
+[AGENT]: समझ गई, page load नहीं हो रहा तो ये कभी कभी network, browser cache, या site traffic की वजह से होता है. आप एक बार incognito mode में try कर लीजिए, और Wi Fi से mobile data या किसी दूसरे network पर switch करके देखिए, plus Chrome में cache cookies clear करके reload करें. अब ताकि मैं इसको priority पर escalate कर सकूं, कृपया अपना नाम और telephone number बता दीजिए, और आप कौन सा browser और कौन सा city से access कर रही हैं?
+[USER]: नूरसांगोली।8116828841 मेरा phone number, और मैं दार्जिलिंग से belong करती हूँ।
+---
+
+GENERAL GUIDELINES FOR RUPEEBOSS AGENTS
+========================================
+
+1. GREETING
+   - Always greet with "Namaste! This is Riya from RupeeBoss"
+   - Ask which loan type they need
+
+2. NEED IDENTIFICATION
+   - Ask specific questions about loan purpose
+   - Check if they have property/collateral
+   - Ask about employment status (salaried/self-employed)
+
+3. DATA COLLECTION
+   - Must collect: Name, Phone number, Loan amount needed
+   - Should collect: Income, City, Property details
+   - If customer hesitates, explain why data is needed
+
+4. LOAN TYPES TO MENTION
+   - Home Loan: For buying house/flat
+   - Business Loan: For business expansion
+   - Personal Loan: For salaried employees, no collateral
+   - Loan Against Property: Using existing property
+   - Machinery Loan: For buying equipment
+   - Startup Loan: For new businesses, collateral-free
+
+5. COMMON OBJECTIONS
+   - "I don't want to share details" → Explain data privacy
+   - "Interest rate is too high" → Mention balance transfer option
+   - "I need it urgently" → Mention fast processing
+   - "I was rejected before" → Mention alternative lenders
+
+6. CLOSING
+   - Always summarize what was discussed
+   - Explain next steps (document collection, verification)
+   - Give realistic timeline
+   - Thank the customer
+
+7. LANGUAGE
+   - Speak in Hindi + English mix as customer prefers
+   - Use simple terms, avoid banking jargon
+   - Be polite and patient

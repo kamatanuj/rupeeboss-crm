@@ -1,0 +1,26 @@
+{
+  "agent_id": "gKNyAo0UhrdRiQ7FAWVZ",
+  "kb_ids": [],
+  "files": [
+    [
+      "01_customer_faq.txt",
+      "RupeeBoss Customer FAQ",
+      "Real customer Q&A from 2073 conversations"
+    ],
+    [
+      "02_loan_types_guide.txt",
+      "RupeeBoss Loan Products Guide",
+      "Home, Business, Personal, Startup, Machinery loan details"
+    ],
+    [
+      "03_agent_best_practices.txt",
+      "RupeeBoss Agent Best Practices",
+      "Successful conversation patterns and guidelines"
+    ],
+    [
+      "04_repeat_customers.txt",
+      "RupeeBoss Repeat Customers",
+      "Customer call history patterns"
+    ]
+  ]
+}

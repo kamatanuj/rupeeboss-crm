@@ -1,0 +1,118 @@
+RupeeBoss Loan Products Guide
+================================
+
+This document describes the loan products offered by RupeeBoss
+based on actual customer conversations.
+
+
+HOME LOAN
+=========
+Common customer needs:
+1. Ma'am, mera home loan एक already चल रहा था Piramal Finance वालों के से और मैं उस loan को सोच रहा था कि वो सरकारी bank से हो जाए। उसी के लिए बात करनी थ
+2. Home loan.
+3. Hi Riya, I am interested in a home loan. Can you help me to get that?
+4. अ, मुझे, अ, home loan के लिए apply करना है।
+5. मुझे loan चाहिए, home loan चाहिए और मेरा ये building माढ़ा वाला MMRDA के under आता है। तो ये, ये कैसे होगा?ये कैसे होगा?मुझे घर खरीदना है तो मुझे इसके
+6. मुझे home loan लेना है।
+7. Ma'am, मुझे loan चाहिए, home loan.
+8. कितने message में आया था?
+9. Yeah, Riya, I wanted to know, now since Delux, uh, in, in mid-
+10. ya, aah, mujhe loan ke baare mein jankari ch
+
+Typical outcome: Home Loan Transfer
+
+
+BUSINESS LOAN
+=============
+Common customer needs:
+1. Home loan.
+2. Can you please connect to the, uh, Ru-RupeeBoss, uh, Relationship Manager?
+3. New form pe logon chahiye.
+4. Abhi humne ma'am...Last time abhi humne aapse baat kiya tha loan ke baare mein. Call disconnect ho gaya tha.
+5. Loan के बारे में जानकारी चाहिए।आपको loan के बारे में कैसे जानना है?
+6. हाँ, वो उनका business loan of 10 lakh.
+7. Hello.
+8. [overlapping dialogue] बात करनी चाह
+9. [clicking sound] ...loans ke
+10. Ji, hello, mera naam Ritesh hai.
+
+Typical outcome: Startup Business Loan
+
+
+PERSONAL LOAN
+=============
+Common customer needs:
+1. मैं loan के लिए apply क्या करता हूँ?उसके बारे में।आप बताइए।
+2. Ji, mujhe loan chahiye thi.
+3. Yes, personal loan.
+4. Login नहीं कर पा रही हूँ।
+5. बोल ना। हम्म, बोल ना।
+6. ।
+7. [हँसना] [बैकग्राउंड में लोगों के बातें करने की आवाज�
+8. [clears throat] Aaah, I have a loan at 18% with 36 months left. No, no, no. Aaah, calculate the EMI for a 15 lakh personal loan at 12% for 5 years.
+9. Calculate EMI for a 15 lakh personal loan at 12% for 5 years
+10. हाँ, मुझे Personal Loan चाहिए।
+
+Typical outcome: Personal Loan Application
+
+
+LOAN AGAINST PROPERTY
+=====================
+Common customer needs:
+1. Mujhe loan lena hai.
+2. हाँ, मुझे अअअ बिजनेस लोन का च-अअअ इन्फॉर्मेशन चाहिए था।
+3. मतलब मेरे लोर निकालियों पॉर्यो-पार्टी, लोर निकालियों लेना है, लोन के लिए पॉर्यो-पार्टी गिर भी रख कह, कैसे कहके लू? और यह Assam Dhubri District में है,
+4. Hello?
+5. Good morning, Riya. I just wanted to know what is the lead time that I would take to get a loan sanction from your end? Listen to this. Listen to this
+
+Typical outcome: Loan Against Property Inquiry
+
+
+MACHINERY LOAN
+==============
+Common customer needs:
+1. Hello?
+2. मैं कल से call लगा रहा हूँ, लेकिन senior manager से मेरी बात नहीं हो पा रही है। किसी loan expert से मेरी बात करा सकती हैं आप?
+
+Typical outcome: Machinery Loan Callback
+
+
+STARTUP LOAN
+============
+Common customer needs:
+1. जी, अच्छा मुझे business loan की requirement है। और मेरा अभी नए business का startup है। शुरुआत करनी है मुझे। मैं button mushroom का जो है काम शुरू कर र
+2. जी, अनशेड़ को मशीन loan चाहिए।
+3. Hello. Business loan mil jaana hai, mujhe.
+4. ...
+5. Oh, finance.
+6. अक्शली, मैंने एक new startup loan चाहिए बिजनिस के लिये और मेरा नाम स्नीहा पैंडल है, मेरा phone number 9318391500 है.
+7. I need a startup fund for my startup.
+8. ...
+9. मैम, मैं लोन के लिए इंक्वायरी कर रहा हूँ। शॉर्ट स्टॉप लोन के लिए
+10. मैम मेरा नाम धीरज कुमार है मेरी आपसे बात हो रही थी।
+
+Typical outcome: Collateral-Free Startup Loan
+
+
+BALANCE TRANSFER
+================
+Common customer needs:
+1. [car engine sound] Balance transfer karna hai, ma'am.
+2. [clears throat] Yeah, I, uh, have a loan at 18% with 36 months left. How much can I save with you?
+3. "I have a loan at 18% with 36 months left. How much can I save with you
+4. A balance transferring loan. I want to know the balance transferring loan.
+5. I've already gained the information of balance transferring loan. What the procedure to take that?
+6. Hi.
+
+Typical outcome: LAP Balance Transfer
+
+
+PARTNER
+=======
+Common customer needs:
+1. Madam, ये मैं form भर रहा हूँ। इसमें valid, valid date नहीं दिख �रहा है। PAN format बता रहा है, जबकि मेरा PAN number तो सही है।
+2. What does it do?
+3. Can I talk to any senior person?
+
+Typical outcome: Partner Registration Issue
+
