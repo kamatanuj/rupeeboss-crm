@@ -21,13 +21,17 @@ cd "$BASE_DIR"
 log "=========================================="
 log "Rupeeboss CRM Auto-Update Starting..."
 
-# Step 1: Extract leads from D-insights
-log "Extracting leads from D-insights API..."
-python3 extract-leads.py >> "$LOG" 2>&1 || log "Lead extraction completed with warnings"
+# Step 1: Extract leads with REAL summaries and transcripts
+log "Building leads with real summaries and transcripts..."
+python3 real_rebuild.py >> "$LOG" 2>&1 || log "Real rebuild completed"
 
-# Step 2: Update dashboard_data.json with new leads
-log "Updating dashboard_data.json with latest leads..."
-python3 update-dashboard.py >> "$LOG" 2>&1 || log "Dashboard update completed"
+# Step 2: Sync conversation database (incremental)
+log "Syncing conversation database..."
+python3 sync_conversations.py >> "$LOG" 2>&1 || log "DB sync completed"
+
+# Step 3: Build dashboard from real rebuild output
+log "Updating dashboard_data.json from rebuild..."
+python3 build-dashboard.py >> "$LOG" 2>&1 || log "Dashboard build completed"
 
 # Step 3: Commit changes to GitHub
 log "Committing changes to GitHub..."
