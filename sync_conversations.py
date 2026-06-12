@@ -126,7 +126,7 @@ def process_conversation(conv):
     client_data = extract_client_data(transcript_list, analysis)
     
     summary_title = conv.get('call_summary_title', '') or (analysis.get('call_summary_title', '') if analysis else '') or ''
-    summary = analysis.get('call_summary', '') if isinstance(analysis, dict) else ''
+    summary = analysis.get('transcript_summary', '') if isinstance(analysis, dict) else ''
     
     status = detail.get('status', '') or conv.get('status', '')
     duration = detail.get('call_duration_secs', 0) or conv.get('call_duration_secs', 0)
