@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-06-17T10:01:59.802300",
+  "lastUpdated": "2026-06-17T11:01:54.244301",
   "metadata": {
-    "totalLeads": 105,
-    "lastUpdated": "2026-06-17T10:01:59.802318",
+    "totalLeads": 93,
+    "lastUpdated": "2026-06-17T11:01:54.244325",
     "source": "Real Summary Rebuild"
   },
   "leads": [
@@ -51,6 +51,20 @@
     {
       "id": "rb_0004",
       "name": "Unknown",
+      "phone": "7080704667",
+      "email": "",
+      "title": "Callback Complaint",
+      "summary": "Callback Complaint",
+      "transcript": "[AGENT]: Namaste! This is Riya from RupeeBoss. Aapko kaunsa loan chahiye? Home loan, business loan, ya loan against property?\n\n[USER]: अरे, loan का तुम छोड़ो। तुम ये बताओ कि चार दिन से मैं RupeeBoss से contact करने की कोशिश कर रहा हूँ। मुझे कोई जवाब क्यों नहीं मिल रहा है?\n[AGENT]: [concerned] समझ गई, ऐसा होना नहीं चाहिए और आपका callback miss हो गया होगा। Please अपना नाम और phone number बता दीजिए, मैं अभी आपका case...\n[USER]: चार-- दुनों, पहले मेरी बात सुनो। चार दिन से missing हो रहाहै। WhatsApp पर मैंने message कर लिया। आपकी teamसे मुझे call आया। Team ने मुझस\n[AGENT]: ठीक है, मैं आपकी बात पूरी सुन रही हूँ। बस आपका नाम और phone number बता दीजिए ताकि मैं आपका previous request track करके तुरंत callback arrange करवा दूँ; और बताइए last call या WhatsApp message किस number पर किया था?\n[USER]: इसी number पर किया था, 7080704667.\n[AGENT]: [fast] Thank you, मैं आपका number सात शून्य आठ शून्य सात शून्य चार छह छह सात confirm कर रही हूँ। आपका नाम क्या है, और आपको किस...\n[USER]: आरती।\n[AGENT]: Thanks आरती जी, मैं अभी आपके लिए callback...\n[USER]: हाँ, अक्षय नहीं, अक्षय।अक्षय नहीं, अक्षय।अक्षय नहीं, अक्षय।\n[AGENT]: ठीक है, नाम अक्षय noted. Confirm कर दूँ,...\n[USER]: अक्षय नहीं, अक्षय नहीं, आसिफ�ए आसिफ़ एच double E आसिफ़ एच।{Non-literal} अच्छा,\n[AGENT]: ठीक है, नाम आसिफ़ H noted. आपका phone number सात शून्य आठ शून्य सात शून्य चार छह छह सात ही है न, और आपको कौन...\n[USER]: Hi, AI.\n[AGENT]: ...\n[USER]: ये सब मैं बताऊँ? ये सब मैं मुझे बा-- ये सब मैं ब-बताऊँगा ही नहीं कि मुझे कौन सा loan चाहिए। मैं कई बार बता चुका हूँ। तुम्हें भी कई बार बता चुका हूँ। WhatsApp पे भी कई बार बता चुका हूँ। Call पे भी तुम्हारी team को क\n[AGENT]: [calm] बिल्कुल समझ गया, बार बार details देना irritating होता है। अभी मैं बस आपका number और नाम आसिफ़ H के साथ complaint log करके priority callback arrange करवा देता हूँ; आप सिर्फ इतना बता दीजिए last time किस loan ke लिए बात हुई थी, home, business, personal,...\n[USER]: हाँ, आसिफ़...आसिफ़, आसिफ़, A-S-H-E-E-S-H.\n[AGENT]: ठीक है, नाम आशीष noted, और number सात शून्य आठ शून्",
+      "date": "2026-06-13",
+      "category": "COLD",
+      "conversation_id": "conv_5801kv09ejaae1etcywt2s6w4x10",
+      "duration": 244,
+      "message_count": 25
+    },
+    {
+      "id": "rb_0005",
+      "name": "Unknown",
       "phone": "9820360913",
       "email": "",
       "title": "Home & Business Loans",
@@ -61,20 +75,6 @@
       "conversation_id": "conv_0901ktxbhsh3e6j9ybrb9vyct66j",
       "duration": 141,
       "message_count": 17
-    },
-    {
-      "id": "rb_0005",
-      "name": "Unknown",
-      "phone": "7080704667",
-      "email": "",
-      "title": "Collateral-Free Startup Loan",
-      "summary": "Collateral-Free Startup Loan",
-      "transcript": "[AGENT]: Namaste! This is Riya from RupeeBoss. Aapko kaunsa loan chahiye? Home loan, business loan, ya loan against property?\n\n[USER]: जी, अच्छा मुझे business loan की requirement है। और मेरा अभी नए business का startup है। शुरुआत करनी है मुझे। मैं button mushroom का जो है काम शुरू कर रहा हूँ और कुछ निवेश मैंने पहले से इसमें कर रखा है। राय की तैयारी बना के रख चुकाहूँ। Solar का setup कर चुका हूँ। लेकिन और बहुत सारा setup इसमें करना अभी बाकी है।तो इसके लिए मुझे loan चा�\n[AGENT]: ...\n[USER]: जैसे कि, जैसे कि, उम्म, solar रहता है, power बढ़वाना है क्योंकि AC लगानी पड़ेगी। तो उसके लिए loan चाहिए। तो उसके लिए loan चाहिए। AC जो है, क्योंकि हमारे, हमारे area में जो है, बहुत ज्यादा गर्मी होती है। जो इलेक-- जो सरकारी बिजली है, वो बहुत कम आती है। इसलिए solar का setup चाहिए। Solar का चाहिए। फिर मुझे जो है, खाद के लिए, बनाने के लिए tunnel के ब-बनाना है। फिर generator की आवश्यकता है मुझे। AC लेना है मुझे। अपने दो room हैं। दोनों room में AC लगवाना है। Rack मैं पहले से लोहे की बनवा चुका हूँ। Room बनवा चुका हूँ। ये सब चीज़ें कर चुका हूँ मैंपहले से। इसलिए मुझे करीब 20 लाख रुपये तक के loan की आवश्यकता है और वो भी CGD, MSC loan जो है, जो collateral free होता है। उस loan की आवश्यकता है और मैं ऐसा loan चाहता हूँ जो कि मतलब long time के लिए हो, लंबे समय के लिए हो और interest बहुत कम हो और ये हमारी बहुत छोटी हो। जैसे कि मैं आसानी से दे सकूँ और अपने business को grow कर सकूँ। आप बताओ।\n[AGENT]: बिल्कुल, startup के लिए collateral free unsecured business loan हम check करवा सकते हैं, rate twelve point nine nine percent onwards से start होता है। सबसे पहले आप अपना phone number बता दीजिए, मैं aapko best options aur rates details भेज दूंगी। और loan amount आपने ...\n[USER]: नहीं।\n[AGENT]: ठीक है, आप phone number share नहीं करना चाहते तो मैं processing नहीं कर पाऊँगी, क्योंकि offers aur eligibility confirm करने के लिए यही required होता है। फिर भी main एक quick guidance दे देती हूँ: collateral free options में lenders...\n[USER]: नहीं, मैं, मैं ये नहीं कह रहा हूँ कि मैं phone number नहीं share करूँगा। मैं",
-      "date": "2026-06-11",
-      "category": "COLD",
-      "conversation_id": "conv_0701kttdmz08ewmr64qvjmz6pa8g",
-      "duration": 601,
-      "message_count": 38
     },
     {
       "id": "rb_0006",
@@ -123,14 +123,14 @@
       "name": "Unknown",
       "phone": "9927414103",
       "email": "",
-      "title": "Machinery Loan Callback",
-      "summary": "Machinery Loan Callback",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?\n[USER]: Hello?\n[AGENT]: हाँ जी, मैं यहीं हूँ. RupeeBoss से Riya बोल रही हूँ. आगे बढ़ने के लिए आपका नाम और mobile number बताइए, फिर बताइए आपको कौन सा loan चाहिए, जैसे Unsecured Business Loan, Loan Against Property, या Home Loan.\n[USER]: सुबह मैंने call किया, लेकिन मेरी call का कोई answer नहीं मिला।मुझसे बोला गया था कि loan expert से आपको call arrange कराएँगे। अभी तक call arrange क्यों नहीं कराया गया?\n[AGENT]: Sorry for the inconvenience, आपका callback miss हो गया होगा. मैं अभी right away आपके लिए loan expert का call arrange करवा देती हूँ, बस आपका नाम और आपका phone number बताइए. और कौन...\n[USER]: पढ़ाई होने के बाद दे...\n[AGENT]: ठीक है, आप चाहें तो मैं अभी बस minimal details ले लूँ ताकि बाद में आपको repeat ना करना पड़े. आपका नाम और phone...\n[USER]: मैं बार-बार कितनी बार बताऊँ? बार-- जितनी बार call करूँ, उतनी बार details बताता ही रहा हूँ। Call मेरे पास\n[AGENT]: मैं समझ सकती हूँ, बार बार details देना really irritating होता है. मेरे पास अभी आपकी previous details screen पर show नहीं हो रही हैं, इसलिए verification के लिए सिर्फ दो चीजें चाहिए, आपका नाम और phone number, ताकि मैं same request पर callback तुरंत raise कर दूँ. आप चाहें तो बस phone number बता दीजिए, मैं बाकी conversation quick रखूँगी ...\n[USER]: नाम है, नाम है गिरीश कुमार। Mobile number है 9927414103. इस पे कराइए arrange जल्दी, machinery loan के लिए।\n[AGENT]: ठीक है गिरीश जी, धन्यवाद. मैं confirm कर रही हूँ, आपका mobile number नौ नौ दो सात चार एक चार एक शून्य तीन है, right? Machinery loan के लिए आपको approx कितनी amount चाहिए और आपकी business type क्या है, manufacturing या trading, ताकि मैं सही expert को assign करके urgent callback arrange करवा दूँ.\n[USER]: हाँ।\n[AGENT]: Thanks, confirm हो गया. Machinery loan के लिए आप कितनी amount लेना चाहते हैं, और आपकी monthly sales या annual turnover...\n[USER]: Madam, मैं बाद में...सुबह में, सुबह में call कर लेंगे।\n[AGENT]: ठीक है गिरीश जी, हम सुबह में ही call arrange कर देंगे. Preferred time sl",
+      "title": "Machine Loan Callback",
+      "summary": "Machine Loan Callback",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?\n[USER]: Madam, मेरे पास call आने के लिए था कि, अ, Monday को, today को call आ जाएगा loan expert का, CTA message.इस time के लिए, लेकिन call नहीं आया मेरे पास।\n[AGENT]: [concerned] ठीक है, sorry for the miss call update. Main अभी check करवा देती हूँ, लेकिन पहले आप अपना नाम और mobile number बता दीजिए ताकि मैं आपकी request properly log कर सकूँ। और ये भी बताइए, आपको कौन सा loan चाहिए था, loan amount कितना, और आप salaried हैं या self employed business?\n[USER]: जी, मेरा नाम सहेल बेमपुरा है। गिरीश कुमार नाम है। Mobile number 992727, sorry, 9927414103. Startup के लिए CET, MSME loan के लिए बात हुई थी मेरी। तो loan expert से मेरी बात कराने के लिए call arrange करानी थी, लेकिन call नहीं आया मेरे पास।\n[AGENT]: ठीक है, thanks. मैं confirm कर लेती हूँ, आपका नाम सहेल बेमपुरा है और alternate name...\n[USER]: नहीं। नाम है गिरीश कुमार।\n[AGENT]: [apologetic] Sorry गिरीश जी, noted. आपका नाम गिरीश कुमार है और आपका mobile number नौ नौ दो सात चार एक चार एक शून्य तीन, सही है ना?\n\nअब ताकि मैं सही loan expert assign करवा सकूँ, आप बस ये confirm कर दीजिए: आपका startup किस nature का है, आप proprietorship हैं या partnership या private limited, और आपको approx कितनी amount चाहिए MSME...\n[USER]: Salaried हैं sir.\n[AGENT]: ठीक है, अगर आप salaried हैं तो MSME startup loan के बजाय आपके लिए personal loan या फिर अगर कोई property है तो loan against property जैसे options ज्यादा suitable रहते हैं. आप funding किस purpose के लिए लेना चाहते हैं, और approx कितनी amount चाहिए?\n\nसाथ ही आपकी monthly net salary कितनी है, existing EMI चल रही है क्या, और ...\n[USER]: Madam, startup, startup के लिए चाहिए, startup के लिए. CDT, MSME, startup के लिए self-employed, propright asset है।\n[AGENT]: ठीक है, समझ गई. आप startup के लिए MSME loan लेना चाहते हैं और self employed proprietorship setup है, सही है. अब मैं आपकी call arrange कराने से पहले quick eligibility pre check कर लेती हूँ ताकि expert को सही details मिल जाएँ.\n\nआप मुझे तीन चीज़ बता दीजिए: आप",
       "date": "2026-05-19",
       "category": "COLD",
-      "conversation_id": "conv_9101krzme8w7f4vah6nny56gqsx7",
-      "duration": 424,
-      "message_count": 29
+      "conversation_id": "conv_3801krza9ceaey29fews45jxtrbt",
+      "duration": 548,
+      "message_count": 49
     },
     {
       "id": "rb_0010",
@@ -261,7 +261,7 @@
     {
       "id": "rb_0019",
       "name": "Unknown",
-      "phone": "8286360886",
+      "phone": "8976169156",
       "email": "",
       "title": "Loan Eligibility Check",
       "summary": "Loan Eligibility Check",
@@ -275,7 +275,7 @@
     {
       "id": "rb_0020",
       "name": "Unknown",
-      "phone": "8976169156",
+      "phone": "8286360886",
       "email": "",
       "title": "Loan Eligibility Check",
       "summary": "Loan Eligibility Check",
@@ -317,20 +317,6 @@
     {
       "id": "rb_0023",
       "name": "Unknown",
-      "phone": "7814828619",
-      "email": "",
-      "title": "Startup Loan Options",
-      "summary": "Startup Loan Options",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?\n[USER]: ...\n[AGENT]: [gentle]...\n[USER]: मुझे MSME पे loan चाहिए।\n[AGENT]: बिल्कुल, MSME loan में मैं आपकी help कर दूँगी। पहले मैं आपका नाम और आपका phone number ले लूँ, ताकि मैं आपको best options share कर सकूँ। फिर बताइए आपको कौन सा loan चाहिए: Unsecured Business Loan या Loan Against Property, और approximate loan amount कितना चाहिए?\n[USER]: मुझे अपने business को start करने के लिए new startup loan चाहिए।\n[AGENT]: समझ गई। Startup के लिए हमारे पास Unsecured Business Loan और कुछ cases में secured options (जैसे Loan Against Property) possible होते हैं, लेकिन आगे बढ़ने से पहले आपका नाम और phone number चाहिए होगा ताकि मैं आपकी profile check करके सही option बता सकूँ। कृपया अपना नाम और mobile number बताइए।\n\nसाथ में एक दो चीज़ें भी बताइए: आपका business अभी register हो चुका है या अभी plan stage में है, और estimated yearly turnover या अभी की income कितनी है?\n[USER]: मेरा नाम पूजा है। मेरा mobile number 7814828619 है।\n[AGENT]: धन्यवाद पूजा जी। अब मैं quickly समझ लेती हूँ कि आपके लिए कौन सा option fit बैठेगा। आपका business अभी start हो चुका है या अभी plan stage में है, और business का type क्या है, जैसे trading, manufacturing, services? साथ ही आपको कितनी amount चाहिए और क्या आपकी कोई property है जिस पर loan against property लेना possible हो सकता है?\n[USER]: मेरा, मेरा business जो है, manufacturing का business है। Trader का, trader और manufacturer दोनों ही हैं और मेरे को बस कोई property नहीं है कि मैं उसके against loan ले सकूँ।\n[AGENT]: ठीक है पूजा जी, बिना property के option basically Unsecured Business Loan रहेगा। Eligibility के हिसाब से इसमें generally minimum turnover करीब पचास लाख per year और net profit करीब पाँच लाख plus, और credit score सात सौ plus preferred होता है; tenure बारह से छत्तीस months और interest rate बारह point नाइन नाइन percent onwards रहता है। \n\nआप confirm कर दीजिए: आपका business अभी कितने time से चल रहा है, last twelve months का approximate turnover कितना है, net profit roughly क",
-      "date": "2026-04-15",
-      "category": "COLD",
-      "conversation_id": "conv_8901kp7k7v0wfwfsy0a967bwswzv",
-      "duration": 601,
-      "message_count": 29
-    },
-    {
-      "id": "rb_0024",
-      "name": "Unknown",
       "phone": "8010196075",
       "email": "",
       "title": "Live Advisor Transfer",
@@ -341,6 +327,20 @@
       "conversation_id": "conv_2201kp7y5rmwezksb6vef3b21wmg",
       "duration": 100,
       "message_count": 17
+    },
+    {
+      "id": "rb_0024",
+      "name": "Unknown",
+      "phone": "7814828619",
+      "email": "",
+      "title": "Startup Loan Options",
+      "summary": "Startup Loan Options",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?\n[USER]: ...\n[AGENT]: [gentle]...\n[USER]: मुझे MSME पे loan चाहिए।\n[AGENT]: बिल्कुल, MSME loan में मैं आपकी help कर दूँगी। पहले मैं आपका नाम और आपका phone number ले लूँ, ताकि मैं आपको best options share कर सकूँ। फिर बताइए आपको कौन सा loan चाहिए: Unsecured Business Loan या Loan Against Property, और approximate loan amount कितना चाहिए?\n[USER]: मुझे अपने business को start करने के लिए new startup loan चाहिए।\n[AGENT]: समझ गई। Startup के लिए हमारे पास Unsecured Business Loan और कुछ cases में secured options (जैसे Loan Against Property) possible होते हैं, लेकिन आगे बढ़ने से पहले आपका नाम और phone number चाहिए होगा ताकि मैं आपकी profile check करके सही option बता सकूँ। कृपया अपना नाम और mobile number बताइए।\n\nसाथ में एक दो चीज़ें भी बताइए: आपका business अभी register हो चुका है या अभी plan stage में है, और estimated yearly turnover या अभी की income कितनी है?\n[USER]: मेरा नाम पूजा है। मेरा mobile number 7814828619 है।\n[AGENT]: धन्यवाद पूजा जी। अब मैं quickly समझ लेती हूँ कि आपके लिए कौन सा option fit बैठेगा। आपका business अभी start हो चुका है या अभी plan stage में है, और business का type क्या है, जैसे trading, manufacturing, services? साथ ही आपको कितनी amount चाहिए और क्या आपकी कोई property है जिस पर loan against property लेना possible हो सकता है?\n[USER]: मेरा, मेरा business जो है, manufacturing का business है। Trader का, trader और manufacturer दोनों ही हैं और मेरे को बस कोई property नहीं है कि मैं उसके against loan ले सकूँ।\n[AGENT]: ठीक है पूजा जी, बिना property के option basically Unsecured Business Loan रहेगा। Eligibility के हिसाब से इसमें generally minimum turnover करीब पचास लाख per year और net profit करीब पाँच लाख plus, और credit score सात सौ plus preferred होता है; tenure बारह से छत्तीस months और interest rate बारह point नाइन नाइन percent onwards रहता है। \n\nआप confirm कर दीजिए: आपका business अभी कितने time से चल रहा है, last twelve months का approximate turnover कितना है, net profit roughly क",
+      "date": "2026-04-15",
+      "category": "COLD",
+      "conversation_id": "conv_8901kp7k7v0wfwfsy0a967bwswzv",
+      "duration": 601,
+      "message_count": 29
     },
     {
       "id": "rb_0025",
@@ -389,13 +389,13 @@
       "name": "Unknown",
       "phone": "7830474563",
       "email": "",
-      "title": "RM Callback Request",
-      "summary": "RM Callback Request",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise...\n[USER]: [background noise] Ji, ji. number se ya koi relation manager se baat ho sakti hai. Just now.\n[AGENT]: [slow] हाँ बिल्कुल, अभी connect करवा देती हूँ. उससे पहले बस आपकी profile confirm करने के लिए आपका नाम और mobile number बता दीजिए, ताकि सही Relationship Manager assign हो जाए. आप किस city में हैं, और आपको कौन सा loan चाहिए, Business Loan या Loan Against Property?\n[USER]: नाम है रितेश, mobile number है 7830474563, loan मुझे unsecured चाहिए, बारह लाख या दस लाख का या आठ लाख में से बारह लाख कुछ भी हो जाए. Proprietorship है, सारी detail पहले दे चुका हूँ. तुरंत मुझे Relationship Manager से देहरादून में संपर्क कराएं, immediate.\n[AGENT]: [fast] ठीक है रितेश जी, thank you. आपका mobile number मैंने noted कर लिया है. अभी मैं देहरादून के लिए Unsecured Business Loan के Relationship Manager को request raise कर रही हूँ ताकि वो आपको तुरंत call करें.\n\nबस एक quick confirmation चाहिए ताकि गलत team में ना जाए: आपका business vintage कितना है, और average monthly sales या income approx कितनी है? और loan amount final किस पर lock करें, आठ, दस या बारह लाख?\n[USER]: बारह लाख।\n[AGENT]: ठीक है, बारह लाख के लिए ...\n[USER]: amount आप lock करे�\n[AGENT]: ठीक है रितेश जी, मैं amount बारह लाख lock कर देती हूँ...\n[USER]: हाँ। तावन या पतंग बास लगे।\n[AGENT]: ठीक है रितेश जी, मैं बारह लाख amount lock कर रही हूँ. Relationship Manager को immediate callback के लिए trigger करवा देती हूँ, ताकि देहरादून में आपको जल्दी connect मिल जाए.\n\nबस last दो चीज़ें confirm कर दीजिए: आपका business कितने साल से चल रहा है, और approx monthly turnover या income कितनी रहती है? इससे RM call पर directly सही options और documents बता पाएंगे.\n[USER]: business मैं पुराना है, थोड़ा सा आपदा में बह गया था, अभी मैंने थोड़ा सा cloud की item type की चला रहा हूँ, मुझे उसी के लिए funding चाहिए, थोड़ा सा बड़ा करना है, बढ़ाना है.\n[AGENT]: समझ गई रितेश जी. आपके case में RM को सही guidance देने के लिए बस exact numbers चाहिए होंगे, वरना offer delay हो सकता है. आप roughly बता द",
+      "title": "RupeeBoss Loan Inquiry",
+      "summary": "RupeeBoss Loan Inquiry",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. Main apki kaise madad kar sakti hu?\n[USER]: Riyaji, namaskar. Abhi meri thodi der pehle baat hui hai. Kya wohi continue ho sakta hai ya dobara repeat se batana padega?\n[AGENT]: [calm] नमस्कार जी, बिल्कुल continue कर सकते हैं. अगर मेरे पास आपकी पिछली chat का context नहीं आया है, तो आप बस इतना बता दीजिए कि आप कौन सा loan देख रहे थे और अभी किस stage पर बात रुकी थी, मैं वहीं से आगे बढ़ा दूँगी.  \n\nProceed करने से पहले [polite] आपका नाम...\n[USER]: ...कर सकूँ\n[AGENT]: हाँ बिल्कुल, कर सकते हैं. बस [polite] आपका नाम और आपका मोबाइल नंबर बता दीजिए, ताकि मैं आपकी details verify करके उसी point से आगे continue कर दूँ. फिर बताइए आप कौन सा loan लेना चाह...\n[USER]: नाम रोटी सिंह है. नंबर 7830474563 है.\n[AGENT]: धन्यवाद रोती सिंह जी. अब बस ये बता दीजिए कि आपको कौन सा loan चाहिए था, कितनी amount चाहिए,...\n[USER]: हाँ, बिल्कुल.\n[AGENT]: ठीक है रोती जी. आप कौन सा loan लेना चाह रहे हैं, Home Loan, Loan Against Property, या Unsecured Business Loan? और approximate कितनी amount चाहिए, और...\n[USER]: इसी तरह ह\n[AGENT]: [calm] रोती जी, आपकी आवाज़ cut हो गई थी,...\n[USER]: बारह लाख तो बोले तो चले�\n[AGENT]: ठीक है रोती जी, बारह लाख noted. अब आप कौन सा loan लेना चाह रहे हैं, Home Loan, Loan Against Property, या Unsecured Business Loan? और आपकी monthly ...\n[USER]: [पृष्ठभूमि में लोगों के बातें करने की आवाज\n[AGENT]: [slow] रोती जी, background noise की वजह से आपकी बात clear नहीं आ रही. आप एक बार बस ये confirm कर दीजिए कि बारह लाख के लिए loan type कौन सा है, Home Loan, Loan Against Property, या Unsecured Business Loan? और...\n[USER]: मैंने I P E S H कहा, I P E S H, I P E S H, I P E S H, I\n[AGENT]: [calm] रोती जी, “आई पी ई एस एच” मुझे loan type की तरह recognize नहीं हो पा रहा. क्या आप कहना चाह रही हैं “एपीएसएच” या “आईपीएस” कुछ ऐसा?  \n\nआप बस इतना बता दीजिए:...",
       "date": "2026-03-30",
       "category": "COLD",
-      "conversation_id": "conv_6501kmzjy5hhf3p8t3nbs5h8qtnc",
-      "duration": 192,
+      "conversation_id": "conv_6001kmzjsqpvfwbt0wh76z8ffgtn",
+      "duration": 138,
       "message_count": 17
     },
     {
@@ -554,244 +554,62 @@
     },
     {
       "id": "rb_0040",
-      "name": "Unknown",
-      "phone": "9864847915",
+      "name": "The",
+      "phone": "9820496217",
       "email": "",
-      "title": "Property Loan Inquiry (Hindi)",
-      "summary": "Property Loan Inquiry (Hindi)",
-      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: मतलब मेरे को लोन लेना है, प्रोफार्टी लोन. मतलब लोन अगेंस्ट प्रो�\n[AGENT]: हाँ, बिल्कुल! आप लोन अगेंस्ट प्रॉपर्टी (Loan Against Property) के बारे में बात कर रहे हैं। यह एक बहुत ही लोकप्रिय विकल्प है, जिसमें आप अपनी रहने वाली या व्यावसायिक संपत्ति के बैंक गिरवी रखकर लोन प्राप्त कर सकते हैं।\n\nक्या आप मुझे बता सकते हैं कि आपकी...\n[USER]: आपा ये पैंदियो\n[AGENT]: मैं आपकी मदद करने के लिए यहाँ हूँ। क्या आप मुझे अपना नाम और मोबाइल नंबर बता सकते हैं? इससे हम आपको आगे के लोन स्कीम्स के बारे में जल्दी से सूचित कर सकते हैं।\n[USER]: जी मेरा नाम नुरालम है और मोबाल नंबर है 9864847915\n[AGENT]: धन्यवाद, नुरालम जी। मैंने आपका नाम और मोबाइल नंबर सफलतापूर्वक स्टोर कर लिया है। आपके लिए लोन अगेंस्ट प्रॉपर्टी के लिए अब हम आगे बढ़ सकते हैं।\n\nक्या आप मुझे बता सकते हैं कि आपकी संपत्ति किस तरह की है? जैसे कि यह आवासीय है या व्यावसायिक? और क्या आपके पास उसके लिए ओसी (OC) या सीसी (CC) सर्टिफिकेट है?\n[USER]: मतलब मेरा प्रोफेक्टी यह है कि जैसे जीमसी का अंडर में मेरा तरह जमीन है तो उसमें कहतून कुछ नहीं बनाया उसको ऊ-कुल में स्त्यौर सिलोक लेना है,\n[AGENT]: समझ गया, नुरालम जी। आपके पास एक जमीन है जो जीमसी के अंतर्गत है, और उस पर कोई इमारत नहीं बनी है। आप इस जमीन के बैंक गिरवी रखकर लोन लेना चाहते हैं।\n\nइसके लिए हमें थोड़े अतिरिक्त दस्तावेजों की आवश्यकता होगी, जैसे कि:\n- जमीन का टाइटल डीड (स्वामित्व साबित करने वाला दस्तावेज)\n- जमीन के लिए लेवल रिकॉर्ड या रजिस्ट्री दस्तावेज\n- जमीन के लिए अपने नाम का नामांकन (प्रॉपर्टी टाइटल)\n- जमीन के लिए अंतिम टैक्स रसीद (प्रॉपर्टी टैक्स)\n- एन्कम्ब्रेंस करेंसी (एनसी) जो दिखाए कि जमीन पर कोई दावा नहीं है\n\nक्या आपके पास इन दस्तावेजों में से कुछ हैं? या आप इन्हें तैयार कर सकते हैं?\n[USER]: नहीं है मेरा पास\n[AGENT]: ठीक है, नुरालम जी। अगर आपके पास इन दस्तावेजों के अभाव में भी लोन लेना है, तो हम आपकी मदद कर सकते हैं। आपकी जमीन के लिए टाइटल डीड और रजिस्ट्री दस्तावेज बहुत महत्वपूर्ण हैं, लेकिन अगर आपके पास नहीं हैं, तो हम आपको इन्हें तैयार करने में मदद कर सकते हैं।\n\nक्या आप बता सकते हैं कि आपकी जमीन कहाँ",
-      "date": "2025-12-04",
-      "category": "COLD",
-      "conversation_id": "conv_8401kbmcryb3f3xr6t05k4j7ff2y",
-      "duration": 181,
-      "message_count": 11
+      "title": "Business Loan Inquiry Details",
+      "summary": "Business Loan Inquiry Details",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Yeah, hello Riya. I want a business loan. What will be the loan amount which I can apply for?\n[AGENT]: Hi there! I'm happy to help you with that. For an unsecured business loan, you can apply for an amount ranging from ₹5 lakhs to ₹7 crores, depending on your business turnover, net profit, and other eligibility criteria. Could you please share your name and cell phone number so I can assist you further and keep you updated on upcoming loan schemes?\n[USER]: Yes, I'm Swapna Lee. My cell number is 9820496217.\n[AGENT]: Thank you, Swapna! I've noted your details. For your unsecured business loan, you can apply for an amount between ₹5 lakhs and ₹7 crores. To proceed, I’ll need a few more details: your business turnover, net profit, credit score (if known), and how many years you’ve been in business. This will help me check your eligibility. Would you like to share those?\n[USER]: Yes, this is the first year of my business and my annual turnover is 30 lakhs. Okay? And I want a loan of 30 lakhs.\n[AGENT]: Thank you for sharing those details, Swapna. I see that your business is in its first year with an annual turnover of ₹30 lakhs. However, for an unsecured business loan, we typically require a minimum business vintage of 2 years and a minimum annual turnover of ₹50 lakhs. Since your business is new, you might want to consider a secured loan, like a Loan Against Property, which could be a better fit for your current situation. Would you like me to provide more details on that option?\n[USER]: Oh, that is good but I don't have a property right now. In future I will get it but right now I do not have. What should I do now?\n[AGENT]: I understand, Swapna. Since you don’t have a property right now, we can explore other options like a working capital loan, which is designed for businesses with a minimum of 1 year of operation and an annual turnover of ₹1 crore or more. Your current turnover is ₹30 lakhs",
+      "date": "2025-12-03",
+      "category": "HOT",
+      "conversation_id": "conv_0001kbhsjdqdee1se76jcstqtx4q",
+      "duration": 180,
+      "message_count": 13
     },
     {
       "id": "rb_0041",
       "name": "Unknown",
-      "phone": "9820496217",
+      "phone": "9318391500",
       "email": "",
-      "title": "Business Loan Inquiry",
-      "summary": "Business Loan Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Hello, Ria. I'm interested in taking a loan. Okay. And with a reduced rate of interest. The rate should be less and the amount should be a good amount, sufficient amount.\n[AGENT]: Hello! I'm glad you're considering a loan with us. To help you get the best option, could you please share your name and cell phone number? This way, I can keep you updated on upcoming loan schemes with reduced interest rates. Also, let me know if you're looking for a personal loan, business loan, or something else like a home or property loan.\n[USER]: Yes right now I'm looking for a business loan.\n[AGENT]: Great! For a business loan, we offer unsecured and secured options tailored to your needs. Could you please share your name and cell phone number so I can assist you better and keep you informed about the best schemes available? Also, let me know if you're a self-employed individual or running a company.\n[USER]: Yeah I'm uh we are running a partnership firm and I would like to know the minimum amount of loan which I can get on unsecured loans.\n[AGENT]: For a partnership firm, the minimum loan amount you can get under our unsecured business loan is ₹ 5 lakhs. The maximum goes up to ₹ 7 crores, depending on your business turnover and credit profile. Could you please share your name and cell phone number so I can send you more details and check your eligibility?\n[USER]: Yeah, I'm Swapna Lee and my cell number is 9820496217.\n[AGENT]: Thank you, Swapna. I’ve noted your details: Swapna Lee, with the number 9820496217. I’ll now check the best unsecured business loan options for your partnership firm. Could you please confirm your firm’s annual turnover and net profit? This will help me give you a more accurate recommendation.\n[USER]: Yes, my annual turnover is Rs 40 lakhs and I want a loan of Rs 20 lakhs.\n[AGENT]: Thank you for sharing those details, Swapna. With an annual turnover of ₹ 40 lakhs, your business is s",
-      "date": "2025-12-03",
+      "title": "Startup Loan Inquiry (Hindi)",
+      "summary": "Startup Loan Inquiry (Hindi)",
+      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: अक्शली, मैंने एक new startup loan चाहिए बिजनिस के लिये और मेरा नाम स्नीहा पैंडल है, मेरा phone number 9318391500 है.\n[AGENT]: नमस्ते स्नीहा, धन्यवाद आपके संपर्क करने के लिए। आपके लिए नए स्टार्टअप के लिए बिजनेस लोन के लिए बहुत अच्छी खबर है। हम आपको अनसिक्योर्ड बिजनेस लोन के विकल्प दे सकते हैं, जिसके लिए आपको कोई गारंटी या संपत्ति की आवश्यकता नहीं है।\n\nइस लोन के लिए आपके पास निम्नलिखित आवश्यकताएं होनी चाहिए:\n- कम से कम 50 लाख रुपये वार्षिक टर्नओवर\n- कम से कम 5 लाख रुपये वार्षिक निवल लाभ\n- कम से कम 680 क्रेडिट स्कोर\n- कम से कम 2 साल का व्यवसाय का अनुभव\n\nक्या आप अपने व्यवसाय के बारे में थोड़ा अधिक बता...\n[USER]: अगर मेरा new startup loan है, तो मैं...\n[AGENT]: स्नीहा, आपके नए स्टार्टअप के लिए लोन के लिए...\n[USER]: मेरा new business loan है, मेरा अभी कोय भी turnover, कोय भी income नहीं है. उसी के regarding मुझे loan चाहिएता. मुझे 4 lakhs rupee loan की स्कूलत है.\n[AGENT]: स्नीहा, आपके नए स्टार्टअप के लिए लोन के लिए बहुत अच्छी खबर है। हम आपको एक विशेष लोन विकल्प प्रदान कर सकते हैं, जिसे हम \"CGTMSE लोन\" कहते हैं। यह लोन नए उद्यमियों के लिए बहुत उपयुक्त है, जिसमें आपको कोई गारंटी या संपत्ति की...\n[USER]: Thank you.\n[AGENT]: आपका स्वागत है, स्नीहा! आपके लिए नए स्टार्टअप के लिए CGTMSE लोन के विकल्प के बारे में जानकारी देने के लिए बहुत खुशी हुई। यह लोन आपके बिना किसी गारंटी के लिए उपलब्ध है और आपके व्यवसाय के विकास में मदद करेगा।\n\nअगर आपको आगे कोई मदद चाहिए, जैसे लोन के लिए आवेदन करने में सहायता या आवश्यक दस्तावेजों की सूची, तो बस बताएं। मैं आपकी पूरी मदद करूंगी।\n\nक्या आप अब लोन के लिए आवेदन करना चाहेंगी?",
+      "date": "2025-12-01",
       "category": "COLD",
-      "conversation_id": "conv_5101kbhrxd5dfcta79bh13fygz00",
-      "duration": 181,
-      "message_count": 13
-    },
-    {
-      "id": "rb_0042",
-      "name": "Juhi",
-      "phone": "9167291919",
-      "email": "",
-      "title": "Loan Information Inquiry",
-      "summary": "Loan Information Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: What is the interest for home loan?\n[AGENT]: The interest rate for a home loan typically ranges from eight point thirty-five percent to ten percent, depending on the loan amount.\n\nTo help me assist you better, could you please provide your name and cell phone number?\n\n[USER]: My name is Juhi and my number is 9167291919.\n[AGENT]: Thank you, Juhi. Now that I have your information, is there anything else I can help you with regarding home loans or any other loan products?\n\n[USER]: Can you give me information about\n[AGENT]: ...\n\nI'm sorry,...\n[USER]: Can you give me information about business loans? Unsecured business loans?\n[AGENT]: Yes, I can certainly provide information on unsecured business loans. These loans don't require collateral and can be a quick way to finance your business.\n\nTo give you the most relevant details, could you tell me a bit about your business, such as your company or firm turnover, how long you've been in business, and your credit score if you know it?\n\n[USER]: I don't know my credit score.\n[AGENT]: No problem at all. Many people don't know their exact credit score offhand. We can...",
-      "date": "2025-11-03",
-      "category": "HOT",
-      "conversation_id": "conv_9601k94m080kfnbtsrt458hsz7x0",
-      "duration": 94,
-      "message_count": 12
-    },
-    {
-      "id": "rb_0043",
-      "name": "Sachin",
-      "phone": "9571357552",
-      "email": "",
-      "title": "Home Loan Transfer Inquiry",
-      "summary": "Home Loan Transfer Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I want to balance transfer.\n[AGENT]: Great! We do offer balance transfers. To assist you better, could you please provide your name and cell phone number? This will help me personalize the information and ensure we can follow up with you.\n\nAlso, can you...\n[USER]: Yeah, yeah sure, sure sure.\n[AGENT]: Okay!...\n[USER]: Actually, my name is Sachin Gujarati and my cell phone number is 9571357552.\n[AGENT]: Thank you, Sachin! I have your name and number now. To proceed with your balance transfer request, could you please specify which loan you're looking to transfer? This could be a personal loan, business loan, home loan, loan against property, or working capital loan.\n[USER]: Actually it's a home loan.\n[AGENT]: Okay, Sachin. To help me understand your needs better, could you tell me which bank or financial institution currently holds your home loan?\n\n[USER]: Finoa Capital.\n[AGENT]: Thanks, Sachin. Just to confirm, you're looking to transfer your home loan from Finoa Capital to RupeeBoss for potentially lower EMI's, is that correct?\n\n[USER]: Yeah yeah yeah that's correct.\n[AGENT]: Okay, Sachin. I can certainly help you with that! To see if a balance transfer is the right option for you, could you share the current interest rate on your home loan with Finoa Capital and the outstanding loan amount?\n\n[USER]: Loan amount is 5 lakh and interest rate is 23%.\n[AGENT]: Thank you, Sachin. Just to confirm, the outstanding loan amount is five lakh, and the interest rate is twenty-three percent. Is that correct?\n\n[USER]: Yes.\n[AGENT]: Okay, Sachin. I have all the details. I will check the options for transferring your home loan.\n\nJust a moment...\n\n[USER]: Sir, this is Deeraj Akram\n[AGENT]: Thank you, Deeraj, for letting me know. I have updated the name. Is the phone number still the same, nine five seven one three five seven five five two?\n\n[USER]: Sorry repeat again?\n[AGENT]: No problem! I can repeat th",
-      "date": "2025-10-04",
-      "category": "HOT",
-      "conversation_id": "conv_4801k6psc4fwfy7s60xbm95v59bb",
-      "duration": 180,
-      "message_count": 25
-    },
-    {
-      "id": "rb_0044",
-      "name": "Unknown",
-      "phone": "9833171404",
-      "email": "",
-      "title": "Personal Loan Application Details",
-      "summary": "Personal Loan Application Details",
-      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: मुझे personal loan चाहिए।\n[AGENT]: ज़रूर, मैं पर्सनल लोन के बारे में आपकी मदद कर सकती हूँ। क्या आप मुझे अपना नाम और फ़ोन नंबर बता सकते हैं ताकि मैं आपको बेहतर तरीके से सहायता कर सकूँ?\n[USER]: हां, मेरा नाम सहिल है।\n[AGENT]: आपका नाम बताने के लिए धन्यवाद, साहिल जी। क्या आप मुझे अपना फ़ोन नंबर भी बता सकते हैं? इससे मुझे आपकी लोन संबंधी ज़रूरतों को समझने और आपको सही जानकारी देने में मदद मिलेगी।\n[USER]: हां, phone number है 9833171404।\n[AGENT]: धन्यवाद, साहिल जी। पर्सनल लोन के लिए आपकी क्या आवश्यकताएं हैं? क्या आप कृपया अपनी मासिक आय, मौजूदा ईएमआई, कार्य अनुभव और क्रेडिट स्कोर के बारे में कुछ जानकारी दे सकते हैं?\n[USER]: हां, मेरा monthly income पचास असरोप्या है। और क्या information चीन?\n[AGENT]: साहिल जी, आपकी मासिक आय बताने के लिए धन्यवाद। पर्सनल लोन के लिए आवेदन करने के लिए, हमें कुछ और जानकारी चाहिए होगी, जैसे कि आपकी कंपनी/फर्म का टर्नओवर, आपका व्यवसाय अनुभव (वर्षों में), और यदि आपको अपना क्रेडिट स्कोर पता है तो वह भी। क्या आप कृपया ये विवरण प्रदान कर सकते हैं?\n[USER]: हां, मुझे 5 साल की experience है। And annual turnover 20 lakhs की होगी my company के and my sable score 725 है।\n[AGENT]: साहिल जी, आपकी जानकारी के लिए धन्यवाद। आपका क्रेडिट स्कोर बहुत अच्छा है। क्या आप कृपया यह बता सकते हैं कि आपको कितने लोन की आवश्यकता है?\n[USER]: 2 lakhs रुपये।\n[AGENT]: साहिल जी, दो लाख रुपये के लोन के लिए, RupeeBoss आपको पर्सनल लोन दिलाने में मदद कर सकता है। हमारी ब्याज दरें दस दशमलव दो पांच प्रतिशत से चौदह प्रतिशत तक हैं, और लोन की अवधि बारह महीने से साठ महीने तक हो सकती है। प्रोसेसिंग शुल्क शून्य दशमलव पांच शून्य प्रतिशत से दो प्रतिशत तक होगा। क्या आप इस लोन के लिए आवेदन करना चाहेंगे?",
-      "date": "2025-09-10",
-      "category": "COLD",
-      "conversation_id": "conv_7301k4s552v4ffp8vbv500nhc1ts",
-      "duration": 150,
-      "message_count": 13
-    },
-    {
-      "id": "rb_0045",
-      "name": "Unknown",
-      "phone": "9365761490",
-      "email": "",
-      "title": "MSME Loan Inquiry",
-      "summary": "MSME Loan Inquiry",
-      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: लोन के बारे में करना है.\n[AGENT]: लोन के बारे में आप क्या जानना चाहते हैं? क्या आप कृपया अपना नाम और फ़ोन नंबर बता सकते हैं ताकि हम आपको बाद में कॉल कर सकें?\n[USER]: 9365761490 आस्कर सुटी मिठी, मेरा नाम है.\n[AGENT]: धन्यवाद, आस्कर जी। आप किस प्रकार के लोन के बारे में जानना चाहते हैं? हमारे पास पर्सनल लोन, होम लोन, बिजनेस लोन और कई अन्य विकल्प उपलब्ध हैं।\n[USER]: MSME लोन के बारे में जलना सकता हूँ.\n[AGENT]: ज़रूर, MSME लोन के बारे में मैं आपको जानकारी दे सकती हूँ। क्या आप कृपया बता सकते हैं कि आपका व्यवसाय किस प्रकार का है और आपको कितने लोन की आवश्यकता है?\n[USER]: फूट पर सेशिंग बिस्जिनेस, पंडरालाक का दोरोत है\n[AGENT]: क्या आप कृपया अपने व्यवसाय के बारे में थोड़ा और बता सकते हैं, जैसे कि आपका वार्षिक टर्नओवर क्या है और आपको कितने समय से व्यवसाय का अनुभव है? इससे मुझे यह समझने में मदद मिलेगी कि आपके लिए कौन सा MSME लोन सबसे उपयुक्त रहेगा।\n[USER]: There was a man,\n[AGENT]: मुझे समझ नहीं आया। क्या आप कृपया दोहरा सकते हैं?\n[USER]: there was a man, there was a man. नया बिजनेस करूँगा\n[AGENT]: मुझे समझ में नहीं आ रहा है। क्या आप कृपया बता सकते हैं कि आप क्या जानना चाहते हैं?\n[USER]: चाहते हैं । फोर्सी बिल्ली नेस के\n[AGENT]: मुझे अभी भी समझ नहीं आ रहा है। क्या आप कृपया स्पष्ट कर सकते हैं कि आप क्या जानना चाहते हैं?\n[USER]: Code Processing Business के बारे में\n[AGENT]: क्या आप \"कोडिंग प्रोसेसिंग बिजनेस\" के बारे में जानना चाहते हैं? क्या आप कृपया बता सकते हैं कि आप किस प्रकार की जानकारी चाहते हैं, जैसे कि लोन की आवश्यकताएं या पात्रता मानदंड?\n[USER]: , Loan की आवक...\n[AGENT]: कोडिंग प्रोसेसिंग ब...",
-      "date": "2025-09-04",
-      "category": "COLD",
-      "conversation_id": "conv_3401k49nq1tvfteaj2gvap54mhqh",
-      "duration": 145,
-      "message_count": 19
-    },
-    {
-      "id": "rb_0046",
-      "name": "Unknown",
-      "phone": "9741394185",
-      "email": "",
-      "title": "News and phone verification",
-      "summary": "News and phone verification",
-      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: मैंने कब बोला मुझे मदद चाहिये?\n[AGENT]: मुझे माफ़ करना, मैं समझती हूँ। क्या आप मुझे अपना नाम और फ़ोन नंबर बता सकते हैं ताकि मैं आपको बेहतर ढंग से समझ सकूँ?\n[USER]: मेरा नाम डॉन है.\n[AGENT]: डॉन, आपसे मिलकर खुशी हुई! क्या आप मुझे अपना फ़ोन नंबर भी बता सकते हैं?\n[USER]: मेरा फोन नम्मर है 9741394185.\n[AGENT]: धन्यवाद डॉन। क्या आप मुझे बता सकते हैं कि आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: आप मेरा फोन नम्मर मुझे वाپस बताो.\n[AGENT]: आपका फ़ोन नंबर नौ सात चार एक तीन नौ चार एक आठ पाँच है। क्या यह सही है?\n[USER]: लकता को है\n[AGENT]: क्या आप सुनिश्चित हैं? अगर यह सही नहीं है, तो कृपया मुझे सही नंबर बताएं ताकि मैं इसे रिकॉर्ड कर सकूं।\n[USER]: . आप OTP भीजो, मैं verify कर दिया.\n[AGENT]: मुझे माफ़ करना, डॉन, लेकिन मैं आपको OTP नहीं भेज सकती। क्या आप मुझे बता सकते हैं कि आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: आप मिलको current news बता दो\n[AGENT]: ज़रूर, डॉन। Rupeeboss की वर्तमान समाचार अपडेट और लेख इस प्रकार हैं: हैदराबाद में ऑफिस का भव्य उद्घाटन चार अक्टूबर को सुबह ग्यारह बजे से शुरू होगा। भोपाल में ऑफिस का भव्य उद्घाटन छह अक्टूबर को सुबह ग्यारह बजे से शुरू होगा। एमएसएमई के लिए धन उगाहने और पिचिंग रणनीतियों पर वेबिनार छह अक्टूबर को दोपहर बारह बजे से एक...",
-      "date": "2025-09-04",
-      "category": "COLD",
-      "conversation_id": "conv_0901k4b7axctf8t822phkk3320k2",
-      "duration": 122,
-      "message_count": 15
-    },
-    {
-      "id": "rb_0047",
-      "name": "Dr",
-      "phone": "9810564441",
-      "email": "",
-      "title": "MSME Loan Information Request",
-      "summary": "MSME Loan Information Request",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you...\n[USER]: Call me\n[AGENT]: I can definitely assist you with that! Before we proceed, could you please provide your name and cell phone number so I can arrange a call for you?\n\n[USER]: My name is Dr. Sudhir Sharma and my phone number is 981056444.\n[AGENT]: Thank you, Dr. Sudhir Sharma. I have your name and number. What is the reason for the call today?\n\n[USER]: MSME loan and other government schemes.\n[AGENT]: Great! We have the MSME Bharat Manch, which is a nationwide initiative to address the challenges faced by Micro, Small, and Medium Enterprises in India.\n\nTo better assist you with MSME loans and other government schemes, could you please provide a little more detail about your specific needs or questions?\n\n[USER]: Yes, tell me.\n[AGENT]: I'd be happy to! To give you the most relevant information, could you tell me what kind of information you're looking for regarding MSME loans and government schemes? For example, are you interested in eligibility criteria, the application process, or specific schemes?\n\n[USER]: Specific schemes.\n[AGENT]: Okay, I can help you with that! To provide you with the most relevant information on specific schemes, could you tell me a bit about your business? Knowing the nature of your business will help me identify the schemes that might be the best fit for you.\n\n[USER]: Pet boarding related and pet shops and other import-export services.\n[AGENT]: Thank you for that information! Based on your business, which includes pet boarding, pet shops, and import-export services, I can share some information.\n\nRupeeBoss Financial Services Pvt Ltd has launched the MSME Bharat Manch, which aims to address the challenges faced by MSMEs by providing access to financial services, market linkages, and technology solutions. This initiative also focuses on uplifting underprivileged entrepreneurs and women-led businesses through mentorship, access to government schemes, and skill development.\n",
-      "date": "2025-09-02",
-      "category": "HOT",
-      "conversation_id": "conv_8801k455tkc3f9dtkjrr78qdxs89",
-      "duration": 181,
-      "message_count": 19
-    },
-    {
-      "id": "rb_0048",
-      "name": "Unknown",
-      "phone": "8620973141",
-      "email": "",
-      "title": "Unsecured Business Loan Inquiry",
-      "summary": "Unsecured Business Loan Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Hello.\n[AGENT]: Hi there! I'm doing great and I hope the same for you. To assist you better, could you please share your name and cell phone number? This will help me personalize our conversation and keep you updated.\n[USER]: Jonti Singh and my number is 8620973141.\n[AGENT]: Thank you, Jonti! It's great to have you with us. How can I help you with your loan needs today?\n\n[USER]: I need to start a loan.\n[AGENT]: ...\n[USER]: MSMEs\n[AGENT]: Okay, I can certainly help you with that! To get started, could you please clarify what type of loan you're interested in for your MSME? Are you looking for a secured business loan, an unsecured business loan, or perhaps a working capital loan?\n\n[USER]: Working capital loan.\n[AGENT]: Great choice, Jonti! A working capital loan can be very helpful for managing day-to-day operational costs.\n\nThese loans typically range from fifty lakhs to one hundred crores, with interest rates between nine and twelve percent depending on your business's risk profile. The repayment can be structured as monthly installments or an overdraft facility.\n\nTo check your eligibility, could you tell me how long your business has been operational, your credit score, and your annual turnover?\n\n[USER]: I didn't start my own business, alright. But I'm just a startup for my own business and my Sibyl score is 742 in Sibyl.com.\n[AGENT]: Thank you for the clarification, Jonti. Since you're just starting your business, you might not yet meet the minimum business vintage of one year that is typically required for a working capital loan. However, since you have a good CIBIL score of seven hundred forty-two, you may be eligible for an unsecured business loan.\nWould you like me to provide...\n[USER]: Yep.\n[AGENT]: Okay, great! An unsecured business loan could be a good option for your startup. With this type of loan, you don't need to provide any collateral.The loan amount can range from five la",
-      "date": "2025-09-01",
-      "category": "COLD",
-      "conversation_id": "conv_7501k42c5fbvfkysbwzf2c796fkk",
-      "duration": 180,
-      "message_count": 17
-    },
-    {
-      "id": "rb_0049",
-      "name": "Unknown",
-      "phone": "9470599675",
-      "email": "",
-      "title": "MSME Loan Assistance",
-      "summary": "MSME Loan Assistance",
-      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: मेरी एक existing logistic company है जिसका की सालाला turnover around 2.5 crore के आसपास है और मुझे अब अपने business को expand करना है और मुझे MSME का loan का requirement है up to 2 crore तक बिना collateral के और मैं इसमें यह भी चाहतا हूं कि जो मैं मुझे पैसा मिले MSME के द्वारה वो मैं इसका repayment एक सال के बात start करूँ\n[AGENT]: नमस्ते! आपकी सहायता करके मुझे बहुत खुशी होगी। मैं समझती हूँ कि आपकी एक लॉजिस्टिक्स कंपनी है जिसका सालाना टर्नओवर लगभग दो करोड़ पचास लाख है। आप अपने व्यवसाय को बढ़ाने के लिए दो करोड़ तक का एमएसएमई लोन बिना किसी सुरक्षा (collateral) के चाहते हैं, और आप चाहते हैं कि लोन का पुनर्भुगतान एक साल बाद शुरू हो।\n\nइससे पहले कि मैं आपको सबसे अच्छी जानकारी दे सकूँ, क्या आप मुझे अपना नाम और फ़ोन नंबर बता सकते हैं? इससे मुझे आपकी ज़रूरतों के अनुसार सही लोन विकल्प खोजने में मदद मिलेगी।\n[USER]: मेरा नام Virendra Sharma है, and my mobile number is 9470599675\n[AGENT]: धन्यवाद, वीरेंद्र जी। आपका नाम और नंबर नोट कर लिया गया है।\n\nमैं आपको बताना चाहती हूँ कि एमएसएमई लोन के लिए कुछ पात्रता मानदंड (eligibility criteria) होते हैं, जैसे कि कंपनी का टर्नओवर, लाभ, और क्रेडिट स्कोर। आमतौर पर, बिना किसी सुरक्षा के लोन के लिए, क्रेडिट स्कोर अच्छा होना चाहिए।\n\nक्या आप मुझे अपनी कंपनी के बारे में कुछ और जानकारी दे सकते हैं, जैसे कि आपका क्रेडिट स्कोर क्या है और आपका व्यवसाय कितने सालों से चल रहा है? इससे मुझे यह समझने में मदद मिलेगी कि आपके लिए कौन सा लोन सबसे उपयुक्त रहेगा।\n[USER]: my business is going on for the last 5 years and my credit score is above 700\n[AGENT]: यह बहुत अच्छी बात है कि आपका व्यवसाय पिछले पांच सालों से चल रहा है और आपका क्रेडिट स्कोर सात सौ से ऊपर है। यह आपको एमएसएमई लोन के लिए एक अच्छा उम्मीदवार बनाता है।\nआपके व्यवसाय को बढ़ाने के लिए, RupeeBoss आपको कई तरह के लोन विकल्प प्रदान कर सकता है। हम असुरक्षित बिजनेस लोन (Unsecured Business Loan), वर्किंग कैपिटल लोन (Working Capital Loan) और सीजीटीएमएसई लोन (CGTMSE Loan) जैसे लोन प्रदान करते हैं।असुरक्षित बिजनेस लोन आपको बिना किसी सुरक्",
-      "date": "2025-08-31",
-      "category": "COLD",
-      "conversation_id": "conv_7401k3z1z6tsea7bcs0qdtcngmft",
-      "duration": 180,
-      "message_count": 7
-    },
-    {
-      "id": "rb_0050",
-      "name": "Unknown",
-      "phone": "9776022973",
-      "email": "",
-      "title": "Business Loan Inquiry",
-      "summary": "Business Loan Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I need a loan, business loan.\n[AGENT]: Great! I can definitely help you with that. To assist you better, could you please provide your name and cell phone number? This will help me personalize the assistance and keep you updated. Also, what kind of business loan are you looking for?\n\n[USER]: Myself, Bishri Patilau Subodhi.\n[AGENT]: Thank you, Bishri. Could you also provide your cell phone number, so I can assist you further with your business loan...\n[USER]: No need.\n[AGENT]: I understand...\n[USER]: 9776022973\n[AGENT]: Thank you, Bishri. Now that I have your contact information, could you tell me more about the type of business loan you're interested in? For example, are you looking for an unsecured business loan, a working capital loan, or something else?\n\n[USER]: Unsecured business loan and working capital loan both.\n[AGENT]: Okay, great! Unsecured business loans don't require collateral, and working capital loans help with your day-to-day operational expenses.\n\nTo see if you're eligible, could you please share a few more details, such as your company's turnover, your existing monthly EMI, your business experience in years, and your credit score if you know it?\n\n[USER]: Annual turnover is 1.5%.\n[AGENT]: I see, and what is the existing monthly EMI, business experience and credit score?\n\n[USER]: Monthly EMI is 20,000.\n[AGENT]: Thank you. And what is the business experience and credit score?\n\n[USER]: Business experience is 3 years.\n[AGENT]: Thank you. And...\n[USER]: Credit score is 740.\n[AGENT]: Thank you, Bishri. Based on the information you've provided, you might be eligible for an unsecured business loan or a working capital loan.\n\nFor an unsecured business loan, we typically look for a minimum income of five lakh rupees turnover and five lakh rupees net profit and above. The rate of interest is around fifteen point ninety nine percent to nineteen percent, depending on the loan amount.",
-      "date": "2025-08-30",
-      "category": "COLD",
-      "conversation_id": "conv_6501k3w7ef5gex594ba8f5vevmer",
-      "duration": 170,
-      "message_count": 27
-    },
-    {
-      "id": "rb_0051",
-      "name": "Unknown",
-      "phone": "9322934091",
-      "email": "",
-      "title": "Personal Loan Eligibility Check",
-      "summary": "Personal Loan Eligibility Check",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I want personal loan of 5 lakhs\n[AGENT]: Okay, I can help you with that! To get started, could you...\n[USER]: Thank you.\n[AGENT]: You're welcome! To assist you better with the personal loan, could you please provide your name and cell phone number?\n\n[USER]: Sheetal Sampat 9322934091\n[AGENT]: Thank you, Sheetal. It's great to have your information. What would you like to know about a personal loan of five lakhs?\n\n[USER]: I want, can you see my eligibility?\n[AGENT]: I can definitely help with that! To check your eligibility for a personal loan, I need a bit more information. Could you please tell me your monthly net income, your existing monthly EMI, and your work experience in years? Also, do you know your credit score?\n\n[USER]: 85,000 monthly income, 19,000 EMI, 769 credit score and 11 years of experience.\n[AGENT]: Thank you for providing that information, Sheetal! Based on what you've shared, you seem to have a good credit score and a solid work history.\n\nJust to confirm, is your monthly net income eighty-five thousand, and your existing monthly EMI nineteen thousand?\n\n[USER]: Yes.\n[AGENT]: Okay, great! With a monthly income of eighty-five thousand, an existing EMI of nineteen thousand, a credit score of seven sixty-nine, and eleven years of experience, you seem to meet the general eligibility criteria for a personal loan.\n\nWould you like me to provide more details on the interest rates, tenure, and processing fees associated with a personal loan?\n\n[USER]: Yeah. First you see where I can get approval\n[AGENT]: Okay, Sheetal, I can help with that!\n\nBased on your profile, here are some banks and NBFCs that you may want to consider for a personal loan: HDFC Bank, ICICI Bank, Axis Bank, Kotak Mahindra Bank, IDFC, Yes Bank, IndusInd Bank, Bajaj Finance, Aditya Birla Capital, Poonawalla, Tata Capital, IIFL, L and T, SMFG, Paysense and Incred.\n\nWould you like me to provide more details on any o",
-      "date": "2025-08-29",
-      "category": "COLD",
-      "conversation_id": "conv_3101k3tmvfcafhv8rmrhmjwtt273",
-      "duration": 181,
-      "message_count": 17
-    },
-    {
-      "id": "rb_0052",
-      "name": "Hiren",
-      "phone": "9376198182",
-      "email": "",
-      "title": "Personal Loan EMI Inquiry",
-      "summary": "Personal Loan EMI Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I want to know about the personal loan.\n[AGENT]: Great! I can help you with information about personal loans. To assist you better, could you please provide your name and cell phone number? Also, what specifically would you like to know about personal loans? For example, are you interested in eligibility criteria, interest rates, or the application process?\n\n[USER]: My name is Hiren Patel and my mobile number is 9376198182. I want to understand about the EMI for the personal loan.\n[AGENT]: Thank you, Hiren. I have your name and number. Regarding your query about EMIs for personal loans, the interest rates typically range from ten point twenty five percent to fourteen percent, depending on factors like your company category and monthly net income. The...",
-      "date": "2025-08-28",
-      "category": "HOT",
-      "conversation_id": "conv_9301k3r94qx2ecwsg6yyezf53fqa",
-      "duration": 55,
-      "message_count": 5
-    },
-    {
-      "id": "rb_0053",
-      "name": "Hiren",
-      "phone": "9376498182",
-      "email": "",
-      "title": "Personal loan inquiry",
-      "summary": "Personal loan inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I want to know about my personal loan.\n[AGENT]: I would be happy to help you with information on personal loans! To assist you better, could you please share your name and cell phone number? This will help me access your details and provide you with the most relevant information.\n[USER]: My name is Hiren and my mobile number is 9376498182.\n[AGENT]: Thank you, Hiren. I have your details now. What specifically would you like to know about personal loans? For example, are you interested in the eligibility criteria, the application process, interest rates, or something else?\n\n[USER]: I want to know about the interest rate\n[AGENT]: Okay, Hiren. The interest rate for a personal loan typically ranges from ten point twenty five percent to fourteen percent. However, this can vary based on factors such as your company category and monthly net income.\n\nDo you have any questions about these factors or would you like me to provide more details on how they might affect your interest rate?\n\n[USER]: No thanks. I'm happy with your information.\n[AGENT]: Great! I'm glad I could help you with the interest rate information. Is there anything else I can assist you with regarding personal...",
-      "date": "2025-08-27",
-      "category": "HOT",
-      "conversation_id": "conv_6801k3nq6xtre5x8hb6td1637bje",
-      "duration": 74,
+      "conversation_id": "conv_2601kbcbqw0berp8ff1mdqa8n9wz",
+      "duration": 141,
       "message_count": 9
     },
     {
-      "id": "rb_0054",
-      "name": "Unknown",
-      "phone": "8265866171",
+      "id": "rb_0042",
+      "name": "Ashish",
+      "phone": "9821170923",
       "email": "",
-      "title": "PMEGP loan disbursement issue",
-      "summary": "PMEGP loan disbursement issue",
-      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: नमस्ते, आप सुनरहे हैं मुझे.\n[AGENT]: हाँ, मैं आपको सुन रही हूँ। मेरा नाम रिया है, और मैं RupeeBoss के लिए एक सपोर्ट एजेंट हूँ। मैं आपको ऋण और क्रेडिट के बारे में जानकारी देने में मदद कर सकती हूँ। क्या आप मुझे अपना नाम और फ़ोन नंबर बता सकते हैं ताकि मैं आपको बेहतर ढंग से सहायता कर सकूँ?\n[USER]: मेरा नाम दीपक कुमार है.\n[AGENT]: नमस्ते, दीपक जी! आपका नाम जानकर बहुत खुशी हुई। क्या आप मुझे अपना फ़ोन नंबर भी बता सकते हैं? इससे मुझे आपके खाते की जानकारी ढूंढने और आपको बेहतर सेवा प्रदान करने में मदद मिलेगी।\n[USER]: 8265866171\n[AGENT]: धन्यवाद, दीपक जी। आपका नाम और फ़ोन नंबर नोट कर लिया गया है। मैं आपकी किस प्रकार सहायता कर सकती हूँ? क्या आप RupeeBoss के किसी विशेष उत्पाद या सेवा के बारे में जानकारी चाहते हैं?\n[USER]: हां मेरा एक प्रॉब्लम है उसके सोलूशन के लिए बात करनी है\n[AGENT]: ज़रूर, दीपक जी। मैं आपकी समस्या का समाधान करने में पूरी मदद करूँगी। कृपया मुझे अपनी समस्या के बारे में विस्तार से बताएं ताकि मैं आपको सही जानकारी और सहायता प्रदान कर सकूँ।\n[USER]: मैंने एक PMEGP लोन के लिए apply किया था, मेरा loan sanction हो गया, but bank disburse नहीं कर रहा, loan without collateral है, but bank security or land मांग रहा है, जहाँ paper मांग रहा है, जहाँ मुझे कम करना है, and that is my father's, so on that, my father has already taken a farmer credit card, now bank is not disbursing the loan on it.\n[AGENT]: दीपक जी, मैं स...\n[USER]: ये मेरी प्रॉब्लम है\n[AGENT]: दीपक जी, मैं समझती हूँ कि आपकी समस्या क्या है। आपका PMEGP लोन स्वीकृत हो गया है, लेकिन बैंक बिना किसी कारण के उसे वितरित नहीं कर रहा है और सुरक्षा या ज़मीन के कागज़ात मांग रहा है, जबकि यह लोन बिना किसी गारंटी के होना चाहिए था।\n\nमैं आपको इस मामले में कुछ सुझाव दे सकती हूँ, लेकिन उससे पहले, क्या आप मुझे बता सकते हैं कि बैंक ने लोन वितरित न करने का क्या कारण बताया है? क्या उन्होंने कोई लिखित में दिया है?\n[USER]: नहीं\n[AGENT]: ठीक है, दीपक जी। चूंकि बैंक ने लिखित में कोई कारण नहीं दिया है, इसलिए मैं आपको कुछ सुझाव दे सकती हूँ:\nसबसे पहले, आप बैंक के उच्च अध",
-      "date": "2025-08-27",
-      "category": "COLD",
-      "conversation_id": "conv_1901k3n1a01gfv7vwfmey0y3zm3n",
-      "duration": 181,
-      "message_count": 15
-    },
-    {
-      "id": "rb_0055",
-      "name": "Unknown",
-      "phone": "9953335955",
-      "email": "",
-      "title": "Unsecured Business Loan Inquiry",
-      "summary": "Unsecured Business Loan Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: May I know your daily office contact number?\n[AGENT]: I can certainly help you with that! But before I proceed, could you please share your name and cell phone number? This will help me assist you better and ensure we can follow up if needed.\n[USER]: Myself Nitin Bhatwaj and my contact number is 9953335955.\n[AGENT]: Thank you, Nitin! How may I help you today?\n\n[USER]: I just want to contact or talk with any non-executive or salesperson.\n[AGENT]: Okay, I can help with that. Could you clarify what you need to discuss with our sales team so I can direct you to the right person?\n\n[USER]: Actually, I just want to know about unsecure business loan.\n[AGENT]: Great! I can definitely help you with information on unsecured business loans. These loans don't require collateral and are designed to help businesses grow.\n\nTo give you the most relevant information, could you tell me a bit about your business, such as your company's turnover, how long you've been in business, and your credit score if you know it?\n\n[USER]: My credit score is very handsome and my company runs almost completed three years. And the turnover is more than two\n[AGENT]: That's great to hear, Nitin! Just to confirm, when you say \"two\" for the turnover, are you referring to two crore? Also, can you share your existing monthly EMI? This will help me assess your eligibility for an unsecured business loan.\n\n[USER]: Not any monthly EMI I put in here.\n[AGENT]: Thank you for confirming, Nitin. Based on the information you've provided, you may be eligible for an unsecured business loan.\n\nWith RupeeBoss, you can avail of an unsecured business loan ranging from five lakhs to seven crores with interest rates from fifteen point ninety nine percent to nineteen percent, depending on the loan amount. The tenure is between twelve months to thirty six months and the processing fee is one percent to two percent.\n\nWould you like me to provide more ",
-      "date": "2025-08-27",
-      "category": "COLD",
-      "conversation_id": "conv_2801k3n9xys2f6grkmbht6xhkz4z",
-      "duration": 177,
-      "message_count": 19
-    },
-    {
-      "id": "rb_0056",
-      "name": "Seeking",
-      "phone": "8790349135",
-      "email": "",
-      "title": "CGTMSE Loan Eligibility Inquiry",
-      "summary": "CGTMSE Loan Eligibility Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Riya, actually, my company is, my proprietorship is registered in 2025. I am seeking for CGTMSE loan of 25 lakh to develop my product in AI native companion app. So am I eligible for that or not?\n[AGENT]: I'd be happy to check your eligibility for a CGTMSE loan. To give you the most accurate information, could you please share your name and cell phone number?\n[USER]: Vikram Bhargava. My mobile number is 8790349135.\n[AGENT]: Thank you, Vikram. Just to confirm, your name is Vikram Bhargava and your number is eight, seven, nine, zero, three, four, nine, one, three, five. Is that correct?\n\n[USER]: Yes.\n[AGENT]: Thanks, Vikram. Could you please provide a bit more detail? I need to know the year your proprietorship was registered. I see you mentioned two thousand twenty-five, but that would be in the...\n[USER]: Yes.\n[AGENT]: I need to know the year your proprietorship was registered. I see you mentioned two thousand twenty-five, but that would be in the future. Could you please clarify the actual year it was registered?\n\n[USER]: It's not future 2025 April.\n[AGENT]: I see, Vikram. Just to clarify, your company was registered in April two thousand twenty-five?\n\n[USER]: Yes\n[AGENT]: I am sorry Vikram, but something seems incorrect. We are currently in two thousand twenty-four, so your company couldn't have been registered in two thousand twenty-five. Could you please double-check the registration year?\n\n[USER]: . We are in August 2025. You are not updated.\n[AGENT]: I apologize for the confusion, Vikram. It seems my information is outdated. Given that we are in August two thousand twenty-five, and your proprietorship was registered in April two thousand twenty-five, you may be eligible for a CGTMSE loan.\n\nTo confirm your eligibility and provide more specific information, could you please tell me a bit more about your business? Specifically, what is your annual turnover and do you have an existing ",
-      "date": "2025-08-25",
+      "title": "Personal Loan Application",
+      "summary": "Personal Loan Application",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Yeah, hi Ria. I need a loan. Can you help me process that loan?\n[AGENT]: Of course, I'd be happy to help you with your loan application! To get started, could you please share your full name and cell phone number? This will help us keep you updated on the loan process and upcoming schemes.\n[USER]: Yeah, my name is Ashish. My cell phone number is 9821170923\n[AGENT]: Thank you, Ashish! I've noted your details. Could you please let me know what type of loan you're looking for—personal, business, home, or something else? This will help me...\n[USER]: Uh...\n[AGENT]: No problem at all,...\n[USER]: A personal loan.\n[AGENT]: Great choice, Ashish! For a personal loan, we offer amounts from ₹1 lakh to ₹75 lakhs, with interest rates starting at 10.25%. The tenure can be between 12 to 60 months. To proceed, could you please share your monthly net income and any existing EMIs you're paying? This will help us check your eligibility.\n[USER]: Okay, my monthly net income is 75,000 rupees. Am I qualified for the loan?\n[AGENT]: Yes, Ashish, with a monthly net income of 75,000 rupees, you definitely qualify for a personal loan! You meet the minimum income requirement of ₹30,000+ and are well within the eligible range. To move forward, could you please share your credit score, if you know it? Also, let me know if you have any existing EMIs.\n[USER]: Yeah my credit score is 920. I have no EMIs right now.\n[AGENT]: That’s excellent, Ashish! A credit score of 920 is very strong, and having no existing EMIs makes you an even better candidate. With your profile, you’re likely to get a competitive interest rate, possibly as low as 10.25%.  \n\nNow, to proceed, I’ll need a few documents:  \n- PAN Card  \n- Aadhaar Card  \n- Latest 3 months’ salary slips  \n- Last 2 years’ Form 16  \n- Latest 6 months’ bank statements  \n\nWould you like me to guide you through the next steps or help you start the application?\n[USER]: या आपको हि",
+      "date": "2025-11-10",
       "category": "HOT",
-      "conversation_id": "conv_1701k3g8gwwve61tyg5rr0zsq9rk",
-      "duration": 181,
-      "message_count": 16
+      "conversation_id": "conv_2201k9pmm8n6eq6990eycf20anee",
+      "duration": 161,
+      "message_count": 21
     },
     {
-      "id": "rb_0057",
+      "id": "rb_0043",
+      "name": "Unknown",
+      "phone": "9317963357",
+      "email": "",
+      "title": "RupeeBoss associate application",
+      "summary": "RupeeBoss associate application",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I want to join SAC.\n[AGENT]: Could you please clarify what you mean by \"join SAC\"? Are you referring to a specific program, scheme, or service offered by RupeeBoss? Let me know so I can assist you better!\n[USER]: Become our associate.\n[AGENT]: That's wonderful to hear! To become an associate with RupeeBoss, we’ll need a few details from you. Could you please share your full name and cell phone number? This will help us connect with you and guide you through the next steps.\n[USER]: Abhijit Roy, my full name and my number is 9317963357\n[AGENT]: Thank you, Abhijit! I’ve noted your details: Name - Abhijit Roy, Phone Number - 9317963357.  \n\nWe’ll be reaching out to you soon with information about the associate program, including benefits, responsibilities, and how you can get started. In the meantime, feel free to ask any questions you may have!  \n\nIs there anything specific you’d like to know about the associate role?\n[USER]: No\n[AGENT]: Great! Thank you, Abhijit. We’ll be in touch shortly with all the details about the associate program. If you have any questions in the meantime, don’t hesitate to reach out.  \n\nHave a wonderful day!",
+      "date": "2025-11-08",
+      "category": "COLD",
+      "conversation_id": "conv_4001k9hdz6r0en78dzjvd0nmpdpm",
+      "duration": 87,
+      "message_count": 11
+    },
+    {
+      "id": "rb_0044",
       "name": "Unknown",
       "phone": "9376498183",
       "email": "",
@@ -805,21 +623,7 @@
       "message_count": 9
     },
     {
-      "id": "rb_0058",
-      "name": "Avc",
-      "phone": "9246262966",
-      "email": "",
-      "title": "Personal Loan Inquiry",
-      "summary": "Personal Loan Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I want a personal loan.\n[AGENT]: Great! I can definitely help you with that. To get started, could you please provide your name and cell phone number? This will help me assist you better and also allow us to contact you later with more details.\n\n[USER]: My name is AVC.\n[AGENT]: ...\n[USER]: And my number is 9246262966.\n[AGENT]: Thank you, AVC. Now that I have your information, can you tell me a bit more about your personal loan requirements? For example, what is the loan amount you're looking for, and what do you plan to use the loan for?\n\n[USER]: I want to go on a vacation.\n[AGENT]: That sounds exciting! To help me find the best personal loan options for you, could you please tell me your monthly net income, your existing monthly EMI, and your work experience? Also, do you know your credit score?\n\n[USER]: Yeah, my credit score is 780.\n[AGENT]: That's great! A credit score of seven hundred eighty is excellent. Could you please provide your monthly net income, existing monthly EMI, and work experience so I can find the best personal loan options for you?\n\n[USER]: Just give me the personal loan options. I will share the details later.\n[AGENT]: Okay, I can give you some general information about personal loans. With RupeeBoss, you can avail of a personal loan for amounts ranging from one lakh to seventy-five lakh rupees, with interest rates between ten point twenty-five percent and fourteen percent, depending on your company category and monthly net income. The repayment tenure can be from twelve months to sixty months, and there is a processing fee of point five zero percent to two percent.\nDoes this sound like something you're interested in? Also, I still need your monthly...",
-      "date": "2025-08-25",
-      "category": "HOT",
-      "conversation_id": "conv_1801k3fhtvq9ehcsyfnsrbnb4pjy",
-      "duration": 117,
-      "message_count": 13
-    },
-    {
-      "id": "rb_0059",
+      "id": "rb_0045",
       "name": "Unknown",
       "phone": "8917520565",
       "email": "",
@@ -833,7 +637,7 @@
       "message_count": 15
     },
     {
-      "id": "rb_0060",
+      "id": "rb_0046",
       "name": "Unknown",
       "phone": "7011910402",
       "email": "",
@@ -847,21 +651,7 @@
       "message_count": 15
     },
     {
-      "id": "rb_0061",
-      "name": "Darshu",
-      "phone": "9765031485",
-      "email": "",
-      "title": "Personal loan inquiry",
-      "summary": "Personal loan inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I want a personal loan.\n[AGENT]: Great! I can definitely help you with that. To get started, could you please provide your name and cell phone number? This will help me assist you better and also allow us to contact you later if needed.\n\n[USER]: Yeah, my name is Darshu Bhimgade. Mobile number is 9765031485.\n[AGENT]: Thank you, Darshu! I have your name and number. To help me find the best personal loan options for you, could you tell me a bit about your monthly net income, any existing monthly EMIs you're currently paying, your work experience, and if you happen to know your credit score?\n\n[USER]: Yeah, monthly income is Rs 37,000. EMI pay monthly is Rs 14,000 and civil score is Rs 675.\n[AGENT]: Thanks for the information, Darshu. Just to confirm, is your monthly income thirty-seven thousand rupees and your credit score six hundred and seventy-five? Also, how long have you been working?\n\n[USER]: 11 years.\n[AGENT]: Thank you, Darshu. Based on the information you've provided, you may be eligible for a personal loan. Our personal loans range from one lakh to seventy-five lakh rupees with interest rates from ten point twenty-five percent to fourteen percent, depending on your company category and monthly net income. The tenure can be from twelve months to sixty months, with a processing fee of point five zero percent to two percent. Would you like me to provide more details on the required documents or any other information?\n\n[USER]: Connect to customer care\n[AGENT]: I am sorry, I am an AI and I cannot connect you to customer care. However, I can provide you with more information regarding our loan products, eligibility criteria, and required documents. Would you like me to proceed with that?\n\n[USER]: No thank you.\n[AGENT]: Okay, Darshu. If you change your mind or have any other questions in the future, feel free to reach out. Have a great day!\n",
-      "date": "2025-08-23",
-      "category": "HOT",
-      "conversation_id": "conv_5401k3bn4ykkfzhvwvn9xf0z0ak9",
-      "duration": 134,
-      "message_count": 13
-    },
-    {
-      "id": "rb_0062",
+      "id": "rb_0047",
       "name": "Bindu",
       "phone": "9061751161",
       "email": "",
@@ -875,21 +665,49 @@
       "message_count": 27
     },
     {
-      "id": "rb_0063",
-      "name": "Unknown",
-      "phone": "7698621716",
+      "id": "rb_0048",
+      "name": "Darshu",
+      "phone": "9765031485",
       "email": "",
-      "title": "Business loan inquiry",
-      "summary": "Business loan inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Call to customer care.\n[AGENT]: I'm happy to assist you! Could you please share your name and cell phone number so I can assist you better?\n\n[USER]: Ajay.\n[AGENT]: Thank you, Ajay. And could you...\n[USER]: Ajay Verma. Mobile number...\n[AGENT]: Thank you, Ajay Verma...\n[USER]: 769866...\n[AGENT]: Thank you, Ajay Verma. And could you please provide the complete mobile number so that I can assist you better?\n\n[USER]: ...\n[AGENT]: I am sorry, I didn't get that. Are you still there?\n\n[USER]: 7698621716...\n[AGENT]: Thank you, Ajay Verma. How can I help you today?\n\n[USER]: 7698621716...\n[AGENT]: ...\n[USER]: कस्टमर केट से बात करनी हैं\n[AGENT]: नमस्ते अजय वर्मा जी, मैं आपकी किस प्रकार सहायता कर सकती हूँ?\n\n[USER]: अब, एक कस्टमर केट से बात करोना ।\n[AGENT]: मुझे समझने में थोड़ी दिक्कत हो रही है। क्या आप कृपया बता सकते हैं कि आप किस बारे में जानना चाहते हैं?\n\n[USER]: लोन लगना है, इसके एकॉर्डिंग बात करनी है\n[AGENT]: आप किस प्रकार के लोन के बारे में बात करना चाहते हैं? क्या आप पर्सनल लोन, बिजनेस लोन या किसी अन्य प्रकार के लोन में रुचि रखते हैं?\n\n[USER]: business, business school.\n[AGENT]: क्या आप कृपया बता सकते हैं कि आपकी कंपनी का टर्नओवर क्या है, आपको कितने लोन की आवश्यकता है, और आपका क्रेडिट स्कोर क्या है?\n\n[USER]: ...\n[AGENT]: क्या आप अभी भी वहां हैं, अजय वर्मा जी? क्या आप कृपया...\n[USER]: I'll leave it out like that.",
-      "date": "2025-08-20",
-      "category": "COLD",
-      "conversation_id": "conv_3101k340atvhf2e97zwked3prx8e",
-      "duration": 131,
-      "message_count": 30
+      "title": "Personal loan inquiry",
+      "summary": "Personal loan inquiry",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I want a personal loan.\n[AGENT]: Great! I can definitely help you with that. To get started, could you please provide your name and cell phone number? This will help me assist you better and also allow us to contact you later if needed.\n\n[USER]: Yeah, my name is Darshu Bhimgade. Mobile number is 9765031485.\n[AGENT]: Thank you, Darshu! I have your name and number. To help me find the best personal loan options for you, could you tell me a bit about your monthly net income, any existing monthly EMIs you're currently paying, your work experience, and if you happen to know your credit score?\n\n[USER]: Yeah, monthly income is Rs 37,000. EMI pay monthly is Rs 14,000 and civil score is Rs 675.\n[AGENT]: Thanks for the information, Darshu. Just to confirm, is your monthly income thirty-seven thousand rupees and your credit score six hundred and seventy-five? Also, how long have you been working?\n\n[USER]: 11 years.\n[AGENT]: Thank you, Darshu. Based on the information you've provided, you may be eligible for a personal loan. Our personal loans range from one lakh to seventy-five lakh rupees with interest rates from ten point twenty-five percent to fourteen percent, depending on your company category and monthly net income. The tenure can be from twelve months to sixty months, with a processing fee of point five zero percent to two percent. Would you like me to provide more details on the required documents or any other information?\n\n[USER]: Connect to customer care\n[AGENT]: I am sorry, I am an AI and I cannot connect you to customer care. However, I can provide you with more information regarding our loan products, eligibility criteria, and required documents. Would you like me to proceed with that?\n\n[USER]: No thank you.\n[AGENT]: Okay, Darshu. If you change your mind or have any other questions in the future, feel free to reach out. Have a great day!\n",
+      "date": "2025-08-23",
+      "category": "HOT",
+      "conversation_id": "conv_5401k3bn4ykkfzhvwvn9xf0z0ak9",
+      "duration": 134,
+      "message_count": 13
     },
     {
-      "id": "rb_0064",
+      "id": "rb_0049",
+      "name": "Unknown",
+      "phone": "9376198182",
+      "email": "",
+      "title": "Personal loan inquiry",
+      "summary": "Personal loan inquiry",
+      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: अच्छा आपक्या सर्विस प्रोवाइड करते हो\n[AGENT]: नमस्ते! RupeeBoss में, हम कई प्रकार की लोन सर्विस प्रदान करते हैं, जैसे कि पर्सनल लोन, होम लोन, बिजनेस लोन और प्रॉपर्टी पर लोन। क्या आप मुझे बता सकते हैं कि आप किस प्रकार की लोन सर्विस में रुचि रखते हैं? इसके अलावा, क्या आप मुझे अपना नाम और फ़ोन नंबर बता सकते हैं?\n[USER]: मेरा नाम हिरैन पतल है और मॉन्स नंबर ही 9376198182\n[AGENT]: धन्यवाद, हिरैन! क्या आप मुझे बता सकते हैं कि आप किस प्रकार की लोन सर्विस में रुचि रखते हैं?\n[USER]: मुंजे personal loan चाहिये\n[AGENT]: ज़रूर, हिरैन। पर्सनल लोन के लिए, हम एक लाख से पचहत्तर लाख तक की लोन राशि प्रदान करते हैं, ब्याज दर दस दशमलव दो पांच प्रतिशत से चौदह प्रतिशत तक होती है, और...",
+      "date": "2025-08-22",
+      "category": "COLD",
+      "conversation_id": "conv_9201k38anemafx7ay4h1va3enw2h",
+      "duration": 69,
+      "message_count": 7
+    },
+    {
+      "id": "rb_0050",
+      "name": "Unknown",
+      "phone": "8790349135",
+      "email": "",
+      "title": "Startup Loan Inquiry",
+      "summary": "Startup Loan Inquiry",
+      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: लोन के बारे में inquire करना है, मेरे new startup के लिए, तो उसके लिए क्या support मिल सकता आपकी एंस्यम?\n[AGENT]: निश्चित रूप से! RupeeBoss में, हम आपके जैसे नए स्टार्टअप्स को लोन दिलाने में मदद करते हैं। क्या आप मुझे अपना नाम और फ़ोन नंबर बता सकते हैं ताकि मैं आपकी ज़रूरतों को बेहतर ढंग से समझ सकूँ?\n[USER]: Vikram Bhargav, phone number 8790349135\n[AGENT]: Hi Vikram, it's great to hear from you! I'm Riya, and I'm here to help you explore loan options for your new startup. To give you the best advice, could you tell me a bit more about your business? For example, what kind of business is it, and how much funding are you looking for?\n\n[USER]: We are AI based, mood based chatbot by the name of T-Tails wherein Roomi is the core AI that will be working for emotional support and rendering mental support to the users. Also it has a FAM Roomi sector wherein we provide services to schools students also from class 9 to class 12 which is a B2C2 model where the basic model is that Roomi will act as your AI native best friend which will be more of human like rather than AI and provide you emotional support as well as fun activities like generation of memes, sassy talk and other things that are involved in the app.\n[AGENT]: That sounds like a very innovative and exciting venture, Vikram! Thank you for sharing the details about T-Tails and Roomi.\n\nTo help me find the best loan options for you, could you please provide a rough estimate of the amount of funding you're looking for? Also, how long has your company been in business?\n\n[USER]: I had a company registered in 2023 but we stopped operation in it in 2024. This startup idea and the product we developed in the May month and still it is under development which will take funding of around 20 lakh rupees for development, deployment and MVP initial validation with the first 100 to 1000 users. So we are looking at a funding of around 20 lakh rupees with a monit",
+      "date": "2025-08-22",
+      "category": "COLD",
+      "conversation_id": "conv_6001k38v9sa0f1jv5ckamgstybv7",
+      "duration": 180,
+      "message_count": 11
+    },
+    {
+      "id": "rb_0051",
       "name": "Unknown",
       "phone": "6295446370",
       "email": "",
@@ -903,7 +721,21 @@
       "message_count": 29
     },
     {
-      "id": "rb_0065",
+      "id": "rb_0052",
+      "name": "Unknown",
+      "phone": "7698621716",
+      "email": "",
+      "title": "Business loan inquiry",
+      "summary": "Business loan inquiry",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Call to customer care.\n[AGENT]: I'm happy to assist you! Could you please share your name and cell phone number so I can assist you better?\n\n[USER]: Ajay.\n[AGENT]: Thank you, Ajay. And could you...\n[USER]: Ajay Verma. Mobile number...\n[AGENT]: Thank you, Ajay Verma...\n[USER]: 769866...\n[AGENT]: Thank you, Ajay Verma. And could you please provide the complete mobile number so that I can assist you better?\n\n[USER]: ...\n[AGENT]: I am sorry, I didn't get that. Are you still there?\n\n[USER]: 7698621716...\n[AGENT]: Thank you, Ajay Verma. How can I help you today?\n\n[USER]: 7698621716...\n[AGENT]: ...\n[USER]: कस्टमर केट से बात करनी हैं\n[AGENT]: नमस्ते अजय वर्मा जी, मैं आपकी किस प्रकार सहायता कर सकती हूँ?\n\n[USER]: अब, एक कस्टमर केट से बात करोना ।\n[AGENT]: मुझे समझने में थोड़ी दिक्कत हो रही है। क्या आप कृपया बता सकते हैं कि आप किस बारे में जानना चाहते हैं?\n\n[USER]: लोन लगना है, इसके एकॉर्डिंग बात करनी है\n[AGENT]: आप किस प्रकार के लोन के बारे में बात करना चाहते हैं? क्या आप पर्सनल लोन, बिजनेस लोन या किसी अन्य प्रकार के लोन में रुचि रखते हैं?\n\n[USER]: business, business school.\n[AGENT]: क्या आप कृपया बता सकते हैं कि आपकी कंपनी का टर्नओवर क्या है, आपको कितने लोन की आवश्यकता है, और आपका क्रेडिट स्कोर क्या है?\n\n[USER]: ...\n[AGENT]: क्या आप अभी भी वहां हैं, अजय वर्मा जी? क्या आप कृपया...\n[USER]: I'll leave it out like that.",
+      "date": "2025-08-20",
+      "category": "COLD",
+      "conversation_id": "conv_3101k340atvhf2e97zwked3prx8e",
+      "duration": 131,
+      "message_count": 30
+    },
+    {
+      "id": "rb_0053",
       "name": "Unknown",
       "phone": "9915201914",
       "email": "",
@@ -917,7 +749,7 @@
       "message_count": 27
     },
     {
-      "id": "rb_0066",
+      "id": "rb_0054",
       "name": "Swaroop",
       "phone": "9178176898",
       "email": "",
@@ -931,7 +763,7 @@
       "message_count": 17
     },
     {
-      "id": "rb_0067",
+      "id": "rb_0055",
       "name": "Baslinga",
       "phone": "9916554411",
       "email": "",
@@ -945,7 +777,7 @@
       "message_count": 17
     },
     {
-      "id": "rb_0068",
+      "id": "rb_0056",
       "name": "Unknown",
       "phone": "9069372921",
       "email": "",
@@ -959,7 +791,7 @@
       "message_count": 11
     },
     {
-      "id": "rb_0069",
+      "id": "rb_0057",
       "name": "Ck",
       "phone": "9212202580",
       "email": "",
@@ -973,7 +805,7 @@
       "message_count": 17
     },
     {
-      "id": "rb_0070",
+      "id": "rb_0058",
       "name": "Navin",
       "phone": "9650610423",
       "email": "",
@@ -987,7 +819,7 @@
       "message_count": 21
     },
     {
-      "id": "rb_0071",
+      "id": "rb_0059",
       "name": "Shaila",
       "phone": "7239874914",
       "email": "",
@@ -1001,7 +833,7 @@
       "message_count": 25
     },
     {
-      "id": "rb_0072",
+      "id": "rb_0060",
       "name": "Unknown",
       "phone": "9892321711",
       "email": "",
@@ -1015,7 +847,7 @@
       "message_count": 17
     },
     {
-      "id": "rb_0073",
+      "id": "rb_0061",
       "name": "Sandeep",
       "phone": "8595552010",
       "email": "",
@@ -1029,7 +861,7 @@
       "message_count": 19
     },
     {
-      "id": "rb_0074",
+      "id": "rb_0062",
       "name": "Interested",
       "phone": "7000508795",
       "email": "",
@@ -1043,7 +875,7 @@
       "message_count": 23
     },
     {
-      "id": "rb_0075",
+      "id": "rb_0063",
       "name": "Unknown",
       "phone": "9888442292",
       "email": "",
@@ -1057,21 +889,7 @@
       "message_count": 23
     },
     {
-      "id": "rb_0076",
-      "name": "Jwala",
-      "phone": "8409076343",
-      "email": "",
-      "title": "Personal loan inquiry",
-      "summary": "Personal loan inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I need loan, a loan 5,000 minimum.\n[AGENT]: Okay, I can help you with that! To get started, could you please provide your name and cell phone number? Also, what type of loan are you interested in?\n\n[USER]: My name is Jwala Prasad Singh. My mobile number is 8409076343. I need 5,000 but now...\n[AGENT]: Thank you, Jwala. I have your name and number. Just to clarify, when you say you need five thousand, do you mean five thousand rupees? Also, what type of loan are you looking for, such as a personal loan or a business loan?\n\n[USER]: Personal Loan My salary is 23,000 per month. I am a branch of the personal secretary of Dharkand Vidhan Sabha Ranchi.\n[AGENT]: Thank you for the information, Jwala. A personal loan is definitely something we can explore. However, the minimum income for a personal loan is thirty thousand rupees. Your current monthly income is twenty three thousand rupees.\n\nWould you like me to help you explore options that might be available to you with your current income, or would you like to explore options to increase your income to meet the eligibility criteria for a personal loan?\n",
-      "date": "2025-08-01",
-      "category": "HOT",
-      "conversation_id": "conv_3301k1jpdq68f80b3gpvp03g3zff",
-      "duration": 89,
-      "message_count": 7
-    },
-    {
-      "id": "rb_0077",
+      "id": "rb_0064",
       "name": "Rahul",
       "phone": "7715860965",
       "email": "",
@@ -1085,7 +903,21 @@
       "message_count": 7
     },
     {
-      "id": "rb_0078",
+      "id": "rb_0065",
+      "name": "Jwala",
+      "phone": "8409076343",
+      "email": "",
+      "title": "Personal loan inquiry",
+      "summary": "Personal loan inquiry",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I need loan, a loan 5,000 minimum.\n[AGENT]: Okay, I can help you with that! To get started, could you please provide your name and cell phone number? Also, what type of loan are you interested in?\n\n[USER]: My name is Jwala Prasad Singh. My mobile number is 8409076343. I need 5,000 but now...\n[AGENT]: Thank you, Jwala. I have your name and number. Just to clarify, when you say you need five thousand, do you mean five thousand rupees? Also, what type of loan are you looking for, such as a personal loan or a business loan?\n\n[USER]: Personal Loan My salary is 23,000 per month. I am a branch of the personal secretary of Dharkand Vidhan Sabha Ranchi.\n[AGENT]: Thank you for the information, Jwala. A personal loan is definitely something we can explore. However, the minimum income for a personal loan is thirty thousand rupees. Your current monthly income is twenty three thousand rupees.\n\nWould you like me to help you explore options that might be available to you with your current income, or would you like to explore options to increase your income to meet the eligibility criteria for a personal loan?\n",
+      "date": "2025-08-01",
+      "category": "HOT",
+      "conversation_id": "conv_3301k1jpdq68f80b3gpvp03g3zff",
+      "duration": 89,
+      "message_count": 7
+    },
+    {
+      "id": "rb_0066",
       "name": "Working",
       "phone": "9300845266",
       "email": "",
@@ -1099,7 +931,7 @@
       "message_count": 29
     },
     {
-      "id": "rb_0079",
+      "id": "rb_0067",
       "name": "Unknown",
       "phone": "9846468484",
       "email": "",
@@ -1113,7 +945,7 @@
       "message_count": 17
     },
     {
-      "id": "rb_0080",
+      "id": "rb_0068",
       "name": "Unknown",
       "phone": "8800915568",
       "email": "",
@@ -1127,7 +959,7 @@
       "message_count": 33
     },
     {
-      "id": "rb_0081",
+      "id": "rb_0069",
       "name": "Saurav",
       "phone": "9473039418",
       "email": "",
@@ -1141,7 +973,7 @@
       "message_count": 9
     },
     {
-      "id": "rb_0082",
+      "id": "rb_0070",
       "name": "Unknown",
       "phone": "8709360119",
       "email": "",
@@ -1155,7 +987,7 @@
       "message_count": 11
     },
     {
-      "id": "rb_0083",
+      "id": "rb_0071",
       "name": "Unknown",
       "phone": "9325710000",
       "email": "",
@@ -1169,7 +1001,7 @@
       "message_count": 9
     },
     {
-      "id": "rb_0084",
+      "id": "rb_0072",
       "name": "Unknown",
       "phone": "9977046268",
       "email": "",
@@ -1183,7 +1015,7 @@
       "message_count": 21
     },
     {
-      "id": "rb_0085",
+      "id": "rb_0073",
       "name": "Unknown",
       "phone": "9887333688",
       "email": "",
@@ -1197,21 +1029,21 @@
       "message_count": 23
     },
     {
-      "id": "rb_0086",
+      "id": "rb_0074",
       "name": "Unknown",
       "phone": "9886666831",
       "email": "",
       "title": "Loan Inquiry",
       "summary": "Loan Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Hi, I'm Nagraj.\n[AGENT]: Hello Nagraj, it's great to hear from you! What can I help you with today?\n\n[USER]: I want business loans.\n[AGENT]: Okay, I can help you with that! To give you the best information, could you please tell me what type of business loan you're interested in? Also, what is your cell phone number?\n\n[USER]: 9886666831\n[AGENT]: Thank you, Nagraj! Just to confirm, your number is nine eight eight six six six six eight three one. Could you please specify what type of business loan you're interested in, so I can assist you better?\n\n[USER]: . Services\n[AGENT]: Thank you for the information, Nagraj! To help me narrow down the best options for you, could you please provide a little more detail about the services you're looking for in a business loan? For example, are you looking for a loan for working capital, or something else?\n\n[USER]: Working Capital\n[AGENT]: Great! A working capital loan can be very helpful for managing day-to-day operational costs. To check your eligibility, could you please tell me your company's annual turnover and your business experience in years?\n\n[USER]: Annual turnover is Rs. 4,50,000 and big business experience of 5 years, 2 months.\n[AGENT]: Thank you for providing that information, Nagraj. Just to confirm, your annual turnover is four lakh fifty thousand rupees. Also, what is your existing monthly EMI?\n\n[USER]: ...\n[AGENT]: Nagraj, are you still there? What is your existing monthly EMI?\n\n[USER]: No EMI Madam.\n[AGENT]: Thank you, Nagraj. One moment while I check the options for a working capital loan.\n\nTo confirm, your business has been operating for five years and two months, your annual turnover is four lakh fifty thousand rupees, and you have no existing EMIs. Is that correct?\n\n[USER]: Yes.\n[AGENT]: Okay, based on the details you've provided, you might be interested in our Working Capital Loan. It is designed to provide businesses with short-te",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: I want business load.\n[AGENT]: Great! We offer several types of business loans. Could you please specify what kind of business loan you're interested in? For example, are you looking for an unsecured business loan, a secured business loan, a working capital loan, or a commercial purchase loan?\n\nAlso, could you please share your name and cell phone number so I can assist you better?\n\n[USER]: 9886666831\n[AGENT]: Thank you! And could you please share your name as well?\n\n[USER]: Nagraj Jaiya\n[AGENT]: Thank you, Nagraj! So, to confirm, you're interested in a business loan. To help me narrow down the best options for you, could you tell me a bit more about your business needs? For example, what do you plan to use the loan for, and how much are you looking to borrow?\n\n[USER]: Rs. 5,50,000\n[AGENT]: Okay, you're looking for five lakh fifty thousand rupees. And what do you plan to use the loan for?\n\n[USER]: Electrical services, home appliance\n[AGENT]: Thank you for that information, Nagraj. Based on your requirements, an unsecured business loan might be a good fit for your needs. Have you considered this type of loan, or would you like to explore other options as well?\n\n[USER]: MSME loan\n[AGENT]: An MSME loan is a great option! To see if you qualify for an unsecured business loan, could you please share a bit more information about your business? Specifically, what is your company or firm's turnover, what's your existing monthly EMI, and how many years of business experience do you have? Also, do you happen to know your credit score?\n\n[USER]: My credit score is a 780.\n[AGENT]: That's excellent, Nagraj! A credit score of seven hundred eighty is great. Could you please provide your company or firm's turnover, your existing monthly EMI, and how many years of business experience you have?\n\n[USER]: Five years, two months and monthly EMI no EMI and turnover is four lakh fifty thousand.\n[AGENT]: Thank yo",
       "date": "2025-07-24",
       "category": "COLD",
-      "conversation_id": "conv_4101k0xzwfzhfdjryeqyzpy6q5zs",
-      "duration": 218,
-      "message_count": 27
+      "conversation_id": "conv_3901k0xzjwjnfxcs1khby26w6stp",
+      "duration": 300,
+      "message_count": 31
     },
     {
-      "id": "rb_0087",
+      "id": "rb_0075",
       "name": "Unknown",
       "phone": "7001414297",
       "email": "",
@@ -1225,7 +1057,7 @@
       "message_count": 23
     },
     {
-      "id": "rb_0088",
+      "id": "rb_0076",
       "name": "Fresher",
       "phone": "7015312581",
       "email": "",
@@ -1239,7 +1071,7 @@
       "message_count": 25
     },
     {
-      "id": "rb_0089",
+      "id": "rb_0077",
       "name": "Seher",
       "phone": "8591564156",
       "email": "",
@@ -1253,7 +1085,7 @@
       "message_count": 27
     },
     {
-      "id": "rb_0090",
+      "id": "rb_0078",
       "name": "Unknown",
       "phone": "9680973316",
       "email": "",
@@ -1267,7 +1099,7 @@
       "message_count": 35
     },
     {
-      "id": "rb_0091",
+      "id": "rb_0079",
       "name": "Rahul",
       "phone": "9079671618",
       "email": "",
@@ -1281,35 +1113,7 @@
       "message_count": 8
     },
     {
-      "id": "rb_0092",
-      "name": "Rajini",
-      "phone": "9324113604",
-      "email": "",
-      "title": "Loan Inquiry",
-      "summary": "Loan Inquiry",
-      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: I want clone.\n[AGENT]: I'm sorry, I'm not quite sure what you mean by \"clone.\" Could you please provide more details about what you're looking for? Also, could you please share your name and cell phone number?\n\n[USER]: My name is Rajini and my number is 9324113604. I want loans.\n[AGENT]: Great, Rajini! It's a pleasure to assist you today.\n\nI see that you're interested in loans. To help me narrow down the best options for you, could you tell me what type of loan you're interested in? For example, are you looking for a personal loan, a business loan, a home loan, or something else?\n\n[USER]: I'm looking for personal loan.\n[AGENT]: Okay, a personal loan! To check your eligibility and provide you with the best options, could you please share a few more details? What is your monthly net income, your existing monthly EMI, and your work experience in years? If you know your credit score, that would be helpful too!\n\n[USER]: I have a school number 761 and I am working in Rupee for financial services. My salary is Rs 22,000\n[AGENT]: Thank you for providing that information, Rajini. Just to clarify, when you mentioned \"school number seven six one\" were you referring to your credit score? Also, your salary is twenty two thousand rupees, correct?\n\n[USER]: net.\n[AGENT]: Okay, so your net monthly income is twenty two thousand rupees. Unfortunately, the minimum income requirement for a personal loan is thirty thousand rupees.\n\nWould you be interested in exploring options that might be available to you with your current income, or would you like to discuss ways to potentially increase your eligibility for a personal loan in the future?\n\n[USER]: What's my income?\n[AGENT]: As you mentioned earlier, your net monthly income is twenty-two thousand rupees.\n\n[USER]: Yes.\n[AGENT]: Okay, since your net monthly income is twenty-two thousand rupees, and the minimum requirement for a personal loan is thirty thousand rupees,",
-      "date": "2025-07-15",
-      "category": "HOT",
-      "conversation_id": "conv_01k06y9czqfwftd2kvshyhrvp1",
-      "duration": 302,
-      "message_count": 37
-    },
-    {
-      "id": "rb_0093",
-      "name": "Ready",
-      "phone": "9917336655",
-      "email": "",
-      "title": "Loan Inquiry",
-      "summary": "Loan Inquiry",
-      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: मुझे business loan चाहिली.\n[AGENT]: नमस्ते! बिजनेस लोन में आपकी मदद करने में मुझे खुशी होगी। क्या आप मुझे अपना नाम और सेल फोन नंबर बता सकते हैं?\n[USER]: मेरा नाम सोरब अक्रोवाल है.\n[AGENT]: सोरब जी, आपका...\n[USER]: cell phone number है.\n[AGENT]: आपका सेल फोन नंबर क्या है?...\n[USER]: cell phone number है.\n[AGENT]: सोरब जी, आपका सेल फोन नंबर क्या है?\n[USER]: 9917336655\n[AGENT]: धन्यवाद, सोरब जी। बिजनेस लोन के बारे में आपकी क्या आवश्यकताएं हैं? क्या आप कृपया अपनी कंपनी का टर्नओवर, मौजूदा मासिक ईएमआई, व्यवसाय का अनुभव और क्रेडिट स्कोर बता सकते हैं? इससे मुझे आपको सबसे उपयुक्त लोन विकल्प बताने में मदद मिलेगी।\n[USER]: मेरा एक साल का टरनवर 36,00,000 रुपए हैं और मन्तली EMI 0 हैं और क्रेडिट स्कोर 657 हैं\n[AGENT]: सोरब जी, आपके व्यवसाय का अनुभव कितने साल का है?\n[USER]: मेरे व्यसाय की अनुभव मुझे दो साल कहती है\n[AGENT]: सोरब जी, आपका क्रेडिट स्कोर छह सौ सत्तावन है, जो कि थोड़ा कम है। आमतौर पर, असुरक्षित बिजनेस लोन के लिए छह सौ अस्सी या उससे अधिक का क्रेडिट स्कोर होना आवश्यक है। हालाँकि, मैं आपको अन्य लोन विकल्पों के बारे में बता सकती हूँ जो आपके लिए उपलब्ध हो सकते हैं। क्या आप चाहेंगे कि मैं आपको उन विकल्पों के बारे में बताऊँ?\n[USER]: . बताइये,\n[AGENT]: ज़रूर, सोरब जी। आपके लिए एक विकल्प CGTMSE लोन हो सकता है। यह लोन बिना किसी कोलेटरल या थर्ड-पार्टी गारंटी के उपलब्ध है, और यह उन उद्यमियों के लिए एक अच्छा विकल्प हो सकता है जिनके पास कम क्रेडिट स्कोर है। क्या आप इस लोन के बारे में अधिक जानकारी चाहते हैं?\n[USER]: Yeah.\n[AGENT]: सीजीटीएमएसई लोन, यानी क्रेडिट गारंटी फंड ट्रस्ट फॉर माइक्रो एंड स्मॉल एंटरप्राइजेज, का उद्देश्य माइक्रो और स्मॉल एंटरप्राइजेज को बिना किसी कोलेटरल के बैंक क्रेडिट उपलब्ध कराना है। क्या आप इस लोन के लिए पात्रता मानदंड और आवश्यक दस्तावेजों के बारे में जानना चाहेंगे?\n[USER]: Yeah. Yeah. Yeah, I want to know.\n[AGENT]: ज़रूर, सोरब जी। CGTMSE लोन के लिए पात्रता मानदंड और आवश्यक दस्तावेज सामान्य बिजनेस लोन के समान ही हैं। आपको अपनी कंपनी का टर्नओवर, मौजूदा मासिक ईएमआई, व्यवसाय का अनुभव और क्रे",
-      "date": "2025-07-15",
-      "category": "HOT",
-      "conversation_id": "conv_01k07jpyw2e3086pz744szmrp2",
-      "duration": 301,
-      "message_count": 27
-    },
-    {
-      "id": "rb_0094",
+      "id": "rb_0080",
       "name": "Unknown",
       "phone": "9760994222",
       "email": "",
@@ -1323,7 +1127,35 @@
       "message_count": 19
     },
     {
-      "id": "rb_0095",
+      "id": "rb_0081",
+      "name": "Rajini",
+      "phone": "9324113604",
+      "email": "",
+      "title": "Loan Inquiry",
+      "summary": "Loan Inquiry",
+      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: I want clone.\n[AGENT]: I'm sorry, I'm not quite sure what you mean by \"clone.\" Could you please provide more details about what you're looking for? Also, could you please share your name and cell phone number?\n\n[USER]: My name is Rajini and my number is 9324113604. I want loans.\n[AGENT]: Great, Rajini! It's a pleasure to assist you today.\n\nI see that you're interested in loans. To help me narrow down the best options for you, could you tell me what type of loan you're interested in? For example, are you looking for a personal loan, a business loan, a home loan, or something else?\n\n[USER]: I'm looking for personal loan.\n[AGENT]: Okay, a personal loan! To check your eligibility and provide you with the best options, could you please share a few more details? What is your monthly net income, your existing monthly EMI, and your work experience in years? If you know your credit score, that would be helpful too!\n\n[USER]: I have a school number 761 and I am working in Rupee for financial services. My salary is Rs 22,000\n[AGENT]: Thank you for providing that information, Rajini. Just to clarify, when you mentioned \"school number seven six one\" were you referring to your credit score? Also, your salary is twenty two thousand rupees, correct?\n\n[USER]: net.\n[AGENT]: Okay, so your net monthly income is twenty two thousand rupees. Unfortunately, the minimum income requirement for a personal loan is thirty thousand rupees.\n\nWould you be interested in exploring options that might be available to you with your current income, or would you like to discuss ways to potentially increase your eligibility for a personal loan in the future?\n\n[USER]: What's my income?\n[AGENT]: As you mentioned earlier, your net monthly income is twenty-two thousand rupees.\n\n[USER]: Yes.\n[AGENT]: Okay, since your net monthly income is twenty-two thousand rupees, and the minimum requirement for a personal loan is thirty thousand rupees,",
+      "date": "2025-07-15",
+      "category": "HOT",
+      "conversation_id": "conv_01k06y9czqfwftd2kvshyhrvp1",
+      "duration": 302,
+      "message_count": 37
+    },
+    {
+      "id": "rb_0082",
+      "name": "Ready",
+      "phone": "9917336655",
+      "email": "",
+      "title": "Loan Inquiry",
+      "summary": "Loan Inquiry",
+      "transcript": "[AGENT]: नमस्ते, मैं रिया हूँ। आज मैं आपकी कैसे मदद कर सकती हूँ?\n[USER]: मुझे business loan चाहिली.\n[AGENT]: नमस्ते! बिजनेस लोन में आपकी मदद करने में मुझे खुशी होगी। क्या आप मुझे अपना नाम और सेल फोन नंबर बता सकते हैं?\n[USER]: मेरा नाम सोरब अक्रोवाल है.\n[AGENT]: सोरब जी, आपका...\n[USER]: cell phone number है.\n[AGENT]: आपका सेल फोन नंबर क्या है?...\n[USER]: cell phone number है.\n[AGENT]: सोरब जी, आपका सेल फोन नंबर क्या है?\n[USER]: 9917336655\n[AGENT]: धन्यवाद, सोरब जी। बिजनेस लोन के बारे में आपकी क्या आवश्यकताएं हैं? क्या आप कृपया अपनी कंपनी का टर्नओवर, मौजूदा मासिक ईएमआई, व्यवसाय का अनुभव और क्रेडिट स्कोर बता सकते हैं? इससे मुझे आपको सबसे उपयुक्त लोन विकल्प बताने में मदद मिलेगी।\n[USER]: मेरा एक साल का टरनवर 36,00,000 रुपए हैं और मन्तली EMI 0 हैं और क्रेडिट स्कोर 657 हैं\n[AGENT]: सोरब जी, आपके व्यवसाय का अनुभव कितने साल का है?\n[USER]: मेरे व्यसाय की अनुभव मुझे दो साल कहती है\n[AGENT]: सोरब जी, आपका क्रेडिट स्कोर छह सौ सत्तावन है, जो कि थोड़ा कम है। आमतौर पर, असुरक्षित बिजनेस लोन के लिए छह सौ अस्सी या उससे अधिक का क्रेडिट स्कोर होना आवश्यक है। हालाँकि, मैं आपको अन्य लोन विकल्पों के बारे में बता सकती हूँ जो आपके लिए उपलब्ध हो सकते हैं। क्या आप चाहेंगे कि मैं आपको उन विकल्पों के बारे में बताऊँ?\n[USER]: . बताइये,\n[AGENT]: ज़रूर, सोरब जी। आपके लिए एक विकल्प CGTMSE लोन हो सकता है। यह लोन बिना किसी कोलेटरल या थर्ड-पार्टी गारंटी के उपलब्ध है, और यह उन उद्यमियों के लिए एक अच्छा विकल्प हो सकता है जिनके पास कम क्रेडिट स्कोर है। क्या आप इस लोन के बारे में अधिक जानकारी चाहते हैं?\n[USER]: Yeah.\n[AGENT]: सीजीटीएमएसई लोन, यानी क्रेडिट गारंटी फंड ट्रस्ट फॉर माइक्रो एंड स्मॉल एंटरप्राइजेज, का उद्देश्य माइक्रो और स्मॉल एंटरप्राइजेज को बिना किसी कोलेटरल के बैंक क्रेडिट उपलब्ध कराना है। क्या आप इस लोन के लिए पात्रता मानदंड और आवश्यक दस्तावेजों के बारे में जानना चाहेंगे?\n[USER]: Yeah. Yeah. Yeah, I want to know.\n[AGENT]: ज़रूर, सोरब जी। CGTMSE लोन के लिए पात्रता मानदंड और आवश्यक दस्तावेज सामान्य बिजनेस लोन के समान ही हैं। आपको अपनी कंपनी का टर्नओवर, मौजूदा मासिक ईएमआई, व्यवसाय का अनुभव और क्रे",
+      "date": "2025-07-15",
+      "category": "HOT",
+      "conversation_id": "conv_01k07jpyw2e3086pz744szmrp2",
+      "duration": 301,
+      "message_count": 27
+    },
+    {
+      "id": "rb_0083",
       "name": "Divyanshu",
       "phone": "8527620204",
       "email": "",
@@ -1337,7 +1169,7 @@
       "message_count": 21
     },
     {
-      "id": "rb_0096",
+      "id": "rb_0084",
       "name": "Bhaskar",
       "phone": "7044750078",
       "email": "",
@@ -1351,7 +1183,7 @@
       "message_count": 32
     },
     {
-      "id": "rb_0097",
+      "id": "rb_0085",
       "name": "Sandeep",
       "phone": "9108777698",
       "email": "",
@@ -1365,7 +1197,7 @@
       "message_count": 21
     },
     {
-      "id": "rb_0098",
+      "id": "rb_0086",
       "name": "Unknown",
       "phone": "9160254911",
       "email": "",
@@ -1379,7 +1211,7 @@
       "message_count": 33
     },
     {
-      "id": "rb_0099",
+      "id": "rb_0087",
       "name": "Unknown",
       "phone": "9739673764",
       "email": "",
@@ -1393,21 +1225,7 @@
       "message_count": 29
     },
     {
-      "id": "rb_0100",
-      "name": "Sherman",
-      "phone": "7506212133",
-      "email": "",
-      "title": "Loan Inquiry",
-      "summary": "Loan Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Hi, I want to know whether I'm eligible for a loan.\n[AGENT]: I'd be happy to help you with that! To determine your eligibility, could you please specify which type of loan you're interested in, such as a personal loan, business...\n[USER]: Personal loan\n[AGENT]: Great! To check your eligibility for a personal loan, I need a bit more information. Could you please provide your monthly net income, existing monthly EMI, and work experience? Also, do you know your credit score?\n\nAnd before we proceed, may I have your name and cell phone number for our records?\n\n[USER]: Is there anyone who I can get in touch with from office?\n[AGENT]: Yes, absolutely! We have several office locations, including Hyderabad, Bhopal, and Rajkot. Would you like the address and contact details for any of these offices, or perhaps another location?...\n[USER]: I would require the contact details for the Mumbai office.\n[AGENT]: I do not have the contact details for the Mumbai office. Would you like me to provide you with the contact details for any of the other...\n[USER]: What is SkyMumbai?\n[AGENT]: I'm sorry, I do not have any information about SkyMumbai. Is there anything else I can help you with?\n\n[USER]: Can you help me with the email ID of the concerned person in the Mumbai office?\n[AGENT]: I am sorry, but I do not have access to the email ID of a specific person in the Mumbai office. However, I can help you with other information regarding our services or loan products. Would you like to know more about that?\n\n[USER]: If if i give you my contact number would anyone contact me?\n[AGENT]: Yes, if you provide me with your contact number, I can have one of our representatives contact you to discuss your loan options and answer any questions you may have.\n\n[USER]: Okay, thank you\n[AGENT]: You're welcome! Is there...\n[USER]: . Hello\n[AGENT]: Hi there! Do you have any questions I can answer for you?\n\n[USER]: Okay, you can",
-      "date": "2025-07-08",
-      "category": "HOT",
-      "conversation_id": "conv_01jzmndt1bembr976y150p5vws",
-      "duration": 177,
-      "message_count": 27
-    },
-    {
-      "id": "rb_0101",
+      "id": "rb_0088",
       "name": "Not",
       "phone": "9381246660",
       "email": "",
@@ -1421,21 +1239,21 @@
       "message_count": 23
     },
     {
-      "id": "rb_0102",
-      "name": "The",
-      "phone": "9820455298",
+      "id": "rb_0089",
+      "name": "Sherman",
+      "phone": "7506212133",
       "email": "",
       "title": "Loan Inquiry",
       "summary": "Loan Inquiry",
-      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: So I wanted to know about the home loan.\n[AGENT]: Great! I can help you with information about home loans. To give you the most relevant details, could you tell me a bit about what you're looking for? For example, are you interested in eligibility criteria, the application process, or something else?\n\nAlso, could you please share your name and cell phone number so I can keep track of our conversation?\n\n[USER]: That's PN Chetty 9820455298 and I would like to know about eligibility.\n[AGENT]: Thank you, Mister Chetty.The eligibility criteria for a home loan typically include factors like your monthly income, existing...\n[USER]: EMI, existing monthly EMI.\n[AGENT]: Thank you for the cla rification...\n[USER]: Thank you for the clarification Mr. Chetty.\n[AGENT]: You're welcome, Mr. Chetty! The...\n[USER]: Welcome Mr. Chetty. I am the new...\n[AGENT]: I apologize for that error, Mr. Chetty! I am still under development and learning to perform all my tasks perfectly.\n\nAs I was saying, the eligibility criteria for a home loan typically include factors like your monthly income, existing monthly EMI, work experience, and credit score.\n\nDo you have any of these details handy? Knowing them will help me give you a more specific idea of your eligibility.\n\n[USER]: My salary is 1 lakh rupees and I'm paying 10 thousand rupees EMI\n[AGENT]: Thanks, that's helpful! And how long have you been working, and do you know your credit score?\n\n[USER]: 5 years and score is 720.\n[AGENT]: That's great, Mr. Chetty! With a salary of one lakh rupees, an existing EMI of ten thousand rupees, five years of work experience, and a credit score of seven hundred and twenty, you seem to meet the basic eligibility criteria for a home loan.\n\nWould you like me to provide more details on the property details required, the documentation needed, or the banks and NBFCs that offer home loans?\n",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Hi, I want to know whether I'm eligible for a loan.\n[AGENT]: I'd be happy to help you with that! To determine your eligibility, could you please specify which type of loan you're interested in, such as a personal loan, business...\n[USER]: Personal loan\n[AGENT]: Great! To check your eligibility for a personal loan, I need a bit more information. Could you please provide your monthly net income, existing monthly EMI, and work experience? Also, do you know your credit score?\n\nAnd before we proceed, may I have your name and cell phone number for our records?\n\n[USER]: Is there anyone who I can get in touch with from office?\n[AGENT]: Yes, absolutely! We have several office locations, including Hyderabad, Bhopal, and Rajkot. Would you like the address and contact details for any of these offices, or perhaps another location?...\n[USER]: I would require the contact details for the Mumbai office.\n[AGENT]: I do not have the contact details for the Mumbai office. Would you like me to provide you with the contact details for any of the other...\n[USER]: What is SkyMumbai?\n[AGENT]: I'm sorry, I do not have any information about SkyMumbai. Is there anything else I can help you with?\n\n[USER]: Can you help me with the email ID of the concerned person in the Mumbai office?\n[AGENT]: I am sorry, but I do not have access to the email ID of a specific person in the Mumbai office. However, I can help you with other information regarding our services or loan products. Would you like to know more about that?\n\n[USER]: If if i give you my contact number would anyone contact me?\n[AGENT]: Yes, if you provide me with your contact number, I can have one of our representatives contact you to discuss your loan options and answer any questions you may have.\n\n[USER]: Okay, thank you\n[AGENT]: You're welcome! Is there...\n[USER]: . Hello\n[AGENT]: Hi there! Do you have any questions I can answer for you?\n\n[USER]: Okay, you can",
       "date": "2025-07-08",
       "category": "HOT",
-      "conversation_id": "conv_01jzmf6n2qe3vv96v113gdppc4",
-      "duration": 123,
-      "message_count": 15
+      "conversation_id": "conv_01jzmndt1bembr976y150p5vws",
+      "duration": 177,
+      "message_count": 27
     },
     {
-      "id": "rb_0103",
+      "id": "rb_0090",
       "name": "Risha",
       "phone": "8197261590",
       "email": "",
@@ -1449,7 +1267,7 @@
       "message_count": 17
     },
     {
-      "id": "rb_0104",
+      "id": "rb_0091",
       "name": "Unknown",
       "phone": "9310399130",
       "email": "",
@@ -1463,7 +1281,21 @@
       "message_count": 13
     },
     {
-      "id": "rb_0105",
+      "id": "rb_0092",
+      "name": "The",
+      "phone": "9820455298",
+      "email": "",
+      "title": "Loan Inquiry",
+      "summary": "Loan Inquiry",
+      "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: So I wanted to know about the home loan.\n[AGENT]: Great! I can help you with information about home loans. To give you the most relevant details, could you tell me a bit about what you're looking for? For example, are you interested in eligibility criteria, the application process, or something else?\n\nAlso, could you please share your name and cell phone number so I can keep track of our conversation?\n\n[USER]: That's PN Chetty 9820455298 and I would like to know about eligibility.\n[AGENT]: Thank you, Mister Chetty.The eligibility criteria for a home loan typically include factors like your monthly income, existing...\n[USER]: EMI, existing monthly EMI.\n[AGENT]: Thank you for the cla rification...\n[USER]: Thank you for the clarification Mr. Chetty.\n[AGENT]: You're welcome, Mr. Chetty! The...\n[USER]: Welcome Mr. Chetty. I am the new...\n[AGENT]: I apologize for that error, Mr. Chetty! I am still under development and learning to perform all my tasks perfectly.\n\nAs I was saying, the eligibility criteria for a home loan typically include factors like your monthly income, existing monthly EMI, work experience, and credit score.\n\nDo you have any of these details handy? Knowing them will help me give you a more specific idea of your eligibility.\n\n[USER]: My salary is 1 lakh rupees and I'm paying 10 thousand rupees EMI\n[AGENT]: Thanks, that's helpful! And how long have you been working, and do you know your credit score?\n\n[USER]: 5 years and score is 720.\n[AGENT]: That's great, Mr. Chetty! With a salary of one lakh rupees, an existing EMI of ten thousand rupees, five years of work experience, and a credit score of seven hundred and twenty, you seem to meet the basic eligibility criteria for a home loan.\n\nWould you like me to provide more details on the property details required, the documentation needed, or the banks and NBFCs that offer home loans?\n",
+      "date": "2025-07-08",
+      "category": "HOT",
+      "conversation_id": "conv_01jzmf6n2qe3vv96v113gdppc4",
+      "duration": 123,
+      "message_count": 15
+    },
+    {
+      "id": "rb_0093",
       "name": "Unknown",
       "phone": "7020716881",
       "email": "",
