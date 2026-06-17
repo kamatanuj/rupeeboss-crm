@@ -23,11 +23,11 @@ log "Rupeeboss CRM Auto-Update Starting..."
 
 # Step 1: Extract leads with REAL summaries and transcripts
 log "Building leads with real summaries and transcripts..."
-python3 real_rebuild.py >> "$LOG" 2>&1 || log "Real rebuild completed"
+/usr/bin/python3.12 real_rebuild.py >> "$LOG" 2>&1 || log "Real rebuild completed"
 
 # Step 2: Sync conversation database (incremental)
 log "Syncing conversation database..."
-python3 sync_conversations.py >> "$LOG" 2>&1 || log "DB sync completed"
+/usr/bin/python3.12 sync_conversations.py >> "$LOG" 2>&1 || log "DB sync completed"
 
 # Step 3: Build dashboard from real rebuild output
 log "Updating dashboard_data.json from rebuild..."
