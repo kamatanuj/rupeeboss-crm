@@ -49,7 +49,7 @@ def extract_names_from_transcript(transcript):
         'looking', 'interested', 'salaried', 'from', 'calling', 'call', 'customer',
         'application', 'registration', 'issue', 'inquiry', 'callback', 'request',
         'transfer', 'connect', 'speaking', 'new', 'old', 'existing', 'first',
-        'second', 'third', 'name', 'naam', 'mobile', 'phone', 'number'
+        'second', 'third', 'name', 'naam', 'mobile', 'phone', 'number', 'agent'
     ]
     
     # Patterns to match names - in order of preference
