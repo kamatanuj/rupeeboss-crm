@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-06-18T03:12:36.231575",
+  "lastUpdated": "2026-06-18T03:04:22.999649",
   "metadata": {
     "totalLeads": 2033,
-    "lastUpdated": "2026-06-18T03:12:36.231595",
-    "source": "Improved Name Extraction",
+    "lastUpdated": "2026-06-18T03:04:22.999663",
+    "source": "Complete Rebuild (DB-backed)",
     "agentId": "gKNyAo0UhrdRiQ7FAWVZ"
   },
   "leads": [
@@ -79,7 +79,7 @@
     },
     {
       "id": "rb_0006",
-      "name": "आशीष",
+      "name": "आरती",
       "phone": "7080704667",
       "email": "",
       "title": "Callback Complaint",
@@ -387,7 +387,7 @@
     },
     {
       "id": "rb_0031",
-      "name": "शरण जे",
+      "name": "Salaried",
       "phone": "9353530895",
       "email": "",
       "title": "Personal Loan Application",
@@ -555,7 +555,7 @@
     },
     {
       "id": "rb_0047",
-      "name": "Amit",
+      "name": "Interested",
       "phone": "9820370922",
       "email": "",
       "title": "Home Loan Inquiry",
@@ -695,7 +695,7 @@
     },
     {
       "id": "rb_0057",
-      "name": "Manoj",
+      "name": "My",
       "phone": "8126991254",
       "email": "",
       "title": "Business Loan RM Connect",
@@ -1143,7 +1143,7 @@
     },
     {
       "id": "rb_0091",
-      "name": "Danish Alam",
+      "name": "Danish",
       "phone": "7483264628",
       "email": "",
       "title": "Home Loan Inquiry",
@@ -1997,7 +1997,7 @@
     },
     {
       "id": "rb_0158",
-      "name": "Tanisha",
+      "name": "Looking",
       "phone": "",
       "email": "",
       "title": "Loan Inquiry Details",
@@ -3313,7 +3313,7 @@
     },
     {
       "id": "rb_0253",
-      "name": "Atanu Bhowmik",
+      "name": "Atanu",
       "phone": "",
       "email": "",
       "title": "Loan Inquiry and Language",
@@ -3411,7 +3411,7 @@
     },
     {
       "id": "rb_0260",
-      "name": "Mohammed Hanif Sheikh",
+      "name": "Mohammed",
       "phone": "",
       "email": "",
       "title": "RupeeBoss loan assistance",
@@ -3859,7 +3859,7 @@
     },
     {
       "id": "rb_0292",
-      "name": "Chetan Kumar",
+      "name": "Chetan",
       "phone": "",
       "email": "",
       "title": "Personal Loan Inquiry",
@@ -4419,7 +4419,7 @@
     },
     {
       "id": "rb_0332",
-      "name": "Prince Sharma",
+      "name": "Prince",
       "phone": "",
       "email": "",
       "title": "Business Loan Discussion",
@@ -4531,7 +4531,7 @@
     },
     {
       "id": "rb_0340",
-      "name": "Rohit Mahato",
+      "name": "Rohit",
       "phone": "",
       "email": "",
       "title": "Business Loan Inquiry",
@@ -4671,7 +4671,7 @@
     },
     {
       "id": "rb_0350",
-      "name": "Shishir Gurung",
+      "name": "Shishir",
       "phone": "8077809366",
       "email": "",
       "title": "Personal Loan Inquiry",
@@ -5413,7 +5413,7 @@
     },
     {
       "id": "rb_0403",
-      "name": "Gulmano Qureshi",
+      "name": "Gulmano",
       "phone": "",
       "email": "",
       "title": "Business Loan Inquiry (Hindi)",
@@ -5679,7 +5679,7 @@
     },
     {
       "id": "rb_0422",
-      "name": "Ahmed Abbas",
+      "name": "Ahmed",
       "phone": "",
       "email": "",
       "title": "Business Expansion Loan Inquiry",
@@ -5847,7 +5847,7 @@
     },
     {
       "id": "rb_0434",
-      "name": "Mahesh",
+      "name": "My",
       "phone": "",
       "email": "",
       "title": "Business loan application",
@@ -7107,7 +7107,7 @@
     },
     {
       "id": "rb_0530",
-      "name": "Swapna Lee",
+      "name": "Eligible",
       "phone": "",
       "email": "",
       "title": "Business Loan Inquiry",
@@ -7751,7 +7751,7 @@
     },
     {
       "id": "rb_0578",
-      "name": "Neel Sharma",
+      "name": "Neel",
       "phone": "",
       "email": "",
       "title": "Business Loan Inquiry",
@@ -8101,7 +8101,7 @@
     },
     {
       "id": "rb_0603",
-      "name": "Angeline Munisha",
+      "name": "Angeline",
       "phone": "",
       "email": "",
       "title": "Personal Loan Application Details",
@@ -8129,7 +8129,7 @@
     },
     {
       "id": "rb_0605",
-      "name": "Shreyas Ibrahj",
+      "name": "Shreyas",
       "phone": "",
       "email": "",
       "title": "RupeeBoss partnership opportunity inquiry",
@@ -8227,7 +8227,7 @@
     },
     {
       "id": "rb_0612",
-      "name": "Harikesh Kumar Sakur",
+      "name": "Harikesh",
       "phone": "",
       "email": "",
       "title": "Business Loan Inquiry",
@@ -8311,7 +8311,7 @@
     },
     {
       "id": "rb_0618",
-      "name": "Tanmay Guha Niyogi",
+      "name": "Tanmay",
       "phone": "",
       "email": "",
       "title": "Financial advice request",
@@ -8423,7 +8423,7 @@
     },
     {
       "id": "rb_0626",
-      "name": "Rohit Manna",
+      "name": "Rohit",
       "phone": "",
       "email": "",
       "title": "Startup Loan Application",
@@ -8969,7 +8969,7 @@
     },
     {
       "id": "rb_0665",
-      "name": "Guru Prasad",
+      "name": "Guru",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Franchise Information",
@@ -9081,7 +9081,7 @@
     },
     {
       "id": "rb_0673",
-      "name": "Meet this",
+      "name": "The",
       "phone": "8000691416",
       "email": "",
       "title": "Unclear Loan Request",
@@ -9347,7 +9347,7 @@
     },
     {
       "id": "rb_0692",
-      "name": "Mahabir Tiwari",
+      "name": "Mahabir",
       "phone": "",
       "email": "",
       "title": "Unsecured business loan inquiry",
@@ -9417,7 +9417,7 @@
     },
     {
       "id": "rb_0697",
-      "name": "Madhav Verma",
+      "name": "Madhav",
       "phone": "8527186288",
       "email": "",
       "title": "MSME Loan Inquiry",
@@ -9487,7 +9487,7 @@
     },
     {
       "id": "rb_0702",
-      "name": "Manpreet Sharma",
+      "name": "Calling",
       "phone": "",
       "email": "",
       "title": "Business Loan Assistance Request",
@@ -9767,7 +9767,7 @@
     },
     {
       "id": "rb_0722",
-      "name": "Rajesh Gupta",
+      "name": "Rajesh",
       "phone": "",
       "email": "",
       "title": "Business Loan Inquiry",
@@ -9907,7 +9907,7 @@
     },
     {
       "id": "rb_0732",
-      "name": "Ronald Henry",
+      "name": "Ronald",
       "phone": "",
       "email": "",
       "title": "Business Loan Inquiry",
@@ -9991,7 +9991,7 @@
     },
     {
       "id": "rb_0738",
-      "name": "Kunal Shrirangay",
+      "name": "Kunal",
       "phone": "",
       "email": "",
       "title": "MSME Unsecured Loan Inquiry",
@@ -10271,7 +10271,7 @@
     },
     {
       "id": "rb_0758",
-      "name": "Rinku Pyarelal",
+      "name": "Rinku",
       "phone": "",
       "email": "",
       "title": "Supermarket Loan Inquiry",
@@ -10593,7 +10593,7 @@
     },
     {
       "id": "rb_0782",
-      "name": "Sachin Gujarati",
+      "name": "Sachin",
       "phone": "9571357552",
       "email": "",
       "title": "Home Loan Transfer Inquiry",
@@ -10677,7 +10677,7 @@
     },
     {
       "id": "rb_0788",
-      "name": "Vijay Kumar Mishra",
+      "name": "Vijay",
       "phone": "9051621216",
       "email": "",
       "title": "Partnership role inquiry",
@@ -10747,7 +10747,7 @@
     },
     {
       "id": "rb_0793",
-      "name": "जयप्रकाश",
+      "name": "Starting",
       "phone": "8287036925",
       "email": "",
       "title": "Business Loan Inquiry",
@@ -10789,7 +10789,7 @@
     },
     {
       "id": "rb_0796",
-      "name": "Tushar Nikum",
+      "name": "Tushar",
       "phone": "9890661640",
       "email": "",
       "title": "Personal loan inquiry",
@@ -10999,7 +10999,7 @@
     },
     {
       "id": "rb_0812",
-      "name": "Viraj Vohraa",
+      "name": "Viraj",
       "phone": "",
       "email": "",
       "title": "Loan for medical expense",
@@ -11027,7 +11027,7 @@
     },
     {
       "id": "rb_0814",
-      "name": "आपको",
+      "name": "Greeting",
       "phone": "",
       "email": "",
       "title": "Religious greetings unhandled",
@@ -11223,7 +11223,7 @@
     },
     {
       "id": "rb_0828",
-      "name": "Chandrashekhar Srimali",
+      "name": "Chandrashekhar",
       "phone": "9831027006",
       "email": "",
       "title": "CGTMSE loan assistance request",
@@ -11265,7 +11265,7 @@
     },
     {
       "id": "rb_0831",
-      "name": "Amit Bhatt",
+      "name": "Amit",
       "phone": "9723150524",
       "email": "",
       "title": "CGTMSE loan IT returns",
@@ -11419,7 +11419,7 @@
     },
     {
       "id": "rb_0842",
-      "name": "Sathya",
+      "name": "Mr",
       "phone": "",
       "email": "",
       "title": "Personal Loan Inquiry/Manager Request",
@@ -11433,7 +11433,7 @@
     },
     {
       "id": "rb_0843",
-      "name": "Satya Narayan Mahoto",
+      "name": "Satya",
       "phone": "",
       "email": "",
       "title": "RupeeBoss: Personal Loan Inquiry",
@@ -11489,7 +11489,7 @@
     },
     {
       "id": "rb_0847",
-      "name": "Dharmendra Kumar",
+      "name": "Dharmendra",
       "phone": "9549024724",
       "email": "",
       "title": "CGTMSE and PSB Loan",
@@ -12357,7 +12357,7 @@
     },
     {
       "id": "rb_0910",
-      "name": "Dr. Sudhir Sharma",
+      "name": "Dr",
       "phone": "9810564441",
       "email": "",
       "title": "MSME Loan Information Request",
@@ -12651,7 +12651,7 @@
     },
     {
       "id": "rb_0931",
-      "name": "Jai Kishore",
+      "name": "Jai",
       "phone": "",
       "email": "",
       "title": "Personal Loan Information Request",
@@ -12763,7 +12763,7 @@
     },
     {
       "id": "rb_0939",
-      "name": "Hiren Patel",
+      "name": "Hiren",
       "phone": "9376198182",
       "email": "",
       "title": "Personal Loan EMI Inquiry",
@@ -12861,7 +12861,7 @@
     },
     {
       "id": "rb_0946",
-      "name": "Hirin Patel",
+      "name": "Hirin",
       "phone": "",
       "email": "",
       "title": "Personal loan assistance",
@@ -13141,7 +13141,7 @@
     },
     {
       "id": "rb_0967",
-      "name": "Vikram Bhargava",
+      "name": "Seeking",
       "phone": "8790349135",
       "email": "",
       "title": "CGTMSE Loan Eligibility Inquiry",
@@ -13253,7 +13253,7 @@
     },
     {
       "id": "rb_0975",
-      "name": "Satyendra Kumar",
+      "name": "Satyendra",
       "phone": "",
       "email": "",
       "title": "Getting phone number",
@@ -13351,7 +13351,7 @@
     },
     {
       "id": "rb_0982",
-      "name": "Darshu Bhimgade",
+      "name": "Darshu",
       "phone": "9765031485",
       "email": "",
       "title": "Personal loan inquiry",
@@ -13617,7 +13617,7 @@
     },
     {
       "id": "rb_1001",
-      "name": "Vikram Bhargava",
+      "name": "Vikram",
       "phone": "",
       "email": "",
       "title": "Startup Funding Inquiry",
@@ -13659,7 +13659,7 @@
     },
     {
       "id": "rb_1006",
-      "name": "Saurabh Sharma",
+      "name": "Saurabh",
       "phone": "",
       "email": "",
       "title": "Personal Loan Inquiry",
@@ -13813,7 +13813,7 @@
     },
     {
       "id": "rb_1017",
-      "name": "Swaroop Sahur",
+      "name": "Swaroop",
       "phone": "9178176898",
       "email": "",
       "title": "DSA Application - Odisha",
@@ -13841,7 +13841,7 @@
     },
     {
       "id": "rb_1019",
-      "name": "Baslinga Pugoda Patil",
+      "name": "Baslinga",
       "phone": "9916554411",
       "email": "",
       "title": "Loan for agricultural land",
@@ -14177,7 +14177,7 @@
     },
     {
       "id": "rb_1043",
-      "name": "Ritu Kumari Singh",
+      "name": "Ritu",
       "phone": "",
       "email": "",
       "title": "MSME Loan Inquiry",
@@ -14331,7 +14331,7 @@
     },
     {
       "id": "rb_1054",
-      "name": "CK Thakur",
+      "name": "Ck",
       "phone": "9212202580",
       "email": "",
       "title": "Business growth support inquiry",
@@ -14359,7 +14359,7 @@
     },
     {
       "id": "rb_1056",
-      "name": "Navin Goyal",
+      "name": "Navin",
       "phone": "9650610423",
       "email": "",
       "title": "Business Loan Inquiry",
@@ -14471,7 +14471,7 @@
     },
     {
       "id": "rb_1064",
-      "name": "Shad Ahmad Ansari",
+      "name": "Here",
       "phone": "",
       "email": "",
       "title": "Personal Loan Inquiry",
@@ -14681,7 +14681,7 @@
     },
     {
       "id": "rb_1079",
-      "name": "Riyan Pasha",
+      "name": "Riyan",
       "phone": "",
       "email": "",
       "title": "CGTMSE Loan Inquiry",
@@ -15423,7 +15423,7 @@
     },
     {
       "id": "rb_1132",
-      "name": "Alex",
+      "name": "My",
       "phone": "",
       "email": "",
       "title": "RupeeBoss support introduction",
@@ -15577,7 +15577,7 @@
     },
     {
       "id": "rb_1143",
-      "name": "Deepjitidekha",
+      "name": "Still",
       "phone": "",
       "email": "",
       "title": "Business Expansion Loan Inquiry",
@@ -15759,7 +15759,7 @@
     },
     {
       "id": "rb_1156",
-      "name": "Jwala Prasad Singh",
+      "name": "Jwala",
       "phone": "8409076343",
       "email": "",
       "title": "Personal loan inquiry",
@@ -15773,7 +15773,7 @@
     },
     {
       "id": "rb_1157",
-      "name": "Rahul Gupta",
+      "name": "Rahul",
       "phone": "7715860965",
       "email": "",
       "title": "Personal Loan Inquiry",
@@ -15787,7 +15787,7 @@
     },
     {
       "id": "rb_1158",
-      "name": "Azliha",
+      "name": "Working",
       "phone": "9300845266",
       "email": "",
       "title": "Business Loan Inquiry",
@@ -15955,7 +15955,7 @@
     },
     {
       "id": "rb_1170",
-      "name": "Mahesh Kumar Sarda",
+      "name": "Mahesh",
       "phone": "",
       "email": "",
       "title": "Business Loan Inquiry Guwahati",
@@ -15983,7 +15983,7 @@
     },
     {
       "id": "rb_1172",
-      "name": "Nitin Choudhary",
+      "name": "Nitin",
       "phone": "",
       "email": "",
       "title": "Business Loan Application Inquiry",
@@ -16151,7 +16151,7 @@
     },
     {
       "id": "rb_1185",
-      "name": "Ravi Teja",
+      "name": "Ravi",
       "phone": "",
       "email": "",
       "title": "Personal Loan Information Request",
@@ -16179,7 +16179,7 @@
     },
     {
       "id": "rb_1187",
-      "name": "Rupinder Kumar",
+      "name": "Rupinder",
       "phone": "",
       "email": "",
       "title": "Business Loan Application (Hindi)",
@@ -16543,7 +16543,7 @@
     },
     {
       "id": "rb_1215",
-      "name": "Bhagwan Aram",
+      "name": "Bhagwan",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -16557,7 +16557,7 @@
     },
     {
       "id": "rb_1216",
-      "name": "Kaushik Morey",
+      "name": "Just",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -16627,7 +16627,7 @@
     },
     {
       "id": "rb_1221",
-      "name": "Jayakishan Jamatia",
+      "name": "Jayakishan",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -16865,7 +16865,7 @@
     },
     {
       "id": "rb_1240",
-      "name": "Pradyum Darbar",
+      "name": "Pradyum",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -16977,7 +16977,7 @@
     },
     {
       "id": "rb_1248",
-      "name": "Gresham Kumar",
+      "name": "Gresham",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -17089,14 +17089,14 @@
     },
     {
       "id": "rb_1256",
-      "name": "So",
+      "name": "Unknown",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
       "summary": "The user is looking for a loan of 18-20 lakh rupees to start a new cold drink and packaged water business. The agent confirmed the loan type and gathered information about the business, turnover (around 2 crore), and credit score (700+). The agent suggested an unsecured business loan and provided details on interest rates, loan terms, and processing fees. The user inquired about required documents, and the agent listed KYC documents, business license, and GST certificate. The user stated they don't have a GST certificate, and the agent said they could still apply with other documents like ITR and bank statements.\n",
       "transcript": "[AGENT]: Hi, I'm Riya from RupeeBoss Support. How can I help you today?\n[USER]: Hello.\n[AGENT]: Hi there! How can I assist you with your loan needs today? To start, could you please share your name and cell phone number?\n\n[USER]: You're welcome.\n[AGENT]: I'm...\n[USER]: इंदी में बात करो, इंदी में\n[AGENT]: नमस्ते! मैं आपकी किस प्रकार सहायता कर सकती हूँ?\n\n[USER]: मुझे 20 लाख रुपे का loan चाहिए\n[AGENT]: ज़रूर! क्या आप मुझे बता सकते हैं कि आपको किस प्रकार का लोन चाहिए? क्या यह पर्सनल लोन, बिजनेस लोन, होम लोन या कोई और प्रकार का लोन है? इससे मुझे आपकी ज़रूरतों को बेहतर ढंग से समझने में मदद मिलेगी।\n\n[USER]: . नया business नहीं start up करने के लिए loan चाहिए.\n[AGENT]: नया बिजनेस शुरू करने के लिए आपको लोन चाहिए, यह बहुत अच्छी बात है! क्या आप मुझे अपने बिजनेस के बारे में कुछ और जानकारी दे सकते हैं? जैसे कि आप किस तरह का बिजनेस शुरू करना चाहते हैं, आपकी कंपनी/फर्म का टर्नओवर क्या है,...\n[USER]: गैल-बैल होयो ? 10, 10\n[AGENT]: मुझे समझ नहीं आया। क्या आप कृपया फिर से कह सकते हैं?\n\n[USER]: See you.\n[AGENT]: ...\n[USER]: बोलो जी हेलो\n[AGENT]: क्या आप अभी भी वहां हैं? क्या आप कुछ और जानकारी देना चाहेंगे ताकि मैं आपकी मदद कर सकूं?\n\n[USER]: Cold drink manufacturing convenience. Packaging drinking water.\n[AGENT]: यह बहुत अच्छा विचार है! क्या आप कृपया मुझे बता सकते हैं कि आपके व्यवसाय का अनुमानित टर्नओवर क्या होगा और आपको कितने वर्षों का अनुभव है? इससे मुझे यह समझने में मदद मिलेगी कि आपके लिए कौन सा लोन सबसे अच्छा रहेगा।\n\n[USER]: सालान टन हुआ तक बीवन दो कर उड़ के आस्पास रहेगा।\n[AGENT]: ठीक है। क्या आप मुझे यह भी बता सकते हैं कि आपका क्रेडिट स्कोर क्या है? यदि आपको अपना क्रेडिट स्कोर पता नहीं है, तो कोई बात नहीं, आप बस इतना बता दीजिए कि क्या...\n[USER]: So\n[AGENT]: क्या...\n[USER]: , 700 से पिलस है।\n[AGENT]: बहुत बढ़िया! सात सौ से ऊपर का क्रेडिट स्कोर होने से आपको बेहतर ब्याज दरें मिलने की संभावना बढ़ जाती है। आपके व्यवसाय के लिए सबसे उपयुक्त लोन विकल्प जानने के लिए, क्या आप कृपया यह बता सकते हैं कि आपको कितनी राशि की आवश्यकता है?\n\n[USER]: 18 से 20 लाख।\n[AGENT]: ठीक है। नया बिजनेस शुरू करन",
       "date": "2025-07-21",
-      "category": "WARM",
+      "category": "COLD",
       "conversation_id": "conv_01k0p5h0b8fasrb4v35xz6n5y8",
       "duration": 301,
       "message_count": 51
@@ -17131,7 +17131,7 @@
     },
     {
       "id": "rb_1259",
-      "name": "Shetty",
+      "name": "Buying",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -17201,7 +17201,7 @@
     },
     {
       "id": "rb_1264",
-      "name": "Sheikh Shoaib",
+      "name": "Sheikh",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -17397,7 +17397,7 @@
     },
     {
       "id": "rb_1278",
-      "name": "Amit Kumar Paswan",
+      "name": "Working",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -17425,7 +17425,7 @@
     },
     {
       "id": "rb_1280",
-      "name": "Kapil Yadav",
+      "name": "Fresher",
       "phone": "7015312581",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -17453,7 +17453,7 @@
     },
     {
       "id": "rb_1282",
-      "name": "Seher Pandit",
+      "name": "Seher",
       "phone": "8591564156",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -17691,7 +17691,7 @@
     },
     {
       "id": "rb_1299",
-      "name": "Saurabh Akrowal",
+      "name": "Ready",
       "phone": "9917336655",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -17985,7 +17985,7 @@
     },
     {
       "id": "rb_1320",
-      "name": "Bhaskar Sarkar",
+      "name": "Bhaskar",
       "phone": "7044750078",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -18097,7 +18097,7 @@
     },
     {
       "id": "rb_1328",
-      "name": "Nitin Suresh Rundive",
+      "name": "Nitin",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -18237,7 +18237,7 @@
     },
     {
       "id": "rb_1339",
-      "name": "Ashim Bhattacharji",
+      "name": "Ashim",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -18293,7 +18293,7 @@
     },
     {
       "id": "rb_1343",
-      "name": "Elizabeth T",
+      "name": "Rameet",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -18433,7 +18433,7 @@
     },
     {
       "id": "rb_1353",
-      "name": "Babu",
+      "name": "Not",
       "phone": "9381246660",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -18531,7 +18531,7 @@
     },
     {
       "id": "rb_1360",
-      "name": "PN Chetty",
+      "name": "The",
       "phone": "9820455298",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -23011,7 +23011,7 @@
     },
     {
       "id": "rb_1683",
-      "name": "Akash Yerbal",
+      "name": "Akash",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -23137,7 +23137,7 @@
     },
     {
       "id": "rb_1692",
-      "name": "Radhanesh Kadal",
+      "name": "Radhanesh",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -23487,7 +23487,7 @@
     },
     {
       "id": "rb_1717",
-      "name": "Harvinder Singh Sidhu",
+      "name": "Harvinder",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -23557,7 +23557,7 @@
     },
     {
       "id": "rb_1722",
-      "name": "Prachin",
+      "name": "Do",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -23641,7 +23641,7 @@
     },
     {
       "id": "rb_1728",
-      "name": "Abhisek Kumar",
+      "name": "Abhisek",
       "phone": "8210661481",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -23711,7 +23711,7 @@
     },
     {
       "id": "rb_1733",
-      "name": "Dinesh Agarwary",
+      "name": "Dinesh",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -23795,7 +23795,7 @@
     },
     {
       "id": "rb_1741",
-      "name": "Lavi Sharma",
+      "name": "Lavi",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -23837,7 +23837,7 @@
     },
     {
       "id": "rb_1744",
-      "name": "Dr. P. Tirumal Rao",
+      "name": "Dr",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -23851,7 +23851,7 @@
     },
     {
       "id": "rb_1745",
-      "name": "Dr. P Thirumal Rao",
+      "name": "Dr",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -23949,7 +23949,7 @@
     },
     {
       "id": "rb_1752",
-      "name": "Krishna Raj",
+      "name": "Krishna",
       "phone": "8879508890",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -24117,7 +24117,7 @@
     },
     {
       "id": "rb_1765",
-      "name": "ताहिर हुसेन",
+      "name": "Waiting",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -24145,7 +24145,7 @@
     },
     {
       "id": "rb_1767",
-      "name": "Gaurav",
+      "name": "Looking",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -24467,7 +24467,7 @@
     },
     {
       "id": "rb_1791",
-      "name": "SP Patil",
+      "name": "Sp",
       "phone": "8746889579",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -25321,7 +25321,7 @@
     },
     {
       "id": "rb_1852",
-      "name": "Madhukar Shakti",
+      "name": "Madhukar",
       "phone": "8217078546",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -25419,7 +25419,7 @@
     },
     {
       "id": "rb_1859",
-      "name": "Vinay Kumar Adana",
+      "name": "Vinay",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -25503,7 +25503,7 @@
     },
     {
       "id": "rb_1865",
-      "name": "Saurabh Rabari",
+      "name": "Saurabh",
       "phone": "7359949219",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -25699,7 +25699,7 @@
     },
     {
       "id": "rb_1879",
-      "name": "Sigmund Phil Roman",
+      "name": "Sigmund",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -25825,7 +25825,7 @@
     },
     {
       "id": "rb_1890",
-      "name": "TA Khan",
+      "name": "Ta",
       "phone": "8969567307",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -25839,7 +25839,7 @@
     },
     {
       "id": "rb_1891",
-      "name": "Tanvir Alam Khan",
+      "name": "Tanvir",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -25993,7 +25993,7 @@
     },
     {
       "id": "rb_1904",
-      "name": "Aman Singh",
+      "name": "Aman",
       "phone": "9713496480",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -26007,7 +26007,7 @@
     },
     {
       "id": "rb_1905",
-      "name": "Aman Singh",
+      "name": "Ajay",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -26049,7 +26049,7 @@
     },
     {
       "id": "rb_1908",
-      "name": "Arjit Singh",
+      "name": "Arjit",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -26217,7 +26217,7 @@
     },
     {
       "id": "rb_1920",
-      "name": "Pravin Chandra",
+      "name": "Pravin",
       "phone": "9538079026",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -26259,7 +26259,7 @@
     },
     {
       "id": "rb_1923",
-      "name": "Amkaravath Jai Mahesh Roy",
+      "name": "Amkaravath",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -26511,7 +26511,7 @@
     },
     {
       "id": "rb_1942",
-      "name": "Mohammed Irfan",
+      "name": "Mohammed",
       "phone": "7028592694",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -26665,7 +26665,7 @@
     },
     {
       "id": "rb_1953",
-      "name": "Sumay Vendan",
+      "name": "Sumay",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -26679,7 +26679,7 @@
     },
     {
       "id": "rb_1954",
-      "name": "MD Ilyasa",
+      "name": "Md",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -26707,7 +26707,7 @@
     },
     {
       "id": "rb_1956",
-      "name": "Raju Kendrik",
+      "name": "Raju",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -27099,7 +27099,7 @@
     },
     {
       "id": "rb_1984",
-      "name": "So",
+      "name": "Not",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -27659,7 +27659,7 @@
     },
     {
       "id": "rb_2024",
-      "name": "Rahul Pijapati",
+      "name": "Rahul",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -27701,7 +27701,7 @@
     },
     {
       "id": "rb_2027",
-      "name": "Tanvi Shetty",
+      "name": "Tanvi",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -27771,7 +27771,7 @@
     },
     {
       "id": "rb_2032",
-      "name": "Ajay Desai",
+      "name": "Ajay",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
@@ -28289,7 +28289,7 @@
     },
     {
       "id": "rb_2069",
-      "name": "So",
+      "name": "Looking",
       "phone": "",
       "email": "",
       "title": "RupeeBoss Loan Inquiry",
