@@ -1,26 +1,17 @@
 {
-  "agent_id": "gKNyAo0UhrdRiQ7FAWVZ",
-  "kb_ids": [],
+  "agent_id": "agent_1401kq6zzdqweh6avxmh9awdbr3q",
+  "agent_name": "New_features_agent",
+  "kb_ids": [
+    "x1ilLKvJCd6h99z266In",
+    "HZ6O11PK4TUts5fTWnlf",
+    "9aqzpENYwPrHIslDMi59",
+    "X4Al9u4ECjjIot3RRvum"
+  ],
   "files": [
-    [
-      "01_customer_faq.txt",
-      "RupeeBoss Customer FAQ",
-      "Real customer Q&A from 2073 conversations"
-    ],
-    [
-      "02_loan_types_guide.txt",
-      "RupeeBoss Loan Products Guide",
-      "Home, Business, Personal, Startup, Machinery loan details"
-    ],
-    [
-      "03_agent_best_practices.txt",
-      "RupeeBoss Agent Best Practices",
-      "Successful conversation patterns and guidelines"
-    ],
-    [
-      "04_repeat_customers.txt",
-      "RupeeBoss Repeat Customers",
-      "Customer call history patterns"
-    ]
-  ]
+    ["01_customer_faq.txt", "RupeeBoss Customer FAQ (Real Q&A from 2073 conversations)", "x1ilLKvJCd6h99z266In"],
+    ["02_loan_types_guide.txt", "RupeeBoss Loan Products Guide", "HZ6O11PK4TUts5fTWnlf"],
+    ["03_agent_best_practices.txt", "RupeeBoss Agent Best Practices", "9aqzpENYwPrHIslDMi59"],
+    ["04_repeat_customers.txt", "RupeeBoss Repeat Customers", "X4Al9u4ECjjIot3RRvum"]
+  ],
+  "uploaded_at": "2026-06-23"
 }
