@@ -348,7 +348,7 @@ def rebuild_from_db():
             "email": email or "",
             "title": title or "RupeeBoss Loan Inquiry",
             "summary": summary or title or f"Lead from {date}",
-            "transcript": transcript[:2000] if transcript else "[No transcript available]",
+            "transcript": transcript or "[No transcript available]",
             "date": date,
             "category": category,
             "conversation_id": conv_id,
