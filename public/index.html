@@ -6,7 +6,7 @@
 <title>RupeeBoss CRM — Admin Dashboard</title>
 <link rel="icon" href="rupeeboss-logo.jpg" type="image/jpeg">
 <script>
-  const BUILD_VERSION = '2026-07-10-v13';
+  const BUILD_VERSION = '2026-07-10-v14';
   (function() {
     const stored = localStorage.getItem('crm_build_version');
     if (stored && stored !== BUILD_VERSION) {
@@ -325,6 +325,24 @@ td .lead-phone:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
+
+<!-- ===== LOADING OVERLAY ===== -->
+<div id="loading-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.9);z-index:9999;justify-content:center;align-items:center;flex-direction:column;">
+  <div style="width:48px;height:48px;border:4px solid #e0e0e0;border-top-color:#dc2626;border-radius:50%;animation:spin 1s linear infinite;margin-bottom:16px;"></div>
+  <p style="color:#333;font-size:16px;font-weight:500;">Loading dashboard data…</p>
+  <p style="color:#999;font-size:13px;margin-top:4px;">Fetching 2,100+ lead records</p>
+</div>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+
+<!-- ===== DATA ERROR OVERLAY ===== -->
+<div id="data-error" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.95);z-index:9999;justify-content:center;align-items:center;flex-direction:column;">
+  <div style="max-width:400px;text-align:center;padding:32px;background:#fff;border-radius:12px;box-shadow:0 2px 20px rgba(0,0,0,0.1);">
+    <div style="font-size:48px;margin-bottom:16px;">⚠️</div>
+    <h3 style="color:#dc2626;font-size:18px;margin-bottom:8px;">Data Loading Error</h3>
+    <p class="error-message" style="color:#666;font-size:14px;margin-bottom:20px;">Failed to load data from server.</p>
+    <button onclick="document.getElementById('data-error').style.display='none';loadData();" style="background:#dc2626;color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:14px;cursor:pointer;font-weight:500;">Retry Now</button>
+  </div>
+</div>
 
 <!-- ===== LOGIN MODAL ===== -->
 <div id="loginModal" class="modal-overlay show">
@@ -674,9 +692,30 @@ function logout() {
 
 // ===== DATA =====
 async function loadData() {
+  var loadingEl = document.getElementById('loading-overlay');
+  if (loadingEl) loadingEl.style.display = 'flex';
+  
   try {
-    const resp = await fetch('dashboard_data.json?v=' + new Date().getTime());
-    const data = await resp.json();
+    // Fetch with cache-busting and longer timeout handling
+    var fetchUrl = 'dashboard_data.json?v=' + BUILD_VERSION;
+    var resp = await fetch(fetchUrl, { cache: 'no-cache' });
+    
+    if (!resp.ok) {
+      throw new Error('HTTP ' + resp.status + ' ' + resp.statusText);
+    }
+    
+    var text = await resp.text();
+    var data;
+    try {
+      data = JSON.parse(text);
+    } catch (parseErr) {
+      throw new Error('JSON parse failed: ' + parseErr.message);
+    }
+    
+    if (!data || !data.leads || !Array.isArray(data.leads)) {
+      throw new Error('Invalid data format: missing leads array');
+    }
+    
     allData = data.leads;
 
     const deletedLeads = JSON.parse(localStorage.getItem('rupeeboss_deleted_leads') || '[]');
@@ -693,9 +732,35 @@ async function loadData() {
     if (currentCategory === 'DUE') {
       await loadAllFollowUps();
     }
+    
+    if (loadingEl) loadingEl.style.display = 'none';
   } catch (e) {
     console.error('Error loading data:', e);
-    alert('Failed to load data from server. Please refresh the page.');
+    if (loadingEl) loadingEl.style.display = 'none';
+    
+    // Show user-friendly error with retry button instead of blocking alert
+    var errorEl = document.getElementById('data-error');
+    if (errorEl) {
+      errorEl.style.display = 'flex';
+      var errMsg = errorEl.querySelector('.error-message');
+      if (errMsg) errMsg.textContent = 'Failed to load data: ' + e.message;
+    } else {
+      // Fallback: retry silently once, then alert
+      try {
+        var retryResp = await fetch('dashboard_data.json?v=' + Date.now(), { cache: 'no-store' });
+        var retryText = await retryResp.text();
+        var retryData = JSON.parse(retryText);
+        if (retryData && retryData.leads) {
+          allData = retryData.leads;
+          updateStats();
+          renderTable();
+          return;
+        }
+      } catch (retryErr) {
+        console.error('Retry also failed:', retryErr);
+      }
+      alert('Failed to load data from server. Please refresh the page.\n\nError: ' + e.message);
+    }
   }
 }
 
@@ -1591,4 +1656,4 @@ function toggleSidebar() {
 checkAuth();
 </script>
 </body>
-</html><!-- BUILD_VERSION: 2026-07-10-v13 -->
+</html><!-- BUILD_VERSION: 2026-07-10-v14 -->
