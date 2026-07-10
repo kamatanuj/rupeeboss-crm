@@ -137,13 +137,16 @@ body::after {
 }
 .sidebar-header .logo {
   width: 38px; height: 38px;
-  background: linear-gradient(135deg, var(--primary), var(--teal));
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 20px; font-weight: 900; color: #fff;
+  overflow: hidden;
   box-shadow: 0 0 20px var(--violet-glow);
   transform-style: preserve-3d;
   animation: logoRotate3d 14s linear infinite;
+}
+.sidebar-header .logo img {
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: 10px;
 }
 @keyframes logoRotate3d {
   from { transform: rotateY(0deg) rotateX(8deg); }
@@ -502,11 +505,14 @@ td .lead-phone:hover { text-decoration: underline; }
 .login-header { text-align: center; margin-bottom: 30px; }
 .login-logo {
   width: 64px; height: 64px;
-  background: linear-gradient(135deg, var(--primary), var(--teal));
   border-radius: 16px; display: flex; align-items: center;
-  justify-content: center; font-size: 32px; font-weight: 900;
-  color: #fff; margin: 0 auto 16px;
+  justify-content: center; overflow: hidden;
+  margin: 0 auto 16px;
   box-shadow: 0 0 30px var(--violet-glow), 0 0 50px var(--cyan-glow);
+}
+.login-logo img {
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: 16px;
 }
 .login-header h2 {
   font-size: 22px; color: var(--text-primary); margin-bottom: 4px;
@@ -717,7 +723,7 @@ td .lead-phone:hover { text-decoration: underline; }
 <div id="loginModal" class="modal-overlay show">
   <div class="login-box">
     <div class="login-header">
-      <div class="login-logo">₹</div>
+      <div class="login-logo"><img src="rupeeboss-logo.png" alt="RupeeBoss"></div>
       <h2>RupeeBoss CRM</h2>
       <p>Sign in to your dashboard</p>
     </div>
@@ -737,7 +743,7 @@ td .lead-phone:hover { text-decoration: underline; }
   <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <div class="logo-wrap">
-        <div class="logo">₹</div>
+        <div class="logo"><img src="rupeeboss-logo.png" alt="RupeeBoss"></div>
         <div class="logo-ring"></div>
       </div>
       <div class="brand">Rupee<span>Boss</span><small>CRM SUITE</small></div>
