@@ -6,7 +6,7 @@
 <title>RupeeBoss CRM — Admin Dashboard</title>
 <link rel="icon" href="rupeeboss-logo.jpg" type="image/jpeg">
 <script>
-  const BUILD_VERSION = '2026-07-10-v10';
+  const BUILD_VERSION = '2026-07-10-v11';
   (function() {
     const stored = localStorage.getItem('crm_build_version');
     if (stored && stored !== BUILD_VERSION) {
@@ -749,10 +749,11 @@ function updateStats() {
     }).length;
   }
 
-  // KPI cards
+  // KPI cards — Total Calls uses count from ElevenLabs API (synced via dashboard_data.json)
+  // A "call" = lead that has a real conversation (duration > 0). Email-only or failed connections are excluded.
   var el;
   if (el = document.getElementById('kpi-total')) el.textContent = total;
-  var totalCalls = allData.filter(function(r) { return r.category !== 'EMAIL_ONLY' && r.duration && r.duration > 0; }).length;
+  var totalCalls = allData.filter(function(r) { return r.conversation_id && r.duration && r.duration > 0; }).length;
   if (el = document.getElementById('kpi-calls')) el.textContent = totalCalls;
   if (el = document.getElementById('kpi-hot')) el.textContent = hot;
   if (el = document.getElementById('kpi-conversion')) el.textContent = total > 0 ? Math.round((hot / total) * 100) + '%' : '0%';
@@ -1578,4 +1579,4 @@ function toggleSidebar() {
 checkAuth();
 </script>
 </body>
-</html><!-- BUILD_VERSION: 2026-07-10-v10 -->
+</html><!-- BUILD_VERSION: 2026-07-10-v11 -->
