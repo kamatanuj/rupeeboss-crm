@@ -6,7 +6,7 @@
 <title>RupeeBoss CRM — Admin Dashboard</title>
 <link rel="icon" href="rupeeboss-logo.jpg" type="image/jpeg">
 <script>
-  const BUILD_VERSION = '2026-07-10-v12';
+  const BUILD_VERSION = '2026-07-10-v13';
   (function() {
     const stored = localStorage.getItem('crm_build_version');
     if (stored && stored !== BUILD_VERSION) {
@@ -749,28 +749,40 @@ function updateStats() {
     }).length;
   }
 
-  // KPI cards — Total Calls uses count from ElevenLabs API (synced via dashboard_data.json)
-  // A "call" = lead that has a real conversation (duration > 0). Email-only or failed connections are excluded.
+  // Qualified leads = has a real name (not "Unknown") AND (phone or email captured)
+  function isQualified(r) {
+    if (!r.name || !r.name.trim() || r.name === 'Unknown') return false;
+    var hasPhone = r.phone && r.phone.trim();
+    var hasEmail = r.email && r.email.trim();
+    return hasPhone || hasEmail;
+  }
+  var qualified = allData.filter(isQualified);
+
+  // KPI cards
   var el;
-  if (el = document.getElementById('kpi-total')) el.textContent = total;
+  // Total Leads = only qualified leads (name + phone or email)
+  if (el = document.getElementById('kpi-total')) el.textContent = qualified.length;
+  // Total Calls = all conversations with duration > 0 (all calls made via ElevenLabs)
   var totalCalls = allData.filter(function(r) { return r.conversation_id && r.duration && r.duration > 0; }).length;
   if (el = document.getElementById('kpi-calls')) el.textContent = totalCalls;
-  if (el = document.getElementById('kpi-hot')) el.textContent = hot;
-  if (el = document.getElementById('kpi-conversion')) el.textContent = total > 0 ? Math.round((hot / total) * 100) + '%' : '0%';
+  // Hot Leads = qualified leads in HOT category
+  var hotQualified = qualified.filter(function(r) { return r.category === 'HOT'; }).length;
+  if (el = document.getElementById('kpi-hot')) el.textContent = hotQualified;
+  if (el = document.getElementById('kpi-conversion')) el.textContent = qualified.length > 0 ? Math.round((hotQualified / qualified.length) * 100) + '%' : '0%';
 
   // Filter pills
-  document.getElementById('filter-all').textContent = total;
-  document.getElementById('filter-hot').textContent = hot;
-  document.getElementById('filter-cold').textContent = cold;
-  document.getElementById('filter-email').textContent = email;
-  document.getElementById('filter-positive').textContent = positive;
-  document.getElementById('filter-negative').textContent = negative;
+  document.getElementById('filter-all').textContent = qualified.length;
+  document.getElementById('filter-hot').textContent = hotQualified;
+  document.getElementById('filter-cold').textContent = qualified.filter(function(r) { return r.category === 'COLD'; }).length;
+  document.getElementById('filter-email').textContent = qualified.filter(function(r) { return r.category === 'EMAIL_ONLY'; }).length;
+  document.getElementById('filter-positive').textContent = qualified.filter(function(r) { return r.sentiment && r.sentiment.label === 'positive'; }).length;
+  document.getElementById('filter-negative').textContent = qualified.filter(function(r) { return r.sentiment && r.sentiment.label === 'negative'; }).length;
   var fde = document.getElementById('filter-due');
   if (fde) fde.textContent = dueCount;
 
   // Nav badge
   var nb = document.getElementById('nav-leads-badge');
-  if (nb) nb.textContent = total;
+  if (nb) nb.textContent = qualified.length;
 
   // Trends
   computeTrends();
@@ -786,8 +798,8 @@ function computeTrends() {
   var lastWeekStart = new Date(now); lastWeekStart.setDate(now.getDate() - 13);
   var lastWeekEnd = new Date(now); lastWeekEnd.setDate(now.getDate() - 7);
 
-  var thisWeek = allData.filter(function(r) { return new Date(r.date) >= thisWeekStart; }).length;
-  var lastWeek = allData.filter(function(r) { var d = new Date(r.date); return d >= lastWeekStart && d <= lastWeekEnd; }).length;
+  var thisWeek = qualified.filter(function(r) { return new Date(r.date) >= thisWeekStart; }).length;
+  var lastWeek = qualified.filter(function(r) { var d = new Date(r.date); return d >= lastWeekStart && d <= lastWeekEnd; }).length;
 
   var trendEl = document.getElementById('kpi-total-trend');
   if (trendEl) {
@@ -801,8 +813,8 @@ function computeTrends() {
 
   var today = new Date().toISOString().split('T')[0];
   var yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
-  var todayHot = allData.filter(function(r) { return r.category === 'HOT' && r.date === today; }).length;
-  var yesterdayHot = allData.filter(function(r) { return r.category === 'HOT' && r.date === yesterday; }).length;
+  var todayHot = qualified.filter(function(r) { return r.category === 'HOT' && r.date === today; }).length;
+  var yesterdayHot = qualified.filter(function(r) { return r.category === 'HOT' && r.date === yesterday; }).length;
   var hotTrend = document.getElementById('kpi-hot-trend');
   if (hotTrend) {
     var diff = todayHot - yesterdayHot;
@@ -1579,4 +1591,4 @@ function toggleSidebar() {
 checkAuth();
 </script>
 </body>
-</html><!-- BUILD_VERSION: 2026-07-10-v12 -->
+</html><!-- BUILD_VERSION: 2026-07-10-v13 -->
