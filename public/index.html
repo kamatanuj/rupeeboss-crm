@@ -6,7 +6,7 @@
 <title>RupeeBoss CRM — Admin Dashboard</title>
 <link rel="icon" href="rupeeboss-logo.jpg" type="image/jpeg">
 <script>
-  const BUILD_VERSION = '2026-07-10-v14';
+  const BUILD_VERSION = '2026-07-10-v15';
   (function() {
     const stored = localStorage.getItem('crm_build_version');
     if (stored && stored !== BUILD_VERSION) {
@@ -576,6 +576,14 @@ td .lead-phone:hover { text-decoration: underline; }
 // ===== VARIABLES =====
 var FOLLOW_UPS_DATA = {};
 var allData = [];
+var qualified = []; // qualified leads (name + phone or email) — global, set in updateStats()
+
+function isQualified(r) {
+  if (!r.name || !r.name.trim() || r.name === 'Unknown') return false;
+  var hasPhone = r.phone && r.phone.trim();
+  var hasEmail = r.email && r.email.trim();
+  return hasPhone || hasEmail;
+}
 var currentCategory = 'all';
 var currentPage = 1;
 var PAGE_SIZE = 10;
@@ -815,13 +823,7 @@ function updateStats() {
   }
 
   // Qualified leads = has a real name (not "Unknown") AND (phone or email captured)
-  function isQualified(r) {
-    if (!r.name || !r.name.trim() || r.name === 'Unknown') return false;
-    var hasPhone = r.phone && r.phone.trim();
-    var hasEmail = r.email && r.email.trim();
-    return hasPhone || hasEmail;
-  }
-  var qualified = allData.filter(isQualified);
+  qualified = allData.filter(isQualified);
 
   // KPI cards
   var el;
@@ -1656,4 +1658,4 @@ function toggleSidebar() {
 checkAuth();
 </script>
 </body>
-</html><!-- BUILD_VERSION: 2026-07-10-v14 -->
+</html><!-- BUILD_VERSION: 2026-07-10-v15 -->
