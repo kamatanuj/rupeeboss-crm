@@ -6,7 +6,7 @@
 <title>RupeeBoss CRM — Admin Dashboard</title>
 <link rel="icon" href="rupeeboss-logo.jpg" type="image/jpeg">
 <script>
-  const BUILD_VERSION = '2026-07-10-v15';
+  const BUILD_VERSION = '2026-07-10-v16';
   (function() {
     const stored = localStorage.getItem('crm_build_version');
     if (stored && stored !== BUILD_VERSION) {
@@ -579,10 +579,11 @@ var allData = [];
 var qualified = []; // qualified leads (name + phone or email) — global, set in updateStats()
 
 function isQualified(r) {
-  if (!r.name || !r.name.trim() || r.name === 'Unknown') return false;
+  // A lead = has name (not "Unknown") OR phone OR email (any one qualifies)
+  var hasName = r.name && r.name.trim() && r.name !== 'Unknown';
   var hasPhone = r.phone && r.phone.trim();
   var hasEmail = r.email && r.email.trim();
-  return hasPhone || hasEmail;
+  return hasName || hasPhone || hasEmail;
 }
 var currentCategory = 'all';
 var currentPage = 1;
@@ -841,7 +842,7 @@ function updateStats() {
   document.getElementById('filter-all').textContent = qualified.length;
   document.getElementById('filter-hot').textContent = hotQualified;
   document.getElementById('filter-cold').textContent = qualified.filter(function(r) { return r.category === 'COLD'; }).length;
-  document.getElementById('filter-email').textContent = qualified.filter(function(r) { return r.category === 'EMAIL_ONLY'; }).length;
+  document.getElementById('filter-email').textContent = qualified.filter(function(r) { return r.email && r.email.trim(); }).length;
   document.getElementById('filter-positive').textContent = qualified.filter(function(r) { return r.sentiment && r.sentiment.label === 'positive'; }).length;
   document.getElementById('filter-negative').textContent = qualified.filter(function(r) { return r.sentiment && r.sentiment.label === 'negative'; }).length;
   var fde = document.getElementById('filter-due');
@@ -892,7 +893,7 @@ function computeTrends() {
 
   var callsTrend = document.getElementById('kpi-calls-trend');
   if (callsTrend) {
-    var callsThisWeek = allData.filter(function(r) { return r.category !== 'EMAIL_ONLY' && r.duration && r.duration > 0 && new Date(r.date) >= thisWeekStart; }).length;
+    var callsThisWeek = allData.filter(function(r) { return r.duration && r.duration > 0 && new Date(r.date) >= thisWeekStart; }).length;
     callsTrend.textContent = '↑ ' + callsThisWeek + ' this week';
     callsTrend.className = 'kpi-trend up';
   }
@@ -920,11 +921,11 @@ function renderChart() {
 }
 
 function renderDonut() {
-  var total = allData.length || 1;
-  var hot = allData.filter(function(r) { return r.category === 'HOT'; }).length;
-  var cold = allData.filter(function(r) { return r.category === 'COLD'; }).length;
-  var email = allData.filter(function(r) { return r.category === 'EMAIL_ONLY'; }).length;
-  var negative = allData.filter(function(r) { return r.sentiment && r.sentiment.label === 'negative'; }).length;
+  var total = qualified.length || 1;
+  var hot = qualified.filter(function(r) { return r.category === 'HOT'; }).length;
+  var cold = qualified.filter(function(r) { return r.category === 'COLD'; }).length;
+  var email = qualified.filter(function(r) { return r.email && r.email.trim(); }).length;
+  var negative = qualified.filter(function(r) { return r.sentiment && r.sentiment.label === 'negative'; }).length;
 
   var hotDeg = (hot / total) * 360;
   var coldDeg = (cold / total) * 360;
@@ -949,10 +950,10 @@ function renderDonut() {
   if (!dc) {
     var center = document.createElement('div');
     center.className = 'donut-center';
-    center.innerHTML = '<div class="donut-value">' + allData.length + '</div><div class="donut-label">Total</div>';
+    center.innerHTML = '<div class="donut-value">' + qualified.length + '</div><div class="donut-label">Total</div>';
     donut.appendChild(center);
   } else {
-    dc.textContent = allData.length;
+    dc.textContent = qualified.length;
   }
 }
 
@@ -986,6 +987,7 @@ function getFiltered() {
     }
     if (currentCategory === 'POSITIVE') return row.sentiment && row.sentiment.label === 'positive';
     if (currentCategory === 'NEGATIVE') return row.sentiment && row.sentiment.label === 'negative';
+    if (currentCategory === 'EMAIL_ONLY') return row.email && row.email.trim();
 
     return matchCat && matchSearch;
   });
@@ -1658,4 +1660,4 @@ function toggleSidebar() {
 checkAuth();
 </script>
 </body>
-</html><!-- BUILD_VERSION: 2026-07-10-v15 -->
+</html><!-- BUILD_VERSION: 2026-07-10-v16 -->
