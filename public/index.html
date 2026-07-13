@@ -434,6 +434,8 @@ td .lead-phone:hover { text-decoration: underline; }
 }
 .row-actions button:hover { border-color: var(--primary); color: var(--primary-light); box-shadow: 0 0 8px var(--violet-glow); }
 .row-actions button.del:hover { border-color: var(--red); color: var(--red); }
+.row-actions button.has-data { border-color: rgba(34,197,94,0.5); color: #22c55e; box-shadow: 0 0 6px rgba(34,197,94,0.2); }
+.row-actions button.has-data:hover { border-color: #22c55e; color: #4ade80; box-shadow: 0 0 10px rgba(34,197,94,0.4); }
 .table-footer {
   padding: 14px 20px; display: flex; align-items: center;
   justify-content: space-between; border-top: 1px solid var(--border-light);
@@ -1673,6 +1675,12 @@ function renderTable() {
       ? '<button class="del" title="Delete" onclick="deleteLead(\'' + safeLeadId + '\')">🗑️</button>'
       : '';
 
+    // Check if summary/transcript have at least 2 lines of real data
+    var summaryText = (row.summary || '').trim();
+    var transcriptText = (row.transcript || '').trim();
+    var hasSummaryData = summaryText !== '' && summaryText.split('\n').filter(function(l) { return l.trim() !== ''; }).length >= 2;
+    var hasTranscriptData = transcriptText !== '' && transcriptText.split('\n').filter(function(l) { return l.trim() !== ''; }).length >= 2;
+
     return '<tr>' +
       '<td class="lead-name">' + (row.name || 'Unknown') + '</td>' +
       '<td>' + (row.phone ? '<a href="tel:' + row.phone + '" class="lead-phone">' + row.phone + '</a>' : '—') + '</td>' +
@@ -1682,8 +1690,8 @@ function renderTable() {
       '<td>' + sentimentBadge + '</td>' +
       '<td style="font-size:12px;">' + duration + '</td>' +
       '<td><div class="row-actions">' +
-        '<button title="Summary" onclick="toggleSection(\'' + safeLeadId + '\',\'summary\')">📋</button>' +
-        '<button title="Transcript" onclick="toggleSection(\'' + safeLeadId + '\',\'transcript\')">📖</button>' +
+        '<button title="Summary" class="' + (hasSummaryData ? 'has-data' : '') + '" onclick="toggleSection(\'' + safeLeadId + '\',\'summary\')">📋</button>' +
+        '<button title="Transcript" class="' + (hasTranscriptData ? 'has-data' : '') + '" onclick="toggleSection(\'' + safeLeadId + '\',\'transcript\')">📖</button>' +
         '<button title="Follow-ups" onclick="toggleSection(\'' + safeLeadId + '\',\'followups\')">📅</button>' +
         '<button title="Documents" onclick="openDocManager(\'' + safeLeadId + '\')">📄</button>' +
         delBtn +
