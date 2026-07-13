@@ -1310,14 +1310,19 @@ function renderDonut() {
   var hotDeg = (hot / total) * 360;
   var coldDeg = (cold / total) * 360;
   var emailDeg = (email / total) * 360;
+  var negDeg = (negative / total) * 360;
+
+  // Only include slices that have data > 0
+  var slices = [];
+  var startDeg = 0;
+  if (hotDeg > 0) { slices.push('var(--primary) ' + startDeg + 'deg ' + (startDeg + hotDeg) + 'deg'); startDeg += hotDeg; }
+  if (coldDeg > 0) { slices.push('var(--teal) ' + startDeg + 'deg ' + (startDeg + coldDeg) + 'deg'); startDeg += coldDeg; }
+  if (emailDeg > 0) { slices.push('var(--purple) ' + startDeg + 'deg ' + (startDeg + emailDeg) + 'deg'); startDeg += emailDeg; }
+  if (negDeg > 0) { slices.push('var(--red) ' + startDeg + 'deg ' + (startDeg + negDeg) + 'deg'); startDeg += negDeg; }
 
   var donut = document.getElementById('donut');
   if (!donut) return;
-  donut.style.background = 'conic-gradient(' +
-    'var(--primary) 0deg ' + hotDeg + 'deg,' +
-    'var(--teal) ' + hotDeg + 'deg ' + (hotDeg + coldDeg) + 'deg,' +
-    'var(--purple) ' + (hotDeg + coldDeg) + 'deg ' + (hotDeg + coldDeg + emailDeg) + 'deg,' +
-    'var(--red) ' + (hotDeg + coldDeg + emailDeg) + 'deg 360deg)';
+  donut.style.background = 'conic-gradient(' + slices.join(', ') + ')';
 
   var el;
   if (el = document.getElementById('donut-hot-pct')) el.textContent = Math.round(hot / total * 100) + '%';
