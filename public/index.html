@@ -1676,10 +1676,13 @@ function renderTable() {
       : '';
 
     // Check if summary/transcript have at least 2 lines of real data
+    // Summaries are stored as single-line paragraphs, so also check char length (100+ chars ≈ 2 display lines)
     var summaryText = (row.summary || '').trim();
     var transcriptText = (row.transcript || '').trim();
-    var hasSummaryData = summaryText !== '' && summaryText.split('\n').filter(function(l) { return l.trim() !== ''; }).length >= 2;
-    var hasTranscriptData = transcriptText !== '' && transcriptText.split('\n').filter(function(l) { return l.trim() !== ''; }).length >= 2;
+    var summaryLines = summaryText !== '' ? summaryText.split('\n').filter(function(l) { return l.trim() !== ''; }).length : 0;
+    var transcriptLines = transcriptText !== '' ? transcriptText.split('\n').filter(function(l) { return l.trim() !== ''; }).length : 0;
+    var hasSummaryData = summaryLines >= 2 || summaryText.length >= 100;
+    var hasTranscriptData = transcriptLines >= 2 || transcriptText.length >= 100;
 
     return '<tr>' +
       '<td class="lead-name">' + (row.name || 'Unknown') + '</td>' +
