@@ -57,7 +57,9 @@ if [ -n "$DEPLOY_ID" ]; then
       -H "Authorization: Bearer $CLOUDFLARE_TOKEN" \
       -H "Content-Type: application/json" \
       -d "{\"canonical_deployment\": \"$DEPLOY_ID\"}" > /dev/null
-    log "Promoted deployment to production"
+    log "Promoted deployment $DEPLOY_ID to production"
+else
+    log "WARNING: Could not get deployment ID for promotion"
 fi
 
 log "✅ Auto-update complete!"
