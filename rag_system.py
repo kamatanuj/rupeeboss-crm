@@ -12,7 +12,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import re
 from datetime import datetime
 
-DB_PATH = '/root/.openclaw/workspace/rupeeboss/conversations.db'
+DB_PATH = '/root/rupeeboss-crm-repo/conversations.db'
 
 class RupeeBossRAG:
     def __init__(self, model_name='sentence-transformers/all-MiniLM-L6-v2'):

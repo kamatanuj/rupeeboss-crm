@@ -2,7 +2,7 @@
 """Build dashboard from real_rebuild.py output — minimal wrapper."""
 import json, os
 
-BASE_DIR = '/root/.openclaw/workspace/rupeeboss'
+BASE_DIR = '/root/rupeeboss-crm-repo'
 json_path = f'{BASE_DIR}/public/dashboard_data.json'
 
 if not os.path.exists(json_path):

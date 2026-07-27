@@ -11,10 +11,10 @@ import os
 from datetime import datetime
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path='/root/.openclaw/workspace/rupeeboss/.env')
+load_dotenv(dotenv_path='/root/rupeeboss-crm-repo/.env')
 KEY = os.getenv('ELEVENLABS_API_KEY')
 AGENT_ID = "gKNyAo0UhrdRiQ7FAWVZ"
-BASE_DIR = '/root/.openclaw/workspace/rupeeboss'
+BASE_DIR = '/root/rupeeboss-crm-repo'
 DB_PATH = f'{BASE_DIR}/conversations.db'
 
 def make_request(url, headers=None, timeout=20):

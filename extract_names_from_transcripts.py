@@ -8,7 +8,7 @@ import sqlite3
 import re
 from datetime import datetime
 
-BASE_DIR = '/root/.openclaw/workspace/rupeeboss'
+BASE_DIR = '/root/rupeeboss-crm-repo'
 DB_PATH = f'{BASE_DIR}/conversations.db'
 
 def extract_names_from_transcript(transcript):

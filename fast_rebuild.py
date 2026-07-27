@@ -5,10 +5,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv
 from datetime import datetime
 
-load_dotenv(dotenv_path='/root/.openclaw/workspace/rupeeboss/.env')
+load_dotenv(dotenv_path='/root/rupeeboss-crm-repo/.env')
 KEY = os.getenv('ELEVENLABS_API_KEY')
-BASE_DIR = '/root/.openclaw/workspace/rupeeboss'
-
+AGENT_ID = "gKNyAo0UhrdRiQ7FAWVZ"
+BASE_DIR = '/root/rupeeboss-crm-repo'
 print("="*60)
 print("FAST PARALLEL REBUILD: RupeeBoss CRM")
 print("="*60)

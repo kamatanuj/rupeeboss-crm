@@ -8,7 +8,7 @@ import json
 import csv
 from datetime import datetime
 
-BASE_DIR = '/root/.openclaw/workspace/rupeeboss'
+BASE_DIR = '/root/rupeeboss-crm-repo'
 DB_PATH = f'{BASE_DIR}/conversations.db'
 
 conn = sqlite3.connect(DB_PATH)
