@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-08-02T04:01:18.453823",
+  "lastUpdated": "2026-08-02T08:01:20.160093",
   "metadata": {
-    "totalLeads": 2074,
-    "lastUpdated": "2026-08-02T04:01:18.453838",
+    "totalLeads": 2081,
+    "lastUpdated": "2026-08-02T08:01:20.160109",
     "source": "Complete Rebuild (DB-backed)",
     "agentId": "gKNyAo0UhrdRiQ7FAWVZ"
   },
@@ -29042,6 +29042,104 @@
       "conversation_id": "pcY0XwCy7PTr2baAxNg7",
       "duration": 128,
       "message_count": 31
+    },
+    {
+      "id": "rb_2127",
+      "name": "Ravindra Gangadhar",
+      "phone": "",
+      "email": "",
+      "title": "AI Voice Agent - Goodbox AI",
+      "summary": "Co-Founder & CEO of Goodbox.ai - AI voice and chat agents for Indian businesses. Focus on voice commerce, support & sales. Previously built BigApp Technologies, SuperCRM. Bengaluru, Karnataka. 1-10 employees.",
+      "transcript": "[No transcript available]",
+      "date": null,
+      "category": "COLD",
+      "conversation_id": "lead-2026-08-02-002",
+      "duration": 0,
+      "message_count": 0
+    },
+    {
+      "id": "rb_2128",
+      "name": "Zakir Khan",
+      "phone": "",
+      "email": "",
+      "title": "AI Voice Agent - SpeakEdge",
+      "summary": "Founder & CEO of SpeakEdge - AI voice platform for customer interactions. 17+ years SaaS experience, former Director of Product at SMS-Magic. Pune, Maharashtra. 1-10 employees, founded 2024.",
+      "transcript": "[No transcript available]",
+      "date": null,
+      "category": "COLD",
+      "conversation_id": "lead-2026-08-02-003",
+      "duration": 0,
+      "message_count": 0
+    },
+    {
+      "id": "rb_2129",
+      "name": "Vinay Kumar Reddy",
+      "phone": "",
+      "email": "",
+      "title": "AI Voice Agent - Ojiva AI",
+      "summary": "Founder & CEO @ Ojiva AI - AI-Powered CPaaS, WhatsApp API, Bulk SMS, RCS, AI Voice Agent. Greater Bengaluru Area.",
+      "transcript": "[No transcript available]",
+      "date": null,
+      "category": "COLD",
+      "conversation_id": "lead-2026-08-02-004",
+      "duration": 0,
+      "message_count": 0
+    },
+    {
+      "id": "rb_2130",
+      "name": "Mahesh Jalgaaonkar",
+      "phone": "",
+      "email": "",
+      "title": "AI Voice Agent - AIONA AI",
+      "summary": "Managing Director – CDB Infotech | Founder – AIONA AI (Voice Calling Agent) | Co-Founder – Maxim Infra | Creator – BillX. Mumbai, Maharashtra.",
+      "transcript": "[No transcript available]",
+      "date": null,
+      "category": "COLD",
+      "conversation_id": "lead-2026-08-02-005",
+      "duration": 0,
+      "message_count": 0
+    },
+    {
+      "id": "rb_2131",
+      "name": "Dhruv Dholakia",
+      "phone": "",
+      "email": "",
+      "title": "AI Voice Agent - AsqVox",
+      "summary": "Founder, AsqVox - Voice AI that turns website visitors into conversations & customers. 14 yrs Founder-CEO @ Togglebytes. 150+ apps shipped. Mumbai.",
+      "transcript": "[No transcript available]",
+      "date": null,
+      "category": "COLD",
+      "conversation_id": "lead-2026-08-02-006",
+      "duration": 0,
+      "message_count": 0
+    },
+    {
+      "id": "rb_2132",
+      "name": "Hanish Naidu",
+      "phone": "",
+      "email": "",
+      "title": "AI Voice Agent - BeastCalls",
+      "summary": "Building AI Voice Agents | Python · FastAPI · React | Telugu+English NLP. Founder & Builder — AI Voice Agent Platform at BeastCalls. Hyderabad.",
+      "transcript": "[No transcript available]",
+      "date": null,
+      "category": "COLD",
+      "conversation_id": "lead-2026-08-02-007",
+      "duration": 0,
+      "message_count": 0
+    },
+    {
+      "id": "rb_2133",
+      "name": "Aditya Sah",
+      "phone": "",
+      "email": "",
+      "title": "AI Voice Agent - Resonera AI",
+      "summary": "Founder @ Resonera.ai - Low latency Voice AI infrastructure. Conversational AI for BPOs and agencies. Mumbai, Maharashtra. Founded 2026.",
+      "transcript": "[No transcript available]",
+      "date": null,
+      "category": "COLD",
+      "conversation_id": "lead-2026-08-02-008",
+      "duration": 0,
+      "message_count": 0
     }
   ]
 }
