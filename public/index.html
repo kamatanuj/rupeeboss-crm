@@ -769,6 +769,10 @@ td .lead-phone:hover { text-decoration: underline; }
       <a class="nav-item" onclick="navAndFilter('POSITIVE',this)">
         <span class="icon">😊</span> Sentiment
       </a>
+      <a class="nav-item" onclick="showMarketIntel(this)">
+        <span class="icon">📡</span> Market Intel
+        <span class="badge" id="nav-intel-badge" style="background:#e74c3c">0</span>
+      </a>
       <div class="nav-section">Management</div>
       <a class="nav-item" onclick="showChangePasswordModal()">
         <span class="icon">⚙️</span> Settings
@@ -2049,6 +2053,131 @@ function exportCSV() {
 function toggleSidebar() {
   document.getElementById('sidebar').classList.toggle('open');
 }
+
+// ===== MARKET INTELLIGENCE =====
+function showMarketIntel(el) {
+  document.querySelectorAll('.nav-item').forEach(function(n) { n.classList.remove('active'); });
+  if (el) el.classList.add('active');
+  
+  // Hide the leads table, show intel panel
+  const main = document.querySelector('.main-content') || document.querySelector('main');
+  
+  // Remove existing intel panel
+  const existing = document.getElementById('market-intel-panel');
+  if (existing) existing.remove();
+  
+  // Create intel panel
+  const panel = document.createElement('div');
+  panel.id = 'market-intel-panel';
+  panel.innerHTML = `
+    <div style="padding:24px;max-width:1200px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+        <h2 style="color:var(--text-primary);font-size:20px;font-weight:700;">📡 Market Intelligence</h2>
+        <button onclick="loadMarketIntel()" style="background:var(--accent-violet);color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;">↻ Refresh</button>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;">
+        <div style="background:var(--bg-2);border:1px solid var(--border-card);border-radius:12px;padding:16px;">
+          <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Social Mentions</div>
+          <div style="font-size:24px;font-weight:700;color:#3498db;margin-top:4px;" id="stat-social">—</div>
+        </div>
+        <div style="background:var(--bg-2);border:1px solid var(--border-card);border-radius:12px;padding:16px;">
+          <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Positive</div>
+          <div style="font-size:24px;font-weight:700;color:#27ae60;margin-top:4px;" id="stat-positive">—</div>
+        </div>
+        <div style="background:var(--bg-2);border:1px solid var(--border-card);border-radius:12px;padding:16px;">
+          <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Negative ⚠️</div>
+          <div style="font-size:24px;font-weight:700;color:#e74c3c;margin-top:4px;" id="stat-negative">—</div>
+        </div>
+        <div style="background:var(--bg-2);border:1px solid var(--border-card);border-radius:12px;padding:16px;">
+          <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Competitor Items</div>
+          <div style="font-size:24px;font-weight:700;color:#f39c12;margin-top:4px;" id="stat-competitor">—</div>
+        </div>
+      </div>
+      
+      <div style="background:var(--bg-2);border:1px solid var(--border-card);border-radius:12px;overflow:hidden;">
+        <div style="padding:16px;border-bottom:1px solid var(--border-card);font-size:14px;font-weight:700;color:var(--text-primary);">Recent Intelligence</div>
+        <div id="intel-list" style="padding:0;max-height:500px;overflow-y:auto;">
+          <div style="padding:40px;text-align:center;color:var(--text-muted);">Loading...</div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  // Insert before the leads section
+  const firstChild = main.firstElementChild;
+  main.insertBefore(panel, firstChild);
+  
+  // Hide other content
+  Array.from(main.children).forEach((child, i) => {
+    if (child.id !== 'market-intel-panel') child.style.display = 'none';
+  });
+  
+  loadMarketIntel();
+}
+
+function hideMarketIntel() {
+  const panel = document.getElementById('market-intel-panel');
+  if (panel) panel.remove();
+  const main = document.querySelector('.main-content') || document.querySelector('main');
+  Array.from(main.children).forEach(child => { child.style.display = ''; });
+}
+
+function loadMarketIntel() {
+  // Fetch from webhook server
+  fetch('http://76.13.246.122:8765/api/market-intel?limit=50')
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        document.getElementById('intel-list').innerHTML = '<div style="padding:20px;color:var(--text-muted);">No data yet. Run: python3 agent_reach_monitor.py --feature all</div>';
+        return;
+      }
+      
+      // Update stats
+      const items = data.items || [];
+      const social = items.filter(i => i.type === 'social_mention');
+      const positive = social.filter(i => i.sentiment === 'positive');
+      const negative = social.filter(i => i.sentiment === 'negative');
+      const competitor = items.filter(i => i.type === 'competitor_intel');
+      
+      document.getElementById('stat-social').textContent = social.length;
+      document.getElementById('stat-positive').textContent = positive.length;
+      document.getElementById('stat-negative').textContent = negative.length;
+      document.getElementById('stat-competitor').textContent = competitor.length;
+      document.getElementById('nav-intel-badge').textContent = negative.length;
+      
+      // Render list
+      const sentimentColor = {positive:'#27ae60', negative:'#e74c3c', neutral:'#64748b'};
+      const typeIcon = {social_mention:'📡', competitor_intel:'🏢'};
+      
+      document.getElementById('intel-list').innerHTML = items.map(i => `
+        <div style="padding:14px 16px;border-bottom:1px solid var(--border-card);">
+          <div style="display:flex;justify-content:space-between;align-items:start;">
+            <div style="flex:1;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                <span style="font-size:14px;">${typeIcon[i.type] || '📄'}</span>
+                <span style="font-size:13px;font-weight:600;color:var(--text-primary);">${i.title || 'Untitled'}</span>
+                <span style="font-size:10px;padding:2px 6px;border-radius:4px;color:#fff;background:${sentimentColor[i.sentiment]||'#64748b'};">${i.sentiment}</span>
+              </div>
+              <div style="font-size:12px;color:var(--text-muted);line-height:1.4;">${(i.content||'').substring(0,150)}...</div>
+              ${i.url ? `<a href="${i.url}" target="_blank" style="font-size:11px;color:var(--accent-cyan);text-decoration:none;">${i.url.substring(0,60)}...</a>` : ''}
+              <div style="font-size:10px;color:var(--text-muted);margin-top:4px;">Source: ${i.source} | ${i.captured_at ? i.captured_at.substring(0,16).replace('T',' ') : ''}</div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    })
+    .catch(err => {
+      document.getElementById('intel-list').innerHTML = '<div style="padding:20px;color:var(--text-muted);">Webhook server not responding. Use command line: python3 agent_reach_monitor.py --feature report</div>';
+    });
+}
+
+// Override navAndFilter to hide intel panel when switching views
+const _origNavAndFilter = navAndFilter;
+navAndFilter = function(filter, el) {
+  hideMarketIntel();
+  _origNavAndFilter(filter, el);
+};
 
 // ===== INIT =====
 checkAuth();
