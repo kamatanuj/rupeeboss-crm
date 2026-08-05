@@ -30,6 +30,20 @@ log "Building leads with real summaries and transcripts..."
 log "Sync step is integrated in complete_rebuild.py; running light sync fallback..."
 /usr/bin/python3.12 sync_conversations.py >> "$LOG" 2>&1 || log "DB sync completed"
 
+# Step 2b: Regenerate market_intel.json from DB (keep in sync with market_intelligence table)
+log "Regenerating market_intel.json from database..."
+python3 -c "
+import sqlite3, json
+conn = sqlite3.connect('conversations.db')
+rows = conn.execute('SELECT * FROM market_intelligence ORDER BY captured_at DESC').fetchall()
+cols = [d[0] for d in conn.execute('SELECT * FROM market_intelligence LIMIT 1').description]
+items = [dict(zip(cols, r)) for r in rows]
+with open('public/market_intel.json', 'w') as f:
+    json.dump({'items': items}, f, indent=2, default=str)
+print(f'Regenerated market_intel.json: {len(items)} items')
+conn.close()
+" >> "$LOG" 2>&1 || log "WARN: market_intel.json regeneration failed"
+
 # Step 3: Build dashboard from real rebuild output
 log "Updating dashboard_data.json from rebuild..."
 python3 build-dashboard.py >> "$LOG" 2>&1 || log "Dashboard build completed"
