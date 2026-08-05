@@ -511,12 +511,16 @@
             }
 
             function fmtDate(d) {
+                if (!d) return '—';
                 const parts = d.split('-');
+                if (parts.length < 3) return d;
                 return parts[2] + '/' + parts[1] + '/' + parts[0].slice(2);
             }
 
             function shortDate(d) {
+                if (!d) return '—';
                 const parts = d.split('-');
+                if (parts.length < 3) return d;
                 return parts[2] + '/' + parts[1];
             }
 
@@ -842,13 +846,14 @@
 
                     // Sort by date descending
                     const sorted = leads.slice().sort((a, b) => {
-                        if (a.date !== b.date) return b.date.localeCompare(a.date);
-                        return a.id.localeCompare(b.id);
+                        const da = a.date || ''; const db = b.date || '';
+                        if (da !== db) return db.localeCompare(da);
+                        return (a.id || '').localeCompare(b.id || '');
                     });
 
                     // Compute date range
-                    const allDates = [...new Set(leads.map(l => l.date))].sort();
-                    const latestDate = allDates[allDates.length - 1];
+                    const allDates = [...new Set(leads.map(l => l.date).filter(Boolean))].sort();
+                    const latestDate = allDates[allDates.length - 1] || 'N/A';
                     document.getElementById('footerDate').textContent = 'Last updated: ' + latestDate;
 
                     // --- KPI Calculations ---
@@ -862,10 +867,12 @@
                     prevPeriodEnd.setDate(prevPeriodEnd.getDate() - 1);
 
                     const currentLeads = leads.filter(l => {
+                        if (!l.date) return false;
                         const d = new Date(l.date + 'T00:00:00');
                         return d >= periodStart && d <= latest;
                     });
                     const prevLeads = leads.filter(l => {
+                        if (!l.date) return false;
                         const d = new Date(l.date + 'T00:00:00');
                         return d >= prevPeriodStart && d <= prevPeriodEnd;
                     });
@@ -918,7 +925,8 @@
                     // --- Charts (Last 30 Days by actual dates with data) ---
                     // Build daily data for last 30 days (only days that have data)
                     const dateMap = {};
-                    currentLeads.forEach(l => {
+                    leads.forEach(l => {
+                        if (!l.date) return;
                         if (!dateMap[l.date]) {
                             dateMap[l.date] = { durations: [], outcomes: [] };
                         }
