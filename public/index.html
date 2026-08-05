@@ -6,7 +6,7 @@
 <title>RupeeBoss CRM — Voice-First Lead Intelligence</title>
 <link rel="icon" href="rupeeboss-logo.jpg" type="image/jpeg">
 <script>
-  const BUILD_VERSION = '2026-08-05-v20-intel-fix';
+  const BUILD_VERSION = '2026-08-05-v21-intel-filters';
   (function() {
     const stored = localStorage.getItem('crm_build_version');
     if (stored && stored !== BUILD_VERSION) {
@@ -2095,12 +2095,34 @@ function showMarketIntel(el) {
         </div>
       </div>
       
+      <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;align-items:center;">
+        <label style="font-size:12px;color:var(--text-muted);">From:</label>
+        <input type="date" id="intel-date-from" style="padding:6px 10px;border:1px solid var(--border-card);border-radius:8px;font-size:13px;background:var(--bg-2);color:var(--text-primary);" onchange="filterIntel()">
+        <label style="font-size:12px;color:var(--text-muted);">To:</label>
+        <input type="date" id="intel-date-to" style="padding:6px 10px;border:1px solid var(--border-card);border-radius:8px;font-size:13px;background:var(--bg-2);color:var(--text-primary);" onchange="filterIntel()">
+        <select id="intel-type-filter" style="padding:6px 10px;border:1px solid var(--border-card);border-radius:8px;font-size:13px;background:var(--bg-2);color:var(--text-primary);" onchange="filterIntel()">
+          <option value="all">All Types</option>
+          <option value="social_mention">📡 Social Mentions</option>
+          <option value="competitor_intel">🏢 Competitor Intel</option>
+        </select>
+        <select id="intel-sentiment-filter" style="padding:6px 10px;border:1px solid var(--border-card);border-radius:8px;font-size:13px;background:var(--bg-2);color:var(--text-primary);" onchange="filterIntel()">
+          <option value="all">All Sentiments</option>
+          <option value="positive">Positive</option>
+          <option value="negative">Negative</option>
+          <option value="neutral">Neutral</option>
+        </select>
+        <button onclick="clearIntelFilters()" style="background:var(--bg-2);border:1px solid var(--border-card);color:var(--text-muted);padding:6px 12px;border-radius:8px;cursor:pointer;font-size:12px;">Clear</button>
+        <span id="intel-result-count" style="font-size:12px;color:var(--text-muted);margin-left:auto;"></span>
+      </div>
+      
       <div style="background:var(--bg-2);border:1px solid var(--border-card);border-radius:12px;overflow:hidden;">
-        <div style="padding:16px;border-bottom:1px solid var(--border-card);font-size:14px;font-weight:700;color:var(--text-primary);">Recent Intelligence</div>
-        <div id="intel-list" style="padding:0;max-height:500px;overflow-y:auto;">
+        <div style="padding:16px;border-bottom:1px solid var(--border-card);font-size:14px;font-weight:700;color:var(--text-primary);">Intelligence Feed</div>
+        <div id="intel-list" style="padding:0;max-height:600px;overflow-y:auto;">
           <div style="padding:40px;text-align:center;color:var(--text-muted);">Loading...</div>
         </div>
       </div>
+      
+      <div id="intel-pagination" style="display:flex;justify-content:center;gap:8px;margin-top:16px;"></div>
     </div>
   `;
   
@@ -2123,8 +2145,11 @@ function hideMarketIntel() {
   Array.from(main.children).forEach(child => { child.style.display = ''; });
 }
 
+var intelAllItems = [];
+var intelCurrentPage = 1;
+var intelPerPage = 15;
+
 function loadMarketIntel() {
-  // Fetch from webhook server
   fetch('market_intel.json')
     .then(r => r.json())
     .then(data => {
@@ -2133,12 +2158,14 @@ function loadMarketIntel() {
         return;
       }
       
-      // Update stats
-      const items = data.items || [];
-      const social = items.filter(i => i.type === 'social_mention');
+      intelAllItems = data.items || [];
+      intelCurrentPage = 1;
+      
+      // Update stats (always show totals, not filtered)
+      const social = intelAllItems.filter(i => i.type === 'social_mention');
       const positive = social.filter(i => i.sentiment === 'positive');
       const negative = social.filter(i => i.sentiment === 'negative');
-      const competitor = items.filter(i => i.type === 'competitor_intel');
+      const competitor = intelAllItems.filter(i => i.type === 'competitor_intel');
       
       document.getElementById('stat-social').textContent = social.length;
       document.getElementById('stat-positive').textContent = positive.length;
@@ -2146,30 +2173,127 @@ function loadMarketIntel() {
       document.getElementById('stat-competitor').textContent = competitor.length;
       document.getElementById('nav-intel-badge').textContent = negative.length;
       
-      // Render list
-      const sentimentColor = {positive:'#27ae60', negative:'#e74c3c', neutral:'#64748b'};
-      const typeIcon = {social_mention:'📡', competitor_intel:'🏢'};
+      // Set default date range to cover all data
+      if (intelAllItems.length > 0) {
+        const dates = intelAllItems.map(i => i.captured_at || '').filter(Boolean).sort();
+        if (dates.length > 0) {
+          const fromEl = document.getElementById('intel-date-from');
+          const toEl = document.getElementById('intel-date-to');
+          if (fromEl && !fromEl.value) fromEl.value = dates[0].substring(0, 10);
+          if (toEl && !toEl.value) toEl.value = dates[dates.length - 1].substring(0, 10);
+        }
+      }
       
-      document.getElementById('intel-list').innerHTML = items.map(i => `
-        <div style="padding:14px 16px;border-bottom:1px solid var(--border-card);">
-          <div style="display:flex;justify-content:space-between;align-items:start;">
-            <div style="flex:1;">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-                <span style="font-size:14px;">${typeIcon[i.type] || '📄'}</span>
-                <span style="font-size:13px;font-weight:600;color:var(--text-primary);">${i.title || 'Untitled'}</span>
-                <span style="font-size:10px;padding:2px 6px;border-radius:4px;color:#fff;background:${sentimentColor[i.sentiment]||'#64748b'};">${i.sentiment}</span>
-              </div>
-              <div style="font-size:12px;color:var(--text-muted);line-height:1.4;">${(i.content||'').substring(0,150)}...</div>
-              ${i.url ? `<a href="${i.url}" target="_blank" style="font-size:11px;color:var(--accent-cyan);text-decoration:none;">${i.url.substring(0,60)}...</a>` : ''}
-              <div style="font-size:10px;color:var(--text-muted);margin-top:4px;">Source: ${i.source} | ${i.captured_at ? i.captured_at.substring(0,16).replace('T',' ') : ''}</div>
-            </div>
-          </div>
-        </div>
-      `).join('');
+      renderIntelList();
     })
     .catch(err => {
-      document.getElementById('intel-list').innerHTML = '<div style="padding:20px;color:var(--text-muted);">Webhook server not responding. Use command line: python3 agent_reach_monitor.py --feature report</div>';
+      document.getElementById('intel-list').innerHTML = '<div style="padding:20px;color:var(--text-muted);">Failed to load market_intel.json</div>';
     });
+}
+
+function getFilteredIntel() {
+  const fromEl = document.getElementById('intel-date-from');
+  const toEl = document.getElementById('intel-date-to');
+  const typeEl = document.getElementById('intel-type-filter');
+  const sentEl = document.getElementById('intel-sentiment-filter');
+  
+  const fromDate = fromEl ? fromEl.value : '';
+  const toDate = toEl ? toEl.value : '';
+  const typeFilter = typeEl ? typeEl.value : 'all';
+  const sentFilter = sentEl ? sentEl.value : 'all';
+  
+  return intelAllItems.filter(i => {
+    // Date filter
+    const itemDate = (i.captured_at || '').substring(0, 10);
+    if (fromDate && itemDate < fromDate) return false;
+    if (toDate && itemDate > toDate) return false;
+    // Type filter
+    if (typeFilter !== 'all' && i.type !== typeFilter) return false;
+    // Sentiment filter
+    if (sentFilter !== 'all' && i.sentiment !== sentFilter) return false;
+    return true;
+  });
+}
+
+function renderIntelList() {
+  const filtered = getFilteredIntel();
+  const sentimentColor = {positive:'#27ae60', negative:'#e74c3c', neutral:'#64748b'};
+  const typeIcon = {social_mention:'📡', competitor_intel:'🏢'};
+  
+  // Update result count
+  const countEl = document.getElementById('intel-result-count');
+  if (countEl) countEl.textContent = `Showing ${filtered.length} of ${intelAllItems.length} items`;
+  
+  // Paginate
+  const totalPages = Math.ceil(filtered.length / intelPerPage);
+  if (intelCurrentPage > totalPages) intelCurrentPage = 1;
+  const start = (intelCurrentPage - 1) * intelPerPage;
+  const pageItems = filtered.slice(start, start + intelPerPage);
+  
+  if (pageItems.length === 0) {
+    document.getElementById('intel-list').innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-muted);">No items match your filters</div>';
+    document.getElementById('intel-pagination').innerHTML = '';
+    return;
+  }
+  
+  document.getElementById('intel-list').innerHTML = pageItems.map(i => `
+    <div style="padding:14px 16px;border-bottom:1px solid var(--border-card);">
+      <div style="display:flex;justify-content:space-between;align-items:start;">
+        <div style="flex:1;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap;">
+            <span style="font-size:14px;">${typeIcon[i.type] || '📄'}</span>
+            <span style="font-size:13px;font-weight:600;color:var(--text-primary);">${i.title || 'Untitled'}</span>
+            <span style="font-size:10px;padding:2px 6px;border-radius:4px;color:#fff;background:${sentimentColor[i.sentiment]||'#64748b'};">${i.sentiment || '—'}</span>
+          </div>
+          <div style="font-size:12px;color:var(--text-muted);line-height:1.4;">${(i.content||'').substring(0,150)}...</div>
+          ${i.url ? `<a href="${i.url}" target="_blank" style="font-size:11px;color:var(--accent-cyan);text-decoration:none;">${i.url.substring(0,60)}...</a>` : ''}
+          <div style="font-size:10px;color:var(--text-muted);margin-top:4px;">Source: ${i.source} | ${i.captured_at ? i.captured_at.substring(0,16).replace('T',' ') : ''}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  
+  // Pagination buttons
+  const pagEl = document.getElementById('intel-pagination');
+  if (totalPages <= 1) {
+    pagEl.innerHTML = '';
+  } else {
+    let buttons = '';
+    if (intelCurrentPage > 1) buttons += `<button onclick="intelGoPage(${intelCurrentPage - 1})" style="background:var(--bg-2);border:1px solid var(--border-card);color:var(--text-primary);padding:6px 12px;border-radius:8px;cursor:pointer;font-size:13px;">← Prev</button>`;
+    
+    const maxBtns = 5;
+    let startBtn = Math.max(1, intelCurrentPage - 2);
+    let endBtn = Math.min(totalPages, startBtn + maxBtns - 1);
+    if (endBtn - startBtn < maxBtns - 1) startBtn = Math.max(1, endBtn - maxBtns + 1);
+    
+    for (let p = startBtn; p <= endBtn; p++) {
+      const active = p === intelCurrentPage;
+      buttons += `<button onclick="intelGoPage(${p})" style="background:${active ? 'var(--accent-violet)' : 'var(--bg-2)'};border:1px solid var(--border-card);color:${active ? '#fff' : 'var(--text-primary)'};padding:6px 12px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:${active ? '700' : '400'};">${p}</button>`;
+    }
+    
+    if (intelCurrentPage < totalPages) buttons += `<button onclick="intelGoPage(${intelCurrentPage + 1})" style="background:var(--bg-2);border:1px solid var(--border-card);color:var(--text-primary);padding:6px 12px;border-radius:8px;cursor:pointer;font-size:13px;">Next →</button>`;
+    pagEl.innerHTML = buttons;
+  }
+}
+
+function filterIntel() {
+  intelCurrentPage = 1;
+  renderIntelList();
+}
+
+function clearIntelFilters() {
+  document.getElementById('intel-date-from').value = '';
+  document.getElementById('intel-date-to').value = '';
+  document.getElementById('intel-type-filter').value = 'all';
+  document.getElementById('intel-sentiment-filter').value = 'all';
+  intelCurrentPage = 1;
+  renderIntelList();
+}
+
+function intelGoPage(page) {
+  intelCurrentPage = page;
+  renderIntelList();
+  document.getElementById('intel-list').scrollTop = 0;
 }
 
 // Override navAndFilter to hide intel panel when switching views
