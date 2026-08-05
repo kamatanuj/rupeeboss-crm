@@ -2125,7 +2125,7 @@ function hideMarketIntel() {
 
 function loadMarketIntel() {
   // Fetch from webhook server
-  fetch('http://76.13.246.122:8765/api/market-intel?limit=50')
+  fetch('market_intel.json')
     .then(r => r.json())
     .then(data => {
       if (data.error) {
