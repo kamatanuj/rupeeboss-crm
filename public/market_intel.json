@@ -1,6 +1,76 @@
 {
   "items": [
     {
+      "id": 86,
+      "type": "regulatory_alert",
+      "source": "exa",
+      "keyword": "digital lending guidelines RBI 2026",
+      "title": "RBI Digital Lending Guidelines 2026: A Practical Compliance Checklist",
+      "url": "https://www.openmalo.com/blog/rbi-digital-lending-guidelines-2026",
+      "content": "RBI Digital Lending Guidelines 2026: A Practical Compliance Checklist ... Quick answer: The RBI Digital Lending Guidelines require that all loan disbursals and repayments flow directly between the borrower\u2019s bank account and the regulated entity, that customers receive a standardised Key Fact Statement (KFS) before sanction, that any First Loss Default Guarantee (FLDG) between an RE and an LSP stays within the prescribed cap, that a cooling-off period is provided, and that data collection is minimised, purpose-limited, and explicitly consented. The rules apply whether you are a bank, an NBFC, or a fintech operating as an LSP for one of them. ... The guidelines apply to all Regulated Entities \u2014 commercial banks, cooperative banks, and NBFCs \u2014 and by extension to every Lending Service Provider that performs one or more of the lending lifecycle functions on their behalf: customer acquisition, underwriting, pricing, KYC, servicing, monitoring, recovery. If your app does any of those for a regulated lender, you are inside the perimeter. ... The guidelines do ... s regulatory ambit ... than a loan. ... 2. The KFS \u2014 what ... Every borrower must receive a Key Fact Statement in a standardised, comparable format before the loan is sanctioned. The KFS must show: ... - The all-inclusive Annual Percentage Rate (APR) \u2014 interest plus all fees, expressed as a single rate - Recovery mechanism (including details of the recovery agent, if any) - Grievance redressal officer\u2019s name and contact - Cooling-off period terms - A unique loan reference number ... The KFS must be digitally signed and time-stamped. We\u2019ve seen ... reject KFS implementations where the APR was calculated without including processing fees or where ... document was delivered as a non-tamper-evident PDF. ... This is the rule that catches the most fintechs. Disbursal must go directly from the RE to the borrower\u2019s bank account and repayment must come directly back to the RE\u2019s account. The LSP cannot sit in the middle, e",
+      "sentiment": "neutral",
+      "severity": "warning",
+      "metadata_json": "{\"published\": \"2026-05-12T00:00:00.000Z\"}",
+      "captured_at": "2026-08-05T13:53:36.252613+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 85,
+      "type": "regulatory_alert",
+      "source": "exa",
+      "keyword": "NBFC regulation India latest 2026",
+      "title": "Notifications - Reserve Bank of India",
+      "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13539&Mode=0",
+      "content": "| RBI/2026-27/163 DOR.FIN.REC.No.137/03.10.001/2026-27 June 24, 2026 Reserve Bank of India (Non-Banking Financial Companies \u2013 Registration, Exemptions and Framework for Scale Based Regulation) Second Amendment Directions, 2026 The Reserve Bank has issued the Reserve Bank of India (Non-Banking Financial Companies \u2013 Registration, Exemptions and Framework for Scale Based Regulation) Directions, 2025 dated November 28, 2025 (hereinafter referred to as \u2018Directions\u2019) in exercise of the powers conferred to it under the provisions of the Reserve Bank of India Act, 1934, the Factoring Regulation Act, 2011 and the National Housing Bank Act, 1987. There is a need to amend the Directions based on a review of instructions pertaining to methodology for identification of NBFCs in the Upper layer and placement of Government owned NBFCs in various layers as envisaged under the Scale Based Regulatory Framework for NBFCs. 2. Accordingly, in exercise of the powers conferred with the Reserve Bank under sections 45JA, 45K, 45L and 45M of the Reserve Bank of India Act, 1934 (Act 2 of 1934), section 3 read with section 31A and section 6 of the Factoring Regulation Act, 2011 (Act 12 of 2012), and sections 30, 30A, 32 and 33 of the National Housing Bank Act, 1987 (Act 53 of 1987), and all other laws enabling the Reserve Bank in this behalf, the Reserve Bank being satisfied that it is necessary and expedient in the public interest so to do, hereby issues the Amendment Directions hereinafter specified. 3. These Amendment Directions shall be called the Reserve Bank of India (Non-Banking Financial Companies \u2013 Registration, Exemptions and Framework for Scale Based Regulation) Second Amendment Directions, 2026. 4. These Amendment Directions shall come into force with effect from date of issuance. 5. These Amendment Directions modify the Directions as under: (1) Paragraph 12 shall be substituted as under, namely:- \u201cThe Upper Layer shall comprise of those NBFCs which are specifically identified annu",
+      "sentiment": "neutral",
+      "severity": "warning",
+      "metadata_json": "{\"published\": \"N/A\"}",
+      "captured_at": "2026-08-05T13:53:32.502109+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 84,
+      "type": "regulatory_alert",
+      "source": "exa",
+      "keyword": "RBI monetary policy repo rate 2026",
+      "title": "RBI keeps policy repo rate unchanged at 5.25%, maintains neutral stance | Business News",
+      "url": "https://www.hindustantimes.com/business/rbi-keeps-policy-repo-rate-unchanged-at-5-25-per-cent-maintains-neutral-stance-101785904650270.html",
+      "content": "RBI keeps policy repo rate unchanged at 5.25%, maintains neutral stance | Business News # RBI keeps policy repo rate unchanged at 5.25%, maintains neutral stance ... Updated on: Aug 5, 2026, 10:59:34 IST ... The Reserve Bank of India on Wednesday announced that it would keep the policy repo rate unchanged, at 5.25%, for the third time in a row, against the backdrop of energy crises and supply disruptions triggered by the ongoing West Asia Conflict. ... Announcing the key decision, RBI governor Sanjay Malhotra said the Monetary Policy Committee unanimously decided to retain the policy interest rate and with a neutral stance. ... Regarding India's economy, governor Malhotra said the domestic economy has exhibited resilience amid persistent global uncertainty. He stated that the Indian economy has performed better than expected in the April-June quarter of this fiscal. ",
+      "sentiment": "neutral",
+      "severity": "warning",
+      "metadata_json": "{\"published\": \"2026-08-05T00:00:00.000Z\"}",
+      "captured_at": "2026-08-05T13:53:28.931786+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 83,
+      "type": "regulatory_alert",
+      "source": "exa",
+      "keyword": "RBI monetary policy repo rate 2026",
+      "title": "RBI MPC meeting August 2026 highlights: Repo rate decision, inflation outlook & GDP forecast; key takeaways from Governor Sanjay Malhotra's speech - The Economic Times",
+      "url": "https://economictimes.indiatimes.com/news/economy/policy/rbi-mpc-meeting-2026-august-5-governor-sanjay-malhotra-speech-highlights-repo-rate-inflation-gdp/articleshow/132891070.cms",
+      "content": "RBI MPC meeting August 2026 highlights: The Reserve Bank of India has decided to keep the repo rate steady at 5.25 percent, reflecting a cautious approach amid global instability and persistent inflation pressures. Despite these challenges, the domestic economy demonstrates resilience, with a projected GDP growth of 6.7 percent for the current fiscal year. Additionally, the central bank has adjusted its inflation forecast for FY27 downward. ... The Reserve Bank of India's (RBI) Monetary Policy Committee (MPC) on Wednesday unanimously decided to keep the policy repo rate unchanged at 5.25 per cent at its 62nd meeting held from August 3 to 5, 2026.The committee also retained its neutral stance.As a result: ... - Repo rate: 5.25% - Standing Deposit Facility (SDF): 5.00% - Marginal Standing Facility (MSF): 5.50% - Bank Rate: 5.50% ... ## Why did the RBI leave interest rates unchanged? ... The MPC said it decided to maintain the current policy rate because: ... - Inflation is expected to rise in the near term but remains largely driven by food and fuel prices. - Core inflation continues to remain moderate. - India's economy remains resilient despite global uncertainties. - Greater clarity is needed on inflation, global trade and geopolitical developments before any policy action. ... ## RBI GDP growth forecast ... The central bank projected real GDP growth at 6.7 per cent for 2026-27.Quarterly GDP projections ... - Q1: 7.0% - Q2: 6.4% - Q3: 6.5% - Q4: 6.8% - Q1 FY28: 7.3% ... ## RBI revises inflation forecast ... The RBI projected consumer price index (CPI) inflation at 5.0 per cent for FY27.Quarterly inflation projections ... - Q2: 4.7% - Q3: 5.9% - Q4: 5.5% - Q1 FY28: 5.3% ... The RBI noted that headline inflation rose to 4.4 per cent in June 2026, mainly because of higher food and fuel prices.Key observations include: ... - Food inflation increased across most categories during May and June. - Fuel inflation rose following higher international energy prices. - Core in",
+      "sentiment": "positive",
+      "severity": "warning",
+      "metadata_json": "{\"published\": \"2026-08-05T00:00:00.000Z\"}",
+      "captured_at": "2026-08-05T13:53:28.926611+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 82,
+      "type": "regulatory_alert",
+      "source": "exa",
+      "keyword": "RBI monetary policy repo rate 2026",
+      "title": "RBI MPC Meeting 2026: Sanjay Malhotra & team keeps repo rate at 5.25% as global risks linger with Iran war flare-up - The Economic Times",
+      "url": "https://economictimes.indiatimes.com/news/economy/policy/rbi-monetary-policy-meeting-2026-sanjay-malhotra-major-announcements-repo-rate-updates-key-takeaways-key-decisions-status-quo-5-25-as-global-risks-iran-war-flare-up/articleshow/132888864.cms",
+      "content": "RBI MPC Meeting 2026: Sanjay Malhotra & team keep repo rate at 5.25% as global risks linger with Iran war flare-up - The Economic Times ... RBI Monetary Policy Meeting 2026: The Reserve Bank of India's Monetary Policy Committee maintained the benchmark repo rate at 5.25 percent. Policymakers are carefully observing geopolitical uncertainties and rising inflationary pressures. Domestic economic growth remains resilient, which supports the central bank's decision. The committee also revised its growth and inflation projections for the current financial year. Analysts had largely anticipated this pause in policy action. ... The Reserve Bank of India (RBI) on Wednesday kept the benchmark repo rate unchanged at 5.25%, extending its pause for a fourth consecutive policy meeting as policymakers balanced rising headline inflation against still-benign underlying price pressures and resilient domestic growth.The six-member Monetary Policy Committee (MPC) unanimously retained its wait-and-watch approach amid persistent geopolitical uncertainties, volatile crude oil prices and emerging inflationary pressures.The committee also kept the Standing Deposit Facility (SDF) rate unchanged at 5%, while the Marginal Standing Facility (MSF) rate and Bank Rate remained at 5.5%. ... The decision, announced by RBI Governor Sanjay Malhotra after the MPC's three-day meeting, marks another policy review since the RBI's last rate cut in December last year. While headline inflation has moved above the central bank's 4% medium-term target, Malhotra said the rise was largely driven by higher fuel prices and that broader price pressures remain contained. ... 4% target ... % tolerance band, giving ... to keep rates unchanged. Meanwhile ... economic activity has shown some signs of moderation, with the private sector Purchasing Managers' Index (PMI) slipping to a five-year low in July. ... warned that relief ... while \"conflict ... the outlook.\" ... pointing to \"steady ... quarter. Private consumptio",
+      "sentiment": "positive",
+      "severity": "warning",
+      "metadata_json": "{\"published\": \"2026-08-05T00:00:00.000Z\"}",
+      "captured_at": "2026-08-05T13:53:28.909589+00:00",
+      "alerted": 0
+    },
+    {
       "id": 81,
       "type": "regulatory_alert",
       "source": "exa",
@@ -1135,6 +1205,6 @@
       "alerted": 0
     }
   ],
-  "count": 81,
-  "lastUpdated": "2026-08-05T09:52:05.921598+00:00"
+  "count": 86,
+  "lastUpdated": "2026-08-05T13:53:36.252613+00:00"
 }
