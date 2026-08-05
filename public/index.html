@@ -6,7 +6,7 @@
 <title>RupeeBoss CRM — Voice-First Lead Intelligence</title>
 <link rel="icon" href="rupeeboss-logo.jpg" type="image/jpeg">
 <script>
-  const BUILD_VERSION = '2026-08-05-v21-intel-filters';
+  const BUILD_VERSION = '2026-08-05-v22-reg-alerts';
   (function() {
     const stored = localStorage.getItem('crm_build_version');
     if (stored && stored !== BUILD_VERSION) {
@@ -2076,7 +2076,7 @@ function showMarketIntel(el) {
         <button onclick="loadMarketIntel()" style="background:var(--accent-violet);color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;">↻ Refresh</button>
       </div>
       
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;">
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:16px;">
         <div style="background:var(--bg-2);border:1px solid var(--border-card);border-radius:12px;padding:16px;">
           <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Social Mentions</div>
           <div style="font-size:24px;font-weight:700;color:#3498db;margin-top:4px;" id="stat-social">—</div>
@@ -2093,7 +2093,13 @@ function showMarketIntel(el) {
           <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">Competitor Items</div>
           <div style="font-size:24px;font-weight:700;color:#f39c12;margin-top:4px;" id="stat-competitor">—</div>
         </div>
+        <div style="background:var(--bg-2);border:1px solid var(--border-card);border-radius:12px;padding:16px;">
+          <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;">⚖️ Regulatory</div>
+          <div style="font-size:24px;font-weight:700;color:#9b59b6;margin-top:4px;" id="stat-regulatory">—</div>
+        </div>
       </div>
+      
+      <div id="regulatory-banner" style="display:none;margin-bottom:16px;"></div>
       
       <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;align-items:center;">
         <label style="font-size:12px;color:var(--text-muted);">From:</label>
@@ -2104,6 +2110,7 @@ function showMarketIntel(el) {
           <option value="all">All Types</option>
           <option value="social_mention">📡 Social Mentions</option>
           <option value="competitor_intel">🏢 Competitor Intel</option>
+          <option value="regulatory_alert">⚖️ Regulatory Alerts</option>
         </select>
         <select id="intel-sentiment-filter" style="padding:6px 10px;border:1px solid var(--border-card);border-radius:8px;font-size:13px;background:var(--bg-2);color:var(--text-primary);" onchange="filterIntel()">
           <option value="all">All Sentiments</option>
@@ -2166,12 +2173,41 @@ function loadMarketIntel() {
       const positive = social.filter(i => i.sentiment === 'positive');
       const negative = social.filter(i => i.sentiment === 'negative');
       const competitor = intelAllItems.filter(i => i.type === 'competitor_intel');
+      const regulatory = intelAllItems.filter(i => i.type === 'regulatory_alert');
+      const regCritical = regulatory.filter(i => i.severity === 'critical');
+      const regWarning = regulatory.filter(i => i.severity === 'warning');
       
       document.getElementById('stat-social').textContent = social.length;
       document.getElementById('stat-positive').textContent = positive.length;
       document.getElementById('stat-negative').textContent = negative.length;
       document.getElementById('stat-competitor').textContent = competitor.length;
-      document.getElementById('nav-intel-badge').textContent = negative.length;
+      document.getElementById('stat-regulatory').textContent = regulatory.length;
+      document.getElementById('nav-intel-badge').textContent = negative.length + regCritical.length;
+      
+      // Show regulatory alert banner if there are critical/warning alerts
+      const banner = document.getElementById('regulatory-banner');
+      if (regCritical.length > 0 || regWarning.length > 0) {
+        const topAlerts = regulatory.filter(i => i.severity === 'critical' || i.severity === 'warning').slice(0, 3);
+        const bannerColor = regCritical.length > 0 ? '#e74c3c' : '#f39c12';
+        banner.style.display = 'block';
+        banner.innerHTML = `
+          <div style="background:${regCritical.length > 0 ? 'rgba(231,76,60,0.1)' : 'rgba(243,156,18,0.1)'};border:1px solid ${bannerColor};border-radius:12px;padding:16px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span style="font-size:16px;">${regCritical.length > 0 ? '🚨' : '⚠️'}</span>
+              <span style="font-size:14px;font-weight:700;color:${bannerColor};">${regCritical.length > 0 ? 'Critical Regulatory Alerts' : 'Regulatory Updates'}</span>
+              <span style="font-size:12px;color:var(--text-muted);">${regCritical.length} critical, ${regWarning.length} warnings</span>
+            </div>
+            ${topAlerts.map(a => `
+              <div style="padding:8px 0;border-top:1px solid rgba(255,255,255,0.05);">
+                <a href="${a.url || '#'}" target="_blank" style="font-size:13px;color:var(--text-primary);text-decoration:none;font-weight:500;">${a.title || 'Untitled'}</a>
+                <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${a.captured_at ? a.captured_at.substring(0,16).replace('T',' ') : ''} | ${a.severity}</div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      } else {
+        banner.style.display = 'none';
+      }
       
       // Set default date range to cover all data
       if (intelAllItems.length > 0) {
@@ -2218,7 +2254,7 @@ function getFilteredIntel() {
 function renderIntelList() {
   const filtered = getFilteredIntel();
   const sentimentColor = {positive:'#27ae60', negative:'#e74c3c', neutral:'#64748b'};
-  const typeIcon = {social_mention:'📡', competitor_intel:'🏢'};
+  const typeIcon = {social_mention:'📡', competitor_intel:'🏢', regulatory_alert:'⚖️'};
   
   // Update result count
   const countEl = document.getElementById('intel-result-count');

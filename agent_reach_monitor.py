@@ -3,15 +3,17 @@
 RupeeBoss CRM — Agent Reach Integration
 Feature 3: Social Media Monitoring (Twitter/Reddit/Web mentions)
 Feature 4: Competitor Intelligence (loan products, pricing, offers)
+Feature 5: Regulatory News Alerts (RBI, NBFC, policy changes every 4 hours)
 
 Uses Agent Reach backends: Exa search, Jina Reader, RSS feeds.
 Stores results in a new `market_intelligence` table in conversations.db.
 Sends alerts via email when configured.
 
 Usage:
-  python3 agent_reach_monitor.py --feature social     # Run social monitoring
-  python3 agent_reach_monitor.py --feature competitor  # Run competitor research
-  python3 agent_reach_monitor.py --feature all          # Run both
+  python3 agent_reach_monitor.py --feature social       # Run social monitoring
+  python3 agent_reach_monitor.py --feature competitor   # Run competitor research
+  python3 agent_reach_monitor.py --feature regulatory   # Run regulatory alerts
+  python3 agent_reach_monitor.py --feature all          # Run all three
   python3 agent_reach_monitor.py --feature all --alert  # Run + email alerts
 """
 
@@ -60,6 +62,30 @@ RSS_FEEDS = [
     "https://www.moneycontrol.com/rss/business.xml",
     "https://economictimes.indiatimes.com/wealth/personal-finance-news/rssfeeds/2546214.cms",
     "https://www.financialexpress.com/feed/",
+]
+
+# Regulatory / policy RSS feeds
+REGULATORY_RSS_FEEDS = [
+    "https://www.rbi.org.in/Scripts/Rss.aspx?cat=Press+Releases",
+    "https://www.rbi.org.in/Scripts/Rss.aspx?cat=Notifications",
+    "https://www.rbi.org.in/Scripts/Rss.aspx?cat=Circulars",
+    "https://www.pib.gov.in/AllRel.aspx?reg=3&lang=1",
+    "https://www.sebi.gov.in/rss/press.xml",
+    "https://economictimes.indiatimes.com/industry/banking/finance/rssfeeds/13358259.cms",
+    "https://www.livemint.com/rss/economy/policy",
+    "https://www.moneycontrol.com/rss/economy.xml",
+]
+
+# Keywords that trigger regulatory alerts
+REGULATORY_KEYWORDS = [
+    'rbi', 'repo rate', 'reverse repo', 'moratorium', 'nbfc', 'microfinance',
+    'loan restructuring', 'emi', 'moratorium', 'interest rate', 'base rate',
+    'mclr', 'lending rate', 'credit policy', 'monetary policy', 'regulation',
+    'circular', 'notification', 'guideline', 'compliance', 'kyc', 'aadhaar',
+    'pan card', 'credit score', 'cibil', 'dlf', 'foreclosure', 'prepayment',
+    'dsao', 'digital lending', 'fintech', 'payment aggregator', 'upi',
+    'insolvency', 'nclt', 'sma', 'npa', 'provisioning', 'priority sector',
+    'msme', 'udyam', 'gst', ' Mudra', 'cgtmse', 'ecgc',
 ]
 
 
@@ -320,6 +346,87 @@ def run_competitor_intelligence():
     return total_found
 
 
+def run_regulatory_monitoring():
+    """Feature 5: Monitor regulatory/policy news for alerts (RBI, NBFC, loan rules)."""
+    print("\n⚖️ Feature 5: Regulatory News Alerts")
+    print("=" * 50)
+    
+    total_found = 0
+    critical_found = 0
+    
+    print("\n📰 Checking regulatory RSS feeds (RBI, SEBI, PIB, ET, Mint, Moneycontrol)...")
+    for feed_url in REGULATORY_RSS_FEEDS:
+        source_name = feed_url.split('/')[2]
+        print(f"  Reading: {source_name}")
+        items = read_rss(feed_url)
+        for item in items:
+            text = (item.get('title', '') + ' ' + item.get('summary', '')).lower()
+            # Check if any regulatory keyword matches
+            matched_keywords = [kw for kw in REGULATORY_KEYWORDS if kw in text]
+            if matched_keywords:
+                # Determine severity
+                title = item.get('title', '')
+                severity = 'info'
+                if any(kw in text for kw in ['moratorium', 'ban', 'restrict', 'penalty', 'fine', 'suspended', 'insolvency', 'npa']):
+                    severity = 'critical'
+                elif any(kw in text for kw in ['circular', 'notification', 'guideline', 'regulation', 'compliance', 'rbi', 'monetary policy']):
+                    severity = 'warning'
+                
+                # Determine sentiment
+                sentiment, _ = detect_sentiment(title + ' ' + item.get('summary', ''))
+                
+                stored = store_intel(
+                    'regulatory_alert', 'rss', matched_keywords[0],
+                    title, item.get('url', ''),
+                    item.get('summary', ''),
+                    sentiment, severity,
+                    {'feed': feed_url, 'matched_keywords': matched_keywords[:5]}
+                )
+                if stored:
+                    total_found += 1
+                    if severity == 'critical':
+                        critical_found += 1
+                        print(f"    🚨 [{severity}] {title[:60]}")
+                    elif severity == 'warning':
+                        print(f"    ⚠️  [{severity}] {title[:60]}")
+                    else:
+                        print(f"    ✓ [{severity}] {title[:60]}")
+        time.sleep(0.5)
+    
+    # Also do Exa searches for latest regulatory news
+    print("\n🔍 Searching for latest regulatory news via Exa...")
+    reg_search_keywords = [
+        "RBI circular loan NBFC 2026",
+        "RBI monetary policy repo rate 2026",
+        "NBFC regulation India latest 2026",
+        "digital lending guidelines RBI 2026",
+        "MSME loan policy change 2026",
+    ]
+    for kw in reg_search_keywords:
+        print(f"  Searching: {kw}")
+        results = exa_search(kw, num_results=3)
+        for r in results:
+            text = r.get('highlights', '') + ' ' + r.get('title', '')
+            text_lower = text.lower()
+            if any(kw in text_lower for kw in REGULATORY_KEYWORDS):
+                sentiment, _ = detect_sentiment(text)
+                severity = 'warning' if 'rbi' in text_lower or 'regulation' in text_lower else 'info'
+                stored = store_intel(
+                    'regulatory_alert', 'exa', kw,
+                    r.get('title', ''), r.get('url', ''),
+                    r.get('highlights', text),
+                    sentiment, severity,
+                    {'published': r.get('published', '')}
+                )
+                if stored:
+                    total_found += 1
+                    print(f"    ✓ [{sentiment}] {r.get('title', '')[:60]}")
+        time.sleep(1)
+    
+    print(f"\n📊 Regulatory Alerts Summary: {total_found} new alerts, {critical_found} critical")
+    return total_found, critical_found
+
+
 def send_alert_email(subject, body):
     """Send alert email via Gmail SMTP."""
     import smtplib
@@ -387,7 +494,7 @@ def generate_report():
 
 def main():
     parser = argparse.ArgumentParser(description='RupeeBoss CRM — Agent Reach Market Intelligence')
-    parser.add_argument('--feature', choices=['social', 'competitor', 'all', 'report'], default='all',
+    parser.add_argument('--feature', choices=['social', 'competitor', 'regulatory', 'all', 'report'], default='all',
                         help='Which feature to run')
     parser.add_argument('--alert', action='store_true',
                         help='Send email alert with results')
@@ -401,6 +508,7 @@ def main():
     
     social_count = 0
     competitor_count = 0
+    regulatory_count = 0
     critical_count = 0
     
     if args.feature in ('social', 'all'):
@@ -409,9 +517,13 @@ def main():
     if args.feature in ('competitor', 'all'):
         competitor_count = run_competitor_intelligence()
     
+    if args.feature in ('regulatory', 'all'):
+        regulatory_count, reg_critical = run_regulatory_monitoring()
+        critical_count += reg_critical
+    
     # Summary
     print("\n" + "=" * 50)
-    print(f"✅ Complete: {social_count} social mentions, {competitor_count} competitor items")
+    print(f"✅ Complete: {social_count} social, {competitor_count} competitor, {regulatory_count} regulatory, {critical_count} critical")
 
     # Generate static JSON for Cloudflare Pages
     import sqlite3
