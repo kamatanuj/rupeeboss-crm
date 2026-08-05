@@ -1,6 +1,48 @@
 {
   "items": [
     {
+      "id": 66,
+      "type": "competitor_intel",
+      "source": "exa",
+      "keyword": "MSME loan best rates India",
+      "title": "MSME Loan Interest Rate - Check Current Rates & Apply",
+      "url": "https://www.bajajfinserv.in/what-are-the-interest-rate-on-msme-loan",
+      "content": "Bajaj Finserv offers low-interest rates and nominal fees and charges on its MSME loans. This collateral-free loan comes with an attractive interest rate starting at 14% - 23% p.a. and a nominal processing fee of up to 4.72% of the Loan Amount (Inclusive of Applicable Taxes). Here is the list of fees and charges: ... : Up To 4.72% (Inclusive Of ... Taxes) On The Outstanding ... Amount As On The Date Of ... . \u2022 Flexi Term (Dropline) Loan: Up To 4.72% (Inclusive Of ... Taxes) on the ... . \u2022 Flex ... 4. ... Applicable Taxes) on ... | Type of fee | Applicable charges | | --- | --- | | Rate of interest | 14% to 18% per annum | | Processing fees | Up to 4.72% of the loan amount (inclusive of applicable taxes) | | Bounce charges | Rs. 1500/- per bounce. \u201cBounce charges\u201d shall mean charges for (i) dishonour of any payment instrument; or (ii) non-payment of instalment (s) on their respective due dates due to dishonour of payment mandate or non-registration of the payment mandate or any other reason. | | Flexi Facility Charge | | Penal Charge | Delay in payment of instalment(s) shall attract Penal Charge at the rate of 36% per annum per instalment from the respective due date until the date of receipt of the full instalment(s) amount. | | Prepayment charges | | Stamp duty (as per respective state) | Payable as per state laws and deducted upfront from loan amount | | Annual maintenance charges | ... The interest rate on MSME (Micro, Small, and Medium Enterprises) loans directly impacts the Equated Monthly Installment (EMI) amount paid by borrowers. A lower interest rate reduces the EMI, making the loan more affordable and reducing the overall cost of borrowing. Conversely, a higher interest rate increases the EMI, potentially straining the borrower's finances and increasing the total repayment amount. Therefore, borrowers often seek competitive interest rates when availing of MSME loans to minimize the financial burden and manage their cash flow effectively, ultimately impactin",
+      "sentiment": "neutral",
+      "severity": "info",
+      "metadata_json": "{\"published\": \"N/A\"}",
+      "captured_at": "2026-08-05T09:05:23.509041+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 65,
+      "type": "competitor_intel",
+      "source": "exa",
+      "keyword": "MSME loan best rates India",
+      "title": "MSME Loan Interest Rate and EMI Calculator Guide",
+      "url": "https://tallysolutions.com/business-guides/msme-loan-interest-rate-emi-calculator/",
+      "content": "30 second summary | MSME loans in India help businesses with working capital, expansion and equipment. Interest rates range from 7% to 24%, depending on the lender and borrower profile. Using an EMI calculator helps plan repayments, while schemes like PMMY and CGTMSE reduce collateral requirements and improve loan access. ... MSME loans help small businesses in India secure working capital, fund expansion or buy equipment. Interest rates range from 7-8% for bank loans to 24% for NBFC loans, depending on the borrower\u2019s profile and risk. Loan amounts can vary from \u20b950,000 to \u20b95 crore. Using an EMI calculator helps businesses plan repayments and manage cash flow effectively. ... ## MSME loan interest rate in India ... Interest rates on MSME loans are not fixed. They depend on the lender, the borrower and the loan profile. ... Interest rates among lenders: ... State Bank of India ... 8.00% onwards ... Canara Bank ... 9.20% onwards ... Punjab National Bank ... 9.60% onwards ... 8.80% onwards ... Union Bank of India ... 10.95% onwards ... Mahindra Finance ... 7.20% onwards ... 17% onwards ... Muthoot Fincorp ... 18% onwards ... Lendingkart ... ~15% p.a. (1.25% monthly) ... General comparison by lender type: ... Public sector banks ... 8% \u2013 12% ... 10% \u2013 16% ... NBFCs ... 15% \u2013 24% ... 8% \u2013 11% ... Public sector banks tend to offer lower rates as MSME lending falls under the priority sector lending category. NBFCs usually approve loans faster but charge higher rates due to increased risk. ... Interest rates vary per borrower. Lenders evaluate multiple factors before finalising a rate: ... - Credit score and repayment history: A score above 750 generally helps secure lower rates, while a lower score can increase rates. - Business timeline and stability: Businesses operating for 6\u201324 months with stable income are considered less risky. - Turnover and financial strength: Annual turnover above \u20b910 lakh with consistent cash flow usually attracts better rates. - Loan amount and ",
+      "sentiment": "neutral",
+      "severity": "info",
+      "metadata_json": "{\"published\": \"2026-04-08T00:00:00.000Z\"}",
+      "captured_at": "2026-08-05T09:05:23.503493+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 64,
+      "type": "competitor_intel",
+      "source": "exa",
+      "keyword": "personal loan India interest rate 2026",
+      "title": "Personal loan rates in May 2026: Compare SBI, HDFC, ICICI ...",
+      "url": "https://www.livemint.com/money/personal-finance/personal-loan-rates-in-may-2026-compare-sbi-hdfc-icici-and-other-lenders-with-fees-and-emis-11778482187343.html",
+      "content": "Personal loan rates in May 2026: Compare SBI, HDFC, ICICI and other lenders with fees and EMIs | Mint View Market Dashboard # Personal loan rates in May 2026: Compare SBI, HDFC, ICICI and other lenders with fees and EMIs ## Comprehensive comparison of personal loan rates in May 2026 across SBI, HDFC, ICICI Bank, Axis Bank, and other lenders in India, including EMIs, interest rates, and processing fees, to help borrowers make informed decisions. Before finalising any loan offer, consult a certified financial advisor. Shivam Shukla Comprehensive personal loan rates May 2026, including processing fees, EMIs, and comparisons across SBI, HDFC, ICICI, Axis Bank, and other leading lenders in India. AI Quick Read --- ",
+      "sentiment": "neutral",
+      "severity": "info",
+      "metadata_json": "{\"published\": \"2026-05-11T00:00:00.000Z\"}",
+      "captured_at": "2026-08-05T09:05:19.202683+00:00",
+      "alerted": 0
+    },
+    {
       "id": 63,
       "type": "competitor_intel",
       "source": "exa",
@@ -882,7 +924,5 @@
       "captured_at": "2026-08-04T11:48:43.760417+00:00",
       "alerted": 0
     }
-  ],
-  "count": 63,
-  "lastUpdated": "2026-08-05T06:00:35.109770+00:00"
+  ]
 }
