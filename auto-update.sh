@@ -54,7 +54,10 @@ git add -A >> "$LOG" 2>&1
 git commit -m "Auto-update: Add new leads $(date +%Y-%m-%d_%H:%M)" >> "$LOG" 2>&1 || log "No changes to commit"
 # Pull --rebase first: another repo (/root/.openclaw/workspace/rupeeboss via Hermes cron)
 # pushes to the same remote, so our push will fail without rebasing first.
+# Stash any stray unstaged changes before rebasing
+git stash >> "$LOG" 2>&1 || true
 git pull --rebase origin main >> "$LOG" 2>&1 || log "Pull rebase failed - check manually"
+git stash pop >> "$LOG" 2>&1 || true
 git push origin main >> "$LOG" 2>&1 || log "Push may have failed - check manually"
 
 # Step 4: Deploy via GitHub Actions (Cloudflare Pages auto-deploy)

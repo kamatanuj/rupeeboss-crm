@@ -389,7 +389,10 @@ def main():
     log("=" * 60)
     log("COMPLETE RUPEEBOSS CRM REBUILD")
     log("=" * 60)
-    sync_conversations()
+    try:
+        sync_conversations()
+    except Exception as e:
+        log(f"WARNING: API sync failed ({e}). Rebuilding from existing DB data only.")
     leads = rebuild_from_db()
 
     log("\nSample leads:")
