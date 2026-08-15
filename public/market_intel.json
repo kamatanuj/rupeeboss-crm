@@ -1,6 +1,62 @@
 {
   "items": [
     {
+      "id": 169,
+      "type": "regulatory_alert",
+      "source": "exa",
+      "keyword": "RBI monetary policy repo rate 2026",
+      "title": "RBI keeps repo rate unchanged; Projects India's real GDP ...",
+      "url": "https://newsonair.gov.in/rbi-to-announce-its-first-bi-monthly-monetary-policy-statement-for-financial-year-2026-27-today/",
+      "content": "RBI keeps repo rate unchanged; Projects India\u2019s real GDP growth for current fiscal at 6.9% | Akashvani News ... ## RBI keeps repo rate unchanged; Projects India\u2019s real GDP growth for current fiscal at 6.9% ... The Reserve Bank of India has kept interest rates unchanged at 5.25 percent. Announcing the first bi-monthly monetary policy for the current fiscal, RBI Governor Sanjay Malhotra today said that the Monetary Policy Committee has unanimously decided to retain the repo rate at 5.25 per cent with a neutral stance. ... Consequently, the standing deposit facility rate remains at 5 per cent and the marginal standing facility rate and the Bank Rate remains at 5.50 per cent. ... Monetary policy Committee has also expected that the GDP for the last financial year will be at 7.6 percent while for the current fiscal year, it will be at 6.9 per cent. RBI has projected that CPI inflation for the current financial year will be at 4.6 percent. ... Accordingly, the Monetary Policy Committee voted to keep the policy rate unchanged even as it remains vigilant, closely monitoring incoming information and assessing the balance of risks. ",
+      "sentiment": "neutral",
+      "severity": "warning",
+      "metadata_json": "{\"published\": \"2026-08-15T07:02:28.778Z\"}",
+      "captured_at": "2026-08-15T09:02:29.441736+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 168,
+      "type": "competitor_intel",
+      "source": "exa",
+      "keyword": "business loan NBFC comparison India",
+      "title": "Business Loans: Compare 50+ Lenders in India | MoneyKarma",
+      "url": "https://moneykarma.com/business-loan/",
+      "content": "Business Loans: Compare 50+ Lenders in India | MoneyKarma ... Get business loans from \u20b950 lakhs to \u20b950 crores with 24-hour approval. Join 50,000+ businesses who scaled with our 90% approval rate and minimal documentation. ... ## Trusted by India's Leading Banks & NBFCs ... Access competitive rates from 90+ financial institutions ... Business Loans Tailored to ... ### Working Capital Loan ... ### MSME Loan ... ## Quick Eligibility Check ... 90% approval rate for businesses meeting our simple criteria ",
+      "sentiment": "neutral",
+      "severity": "info",
+      "metadata_json": "{\"published\": \"N/A\"}",
+      "captured_at": "2026-08-15T09:01:26.971554+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 167,
+      "type": "competitor_intel",
+      "source": "exa",
+      "keyword": "MSME loan best rates India",
+      "title": "Apply for MSME Business Loan with Govt. Subsidy Schemes",
+      "url": "https://www.paisabazaar.com/business-loan/msme-loan/",
+      "content": "## Find Best Business Loan Offers ... HDFC Bank ... Max Loan Amt.Upto \u20b975L ... Rate of Interest10.75% - 28% ... ICICI Bank ... Max Loan Amt.Upto \u20b950L ... Rate of Interest13.25% 19.25% ... Max Loan Amt.Upto \u20b975L ... Rate of Interest15% - 19.25% ... An MSME loan is a specialised loan or credit facility offered to MSMEs by banks, NBFCs, Government Bodies, financial institutions, etc. These MSME loans provide financial support for a range of business needs, including improving cash flow, expanding operations, managing working capital, covering business expenses, and more. The interest rates of these MSME business loans vary from lender to lender. ... You can check, compare, and apply for business loans on Paisabazaar with interest rates starting from 14.99% p.a. The MSME loan interest rate varies by the lender, business profile, and loan amount. ... - Assess how urgently you need ... funds before selecting the loan ... - Match the loan tenure with your expected ... - Compare ... and prepayment charges - Keep financial documents and cash ... organised for faster approval - Borrow only what supports growth ... not what increases repayment pressure ... What is the current interest rate for MSME loans? ... The interest rates for business loans for MSMEs vary from lender to lender. You can check, compare, and apply for various types of business loans on Paisabazaar. ... MSME loans offer benefits such as easy access to funds, attractive interest rates, reduced paperwork, and fast processing times. These loans help businesses manage their working capital, expand operations, and invest in machinery or infrastructure. ",
+      "sentiment": "neutral",
+      "severity": "info",
+      "metadata_json": "{\"published\": \"N/A\"}",
+      "captured_at": "2026-08-15T09:01:23.464817+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 166,
+      "type": "social_mention",
+      "source": "exa",
+      "keyword": "rupeeboss fraud",
+      "title": "Stop Illegal Payday Loan Apps and Exploitative Interest Rates - iPetitions",
+      "url": "https://www.ipetitions.com/petition/end-the-1-loan-trap-stop-harassment/",
+      "content": "We, the citizens of India, demand immediate action against illegal payday loan apps that are trapping people with 1% daily interest schemes, harassment, and exploitation. ... Dozens of apps are openly exploiting borrowers, including: Rupee112, SalaryOnTime, Salary Advance, Duniy Finance, Zapp Loans, Ram Fincorp, Lending Rupee, Easy Dhan, Credxpres, Sabka Loan, Surya Loan, Loan Pey, Salary Loan, Loan Hub, Instant Loan Pay, Cash My Payment, Day to Day Loan, Next Big Loan, Credit Pey, Jhatpat Loans, CreditSea, CreditWalle, MoneyWalle, LoanOne, Day and Night Loan, Rupee on Time, Cash Walle, Loanwithin, Salary4Sure, FastPaise, Dpal, Rupeelend, Digii Finance, Figiitech Lend, Xpressloan, Daksh Money, EasyRupee, LoanZap, Speedoloan, SalaryNow, CashMyPayment, EverydayLoanIndia, PaisaOnTime, and many more. ... These apps lure people with instant cash but then push them into: ... - 1% daily interest (365%+ yearly), far beyond RBI limits - Harassment through WhatsApp and phone calls from fake recovery agents - Threats and public shaming by contacting family, friends, and colleagues - Illegal data misuse by accessing contact lists without consent - Mental stress, health breakdown, and family disputes caused by continuous harassment ... This is nothing but digital extortion. These apps are operating outside RBI\u2019s framework and are exploiting ordinary citizens who fall into their trap during emergencies. ... 1. RBI and Government of India must immediately ban all apps charging 1% daily interest. 2. Criminal action against app operators and their recovery agents for harassment and extortion. 3. Strict enforcement of digital lending guidelines and caps on interest rates. 4. A dedicated helpline and grievance redressal system for victims of loan app harassment. 5. Public awareness campaigns to protect people from predatory digital loan scams. ... We urge the authorities to take swift and strict action before more Indian families are destroyed by these 1% loan exploitation traps. ... ",
+      "sentiment": "neutral",
+      "severity": "info",
+      "metadata_json": "{\"published\": \"N/A\"}",
+      "captured_at": "2026-08-15T09:01:12.560178+00:00",
+      "alerted": 0
+    },
+    {
       "id": 165,
       "type": "regulatory_alert",
       "source": "exa",
@@ -1343,64 +1399,8 @@
       "metadata_json": "{\"published\": \"2026-08-05T00:00:00.000Z\"}",
       "captured_at": "2026-08-05T09:51:54.453058+00:00",
       "alerted": 0
-    },
-    {
-      "id": 69,
-      "type": "regulatory_alert",
-      "source": "exa",
-      "keyword": "RBI circular loan NBFC 2026",
-      "title": "Master Directions - Reserve Bank of India",
-      "url": "https://www.rbi.org.in/SCRIPTS/BS_ViewMasDirections.aspx?id=12948",
-      "content": "to as 'NBFCs' and individually as a 'NBFC'). (1) NBFC-D registered with the RBI under the provisions of the RBI Act, 1934; (2) NBFC-ICC registered with the RBI under the provisions of the RBI Act, 1934; (3) NBFC-Factor registered with the RBI under the provisions of the Factoring Regulation Act, 2011; (4) NBFC-IFC registered with the RBI under the provisions of the RBI Act, 1934; (5) IDF-NBFC registered with the RBI under the provisions of the RBI Act, 1934; 4. The provisions of these directions shall apply to Housing Finance Company registered with the RBI under NHB Act, 1987; unless the provisions of these directions are not consistent with the Reserve Bank of India (Housing Finance Company) Directions, 2025. The instructions contained in the Reserve Bank of India (Housing Finance Company) Directions, 2025 shall prevail in the event of conflict, if any, with these Directions. 5. The provisions of these directions shall apply to NBFC-Micro Finance Institution registered with the RBI under RBI Act, 1934; unless the provisions of these directions are not consistent with the Reserve Bank of India (Non-Banking Financial Companies \u2013 Microfinance Institution) Directions, 2025. The instructions contained in the Reserve Bank of India (Non-Banking Financial Companies \u2013 Microfinance Institution) Directions, 2025 shall prevail in the event of conflict, if any, with these Directions, with these Directions. 6. The provisions of these directions shall apply to Mortgage Guarantee Company registered with the RBI under RBI Act, 1934; unless the provisions of these directions are not consistent with the Reserve Bank of India (Mortgage Guarantee Companies) Directions, 2025. The instructions contained in the Reserve Bank of India (Mortgage Guarantee Companies) Directions, 2025 shall prevail in the event of conflict, if any, with these Directions. 7. The provisions of these directions shall apply to Core Investment Company registered with the RBI under RBI Act, 1934; unless the provisi",
-      "sentiment": "negative",
-      "severity": "warning",
-      "metadata_json": "{\"published\": \"N/A\"}",
-      "captured_at": "2026-08-05T09:51:50.960863+00:00",
-      "alerted": 0
-    },
-    {
-      "id": 68,
-      "type": "regulatory_alert",
-      "source": "exa",
-      "keyword": "RBI circular loan NBFC 2026",
-      "title": "Notifications - Reserve Bank of India",
-      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13428&Mode=0",
-      "content": "/2026-27/69 DOR.STR.REC.58/21-04-048/2026-27 April 29, 2026 Reserve Bank of India (Non-Banking Financial Companies \u2013 Income Recognition, Asset Classification and Provisioning) Amendment Directions, 2026 Please refer to Reserve Bank of India (Non-Banking Financial Companies \u2013 Resolution of Stressed Assets) Amendment Directions, 2026 dated April 29, 2026. 2. Consequent to the aforesaid Amendment Directions, in exercise of the powers conferred by the sections 45JA, 45L and 45M of the Reserve Bank of India Act, 1934; sections 30A and 32 of the National Housing Bank Act, 1987 and section 3 read with section 31A and section 6 of the Factoring Regulation Act, 2011, and all other laws enabling the Reserve Bank of India (hereinafter called the Reserve Bank) in this regard, the Reserve Bank being satisfied that it is necessary and expedient in the public interest so to do, hereby issues the Amendment Directions hereinafter specified. 3. These Amendment Directions modify the Directions as under: i. Paragraph 27A and 27B shall be inserted as under: 27A. If a resolution plan is implemented in adherence to the provisions of Chapter VI-A of Reserve Bank of India (Non-Banking Financial Companies \u2013 Resolution of Stressed Assets) Directions, 2025 dated November 28, 2025, borrower accounts which are classified as \u2018Standard\u2019 may be retained as such upon implementation. Borrower accounts which may have slipped into NPA between the date of occurrence of the calamity and implementation of the resolution plan, shall be upgraded as \u2018Standard\u2019, upon implementation of the resolution plan. Provided that after implementation of the resolution plan, the subsequent asset classification shall be governed by the criteria laid out in these Directions. 27B. Accounts which are restructured under paragraph 122E to 122L of the Reserve Bank of India (Non-Banking Financial Companies \u2013 Resolution of Stressed Assets) Directions, 2025 dated November 28, 2025, where a subsequent restructuring is necessitated ",
-      "sentiment": "neutral",
-      "severity": "warning",
-      "metadata_json": "{\"published\": \"N/A\"}",
-      "captured_at": "2026-08-05T09:51:50.956504+00:00",
-      "alerted": 0
-    },
-    {
-      "id": 67,
-      "type": "regulatory_alert",
-      "source": "exa",
-      "keyword": "RBI circular loan NBFC 2026",
-      "title": "Notifications - Reserve Bank of India",
-      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13561&Mode=0",
-      "content": "| RBI/2026-27/183 DOR.STR.REC.156/21-04-048/2026-27 July 15, 2026 Reserve Bank of India (Non-Banking Financial Companies \u2013 Credit Facilities) Second Amendment Directions, 2026 Please refer to Reserve Bank of India (Non-Banking Financial Companies \u2013 Credit Facilities) Directions, 2025(hereinafter referred to as \u2018the Directions\u2019). 2. In exercise of the powers conferred by the sections 45JA, 45L and 45M of the Reserve Bank of India Act, 1934; sections 30A and 32 of the National Housing Bank Act, 1987 and section 3 read with section 31A and section 6 of the Factoring Regulation Act, 2011, and all other laws enabling the Reserve Bank of India (hereinafter called the Reserve Bank) in this regard, the Reserve Bank being satisfied that it is necessary and expedient in the public interest so to do, hereby issues the Amendment Directions hereinafter specified. 3. These Amendment Directions modify the Directions as under: (i) In paragraph 70, an Explanation shall be added as under: Explanation: Where it is possible for a project to be operationalised as multiple independent viable units, a NBFC may at its discretion finance such independent units as separate projects with their own financial closure, provided each unit is appraised ex-ante for standalone viability. (ii) In paragraph 72, an Explanation shall be added as under: Explanation: For the purpose of this paragraph, for projects in electricity generation where the project scope involves both generation and transmission (evacuation infrastructure), the right of way requirement for transmission may be determined as per sub-paragraph (3). 4. The above amendment would come into force with immediate effect. (Vaibhav Chaturvedi) Chief General Manager | | --- | ... | ( 436 kb ) | | --- | | Reserve Bank of India (Non-Banking Financial Companies \u2013 Credit Facilities) Second Amendment Directions, 2026 | ... ## 2026 ... - January --- ",
-      "sentiment": "neutral",
-      "severity": "warning",
-      "metadata_json": "{\"published\": \"N/A\"}",
-      "captured_at": "2026-08-05T09:51:50.941961+00:00",
-      "alerted": 0
-    },
-    {
-      "id": 66,
-      "type": "competitor_intel",
-      "source": "exa",
-      "keyword": "MSME loan best rates India",
-      "title": "MSME Loan Interest Rate - Check Current Rates & Apply",
-      "url": "https://www.bajajfinserv.in/what-are-the-interest-rate-on-msme-loan",
-      "content": "Bajaj Finserv offers low-interest rates and nominal fees and charges on its MSME loans. This collateral-free loan comes with an attractive interest rate starting at 14% - 23% p.a. and a nominal processing fee of up to 4.72% of the Loan Amount (Inclusive of Applicable Taxes). Here is the list of fees and charges: ... : Up To 4.72% (Inclusive Of ... Taxes) On The Outstanding ... Amount As On The Date Of ... . \u2022 Flexi Term (Dropline) Loan: Up To 4.72% (Inclusive Of ... Taxes) on the ... . \u2022 Flex ... 4. ... Applicable Taxes) on ... | Type of fee | Applicable charges | | --- | --- | | Rate of interest | 14% to 18% per annum | | Processing fees | Up to 4.72% of the loan amount (inclusive of applicable taxes) | | Bounce charges | Rs. 1500/- per bounce. \u201cBounce charges\u201d shall mean charges for (i) dishonour of any payment instrument; or (ii) non-payment of instalment (s) on their respective due dates due to dishonour of payment mandate or non-registration of the payment mandate or any other reason. | | Flexi Facility Charge | | Penal Charge | Delay in payment of instalment(s) shall attract Penal Charge at the rate of 36% per annum per instalment from the respective due date until the date of receipt of the full instalment(s) amount. | | Prepayment charges | | Stamp duty (as per respective state) | Payable as per state laws and deducted upfront from loan amount | | Annual maintenance charges | ... The interest rate on MSME (Micro, Small, and Medium Enterprises) loans directly impacts the Equated Monthly Installment (EMI) amount paid by borrowers. A lower interest rate reduces the EMI, making the loan more affordable and reducing the overall cost of borrowing. Conversely, a higher interest rate increases the EMI, potentially straining the borrower's finances and increasing the total repayment amount. Therefore, borrowers often seek competitive interest rates when availing of MSME loans to minimize the financial burden and manage their cash flow effectively, ultimately impactin",
-      "sentiment": "neutral",
-      "severity": "info",
-      "metadata_json": "{\"published\": \"N/A\"}",
-      "captured_at": "2026-08-05T09:05:23.509041+00:00",
-      "alerted": 0
     }
   ],
   "count": 100,
-  "lastUpdated": "2026-08-14T09:02:27.491434+00:00"
+  "lastUpdated": "2026-08-15T09:02:29.441736+00:00"
 }
