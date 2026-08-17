@@ -1,6 +1,48 @@
 {
   "items": [
     {
+      "id": 176,
+      "type": "regulatory_alert",
+      "source": "exa",
+      "keyword": "RBI monetary policy repo rate 2026",
+      "title": "Press Releases - Reserve Bank of India",
+      "url": "https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62599",
+      "content": "2026-27 is projected at 6.9 per cent, with Q1 at 6.8 per cent; Q2 at 6.7 per cent; Q3 at 7.0 per cent; and Q4 at 7.2 per cent (Chart 1). Further escalation of the conflict, its continuation over a wider geographical spread and uncertainty regarding the damage to the energy infrastructure, apart from weather related events, pose downside risks to the domestic growth outlook. 10. As per the new CPI series (2024=100), headline inflation increased to 3.2 per cent in February 2026 from 2.7 per cent in January. The uptick was primarily driven by unfavourable base effects even as the momentum remained muted. While food inflation increased in February, core (excluding food and fuel) inflation remained unchanged. Excluding precious metals, core inflation remained moderate at 2.1 per cent in January and February, suggesting subdued underlying inflation pressures. 11. The ongoing conflict has led to large volatility in international energy and other commodity prices imparting considerable uncertainty to the near-term inflation outlook. The pass-through of higher global energy prices has resulted in price increases in select fuels such as premium petrol and LPG and diesel for industrial use. On the other hand, the near-term food supply prospects have been boosted by robust rabi crop providing some comfort. Considering all these factors, CPI inflation for 2026-27 is projected to be at 4.6 per cent with Q1 at 4.0 per cent; Q2 at 4.4 per cent; Q3 at 5.2 per cent; and Q4 at 4.7 per cent. Persistently elevated energy prices due to the West Asia conflict and possible El Ni\u00f1o conditions (which could have a negative impact on southwest monsoon) pose upside risks to inflation (Chart 2). Core inflation is projected at 4.4 per cent for 2026-27 and, excluding precious metals, it is even lower indicating that underlying inflation pressures are expected to remain contained. Rationale for Monetary Policy Decisions 12. Since the last policy meeting, geopolitical uncertainties have heightened s",
+      "sentiment": "positive",
+      "severity": "info",
+      "metadata_json": "{\"published\": \"N/A\"}",
+      "captured_at": "2026-08-17T09:02:22.378165+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 175,
+      "type": "competitor_intel",
+      "source": "exa",
+      "keyword": "loan aggregator India competitors",
+      "title": "India Online Loan Aggregators Market",
+      "url": "https://www.researchandmarkets.com/reports/6211016/india-online-loan-aggregators-market",
+      "content": "## India Online Loan Aggregators Market Competitive Landscape ... The India Online Loan Aggregators Market is characterized by a dynamic mix of regional and international players. Leading participants such as BankBazaar, Paisabazaar, Lendingkart, PaySense (now PayLater by LazyPay), RupeeRedee, CASHe, Indiabulls Dhani, EarlySalary (now Fibe), KreditBee, FlexiLoans, LoanTap, Nira, ZestMoney, Fibe, MoneyTap, Faircent, IndiaLends, and Buddy Loan contribute to innovation, geographic expansion, and service delivery in this space. ... 5.1. Detailed Profiles of Major Companies5.1.1. BankBazaar5.1.2. Paisabazaar5.1.3. Lendingkart5.1.4. PaySense (now PayLater by LazyPay)5.1.5. RupeeRedee5.2. Cross Comparison Parameters5.2.1. No. of Employees5.2.2. Headquarters5.2.3. Inception Year5.2.4. Revenue5.2.5. Loan Disbursement Volume ... - BankBazaar - Paisabazaar - Lendingkart - PaySense (now PayLater by LazyPay) - RupeeRedee - CASHe - Indiabulls Dhani - EarlySalary (now Fibe) - KreditBee - FlexiLoans - LoanTap - Nira - ZestMoney - Fibe - MoneyTap - Faircent - IndiaLends - Buddy Loan --- ",
+      "sentiment": "neutral",
+      "severity": "info",
+      "metadata_json": "{\"published\": \"N/A\"}",
+      "captured_at": "2026-08-17T09:01:35.797793+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 174,
+      "type": "competitor_intel",
+      "source": "exa",
+      "keyword": "MSME loan best rates India",
+      "title": "ABL (Saral) - Business",
+      "url": "https://sbi.bank.in/web/business/sme/sme-loans/abl-saral",
+      "content": "- Minimum: Above Rs.10.00 lakh. - Maximum: Rs.5.00 Cr. ... - Attractive Interest rates based on rating of the Borrower/ External Rating or as per Scheme Specific Rating (if applicable) or as per extant guidelines of the Bank. EBR (Linked to Repo Rate and Currently EBR is Repo Rate + 2.65%) linked (for MSMEs) & 6 months MCLR linked (for Non-MSMEs) ... ## Interest Rates ... 7.25%* p.a. onwards ... 10.00% p.a.* ... 11.60% p.a.* ... 2.50% p.a. ... Starts From 8.70%* ... 2.50% p.a. ... 6.90% p.a.* ... 8.90% p.a. ... 6.95% ... 5.75% p.a. ... for loan amount up to Rs. 2 lacs ... 7.90% p.a. ... for loan amount > Rs. 2 lacs up to Rs. 6 lacs ... 9.95% p.a. ",
+      "sentiment": "neutral",
+      "severity": "info",
+      "metadata_json": "{\"published\": \"N/A\"}",
+      "captured_at": "2026-08-17T09:01:22.544225+00:00",
+      "alerted": 0
+    },
+    {
       "id": 173,
       "type": "regulatory_alert",
       "source": "exa",
@@ -1357,50 +1399,8 @@
       "metadata_json": "{\"published\": \"N/A\"}",
       "captured_at": "2026-08-05T09:52:01.563918+00:00",
       "alerted": 0
-    },
-    {
-      "id": 76,
-      "type": "regulatory_alert",
-      "source": "exa",
-      "keyword": "digital lending guidelines RBI 2026",
-      "title": "N/A",
-      "url": "https://www.pdicai.org/Docs/RBI-2025-26-36_125202512145948.pdf",
-      "content": "RESERVE BANK OF INDIA RBI/2025-26/36 DOR.STR.REC.19/21.07.001/2025-26 May 8, 2025 Reserve Bank of India (Digital Lending) Directions, 2025 Index ... Reserve Bank is statutorily mandated to operate the credit system of the country to its advantage. In this endeavour, Reserve Bank encourages ... in the financial systems, products and credit ... methods while ensuring orderly growth, financial ... stability and protection of depositors\u2019 and borrowers ... interest. Certain concerns had ... emerged around the methods of designing, delivering and servicing digital credit products, which if not mitigated, may impact the borrower\u2019s confidence in the digital lending ecosystem. The concerns primarily relate to unbridled engagement of third parties, mis-selling, breach of data privacy, unfair business conduct, charging of exorbitant interest rates, and unethical recovery practices. To address these concerns, pursuant to the recommendations made by the \u201cWorking Group on Digital Lending\u201d, the Reserve Bank has, from time to time, issued guidelines to its regulated entities on digital lending. These Directions consolidate the earlier instructions along with certain new measures for arrangements involving Lending Service Providers partnering with multiple regulated entities as mentioned under para 6, and for creation of a directory of digital lending apps as mentioned under para 17 of these Directions. ... i. These Directions shall be called the Reserve Bank of India (Digital Lending) Directions, 2025. ... ii. These Directions shall come into force immediately except for para 6, which shall come into effect from November 1, 2025, and para 17, which shall come into effect from June 15, 2025. ... These Directions shall be applicable to all digital lending activities of the following entities, hereinafter referred to as a Regulated Entity (RE) and collectively as Regulated Entities (REs), as the context may require: i. All Commercial Banks, ... ii. All Primary (Urban) Co-operative Ban",
-      "sentiment": "neutral",
-      "severity": "warning",
-      "metadata_json": "{\"published\": \"N/A\"}",
-      "captured_at": "2026-08-05T09:52:01.552631+00:00",
-      "alerted": 0
-    },
-    {
-      "id": 75,
-      "type": "regulatory_alert",
-      "source": "exa",
-      "keyword": "NBFC regulation India latest 2026",
-      "title": "RBI Issues 2026 Supervisory Returns Directions for Non-Banking Financial Companies",
-      "url": "https://taxguru.in/rbi/rbi-issues-2026-supervisory-returns-directions-non-banking-financial-companies.html",
-      "content": "The Reserve Bank of India issued the Reserve Bank of India (Non-Banking Financial Companies \u2013 Supervisory Returns) Directions, 2026 (RBI/DoS/2026-27/466 dated July 31, 2026), effective immediately, under Chapter III-B of the Reserve Bank of India Act, 1934 and Section 6 of the Factoring Regulation Act, 2011, and applicable to all categories of Non-Banking Financial Companies, excluding Housing Finance Companies. The Directions prescribe governance standards for data quality, risk data aggregation, reporting accuracy, IT infrastructure, and business continuity, and require NBFCs to submit supervisory returns through RBI\u2019s online portals. They specify applicable returns, periodicity, reference dates, and timelines for various NBFC categories, including DNBS01 to DNBS14, CRILC, liquidity and prudential returns, fraud monitoring returns, Form A Certificate, and returns for Core Investment Companies, Peer-to-Peer Lending Platforms, Standalone Primary Dealers, and overseas investments. The Directions prescribe timelines for weekly, monthly, quarterly, yearly, and event-based returns, including special timelines for Statutory Auditor Certificates, fraud reporting, and auditor appointment certificates. RBI may introduce or withdraw returns, impose penalties for violations under the Reserve Bank of India Act, 1934, repeal earlier supervisory return directions while preserving existing actions and liabilities, and clarify that RBI\u2019s interpretation shall be final and binding. ... 3. These Directions shall be applicable to all categories of Non-Banking Financial Company [excluding Housing Finance Companies (HFCs)] (hereinafter collectively referred to as \u2018NBFCs\u2019 and individually as \u2018NBFC\u2019), for all layers, unless specified otherwise. ... 18. RBI has introduced various online portals, links to which are available on RBI website, for filing all applicable online returns by the NBFC. The NBFC shall submit all the returns through online mode in the formats and in the manner as comm",
-      "sentiment": "negative",
-      "severity": "warning",
-      "metadata_json": "{\"published\": \"2026-08-03T00:00:00.000Z\"}",
-      "captured_at": "2026-08-05T09:51:58.058894+00:00",
-      "alerted": 0
-    },
-    {
-      "id": 74,
-      "type": "regulatory_alert",
-      "source": "exa",
-      "keyword": "NBFC regulation India latest 2026",
-      "title": "RBI Issues 2026 Miscellaneous Supervisory Directions for NBFCs and PCA Framework",
-      "url": "https://taxguru.in/rbi/rbi-issues-2026-miscellaneous-supervisory-directions-nbfcs-pca-framework.html",
-      "content": "FCs and PCA Framework ... The Reserve Bank of India issued the Reserve Bank of India (Non-Banking Financial Companies \u2013 Miscellaneous) Supervisory Directions, 2026 (RBI/DoS/2026-27/467 dated July 31, 2026), effective immediately, applicable to specified categories of Non-Banking Financial Companies (NBFCs) and Housing Finance Companies as provided in the Directions. The Directions require NBFCs in the Upper and Middle Layers with 10 or more fixed point service delivery units to implement a Core Financial Services Solution (CFSS) and submit quarterly implementation progress reports to RBI. They direct NBFCs to review loan disbursal, interest charging, EMI computation, amortisation schedules, and related practices to address unfair practices and encourage online account transfers for loan disbursals. Deposit-taking NBFCs are required to strengthen nomination coverage for deposit accounts, review progress periodically, report quarterly through the DAKSH portal, and conduct customer awareness initiatives. The Directions also prescribe a Prompt Corrective Action (PCA) Framework for specified NBFCs based on capital, asset quality, leverage, and related indicators, including risk thresholds, mandatory and discretionary corrective actions, conditions for exit, and possible public disclosure by RBI when an NBFC is placed under or exits the PCA Framework. The Directions repeal earlier supervisory directions while preserving existing actions and provide that RBI\u2019s interpretation shall be final and binding. ... 1. These Directions shall be applicable to Non-Banking Financial Companies (hereinafter collectively referred to as \u2018NBFCs\u2019 and individually as a \u2018NBFC\u2019), for all layers, holding registration under the Reserve Bank of India Act, 1934 or the Factoring Regulation Act, 2011 and Housing Finance Companies holding registration under the National Housing Bank Act, 1987, unless specified otherwise. ... 15. The objective of the Prompt Corrective Action (PCA) Framework is to enabl",
-      "sentiment": "negative",
-      "severity": "warning",
-      "metadata_json": "{\"published\": \"2026-08-03T00:00:00.000Z\"}",
-      "captured_at": "2026-08-05T09:51:58.056455+00:00",
-      "alerted": 0
     }
   ],
   "count": 100,
-  "lastUpdated": "2026-08-16T09:01:51.550497+00:00"
+  "lastUpdated": "2026-08-17T09:02:22.378165+00:00"
 }
