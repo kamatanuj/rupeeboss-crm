@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": 177,
+      "type": "competitor_intel",
+      "source": "exa",
+      "keyword": "MSME loan best rates India",
+      "title": "Business Loan Interest Rates Starting at 12.99%* p.a. | IDFC FIRST Bank",
+      "url": "https://www.idfcfirst.bank.in/business-banking/loans/business-loan/business-loan-interest-rates",
+      "content": "Business Loan Interest Rate @12.99% p.a.* | IDFC FIRST Bank ... MSME Loans ",
+      "sentiment": "neutral",
+      "severity": "info",
+      "metadata_json": "{\"published\": \"N/A\"}",
+      "captured_at": "2026-08-18T09:01:55.913502+00:00",
+      "alerted": 0
+    },
+    {
       "id": 176,
       "type": "regulatory_alert",
       "source": "exa",
@@ -1385,22 +1399,8 @@
       "metadata_json": "{\"published\": \"2025-05-08T00:00:00.000Z\"}",
       "captured_at": "2026-08-05T09:52:01.586442+00:00",
       "alerted": 0
-    },
-    {
-      "id": 77,
-      "type": "regulatory_alert",
-      "source": "exa",
-      "keyword": "digital lending guidelines RBI 2026",
-      "title": "\u092d\u093e\u0930\u0924\u0940\u092f \ufffd\u0930\u095b\u0935\u0930\u094d \u092c\u0948\u0902\u0915",
-      "url": "https://banklaw.in/manage/images/services/1549227923RBI-DigitalLendingDirections2025-8.5.2025.pdf",
-      "content": "Reserve Bank of India (Digital Lending) Directions, 2025 Index Chapter I: Preliminary ... 3 1. Preamble ... 3 ... is statutorily mandated ... advantage. In this ... , Reserve Bank encourages ... and protection of ... \u2019 interest. Certain concerns ... around the methods of designing, delivering and servicing ... , which if not mitigated, may impact ... lending ... . The concerns primarily relate to unbridled engagement of third parties, mis-selling, breach of data privacy, unfair business conduct, charging of exorbitant interest rates, and unethical recovery practices. To address these concerns, pursuant to the recommendations made by the \u201cWorking Group on Digital Lending\u201d, the Reserve Bank has, from time to time, issued guidelines to its regulated entities on digital lending. These Directions consolidate the earlier instructions along with certain new measures for arrangements involving Lending Service Providers partnering with multiple regulated entities as mentioned under para 6, and for creation of a directory of digital lending apps as mentioned under para 17 of these Directions. ... Companies (Regulation) Act, 2005, the Reserve Bank of India being satisfied that it is necessary and expedient in the public interest to do so, hereby issues these Directions hereinafter specified. 2. Short title and commencement i. These Directions shall be called the Reserve Bank of India (Digital Lending) Directions, 2025. #### ii. These Directions shall come into force immediately except for para 6, which shall come into effect from November 1, 2025, and para 17, which shall come into effect from June 15, 2025. ... 3. Applicability These Directions shall be applicable to all digital lending activities of the following entities, hereinafter referred to as a Regulated Entity (RE) and collectively as Regulated Entities (REs), as the context may require: i. All Commercial Banks, ii. All Primary (Urban) Co-operative Banks, State Co-operative Banks, Central Co operative Banks, iii. All",
-      "sentiment": "positive",
-      "severity": "warning",
-      "metadata_json": "{\"published\": \"N/A\"}",
-      "captured_at": "2026-08-05T09:52:01.563918+00:00",
-      "alerted": 0
     }
   ],
   "count": 100,
-  "lastUpdated": "2026-08-17T09:02:22.378165+00:00"
+  "lastUpdated": "2026-08-18T09:01:55.913502+00:00"
 }
