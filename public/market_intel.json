@@ -1,6 +1,48 @@
 {
   "items": [
     {
+      "id": 180,
+      "type": "regulatory_alert",
+      "source": "exa",
+      "keyword": "digital lending guidelines RBI 2026",
+      "title": "RBI Proposes New Loan Pricing Norms for Banks and NBFCs | Whalesbook",
+      "url": "https://www.whalesbook.com/news/English/rbi/RBI-Proposes-New-Loan-Pricing-Norms-for-Banks-and-NBFCs/6a7ec5616ffbe1e6461b27b6",
+      "content": "The Reserve Bank of India has released draft guidelines to standardize loan pricing and increase transparency, with an implementation date of April 1, 2027. The proposal mandates caps on small-ticket loan costs, periodic interest rate resets, and restrictions on spread revisions, potentially impacting how banks and non-banking financial companies manage their margins and loan portfolios. ... The Reserve Bank of India (RBI) has unveiled draft directions aimed at bringing greater transparency and uniformity to how loans are priced across the Indian financial system. Released on August 12, 2026, the proposed \u201cInterest Rates on Loans and Advances Directions, 2026\u201d are designed to protect borrowers from arbitrary rate hikes and hidden costs, with a planned effective date of April 1, 2027. ... Under the new framework, the regulator aims to standardize interest calculation methods. Lenders will be required to compute interest using a daily reducing balance method, ensuring consistency across different financial institutions. The draft mandates that floating-rate loans undergo interest rate resets at intervals not exceeding three months, a move intended to prevent sudden, unexpected jumps in a borrower's EMI obligations when market rates fluctuate. ... One of the most significant changes involves the structure of loan spreads. The RBI proposes that lenders freeze non-credit-risk spread components\u2014which include operating costs and business strategy margins\u2014for three years from the date of initial disbursement or the last revision. This is intended to stop lenders from unilaterally increasing interest rates on existing customers without a valid change in their credit risk profile. While lenders can still adjust the credit risk premium, the inability to alter other components for a three-year window could force banks and NBFCs to be more precise in their initial pricing strategies. ... For microfinance and small-value personal loans up to \u20b950,000, the draft introduces a ceilin",
+      "sentiment": "positive",
+      "severity": "warning",
+      "metadata_json": "{\"published\": \"2026-08-14T07:36:01.000Z\"}",
+      "captured_at": "2026-08-19T09:02:47.966797+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 179,
+      "type": "regulatory_alert",
+      "source": "exa",
+      "keyword": "digital lending guidelines RBI 2026",
+      "title": "RBI seeks NBFC feedback on draft rules for revolving credit facilities - Telangana Today",
+      "url": "https://telanganatoday.com/rbi-seeks-nbfc-feedback-on-draft-rules-for-revolving-credit-facilities",
+      "content": "The RBI has sought feedback from NBFCs on draft guidelines for revolving credit facilities while stressing stronger compliance, internal audits and risk management. The regulator also urged lenders to address emerging risks and strengthen consumer grievance redressal mechanisms. ... New Delhi: The Reserve Bank of India (RBI) has sought feedback from non-banking finance companies (NBFCs) on draft guidelines proposed for regulating revolving credit facilities, while emphasising the need for stronger compliance, internal audit and risk management frameworks, a report has said. ... In addition, the central bank is also looking to align the regulatory framework for NBFCs more closely with global standards, it added. ... The regulator urged NBFCs to identify and address risks arising from new products and business models at an early stage to prevent potential build-up of vulnerabilities. ... The RBI also acknowledged that NBFCs are often early adopters of technology-driven lending products and business models and indicated that insights from their experience could help inform regulations for emerging areas. ... It further advised NBFCs to strengthen consumer grievance redressal mechanisms and ensure customer complaints are resolved effectively within prescribed timelines. ... However, NBFCs were also asked to ensure full compliance with the RBI\u2019s digital lending framework and the Digital Personal Data Protection Act, particularly as lenders increasingly rely on technology and digital channels for customer acquisition, underwriting and servicing. ... Last week, RBI officials met senior executives of NBFCs as part of ongoing supervisory engagement amid the regulator\u2019s heightened focus on risks associated with rapidly expanding lending products and technology-led business models across the sector. --- ",
+      "sentiment": "negative",
+      "severity": "warning",
+      "metadata_json": "{\"published\": \"2026-08-17T09:29:45.000Z\"}",
+      "captured_at": "2026-08-19T09:02:47.952274+00:00",
+      "alerted": 0
+    },
+    {
+      "id": 178,
+      "type": "regulatory_alert",
+      "source": "exa",
+      "keyword": "digital lending guidelines RBI 2026",
+      "title": "RBI issues draft rules on harmonised interest rates for all loans | Asianet Newsable",
+      "url": "https://newsable.asianetnews.com/business/rbi-issues-draft-rules-on-harmonised-interest-rates-for-all-loans-articleshow-o5qt4gk",
+      "content": "## RBI published draft rules for harmonised interest rates for all regulated entities. The goal is to ensure effective monetary policy transmission and fair treatment of borrowers for both fixed and floating rate loans, effective April 1, 2027. ... RBI issued draft rules on harmonised interest rate directions for all regulated entities to ensure effective monetary policy transmission, appropriate pricing of credit risk, and fair treatment of borrowers. ... The central bank published the draft guidelines on Wednesday, titled \"Reserve Bank of India (Interest Rates on Loans and Advances) Directions, 2026,\" following its developmental and regulatory policies statement on August 5, 2026. The proposed directions aim to create a principles-based framework for interest rates on both fixed and floating rate loans. ... Under the draft framework, effective April 1, 2027, all floating-rate loans will reset within a maximum period of three months. Marginal Cost of Funds Based Lending Rate (MCLR) calculations will use a three-month moving average of the weighted cost of fresh deposits and fresh borrowings. ... \"At present, regulatory framework on interest rate on advances are applicable for Commercial Banks (including Small Finance Banks and Local Area Banks), covering, inter alia, instructions on internal and external benchmark-based lending frameworks for floating rate loans and determination of spreads over such benchmarks,\" the RBI noted. ... \"Regulatory instructions on interest rates on loans and advances extended by other REs (i.e., Non-Banking Financial Companies, All India Financial Institutions, Regional Rural Banks, Urban Cooperative Banks, and Rural Cooperative Banks) are largely with regard to conduct related aspects,\" the draft document added. ... The central bank observed divergent practices among commercial banks in determining internal benchmarks like MCLR and noted limited instructions for fixed-rate loans. ... Non-credit risk spread components on floating-rate l",
+      "sentiment": "negative",
+      "severity": "warning",
+      "metadata_json": "{\"published\": \"2026-08-13T07:31:12.000Z\"}",
+      "captured_at": "2026-08-19T09:02:47.938989+00:00",
+      "alerted": 0
+    },
+    {
       "id": 177,
       "type": "competitor_intel",
       "source": "exa",
@@ -1357,50 +1399,8 @@
       "metadata_json": "{\"published\": \"2026-02-06T00:00:00.000Z\"}",
       "captured_at": "2026-08-05T09:52:05.921598+00:00",
       "alerted": 0
-    },
-    {
-      "id": 80,
-      "type": "regulatory_alert",
-      "source": "exa",
-      "keyword": "MSME loan policy change 2026",
-      "title": "Press Releases - Reserve Bank of India",
-      "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62190",
-      "content": "## Date : Feb 09, 2026 ... ## RBI Issues Amendment Directions on Lending to Micro, Small & Medium Enterprises (MSME) Sector ... The Reserve Bank of India has today issued the Lending to Micro, Small & Medium Enterprises (MSME) Sector (Amendment) Directions, 2026. These amendment directions modify certain provisions of the Master Direction - Lending to Micro, Small & Medium Enterprises (MSME) Sector(Updated as on July 23, 2025). ... 2. These amendments have been carried out to (i) enhance the extant Collateral-Free Loan Limit for Micro and Small Enterprises (MSEs) to \u20b920 lakh, and (ii) align with certain regulatory changes that have been notified separately. The objective is to strengthen last mile credit delivery for Micro and Small Enterprises with limited assets to provide as collateral. ... 3. The amended Directions shall come into effect from April 01, 2026. --- ",
-      "sentiment": "negative",
-      "severity": "warning",
-      "metadata_json": "{\"published\": \"N/A\"}",
-      "captured_at": "2026-08-05T09:52:05.914520+00:00",
-      "alerted": 0
-    },
-    {
-      "id": 79,
-      "type": "regulatory_alert",
-      "source": "exa",
-      "keyword": "MSME loan policy change 2026",
-      "title": "Notifications - Reserve Bank of India",
-      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13290&Mode=0",
-      "content": "RBI/2025-26/206 FIDD.MSME & NFS.BC.No.12/06.02.31/2025-26 ... February 09, 2026 ... Lending to Micro, Small & Medium Enterprises (MSME) Sector (Amendment) Directions, 2026 ... Please refer to the Master Direction - Lending to Micro, Small & Medium Enterprises (MSME) Sector(Updated as on July 23, 2025) (hereinafter referred to as \u201cthe Directions\u201d). ... 2. On a review, in exercise of the powers conferred by Sections 21 and 35 A of the Banking Regulation Act, 1949, the Reserve Bank of India, being satisfied that it is necessary and expedient in the public interest to do so, hereby, issues the Amendment Directions hereinafter specified. ... 3. The Amendment Directions modify the Directions as below: ... i. Paragraph 4.1 shall be substituted by the following, namely:- ... \u201c4.1 Collateral ... Banks are mandated not to accept collateral security in the case of loans up to \u20b920 lakh extended to units in the MSE sector. Banks are also advised to extend collateral-free loans up to \u20b920 lakh to all units financed under the Prime Minister Employment Generation Programme (PMEGP) administered by KVIC. ... Banks may, on the basis of good track record and financial position of the MSE units, increase the limit to dispense with the collateral requirement for loans up to \u20b925 lakh as per their internal policy. ... Banks may avail the benefit of Credit Guarantee Scheme cover, where applicable. ... However, accepting gold and silver as collateral pledged voluntarily by borrowers for loans sanctioned by the banks upto the collateral free limit, will not be construed as a violation of the above mandate\u201d. ... ii. Paragraph 6.5 shall stand deleted. ... 4. The above amendment shall come into force for all loans to MSE borrowers sanctioned or renewed on or after April 01, 2026. ... to Micro, Small & Medium Enterprises (MSME) Sector (Amendment) Directions, 2026 | ... ## 2026 --- ",
-      "sentiment": "positive",
-      "severity": "warning",
-      "metadata_json": "{\"published\": \"N/A\"}",
-      "captured_at": "2026-08-05T09:52:05.903377+00:00",
-      "alerted": 0
-    },
-    {
-      "id": 78,
-      "type": "regulatory_alert",
-      "source": "exa",
-      "keyword": "digital lending guidelines RBI 2026",
-      "title": "Reserve Bank of India (Digital Lending) Directions, 2025",
-      "url": "https://taxguru.in/rbi/reserve-bank-india-digital-lending-directions-2025.html",
-      "content": "Reserve Bank of India (RBI) has issued the Digital Lending Directions, 2025, consolidating and updating guidelines to address growing concerns in the digital lending sector. These directions aim to mitigate risks related to third-party involvement, mis-selling, data misuse, unfair practices, excessive charges, and unethical recovery methods. They apply to regulated entities and their arrangements with Lending Service Providers (LSPs), especially in multi-lender models. Key provisions include due diligence on LSPs, clear disclosures to borrowers, structured grievance redressal, mandatory creditworthiness assessments, and rules around loan disbursal and repayment. The guidelines also enforce data protection through restrictions on collection, sharing, and storage, requiring a comprehensive privacy policy and adherence to prescribed technology standards. The Directions introduce reporting norms for digital lending apps (DLAs) and mandate disclosures and controls around default loss guarantee (DLG) arrangements. These include eligibility, structural requirements, caps, and recognition of non-performing assets. Some provisions take immediate effect, while para 6 (multi-lender arrangements) and para 17 (DLA directory) come into force on November 1, 2025, and June 15, 2025, respectively. Additionally, card issuers are required to provide full transparency on EMI conversions, ensuring all cost components are clearly communicated. The Directions derive authority from several financial laws and replace earlier circulars now listed in an annexure. ... the digital lending ecosystem. The concerns primarily relate to unbridled engagement of third parties, mis-selling, breach of data privacy, unfair business conduct, charging of exorbitant interest rates, and unethical recovery practices. To address these concerns, pursuant to the recommendations made by the \u201cWorking Group on Digital Lending\u201d, the Reserve Bank has, from time to time, issued guidelines to its regulated entities on ",
-      "sentiment": "neutral",
-      "severity": "warning",
-      "metadata_json": "{\"published\": \"2025-05-08T00:00:00.000Z\"}",
-      "captured_at": "2026-08-05T09:52:01.586442+00:00",
-      "alerted": 0
     }
   ],
   "count": 100,
-  "lastUpdated": "2026-08-18T09:01:55.913502+00:00"
+  "lastUpdated": "2026-08-19T09:02:47.966797+00:00"
 }
